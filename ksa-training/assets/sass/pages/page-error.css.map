@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,MAAM,EAAC,SAAS,EAAE,KAAK;EACrB,AACE,MADI,CACJ,UAAU,CAAC;IACT,KAAK,EAAE,KAAK;GACb",
+    "sources": [
+        "page-error.scss"
+    ],
+    "names": [],
+    "file": "page-error.css"
+}

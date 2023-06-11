@@ -1,0 +1,53 @@
+p,
+div,
+span,
+section,
+a,
+li,
+ul {
+  font-family: "Almarai-Light" !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.mat-card-title {
+  font-family: "Almarai-bold" !important;
+}
+
+/* Almarai Font  */
+.font-almarai {
+  font-family: "Almarai" !important;
+}
+
+.font-almarai-light {
+  font-family: "Almarai-Light" !important;
+}
+
+.font-almarai-bold {
+  font-family: "Almarai-Bold" !important;
+}
+
+.font-almarai-extra-bold {
+  font-family: "Almarai-ExtraBold" !important;
+}
+
+/* Almarai Font  */
+.font-almarai {
+  font-family: "Almarai" !important;
+}
+
+.font-light {
+  font-family: "Almarai-Light" !important;
+}
+
+.font-bold {
+  font-family: "Almarai-Bold" !important;
+}
+
+.font-extra-bold {
+  font-family: "Almarai-ExtraBold" !important;
+}
