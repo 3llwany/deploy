@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAEI,cAFU,CACZ,YAAY,CACV,eAAe,CAAC;EACd,UAAU,EAAE,WAAW;CACxB",
-    "sources": [
-        "ex-component-media-player.scss"
-    ],
-    "names": [],
-    "file": "ex-component-media-player.css"
-}

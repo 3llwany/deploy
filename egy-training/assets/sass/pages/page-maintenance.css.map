@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACA,MAAM,EAAC,SAAS,EAAE,KAAK;EACrB,AACE,YADU,CACV,gBAAgB,CAAC;IACf,KAAK,EAAE,KAAK;GACb",
-    "sources": [
-        "page-maintenance.scss"
-    ],
-    "names": [],
-    "file": "page-maintenance.css"
-}
