@@ -1,0 +1,57 @@
+/*   English Fonts interface   */
+
+/* 300 */
+@font-face {
+  font-family: Axi-Light;
+  src: url(../fonts/axi-almarai/Axiforma-Light.woff);
+}
+
+/* 400 */
+@font-face {
+  font-family: Axi-Regular;
+  src: url(../fonts/axi-almarai/Axiforma-Regular.woff);
+}
+
+/* 600 */
+@font-face {
+  font-family: Axi-SemiBold;
+  src: url(../fonts/axi-almarai/Axiforma-SemiBold.woff);
+}
+
+/* 700 */
+@font-face {
+  font-family: Axi-Bold;
+  src: url(../fonts/axi-almarai/Axiforma-Bold.woff);
+}
+
+/* 700 */
+@font-face {
+  font-family: Axi-BoldItalic;
+  src: url(../fonts/axi-almarai/Axiforma-BoldItalic.woff);
+}
+
+/*  arabic Fonts interface   */
+
+/* 300 */
+@font-face {
+  font-family: Almarai-Light;
+  src: url(../fonts/axi-almarai/Almarai-Light.ttf);
+}
+
+/* 400 */
+@font-face {
+  font-family: Almarai;
+  src: url(../fonts/axi-almarai/Almarai-Regular.ttf);
+}
+
+/* 700 */
+@font-face {
+  font-family: Almarai-Bold;
+  src: url(../fonts/axi-almarai/Almarai-Bold.ttf);
+}
+
+/* 800 */
+@font-face {
+  font-family: Almarai-ExtraBold;
+  src: url(../fonts/axi-almarai/Almarai-ExtraBold.ttf);
+}

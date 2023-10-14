@@ -1,0 +1,65 @@
+p,
+div,
+span,
+section,
+a,
+li,
+ul {
+  font-family: "Axi-Regular" !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.mat-card-title,
+.card .card-title,
+.content-header {
+  font-family: "Axi-bold" !important;
+}
+
+/*  Axi Font   */
+
+.font-axi-regular {
+  font-family: "Axi-Regular" !important;
+}
+
+.font-axi-light {
+  font-family: "Axi-Light" !important;
+}
+
+.font-axi-semi-bold {
+  font-family: "Axi-SemiBold" !important;
+}
+
+.font-axi-bold {
+  font-family: "Axi-Bold" !important;
+}
+
+.font-axi-bold-italic {
+  font-family: "Axi-BoldItalic" !important;
+}
+
+/*  Axi Font General   using same classes name in ar file fonts  */
+
+.font-regular {
+  font-family: "Axi-Regular" !important;
+}
+
+.font-light {
+  font-family: "Axi-Light" !important;
+}
+
+.font-semi-bold {
+  font-family: "Axi-SemiBold" !important;
+}
+
+.font-bold {
+  font-family: "Axi-Bold" !important;
+}
+
+.font-bold-italic {
+  font-family: "Axi-BoldItalic" !important;
+}
