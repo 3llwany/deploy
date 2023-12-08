@@ -162,8 +162,7 @@ class AddS4AccountMapComponent extends app_shared_resources_app_helpers__WEBPACK
             .getById(this.s4AccountMapId)
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
-                let result = (0,app_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__.s4AccountToMap)(res.data);
-                this.s4AccountMapToEdit(result[0]);
+                this.s4AccountMapToEdit((0,app_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__.s4AccountGetAllToMap)(res.data)[0]);
             }
             else
                 this.errorList(res.message.messages);
@@ -286,7 +285,7 @@ class AddS4AccountMapComponent extends app_shared_resources_app_helpers__WEBPACK
         }
     }
     changeGLAccountText(glAccount) {
-        this.formCtrls.s4_LG_Account_Text.setValue(glAccount[0].GLName);
+        this.formCtrls.s4_LG_Account_Text.setValue(glAccount[0]?.Gl_text);
     }
 }
 AddS4AccountMapComponent.ɵfac = function AddS4AccountMapComponent_Factory(t) { return new (t || AddS4AccountMapComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdirectiveInject"](app_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__.S4AccountMapService)); };
@@ -412,23 +411,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "S4AccountMapIndexComponent": () => (/* binding */ S4AccountMapIndexComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
-/* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/s4-setup/services/s4-account-map.service */ 86819);
-/* harmony import */ var _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared/components/material-table/material-table.component */ 56184);
-/* harmony import */ var _shared_components_dropdowns_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/s4-system-instance-dropdown/s4-system-instance-dropdown.component */ 92363);
-/* harmony import */ var _shared_components_dropdowns_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/s4-integration-purpose-by-system-instance-dropdown/s4-integration-purpose-by-system-instance-dropdown.component */ 85003);
-/* harmony import */ var _shared_components_dropdowns_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/gl-account-by-s4-system-instance-dropdown/gl-account-by-s4-system-instance-dropdown.component */ 33886);
-/* harmony import */ var _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/buttons/reset-form-btn/reset-form-btn.component */ 22289);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/button */ 84522);
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ngx-spinner */ 88035);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/table */ 85288);
+/* harmony import */ var app_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/s4-setup/mapper/s4-account-map */ 29577);
+/* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
+/* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var app_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/s4-setup/services/s4-account-map.service */ 86819);
+/* harmony import */ var _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/material-table/material-table.component */ 56184);
+/* harmony import */ var _shared_components_dropdowns_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/s4-system-instance-dropdown/s4-system-instance-dropdown.component */ 92363);
+/* harmony import */ var _shared_components_dropdowns_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/s4-integration-purpose-by-system-instance-dropdown/s4-integration-purpose-by-system-instance-dropdown.component */ 85003);
+/* harmony import */ var _shared_components_dropdowns_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/gl-account-by-s4-system-instance-dropdown/gl-account-by-s4-system-instance-dropdown.component */ 33886);
+/* harmony import */ var _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/buttons/reset-form-btn/reset-form-btn.component */ 22289);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/button */ 84522);
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ 82156);
+/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/divider */ 71528);
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ 2508);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
 
 
 
@@ -446,7 +446,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class S4AccountMapIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__.AppHelpers {
+
+class S4AccountMapIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__.AppHelpers {
     constructor(s4AccountMapService) {
         super();
         this.s4AccountMapService = s4AccountMapService;
@@ -475,7 +476,7 @@ class S4AccountMapIndexComponent extends app_shared_resources_app_helpers__WEBPA
     }
     onChangeBusinessAndCompanyId() {
         if (this.dataSource?.data?.length > 0)
-            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_9__.MatTableDataSource(null);
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_10__.MatTableDataSource(null);
         if (this.checkNoBusinessOrCompany())
             this.getList(this.pageFromUrl > 0 ? this.pageFromUrl : this.firstPage);
     }
@@ -511,19 +512,14 @@ class S4AccountMapIndexComponent extends app_shared_resources_app_helpers__WEBPA
         };
         this.s4AccountMapService
             .getList(params)
+            .pipe(this.cancelRequest())
             .subscribe((res) => {
-            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
+            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
                 if (res.data.length == 0 && page > 1) {
                     this.getList(this.prevPage);
                     return;
                 }
-                res.data.map((ele) => {
-                    ele.integrationPurpose = ele.s4_IntegrationPurpose.name;
-                    ele.accountType = ele.is_Debit ? "Debit" : "Credit";
-                    ele.variables = this.msgTranslate(ele.pay_Variable?.arName, ele.pay_Variable?.name);
-                    ele.bothBankCash = ele.bothBankCash && !ele.bank_ID ? true : false;
-                });
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_9__.MatTableDataSource(res.data);
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_10__.MatTableDataSource((0,app_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__.s4AccountToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -541,7 +537,7 @@ class S4AccountMapIndexComponent extends app_shared_resources_app_helpers__WEBPA
     delete(s4AccountMap) {
         this.showLoading();
         this.s4AccountMapService.Delete(s4AccountMap.id).subscribe((res) => {
-            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
+            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
                 this.deleteSuccessfullyMsg(res?.message?.messageTypeName);
                 if (this.dataSource.data.length == 1 && this.currentPage > 1) {
                     // if last item in list: get previous page
@@ -570,49 +566,49 @@ class S4AccountMapIndexComponent extends app_shared_resources_app_helpers__WEBPA
             this.formCtrls.integrationPurpose_ID.setValue(null);
     }
 }
-S4AccountMapIndexComponent.ɵfac = function S4AccountMapIndexComponent_Factory(t) { return new (t || S4AccountMapIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdirectiveInject"](app_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_2__.S4AccountMapService)); };
-S4AccountMapIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdefineComponent"]({ type: S4AccountMapIndexComponent, selectors: [["app-s4-account-map-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵInheritDefinitionFeature"]], decls: 24, vars: 19, consts: [[1, "row"], [1, "col-12"], ["title", "s4AccountMap", 3, "globalFunctions"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-4", "col-12"], [3, "control", "filter"], [3, "control", "s4SystemInstanceControl", "filter", "change"], ["align", "end"], ["mat-raised-button", "", 1, "btn", "btn-info", "bg-light-info", 3, "click"], [3, "click"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "actions", "onChangePage", "deleteRow"]], template: function S4AccountMapIndexComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](5, "page-title", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](6, "mat-card-content", 3)(7, "div", 0)(8, "div", 1)(9, "form", 4)(10, "div", 0)(11, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](12, "app-s4-system-instance-dropdown", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](13, "div", 5)(14, "app-s4-integration-purpose-by-system-instance-dropdown", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵlistener"]("change", function S4AccountMapIndexComponent_Template_app_s4_integration_purpose_by_system_instance_dropdown_change_14_listener($event) { return ctx.onChangePurpose($event); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](15, "div", 5)(16, "app-gl-account-by-s4-system-instance-dropdown", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵlistener"]("change", function S4AccountMapIndexComponent_Template_app_gl_account_by_s4_system_instance_dropdown_change_16_listener($event) { return ctx.onChangeGlAccount($event); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]()()()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](17, "mat-card-actions", 8)(18, "button", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵlistener"]("click", function S4AccountMapIndexComponent_Template_button_click_18_listener() { return ctx.searchList(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtext"](19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipe"](20, "translate");
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](21, "reset-form-btn", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵlistener"]("click", function S4AccountMapIndexComponent_Template_reset_form_btn_click_21_listener() { return ctx.resetSearch(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](22, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](23, "app-material-table", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵlistener"]("onChangePage", function S4AccountMapIndexComponent_Template_app_material_table_onChangePage_23_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function S4AccountMapIndexComponent_Template_app_material_table_deleteRow_23_listener($event) { return ctx.onDelete($event); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]()()()();
+S4AccountMapIndexComponent.ɵfac = function S4AccountMapIndexComponent_Factory(t) { return new (t || S4AccountMapIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__.S4AccountMapService)); };
+S4AccountMapIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineComponent"]({ type: S4AccountMapIndexComponent, selectors: [["app-s4-account-map-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵInheritDefinitionFeature"]], decls: 24, vars: 19, consts: [[1, "row"], [1, "col-12"], ["title", "s4AccountMap", 3, "globalFunctions"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-4", "col-12"], [3, "control", "filter"], [3, "control", "s4SystemInstanceControl", "filter", "change"], ["align", "end"], ["mat-raised-button", "", 1, "btn", "btn-info", "bg-light-info", 3, "click"], [3, "click"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "actions", "onChangePage", "deleteRow"]], template: function S4AccountMapIndexComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](0, "ngx-spinner");
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](6, "mat-card-content", 3)(7, "div", 0)(8, "div", 1)(9, "form", 4)(10, "div", 0)(11, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](12, "app-s4-system-instance-dropdown", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](13, "div", 5)(14, "app-s4-integration-purpose-by-system-instance-dropdown", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("change", function S4AccountMapIndexComponent_Template_app_s4_integration_purpose_by_system_instance_dropdown_change_14_listener($event) { return ctx.onChangePurpose($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](15, "div", 5)(16, "app-gl-account-by-s4-system-instance-dropdown", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("change", function S4AccountMapIndexComponent_Template_app_gl_account_by_s4_system_instance_dropdown_change_16_listener($event) { return ctx.onChangeGlAccount($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]()()()()()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](17, "mat-card-actions", 8)(18, "button", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("click", function S4AccountMapIndexComponent_Template_button_click_18_listener() { return ctx.searchList(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵtext"](19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipe"](20, "translate");
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](21, "reset-form-btn", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("click", function S4AccountMapIndexComponent_Template_reset_form_btn_click_21_listener() { return ctx.resetSearch(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](22, "mat-divider");
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](23, "app-material-table", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("onChangePage", function S4AccountMapIndexComponent_Template_app_material_table_onChangePage_23_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function S4AccountMapIndexComponent_Template_app_material_table_deleteRow_23_listener($event) { return ctx.onDelete($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("formGroup", ctx.form);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("control", ctx.formCtrls.systemInstance_ID)("filter", true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("control", ctx.formCtrls.integrationPurpose_ID)("s4SystemInstanceControl", ctx.formCtrls.systemInstance_ID)("filter", true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("control", ctx.formCtrls.S4_LG_AccountCode)("s4SystemInstanceControl", ctx.formCtrls.systemInstance_ID)("filter", true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](20, 17, "General.search"), " ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions);
-    } }, dependencies: [_shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_dropdowns_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_4__.S4SystemInstanceDropdownComponent, _shared_components_dropdowns_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_5__.S4IntegrationPurposeBySystemInstanceDropdownComponent, _shared_components_dropdowns_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_6__.GlAccountByS4SystemInstanceDropdownComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_7__.ResetFormBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_button__WEBPACK_IMPORTED_MODULE_11__.MatButton, _angular_material_card__WEBPACK_IMPORTED_MODULE_12__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_12__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_12__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_12__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_13__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_14__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_15__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_15__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.FormGroupDirective, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzNC1hY2NvdW50LW1hcC1pbmRleC5jb21wb25lbnQuc2NzcyJ9 */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("formGroup", ctx.form);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("control", ctx.formCtrls.systemInstance_ID)("filter", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("control", ctx.formCtrls.integrationPurpose_ID)("s4SystemInstanceControl", ctx.formCtrls.systemInstance_ID)("filter", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("control", ctx.formCtrls.S4_LG_AccountCode)("s4SystemInstanceControl", ctx.formCtrls.systemInstance_ID)("filter", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](20, 17, "General.search"), " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions);
+    } }, dependencies: [_shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_dropdowns_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_5__.S4SystemInstanceDropdownComponent, _shared_components_dropdowns_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_6__.S4IntegrationPurposeBySystemInstanceDropdownComponent, _shared_components_dropdowns_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_7__.GlAccountByS4SystemInstanceDropdownComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__.ResetFormBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_9__.PageTitleComponent, _angular_material_button__WEBPACK_IMPORTED_MODULE_12__.MatButton, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_16__.FormGroupDirective, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_17__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzNC1hY2NvdW50LW1hcC1pbmRleC5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
@@ -704,6 +700,7 @@ class S4SystemInstanceIndexComponent extends app_shared_resources_app_helpers__W
         };
         this.s4SytemInstanceService
             .getList(params)
+            .pipe(this.cancelRequest())
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 if (res.data.length == 0 && page > 1) {
@@ -777,13 +774,27 @@ S4SystemInstanceIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPO
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "s4AccountGetAllToMap": () => (/* binding */ s4AccountGetAllToMap),
 /* harmony export */   "s4AccountToMap": () => (/* binding */ s4AccountToMap)
 /* harmony export */ });
-function s4AccountToMap(violations) {
+/* harmony import */ var app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/resources/helpers-functions */ 35478);
+
+function s4AccountGetAllToMap(violations) {
     return violations.map((s4Account) => {
         return {
             ...s4Account._I_PAY_Variable_SAP_SystemInstance_AccountNumber_COMM_Bank,
             organizationTypeId: s4Account.orgTypeId,
+        };
+    });
+}
+function s4AccountToMap(violations) {
+    return violations.map((s4Account) => {
+        return {
+            ...s4Account,
+            integrationPurpose: s4Account.s4_IntegrationPurpose.name,
+            accountType: s4Account.is_Debit ? "Debit" : "Credit",
+            variables: (0,app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__.msgTranslate)(s4Account.pay_Variable?.arName, s4Account.pay_Variable?.name),
+            bothBankCash: s4Account.bothBankCash && !s4Account.bank_ID ? true : false,
         };
     });
 }

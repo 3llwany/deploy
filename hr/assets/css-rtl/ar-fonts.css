@@ -5,7 +5,8 @@ section,
 a,
 li,
 ul {
-  font-family: "Almarai-Light" !important;
+  /* font-family: "Almarai-Light" !important; */
+  font-family: "Almarai" !important;
 }
 
 h1,

@@ -48,8 +48,8 @@ body.bodyrtl .page-user-profile .user-profile-text {
 
 .page-user-profile .user-profile-buttons {
 	padding-right: 11.25rem;
-	padding-left: 0;
-	justify-content: flex-end !important;
+	/* padding-left: 0; */
+	/* justify-content: flex-end !important; */
 }
 
 .page-user-profile .user-profile-buttons button {
@@ -59,11 +59,12 @@ body.bodyrtl .page-user-profile .user-profile-text {
 
 .page-user-profile .user-profile-images .user-timeline-image {
 	min-height: 200px;
-	max-height: 200px;
+	/* max-height: 200px; */
 	height: 300px;
 	width: 100%;
 	-o-object-fit: fill;
 	object-fit: fill;
+  /* object-fit: cover; */
 }
 
 .cart-tabsec .card.chpter {

@@ -74,15 +74,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AuthModule": () => (/* binding */ AuthModule)
 /* harmony export */ });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _auth_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth-routing.module */ 40431);
-/* harmony import */ var _components_login_login_page_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/login/login-page.component */ 34446);
-/* harmony import */ var _components_error_error_page_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/error/error-page.component */ 97495);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
-/* harmony import */ var _components_access_denied_access_denied_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/access-denied/access-denied.component */ 41878);
-/* harmony import */ var _components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/not-found/not-found.component */ 83130);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
-/* harmony import */ var app_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/shared/shared.module */ 44466);
+/* harmony import */ var app_shared_shared_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/shared.module */ 44466);
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _auth_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth-routing.module */ 40431);
+/* harmony import */ var _components_access_denied_access_denied_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/access-denied/access-denied.component */ 41878);
+/* harmony import */ var _components_error_error_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/error/error-page.component */ 97495);
+/* harmony import */ var _components_login_login_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/login/login-page.component */ 34446);
+/* harmony import */ var _components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/not-found/not-found.component */ 83130);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
@@ -100,20 +100,20 @@ class AuthModule {
 AuthModule.ɵfac = function AuthModule_Factory(t) { return new (t || AuthModule)(); };
 AuthModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({ type: AuthModule });
 AuthModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule,
-        _auth_routing_module__WEBPACK_IMPORTED_MODULE_0__.AuthRoutingModule,
+        _auth_routing_module__WEBPACK_IMPORTED_MODULE_1__.AuthRoutingModule,
         _angular_forms__WEBPACK_IMPORTED_MODULE_8__.ReactiveFormsModule,
         ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerModule,
         _ngx_translate_core__WEBPACK_IMPORTED_MODULE_10__.TranslateModule,
-        app_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__.SharedModule] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](AuthModule, { declarations: [_components_login_login_page_component__WEBPACK_IMPORTED_MODULE_1__.LoginPageComponent,
-        _components_error_error_page_component__WEBPACK_IMPORTED_MODULE_2__.ErrorPageComponent,
-        _components_access_denied_access_denied_component__WEBPACK_IMPORTED_MODULE_3__.AccessDeniedComponent,
-        _components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__.NotFoundComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule,
-        _auth_routing_module__WEBPACK_IMPORTED_MODULE_0__.AuthRoutingModule,
+        app_shared_shared_module__WEBPACK_IMPORTED_MODULE_0__.SharedModule] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](AuthModule, { declarations: [_components_login_login_page_component__WEBPACK_IMPORTED_MODULE_4__.LoginPageComponent,
+        _components_error_error_page_component__WEBPACK_IMPORTED_MODULE_3__.ErrorPageComponent,
+        _components_access_denied_access_denied_component__WEBPACK_IMPORTED_MODULE_2__.AccessDeniedComponent,
+        _components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_5__.NotFoundComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule,
+        _auth_routing_module__WEBPACK_IMPORTED_MODULE_1__.AuthRoutingModule,
         _angular_forms__WEBPACK_IMPORTED_MODULE_8__.ReactiveFormsModule,
         ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerModule,
         _ngx_translate_core__WEBPACK_IMPORTED_MODULE_10__.TranslateModule,
-        app_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__.SharedModule] }); })();
+        app_shared_shared_module__WEBPACK_IMPORTED_MODULE_0__.SharedModule] }); })();
 
 
 /***/ }),
@@ -230,7 +230,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ 2508);
 /* harmony import */ var app_shared_resources_assets_manager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/resources/assets-manager */ 69846);
-/* harmony import */ var app_shared_enums_input_appearance_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/input-appearance.enum */ 90703);
+/* harmony import */ var app_shared_enums_mat_theme_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/mat-theme.enum */ 92772);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_resources_local_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/resources/local-storage */ 66606);
@@ -279,7 +279,7 @@ class LoginPageComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
         this.loginFormSubmitted = false;
         this.isLoginFailed = false;
         this.appAsset = new app_shared_resources_assets_manager__WEBPACK_IMPORTED_MODULE_0__.AssetsManager();
-        this.appearance = app_shared_enums_input_appearance_enum__WEBPACK_IMPORTED_MODULE_1__.InputAppearance;
+        this.appearance = app_shared_enums_mat_theme_enum__WEBPACK_IMPORTED_MODULE_1__.InputAppearance;
         this.returnUrl = this.route.snapshot.queryParams["returnUrl"];
     }
     ngOnInit() {

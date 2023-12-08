@@ -83,6 +83,7 @@ class CourseCategoryComponent extends app_shared_resources_app_helpers__WEBPACK_
         };
         this._courseCategoryService
             .getList(params)
+            .pipe(this.cancelRequest())
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_10__.MatTableDataSource(res.data);
@@ -106,7 +107,9 @@ class CourseCategoryComponent extends app_shared_resources_app_helpers__WEBPACK_
     }
     create(model) {
         this.showLoading();
-        this._courseCategoryService.create(model).subscribe((res) => {
+        this._courseCategoryService
+            .create(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.lastPage, this.page.pageSize);
@@ -119,7 +122,9 @@ class CourseCategoryComponent extends app_shared_resources_app_helpers__WEBPACK_
     }
     update(model) {
         this.showLoading();
-        this._courseCategoryService.update(model).subscribe((res) => {
+        this._courseCategoryService
+            .update(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.currentPage, this.page.pageSize);
@@ -286,7 +291,10 @@ class CourseTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPO
             PageNumber: page,
             pageSize: this.page.pageSize,
         };
-        this._courseTypeService.getList(params).subscribe((res) => {
+        this._courseTypeService
+            .getList(params)
+            .pipe(this.cancelRequest())
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_10__.MatTableDataSource(res.data);
                 this.isLoaded = true;
@@ -309,7 +317,9 @@ class CourseTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPO
     }
     create(model) {
         this.showLoading();
-        this._courseTypeService.create(model).subscribe((res) => {
+        this._courseTypeService
+            .create(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.lastPage, this.page.pageSize);
@@ -322,7 +332,9 @@ class CourseTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPO
     }
     update(model) {
         this.showLoading();
-        this._courseTypeService.update(model).subscribe((res) => {
+        this._courseTypeService
+            .update(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.currentPage, this.page.pageSize);
@@ -489,7 +501,10 @@ class ExpenseComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTE
             PageNumber: page,
             pageSize: this.page.pageSize,
         };
-        this._expenseService.getList(params).subscribe((res) => {
+        this._expenseService
+            .getList(params)
+            .pipe(this.cancelRequest())
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_10__.MatTableDataSource(res.data);
                 this.isLoaded = true;
@@ -512,7 +527,9 @@ class ExpenseComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTE
     }
     create(model) {
         this.showLoading();
-        this._expenseService.create(model).subscribe((res) => {
+        this._expenseService
+            .create(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.lastPage, this.page.pageSize);
@@ -525,7 +542,9 @@ class ExpenseComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTE
     }
     update(model) {
         this.showLoading();
-        this._expenseService.update(model).subscribe((res) => {
+        this._expenseService
+            .update(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.currentPage, this.page.pageSize);
@@ -694,6 +713,7 @@ class QuestionCategoryComponent extends app_shared_resources_app_helpers__WEBPAC
         };
         this._questionCategoryService
             .getList(params)
+            .pipe(this.cancelRequest())
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_11__.MatTableDataSource(res.data);
@@ -900,7 +920,10 @@ class ReasonsComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTE
             PageNumber: page,
             pageSize: this.page.pageSize,
         };
-        this._reasonsService.getList(params).subscribe((res) => {
+        this._reasonsService
+            .getList(params)
+            .pipe(this.cancelRequest())
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_10__.MatTableDataSource(res.data);
                 this.isLoaded = true;
@@ -923,7 +946,9 @@ class ReasonsComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTE
     }
     create(model) {
         this.showLoading();
-        this._reasonsService.create(model).subscribe((res) => {
+        this._reasonsService
+            .create(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.lastPage, this.page.pageSize);
@@ -936,7 +961,9 @@ class ReasonsComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTE
     }
     update(model) {
         this.showLoading();
-        this._reasonsService.update(model).subscribe((res) => {
+        this._reasonsService
+            .update(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.currentPage, this.page.pageSize);
@@ -1103,7 +1130,10 @@ class SurveyTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPO
             PageNumber: page,
             pageSize: this.page.pageSize,
         };
-        this._surveyTypeService.getList(params).subscribe((res) => {
+        this._surveyTypeService
+            .getList(params)
+            .pipe(this.cancelRequest())
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_11__.MatTableDataSource(res.data);
                 this.isLoaded = true;
@@ -1126,7 +1156,9 @@ class SurveyTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPO
     }
     create(model) {
         this.showLoading();
-        this._surveyTypeService.create(model).subscribe((res) => {
+        this._surveyTypeService
+            .create(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.lastPage, this.page.pageSize);
@@ -1139,7 +1171,9 @@ class SurveyTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPO
     }
     update(model) {
         this.showLoading();
-        this._surveyTypeService.update(model).subscribe((res) => {
+        this._surveyTypeService
+            .update(model)
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.currentPage, this.page.pageSize);
@@ -1162,7 +1196,9 @@ class SurveyTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPO
     }
     delete(surveyType) {
         this.showLoading();
-        this._surveyTypeService.Delete(surveyType.id).subscribe((res) => {
+        this._surveyTypeService
+            .Delete(surveyType.id)
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success) {
                 this.deleteSuccessfullyMsg(res?.message?.messageTypeName);
                 if (this.dataSource.data.length == 1 && this.currentPage > 1) {
@@ -1305,7 +1341,10 @@ class TestTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORT
             PageNumber: page,
             pageSize: this.page.pageSize,
         };
-        this._testTypeService.getList(params).subscribe((res) => {
+        this._testTypeService
+            .getList(params)
+            .pipe(this.cancelRequest())
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_11__.MatTableDataSource(res.data);
                 this.isLoaded = true;
@@ -1328,7 +1367,9 @@ class TestTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORT
     }
     create(model) {
         this.showLoading();
-        this._testTypeService.create(model).subscribe((res) => {
+        this._testTypeService
+            .create(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.lastPage, this.page.pageSize);
@@ -1341,7 +1382,9 @@ class TestTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORT
     }
     update(model) {
         this.showLoading();
-        this._testTypeService.update(model).subscribe((res) => {
+        this._testTypeService
+            .update(model)
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.currentPage, this.page.pageSize);
@@ -1423,94 +1466,6 @@ TestTypeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions);
     } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0ZXN0LXR5cGUuY29tcG9uZW50LnNjc3MifQ== */"] });
-
-
-/***/ }),
-
-/***/ 56746:
-/*!********************************************************************!*\
-  !*** ./src/app/training-setup/services/course-category.service.ts ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CourseCategoryService": () => (/* binding */ CourseCategoryService)
-/* harmony export */ });
-/* harmony import */ var app_shared_services_app_client_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/services/app-client.service */ 18521);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 22560);
-
-
-class CourseCategoryService extends app_shared_services_app_client_service__WEBPACK_IMPORTED_MODULE_0__.AppClientService {
-    constructor() {
-        super();
-    }
-    create(data) {
-        return this.post("TrainingSetup/CourseCategory/Create", data);
-    }
-    update(data) {
-        return this.post("TrainingSetup/CourseCategory/Edit", data);
-    }
-    getList(params) {
-        return this.get("TrainingSetup/CourseCategory/GetList", {
-            params: params,
-        });
-    }
-    getAll() {
-        this.get("TrainingSetup/CourseCategory/GetAll");
-    }
-    Delete(id) {
-        return this.delete("TrainingSetup/CourseCategory/Delete", {
-            params: { Id: id },
-        });
-    }
-}
-CourseCategoryService.ɵfac = function CourseCategoryService_Factory(t) { return new (t || CourseCategoryService)(); };
-CourseCategoryService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: CourseCategoryService, factory: CourseCategoryService.ɵfac, providedIn: "root" });
-
-
-/***/ }),
-
-/***/ 95801:
-/*!****************************************************************!*\
-  !*** ./src/app/training-setup/services/course-type.service.ts ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CourseTypeService": () => (/* binding */ CourseTypeService)
-/* harmony export */ });
-/* harmony import */ var app_shared_services_app_client_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/services/app-client.service */ 18521);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 22560);
-
-
-class CourseTypeService extends app_shared_services_app_client_service__WEBPACK_IMPORTED_MODULE_0__.AppClientService {
-    constructor() {
-        super();
-    }
-    create(data) {
-        return this.post("TrainingSetup/CourseType/Create", data);
-    }
-    update(data) {
-        return this.post("TrainingSetup/CourseType/Edit", data);
-    }
-    getList(params) {
-        return this.get("TrainingSetup/CourseType/GetList", {
-            params: params,
-        });
-    }
-    getAll() {
-        this.get("TrainingSetup/CourseType/GetAll");
-    }
-    Delete(id) {
-        return this.delete("TrainingSetup/CourseType/Delete", {
-            params: { Id: id },
-        });
-    }
-}
-CourseTypeService.ɵfac = function CourseTypeService_Factory(t) { return new (t || CourseTypeService)(); };
-CourseTypeService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: CourseTypeService, factory: CourseTypeService.ɵfac, providedIn: "root" });
 
 
 /***/ }),

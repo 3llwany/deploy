@@ -51,3 +51,35 @@
     border-radius: #{$i}px !important;
   }
 }
+
+// ====================== Buttons ======================
+
+// dark blue btn
+.btn-darkBlue {
+  color: #fff !important;
+  background-color: #374761 !important;
+  border-color: #374761 !important;
+}
+
+.btn-darkBlue:hover,
+.btn-darkBlue:active,
+.btn-darkBlue:focus {
+  color: #fff !important;
+  background-color: #576579 !important;
+  border-color: #374761 !important;
+}
+
+// lightGreen btn
+.btn-lightGreen {
+  color: #fff !important;
+  background-color: #30b79d !important;
+  border-color: #30b79d;
+  float: right;
+}
+
+.btn-lightGreen:hover,
+.btn-lightGreen:active,
+.btn-lightGreen:focus {
+  background-color: #42e1b9 !important;
+  border-color: #42e1b9 !important;
+}

@@ -57,7 +57,13 @@ class PenaltiesComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
         super();
         this.penaltiesService = penaltiesService;
         this.submitted = false;
-        this.mandatoryColomns = ["Ser", "id", "name", "penalty_Value", "actions"];
+        this.mandatoryColomns = [
+            "Ser",
+            "id",
+            "name",
+            "penalty_Value",
+            "actions",
+        ];
         this.isLoaded = false;
         this.optionalColomns = [];
     }
@@ -86,7 +92,10 @@ class PenaltiesComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
             PageNumber: page,
             pageSize: this.page.pageSize,
         };
-        this.penaltiesService.getList(params).subscribe((res) => {
+        this.penaltiesService
+            .getList(params)
+            .pipe(this.cancelRequest())
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_12__.MatTableDataSource(res.data);
                 this.isLoaded = true;
@@ -110,7 +119,9 @@ class PenaltiesComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
     }
     create(model) {
         this.showLoading();
-        this.penaltiesService.create(model).subscribe((res) => {
+        this.penaltiesService
+            .create(model)
+            .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.lastPage, this.page.pageSize);
@@ -123,7 +134,9 @@ class PenaltiesComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
     }
     update(model) {
         this.showLoading();
-        this.penaltiesService.update(model).subscribe((res) => {
+        this.penaltiesService
+            .update(model)
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.clearForm();
                 this.getList(this.currentPage, this.page.pageSize); // current page after update
@@ -235,11 +248,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/buttons/reset-form-btn/reset-form-btn.component */ 22289);
 /* harmony import */ var _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/buttons/submit-btn/submit-btn.component */ 53026);
 /* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
-/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/tabs */ 15892);
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/cdk/bidi */ 72867);
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/tabs */ 15892);
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/card */ 82156);
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ngx-spinner */ 88035);
 /* harmony import */ var _penalty_regulations_details_penalty_regulations_details_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../penalty-regulations-details/penalty-regulations-details.component */ 19156);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
+
 
 
 
@@ -367,7 +382,7 @@ class AddPenaltyRegulationsComponent extends app_shared_resources_app_helpers__W
     }
 }
 AddPenaltyRegulationsComponent.ɵfac = function AddPenaltyRegulationsComponent_Factory(t) { return new (t || AddPenaltyRegulationsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_penalty_regulations_service__WEBPACK_IMPORTED_MODULE_3__.PenaltyRegulationsService)); };
-AddPenaltyRegulationsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineComponent"]({ type: AddPenaltyRegulationsComponent, selectors: [["app-add-penalty-regulations"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵInheritDefinitionFeature"]], decls: 26, vars: 20, consts: [[1, "row"], [1, "col-12"], ["addTitle", "penaltyRegulations", "editTitle", "editPenaltyRegulation", 3, "id"], [3, "url", "params", 4, "ngIf"], [3, "url", "params"], [1, "col-12", "w-100"], [3, "label"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "penaltyRegulationId"], [3, "click"]], template: function AddPenaltyRegulationsComponent_Template(rf, ctx) { if (rf & 1) {
+AddPenaltyRegulationsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineComponent"]({ type: AddPenaltyRegulationsComponent, selectors: [["app-add-penalty-regulations"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵInheritDefinitionFeature"]], decls: 26, vars: 21, consts: [[1, "row"], [1, "col-12"], ["addTitle", "penaltyRegulations", "editTitle", "editPenaltyRegulation", 3, "id"], [3, "url", "params", 4, "ngIf"], [3, "url", "params"], [1, "col-12", "w-100", 3, "dir"], [3, "label"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "penaltyRegulationId"], [3, "click"]], template: function AddPenaltyRegulationsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](5, "page-title", 2);
@@ -398,8 +413,10 @@ AddPenaltyRegulationsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPO
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpropertyInterpolate1"]("url", "/penalty-regulations-setup/", ctx.moduleId, "/penalty-regulations/index");
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("params", ctx.pageParams);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpropertyInterpolate"]("label", _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](10, 12, _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](11, 14, "penaltyRegulations")));
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("dir", ctx.languageService.isArabic ? "rtl" : "ltr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpropertyInterpolate"]("label", _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](10, 13, _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](11, 15, "penaltyRegulations")));
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("formGroup", ctx.form);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](3);
@@ -409,10 +426,10 @@ AddPenaltyRegulationsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPO
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value == 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpropertyInterpolate"]("label", _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](23, 16, _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](24, 18, "penaltyRegulationDetails")));
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpropertyInterpolate"]("label", _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](23, 17, _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](24, 19, "penaltyRegulationDetails")));
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("penaltyRegulationId", ctx.penaltyRegulationId);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_5__.BackBtnComponent, _shared_components_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_6__.AddNewBtnComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_7__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_8__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_9__.PageTitleComponent, _angular_material_tabs__WEBPACK_IMPORTED_MODULE_14__.MatTabGroup, _angular_material_tabs__WEBPACK_IMPORTED_MODULE_14__.MatTab, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_16__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormGroupDirective, _penalty_regulations_details_penalty_regulations_details_component__WEBPACK_IMPORTED_MODULE_10__.PenaltyRegulationsDetailsComponent, _angular_common__WEBPACK_IMPORTED_MODULE_13__.TitleCasePipe, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_17__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtcGVuYWx0eS1yZWd1bGF0aW9ucy5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_5__.BackBtnComponent, _shared_components_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_6__.AddNewBtnComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_7__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_8__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_9__.PageTitleComponent, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_14__.Dir, _angular_material_tabs__WEBPACK_IMPORTED_MODULE_15__.MatTabGroup, _angular_material_tabs__WEBPACK_IMPORTED_MODULE_15__.MatTab, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_17__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormGroupDirective, _penalty_regulations_details_penalty_regulations_details_component__WEBPACK_IMPORTED_MODULE_10__.PenaltyRegulationsDetailsComponent, _angular_common__WEBPACK_IMPORTED_MODULE_13__.TitleCasePipe, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_18__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtcGVuYWx0eS1yZWd1bGF0aW9ucy5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
@@ -427,24 +444,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "PenaltyRegulationsDetailsComponent": () => (/* binding */ PenaltyRegulationsDetailsComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_penalty_regulations_setup_mapper_violations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/penalty-regulations-setup/mapper/violations */ 24174);
-/* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
-/* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
-/* harmony import */ var ngx_custom_validators__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-custom-validators */ 79512);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_penalty_regulations_setup_services_penalty_regulations_details_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/penalty-regulations-setup/services/penalty-regulations-details.service */ 82062);
-/* harmony import */ var app_penalty_regulations_setup_services_violations_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/penalty-regulations-setup/services/violations.service */ 18610);
-/* harmony import */ var app_penalty_regulations_setup_services_penalties_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/penalty-regulations-setup/services/penalties.service */ 92645);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/dynamic-form-field/input/input.component */ 45471);
-/* harmony import */ var _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/material-table/material-table.component */ 56184);
-/* harmony import */ var _shared_components_dynamic_form_field_prime_ng_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/dynamic-form-field/prime-ng/dropdown/dropdown.component */ 7384);
-/* harmony import */ var _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/buttons/reset-form-btn/reset-form-btn.component */ 22289);
-/* harmony import */ var _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../shared/components/buttons/submit-btn/submit-btn.component */ 53026);
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/divider */ 71528);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/forms */ 2508);
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/table */ 85288);
+/* harmony import */ var app_penalty_regulations_setup_mapper_penalty_regulation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/penalty-regulations-setup/mapper/penalty-regulation */ 22173);
+/* harmony import */ var app_penalty_regulations_setup_mapper_violations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/penalty-regulations-setup/mapper/violations */ 24174);
+/* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
+/* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
+/* harmony import */ var ngx_custom_validators__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ngx-custom-validators */ 79512);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var app_penalty_regulations_setup_services_penalty_regulations_details_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/penalty-regulations-setup/services/penalty-regulations-details.service */ 82062);
+/* harmony import */ var app_penalty_regulations_setup_services_violations_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/penalty-regulations-setup/services/violations.service */ 18610);
+/* harmony import */ var app_penalty_regulations_setup_services_penalties_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/penalty-regulations-setup/services/penalties.service */ 92645);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common */ 94666);
+/* harmony import */ var _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/dynamic-form-field/input/input.component */ 45471);
+/* harmony import */ var _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/material-table/material-table.component */ 56184);
+/* harmony import */ var _shared_components_dynamic_form_field_prime_ng_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/dynamic-form-field/prime-ng/dropdown/dropdown.component */ 7384);
+/* harmony import */ var _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../shared/components/buttons/reset-form-btn/reset-form-btn.component */ 22289);
+/* harmony import */ var _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../shared/components/buttons/submit-btn/submit-btn.component */ 53026);
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/card */ 82156);
+/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/divider */ 71528);
+
 
 
 
@@ -466,26 +485,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function PenaltyRegulationsDetailsComponent_reset_form_btn_13_Template(rf, ctx) { if (rf & 1) {
-    const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](0, "reset-form-btn", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("click", function PenaltyRegulationsDetailsComponent_reset_form_btn_13_Template_reset_form_btn_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵresetView"](ctx_r2.clearForm()); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
+    const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "reset-form-btn", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵlistener"]("click", function PenaltyRegulationsDetailsComponent_reset_form_btn_13_Template_reset_form_btn_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵresetView"](ctx_r2.clearForm()); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
 } }
 function PenaltyRegulationsDetailsComponent_ng_container_14_Template(rf, ctx) { if (rf & 1) {
-    const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](1, "mat-divider");
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](2, "app-material-table", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("editRow", function PenaltyRegulationsDetailsComponent_ng_container_14_Template_app_material_table_editRow_2_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵrestoreView"](_r5); const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵresetView"](ctx_r4.penaltyRegulationToEdit($event)); })("deleteRow", function PenaltyRegulationsDetailsComponent_ng_container_14_Template_app_material_table_deleteRow_2_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵrestoreView"](_r5); const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵresetView"](ctx_r6.onDelete($event)); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementContainerEnd"]();
+    const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelement"](1, "mat-divider");
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](2, "app-material-table", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵlistener"]("editRow", function PenaltyRegulationsDetailsComponent_ng_container_14_Template_app_material_table_editRow_2_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵrestoreView"](_r5); const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵresetView"](ctx_r4.penaltyRegulationToEdit($event)); })("deleteRow", function PenaltyRegulationsDetailsComponent_ng_container_14_Template_app_material_table_deleteRow_2_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵrestoreView"](_r5); const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵresetView"](ctx_r6.onDelete($event)); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementContainerEnd"]();
 } if (rf & 2) {
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("isLoaded", ctx_r1.isLoaded)("dataSource", ctx_r1.dataSource)("mandatoryColomns", ctx_r1.mandatoryColomns)("optionalColomns", ctx_r1.optionalColomns)("actions", ctx_r1.rowFunctions)("showPaginator", false);
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("isLoaded", ctx_r1.isLoaded)("dataSource", ctx_r1.dataSource)("mandatoryColomns", ctx_r1.mandatoryColomns)("optionalColomns", ctx_r1.optionalColomns)("actions", ctx_r1.rowFunctions)("showPaginator", false);
 } }
 const _c0 = function (a0) { return { "hidden-field": a0 }; };
-class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__.AppHelpers {
+class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_3__.AppHelpers {
     constructor(penaltyRegulationsDetailsService, violationsService, penaltiesService) {
         super();
         this.penaltyRegulationsDetailsService = penaltyRegulationsDetailsService;
@@ -507,12 +526,12 @@ class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helper
         //   if (this.penaltyRegulationId > 0) this.getAll();
         // }
         this.form = this.fb.group({
-            violation_ID: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_12__.Validators.required]],
+            violation_ID: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_13__.Validators.required]],
             repetition_No: [
                 null,
-                [_angular_forms__WEBPACK_IMPORTED_MODULE_12__.Validators.required, ngx_custom_validators__WEBPACK_IMPORTED_MODULE_13__.CustomValidators.digits, ngx_custom_validators__WEBPACK_IMPORTED_MODULE_13__.CustomValidators.gte(0)],
+                [_angular_forms__WEBPACK_IMPORTED_MODULE_13__.Validators.required, ngx_custom_validators__WEBPACK_IMPORTED_MODULE_14__.CustomValidators.digits, ngx_custom_validators__WEBPACK_IMPORTED_MODULE_14__.CustomValidators.gte(0)],
             ],
-            penalty_ID: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_12__.Validators.required]],
+            penalty_ID: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_13__.Validators.required]],
         });
     }
     ngOnChanges(changes) {
@@ -520,7 +539,7 @@ class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helper
     }
     onChangeBusinessAndCompanyId() {
         if (this.dataSource?.data?.length > 0)
-            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_14__.MatTableDataSource(null);
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_15__.MatTableDataSource(null);
         if (this.checkNoBusinessOrCompany()) {
             this.getAllViolations();
             this.getAllPenalties();
@@ -534,13 +553,10 @@ class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helper
     getAll() {
         this.penaltyRegulationsDetailsService
             .getAllByPenaltyRegulationId(this.penaltyRegulationId)
+            .pipe(this.cancelRequest())
             .subscribe((res) => {
-            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
-                res.data.map((ele) => {
-                    ele.violation = this.msgTranslate(ele.att_Violation?.ar_Name, ele.att_Violation?.en_Name);
-                    ele.penalty = this.msgTranslate(ele.att_Penalty?.name);
-                });
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_14__.MatTableDataSource(res.data);
+            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success) {
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_15__.MatTableDataSource((0,app_penalty_regulations_setup_mapper_penalty_regulation__WEBPACK_IMPORTED_MODULE_0__.penaltyRegulationDetailsToMap)(res.data));
                 this.isLoaded = true;
             }
             else
@@ -572,7 +588,7 @@ class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helper
         this.penaltyRegulationsDetailsService
             .create(model)
             .subscribe((res) => {
-            if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
+            if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success) {
                 this.clearForm();
                 this.addSuccessfullyMsg(res?.message?.messageTypeName);
                 this.getAll();
@@ -596,7 +612,7 @@ class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helper
         this.penaltyRegulationsDetailsService
             .update(editModel)
             .subscribe((res) => {
-            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
+            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success) {
                 this.clearForm();
                 this.updateSuccessfullyMsg(res?.message?.messageTypeName);
                 this.getAll();
@@ -621,7 +637,7 @@ class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helper
         };
         this.showLoading();
         this.penaltyRegulationsDetailsService.Delete(params).subscribe((res) => {
-            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
+            if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success) {
                 this.deleteSuccessfullyMsg(res?.message?.messageTypeName);
                 this.getAll();
                 if (penaltyRegulationDetails.penalty_Regulation_ID ==
@@ -648,8 +664,8 @@ class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helper
         this.violationsService
             .getAll()
             .subscribe((res) => {
-            if ((res.message.messageType = app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success)) {
-                this.violationsList = (0,app_penalty_regulations_setup_mapper_violations__WEBPACK_IMPORTED_MODULE_0__.violationToMap)(res.data);
+            if ((res.message.messageType = app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success)) {
+                this.violationsList = (0,app_penalty_regulations_setup_mapper_violations__WEBPACK_IMPORTED_MODULE_1__.violationToMap)(res.data);
             }
             else
                 this.errorList(res.message.messages);
@@ -659,7 +675,7 @@ class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helper
     getAllPenalties() {
         this.showLoading();
         this.penaltiesService.getAll().subscribe((res) => {
-            if ((res.message.messageType = app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success)) {
+            if ((res.message.messageType = app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_2__.MessageTypes.Success)) {
                 this.penaltiesList = res.data;
             }
             else
@@ -674,50 +690,50 @@ class PenaltyRegulationsDetailsComponent extends app_shared_resources_app_helper
             this.formCtrls.penalty_ID.clearValidators();
         }
         else {
-            this.formCtrls.repetition_No.setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_12__.Validators.required, ngx_custom_validators__WEBPACK_IMPORTED_MODULE_13__.CustomValidators.gte(0)]);
-            this.formCtrls.penalty_ID.setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_12__.Validators.required]);
+            this.formCtrls.repetition_No.setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_13__.Validators.required, ngx_custom_validators__WEBPACK_IMPORTED_MODULE_14__.CustomValidators.gte(0)]);
+            this.formCtrls.penalty_ID.setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_13__.Validators.required]);
         }
         this.formCtrls.repetition_No.updateValueAndValidity();
         this.formCtrls.penalty_ID.updateValueAndValidity();
     }
 }
-PenaltyRegulationsDetailsComponent.ɵfac = function PenaltyRegulationsDetailsComponent_Factory(t) { return new (t || PenaltyRegulationsDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_penalty_regulations_details_service__WEBPACK_IMPORTED_MODULE_3__.PenaltyRegulationsDetailsService), _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_violations_service__WEBPACK_IMPORTED_MODULE_4__.ViolationsService), _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_penalties_service__WEBPACK_IMPORTED_MODULE_5__.PenaltiesService)); };
-PenaltyRegulationsDetailsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineComponent"]({ type: PenaltyRegulationsDetailsComponent, selectors: [["app-penalty-regulations-details"]], inputs: { penaltyRegulationId: "penaltyRegulationId" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵInheritDefinitionFeature"], _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵNgOnChangesFeature"]], decls: 15, vars: 21, consts: [[1, "container-fluid", "mb-0"], [1, "row"], [1, "col-12"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "violation", "appendTo", "body", 3, "control", "List", "submitted", "filter", "change"], [1, "col-md-6", "col-12", 3, "ngClass"], ["label", "repetition_No", "type", "number", 3, "control", "submitted"], ["label", "penalty", "appendTo", "body", 3, "control", "List", "submitted", "filter"], ["align", "end"], [3, "id", "disabled", "onClick"], [3, "click", 4, "ngIf"], [4, "ngIf"], [3, "click"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "actions", "showPaginator", "editRow", "deleteRow"]], template: function PenaltyRegulationsDetailsComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](0, "mat-card-content", 0)(1, "div", 1)(2, "div", 2)(3, "form", 3)(4, "div", 1)(5, "div", 4)(6, "app-prime-dropdown", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("change", function PenaltyRegulationsDetailsComponent_Template_app_prime_dropdown_change_6_listener($event) { return ctx.onChangeViolation($event); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](7, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](8, "app-input", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](9, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](10, "app-prime-dropdown", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]()()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](11, "mat-card-actions", 9)(12, "submit-btn", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("onClick", function PenaltyRegulationsDetailsComponent_Template_submit_btn_onClick_12_listener() { return ctx.submit(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵtemplate"](13, PenaltyRegulationsDetailsComponent_reset_form_btn_13_Template, 1, 0, "reset-form-btn", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵtemplate"](14, PenaltyRegulationsDetailsComponent_ng_container_14_Template, 3, 6, "ng-container", 12);
+PenaltyRegulationsDetailsComponent.ɵfac = function PenaltyRegulationsDetailsComponent_Factory(t) { return new (t || PenaltyRegulationsDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_penalty_regulations_details_service__WEBPACK_IMPORTED_MODULE_4__.PenaltyRegulationsDetailsService), _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_violations_service__WEBPACK_IMPORTED_MODULE_5__.ViolationsService), _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_penalties_service__WEBPACK_IMPORTED_MODULE_6__.PenaltiesService)); };
+PenaltyRegulationsDetailsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdefineComponent"]({ type: PenaltyRegulationsDetailsComponent, selectors: [["app-penalty-regulations-details"]], inputs: { penaltyRegulationId: "penaltyRegulationId" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵInheritDefinitionFeature"], _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵNgOnChangesFeature"]], decls: 15, vars: 21, consts: [[1, "container-fluid", "mb-0"], [1, "row"], [1, "col-12"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "violation", "appendTo", "body", 3, "control", "List", "submitted", "filter", "change"], [1, "col-md-6", "col-12", 3, "ngClass"], ["label", "repetition_No", "type", "number", 3, "control", "submitted"], ["label", "penalty", "appendTo", "body", 3, "control", "List", "submitted", "filter"], ["align", "end"], [3, "id", "disabled", "onClick"], [3, "click", 4, "ngIf"], [4, "ngIf"], [3, "click"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "actions", "showPaginator", "editRow", "deleteRow"]], template: function PenaltyRegulationsDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "mat-card-content", 0)(1, "div", 1)(2, "div", 2)(3, "form", 3)(4, "div", 1)(5, "div", 4)(6, "app-prime-dropdown", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵlistener"]("change", function PenaltyRegulationsDetailsComponent_Template_app_prime_dropdown_change_6_listener($event) { return ctx.onChangeViolation($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](7, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelement"](8, "app-input", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](9, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelement"](10, "app-prime-dropdown", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]()()()()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](11, "mat-card-actions", 9)(12, "submit-btn", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵlistener"]("onClick", function PenaltyRegulationsDetailsComponent_Template_submit_btn_onClick_12_listener() { return ctx.submit(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](13, PenaltyRegulationsDetailsComponent_reset_form_btn_13_Template, 1, 0, "reset-form-btn", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](14, PenaltyRegulationsDetailsComponent_ng_container_14_Template, 3, 6, "ng-container", 12);
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("formGroup", ctx.form);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("control", ctx.formCtrls.violation_ID)("List", ctx.violationsList)("submitted", ctx.submitted)("filter", true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpureFunction1"](17, _c0, ctx.selectedViolation == null ? null : ctx.selectedViolation.ismoney));
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("control", ctx.formCtrls.repetition_No)("submitted", ctx.submitted);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpureFunction1"](19, _c0, ctx.selectedViolation == null ? null : ctx.selectedViolation.ismoney));
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("control", ctx.formCtrls.penalty_ID)("List", ctx.penaltiesList)("submitted", ctx.submitted)("filter", true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("id", ctx.selectedPenaltyRegulationDetails ? 1 : 0)("disabled", !ctx.penaltyRegulationId);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("ngIf", ctx.selectedPenaltyRegulationDetails);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("ngIf", ctx.penaltyRegulationId);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_15__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_15__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_6__.InputComponent, _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_7__.MaterialTableComponent, _shared_components_dynamic_form_field_prime_ng_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_8__.DropdownComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_9__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_10__.SubmitBtnComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_17__.MatDivider, _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZW5hbHR5LXJlZ3VsYXRpb25zLWRldGFpbHMuY29tcG9uZW50LnNjc3MifQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("formGroup", ctx.form);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("control", ctx.formCtrls.violation_ID)("List", ctx.violationsList)("submitted", ctx.submitted)("filter", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpureFunction1"](17, _c0, ctx.selectedViolation == null ? null : ctx.selectedViolation.ismoney));
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("control", ctx.formCtrls.repetition_No)("submitted", ctx.submitted);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpureFunction1"](19, _c0, ctx.selectedViolation == null ? null : ctx.selectedViolation.ismoney));
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("control", ctx.formCtrls.penalty_ID)("List", ctx.penaltiesList)("submitted", ctx.submitted)("filter", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("id", ctx.selectedPenaltyRegulationDetails ? 1 : 0)("disabled", !ctx.penaltyRegulationId);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx.selectedPenaltyRegulationDetails);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx.penaltyRegulationId);
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_16__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_16__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_7__.InputComponent, _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_8__.MaterialTableComponent, _shared_components_dynamic_form_field_prime_ng_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.DropdownComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_10__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_11__.SubmitBtnComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_18__.MatDivider, _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_13__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZW5hbHR5LXJlZ3VsYXRpb25zLWRldGFpbHMuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
@@ -780,6 +796,7 @@ class PenaltyRegulationsIndexComponent extends app_shared_resources_app_helpers_
         };
         this.penaltyRegulationsService
             .getList(params)
+            .pipe(this.cancelRequest())
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 if (res.data.length == 0 && page > 1) {
@@ -925,6 +942,7 @@ class ViolationTypesComponent extends app_shared_resources_app_helpers__WEBPACK_
         };
         this.violationTypesService
             .getList(params)
+            .pipe(this.cancelRequest())
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_11__.MatTableDataSource(res.data);
@@ -1458,14 +1476,22 @@ class ViolationsIndexComponent extends app_shared_resources_app_helpers__WEBPACK
             PageNumber: page,
             pageSize: this.page.pageSize,
         };
-        this.violationsService.getList(params).subscribe((res) => {
+        this.violationsService
+            .getList(params)
+            .pipe(this.cancelRequest())
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
                 if (res.data.length == 0 && page > 1) {
                     this.getList(this.prevPage);
                     return;
                 }
-                let result = (0,app_penalty_regulations_setup_mapper_violations__WEBPACK_IMPORTED_MODULE_0__.violationToMap)(res.data);
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource(result);
+                res.data.map((violation) => {
+                    violation.att_Violation.moneyOrPenalty = violation.att_Violation
+                        .ismoney
+                        ? this.translate("money")
+                        : this.translate("penalty");
+                });
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource((0,app_penalty_regulations_setup_mapper_violations__WEBPACK_IMPORTED_MODULE_0__.violationToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -1520,6 +1546,31 @@ ViolationsIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_M
 
 /***/ }),
 
+/***/ 22173:
+/*!************************************************************************!*\
+  !*** ./src/app/penalty-regulations-setup/mapper/penalty-regulation.ts ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "penaltyRegulationDetailsToMap": () => (/* binding */ penaltyRegulationDetailsToMap)
+/* harmony export */ });
+/* harmony import */ var app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/resources/helpers-functions */ 35478);
+
+function penaltyRegulationDetailsToMap(penaltyRegulationDetails) {
+    return penaltyRegulationDetails.map((penaltyRegulationDetail) => {
+        return {
+            ...penaltyRegulationDetail,
+            violation: (0,app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__.msgTranslate)(penaltyRegulationDetail.att_Violation?.ar_Name, penaltyRegulationDetail.att_Violation?.en_Name),
+            penalty: penaltyRegulationDetail.att_Penalty?.name,
+        };
+    });
+}
+
+
+/***/ }),
+
 /***/ 24174:
 /*!****************************************************************!*\
   !*** ./src/app/penalty-regulations-setup/mapper/violations.ts ***!
@@ -1535,11 +1586,8 @@ function violationToMap(violations) {
         return {
             ...violation.att_Violation,
             variableCode: violation.paY_Variable.code,
-            // moneyOrPenalty: violation.att_Violation.ismoney
-            //   ? translate("money")
-            //   : translate("penalty"),
-            violationType: violation.att_Violation.att_Violation_Type.name,
-            typeName: violation.att_Violation.att_Type.en_Name,
+            violationType: violation.att_Violation.att_Violation_Type?.name,
+            typeName: violation.att_Violation.att_Type?.en_Name,
             display_In_Result: violation.paY_Variable.display_In_Result,
         };
     });

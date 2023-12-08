@@ -84,7 +84,10 @@ class UnitComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTED_M
             PageNumber: page,
             pageSize: this.page.pageSize,
         };
-        this.unitService.getList(params).subscribe((res) => {
+        this.unitService
+            .getList(params)
+            .pipe(this.cancelRequest())
+            .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__.MessageTypes.Success) {
                 this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_11__.MatTableDataSource(res.data);
                 this.isLoaded = true;
