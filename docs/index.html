@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>HRMS Mashura</title>
+		<base href="/"/>
+		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+		<meta content="hrms" name="description"/>
+		<meta content="www.hrms.com" name="author"/>
+		<meta property="og:title" content="HRMS - Home"/>
+		<meta property="og:description" content="Welcome to HRMS. Learn about HRMS best practices, tutorials, and more."/>
+		<meta property="og:image" content="http://localhost:4200/assets/img/logo/logo.png"/>
+		<meta property="og:url" content="http://localhost:4200/"/>
+
+		<!-- Twitter Card Meta Data -->
+		<meta content="www.hrms.com" name="twitter:card"/>
+		<meta content="www.hrms.com" name="twitter:site"/>
+		<meta content="www.hrms.com" name="twitter:creator"/>
+		<meta content="hrms" name="twitter:title"/>
+		<meta content="hrms" name="twitter:description"/>
+
+		<link href="assets/fonts/feather/style.min.css" rel="stylesheet"/>
+		<!-- <link href="assets/fonts/simple-line-icons/style.css" rel="stylesheet" /> -->
+		<!-- <link href="assets/fonts/weathericons/css/weather-icons.css" rel="stylesheet" />
+		<link href="assets/fonts/weathericons/css/weather-icons-wind.css" rel="stylesheet" /> -->
+		<!-- <link
+			href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|Montserrat:300,400,500,600,700,800,900"
+			rel="stylesheet"
+			type="text/css"
+		/> -->
+		<!-- <link rel="stylesheet" href="assets/vendor/pace/themes/black/pace-theme-flash.css" /> -->
+		<!-- <link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/> -->
+		<style type="text/css">
+			.pace .pace-activity {
+				top: 19px;
+				right: 19px;
+				display: none;
+			}
+
+			.page-loading {
+				position: fixed;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				overflow: hidden;
+				background: rgba(51, 51, 51, 1);
+				opacity: 0;
+				transition: opacity 1s ease-in-out;
+				z-index: -1;
+			}
+
+			.loading-icon {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 38px;
+				height: 38px;
+				margin-left: -19px;
+				margin-top: -19px;
+			}
+
+			app-root:empty ~ .page-loading {
+				opacity: 1;
+				z-index: 1;
+			}
+		</style>
+		<!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
+		<!-- <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    /> -->
+		<!-- <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    /> -->
+	<link rel="stylesheet" href="styles.css"></head>
+
+	<body class="bodyrtl vertical-layout vertical-menu 2-columns navbar-sticky layout-dark layout-transparent bg-glass-1 pace-done nav-collapsed" data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
+		<app-root></app-root>
+		<div class="page-loading">
+			<img src="assets/img/svg/oval.svg" alt="loading" class="loading-icon"/>
+		</div>
+		<!--
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script> -->
+	<script src="runtime.js" type="module"></script><script src="polyfills.js" type="module"></script><script src="scripts.js" defer></script><script src="vendor.js" type="module"></script><script src="main.js" type="module"></script></body>
+</html>

@@ -1,0 +1,85 @@
+@for $i from 1 through 50 {
+  /* ====================== margin ====================== */
+  .margin-#{$i} {
+    margin: #{$i}px !important;
+  }
+  /* ====================== margin Top ====================== */
+  .mtop-#{$i} {
+    margin-top: #{$i}px !important;
+  }
+  /* ====================== margin bottom ======================*/
+  .mbottom-#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+  /* ====================== margin Right ====================== */
+  .mright-#{$i} {
+    margin-right: #{$i}px !important;
+  }
+  /* ====================== margin Left  ======================*/
+  .mleft-#{$i} {
+    margin-left: #{$i}px !important;
+  }
+
+  /* ====================== padding ====================== */
+  .padding-#{$i} {
+    padding: #{$i}px !important;
+  }
+  /* ====================== padding Top ====================== */
+  .ptop-#{$i} {
+    padding-top: #{$i}px !important;
+  }
+  /* ====================== padding bottom ======================*/
+  .pbottom-#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+  /* ====================== padding Right ====================== */
+  .pright-#{$i} {
+    padding-right: #{$i}px !important;
+  }
+  /* ====================== padding Left  ======================*/
+  .pleft-#{$i} {
+    padding-left: #{$i}px !important;
+  }
+
+  /* ====================== font size ====================== */
+  .font-size-#{$i} {
+    font-size: #{$i}px !important;
+  }
+
+  /* ====================== border-radius ====================== */
+  .radius-#{$i} {
+    border-radius: #{$i}px !important;
+  }
+}
+
+// ====================== Buttons ======================
+
+// dark blue btn
+.btn-darkBlue {
+  color: #fff !important;
+  background-color: #374761 !important;
+  border-color: #374761 !important;
+}
+
+.btn-darkBlue:hover,
+.btn-darkBlue:active,
+.btn-darkBlue:focus {
+  color: #fff !important;
+  background-color: #576579 !important;
+  border-color: #374761 !important;
+}
+
+// lightGreen btn
+.btn-lightGreen {
+  color: #fff !important;
+  background-color: #30b79d !important;
+  border-color: #30b79d;
+  float: right;
+}
+
+.btn-lightGreen:hover,
+.btn-lightGreen:active,
+.btn-lightGreen:focus {
+  background-color: #42e1b9 !important;
+  border-color: #42e1b9 !important;
+}
