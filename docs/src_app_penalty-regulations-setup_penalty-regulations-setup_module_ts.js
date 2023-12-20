@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function PenaltiesComponent_reset_form_btn_17_Template(rf, ctx) { if (rf & 1) {
     const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "reset-form-btn", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "reset-form-btn", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("click", function PenaltiesComponent_reset_form_btn_17_Template_reset_form_btn_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵrestoreView"](_r2); const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵresetView"](ctx_r1.clearForm()); });
     _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 } }
@@ -185,24 +185,24 @@ class PenaltiesComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
     }
 }
 PenaltiesComponent.ɵfac = function PenaltiesComponent_Factory(t) { return new (t || PenaltiesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_penalties_service__WEBPACK_IMPORTED_MODULE_3__.PenaltiesService)); };
-PenaltiesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: PenaltiesComponent, selectors: [["app-penalties"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵInheritDefinitionFeature"]], decls: 20, vars: 14, consts: [[1, "row"], [1, "col-12"], ["addTitle", "penalties", "editTitle", "editPenalty", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["type", "number", "label", "penalty_Value", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "actions", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function PenaltiesComponent_Template(rf, ctx) { if (rf & 1) {
+PenaltiesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: PenaltiesComponent, selectors: [["app-penalties"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵInheritDefinitionFeature"]], decls: 20, vars: 15, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "penalties", "editTitle", "editPenalty", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["type", "number", "label", "penalty_Value", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function PenaltiesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](5, "page-title", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](6, "mat-card-content", 3)(7, "div", 0)(8, "div", 1)(9, "form", 4)(10, "div", 0)(11, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](12, "app-input", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](6, "mat-card-content", 4)(7, "div", 0)(8, "div", 1)(9, "form", 5)(10, "div", 0)(11, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](12, "app-input", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](13, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](14, "app-input", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](13, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](14, "app-input", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]()()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](15, "mat-card-actions", 8)(16, "submit-btn", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](15, "mat-card-actions", 9)(16, "submit-btn", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("onClick", function PenaltiesComponent_Template_submit_btn_onClick_16_listener() { return ctx.submit(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](17, PenaltiesComponent_reset_form_btn_17_Template, 1, 0, "reset-form-btn", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](17, PenaltiesComponent_reset_form_btn_17_Template, 1, 0, "reset-form-btn", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](18, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](19, "app-material-table", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](19, "app-material-table", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("onChangePage", function PenaltiesComponent_Template_app_material_table_onChangePage_19_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("editRow", function PenaltiesComponent_Template_app_material_table_editRow_19_listener($event) { return ctx.penaltyToEdit($event); })("deleteRow", function PenaltiesComponent_Template_app_material_table_deleteRow_19_listener($event) { return ctx.onDelete($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
@@ -219,8 +219,8 @@ PenaltiesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_15__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_16__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZW5hbHRpZXMuY29tcG9uZW50LnNjc3MifQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.penaltiesService)("actions", ctx.rowFunctions);
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_15__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_16__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZW5hbHRpZXMuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
@@ -275,7 +275,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function AddPenaltyRegulationsComponent_app_add_new_btn_6_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](0, "app-add-new-btn", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](0, "app-add-new-btn", 5);
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpropertyInterpolate1"]("url", "/penalty-regulations-setup/", ctx_r0.moduleId, "/penalty-regulations/add");
@@ -283,7 +283,7 @@ function AddPenaltyRegulationsComponent_app_add_new_btn_6_Template(rf, ctx) { if
 } }
 function AddPenaltyRegulationsComponent_reset_form_btn_21_Template(rf, ctx) { if (rf & 1) {
     const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](0, "reset-form-btn", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](0, "reset-form-btn", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("click", function AddPenaltyRegulationsComponent_reset_form_btn_21_Template_reset_form_btn_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵresetView"](ctx_r2.clearForm()); });
     _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
 } }
@@ -382,28 +382,28 @@ class AddPenaltyRegulationsComponent extends app_shared_resources_app_helpers__W
     }
 }
 AddPenaltyRegulationsComponent.ɵfac = function AddPenaltyRegulationsComponent_Factory(t) { return new (t || AddPenaltyRegulationsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_penalty_regulations_service__WEBPACK_IMPORTED_MODULE_3__.PenaltyRegulationsService)); };
-AddPenaltyRegulationsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineComponent"]({ type: AddPenaltyRegulationsComponent, selectors: [["app-add-penalty-regulations"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵInheritDefinitionFeature"]], decls: 26, vars: 21, consts: [[1, "row"], [1, "col-12"], ["addTitle", "penaltyRegulations", "editTitle", "editPenaltyRegulation", 3, "id"], [3, "url", "params", 4, "ngIf"], [3, "url", "params"], [1, "col-12", "w-100", 3, "dir"], [3, "label"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "penaltyRegulationId"], [3, "click"]], template: function AddPenaltyRegulationsComponent_Template(rf, ctx) { if (rf & 1) {
+AddPenaltyRegulationsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineComponent"]({ type: AddPenaltyRegulationsComponent, selectors: [["app-add-penalty-regulations"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵInheritDefinitionFeature"]], decls: 26, vars: 21, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "penaltyRegulations", "editTitle", "editPenaltyRegulation", 3, "id"], [3, "url", "params", 4, "ngIf"], [3, "url", "params"], [1, "col-12", "w-100", 3, "dir"], [3, "label"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "penaltyRegulationId"], [3, "click"]], template: function AddPenaltyRegulationsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](5, "page-title", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵtemplate"](6, AddPenaltyRegulationsComponent_app_add_new_btn_6_Template, 1, 2, "app-add-new-btn", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](7, "app-back-btn", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](5, "page-title", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵtemplate"](6, AddPenaltyRegulationsComponent_app_add_new_btn_6_Template, 1, 2, "app-add-new-btn", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](7, "app-back-btn", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](8, "mat-tab-group", 5)(9, "mat-tab", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](8, "mat-tab-group", 6)(9, "mat-tab", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipe"](10, "titlecase");
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipe"](11, "translate");
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](12, "mat-card-content", 7)(13, "div", 0)(14, "div", 1)(15, "form", 8)(16, "div", 0)(17, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](18, "app-input", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](12, "mat-card-content", 8)(13, "div", 0)(14, "div", 1)(15, "form", 9)(16, "div", 0)(17, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](18, "app-input", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]()()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](19, "mat-card-actions", 11)(20, "submit-btn", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](19, "mat-card-actions", 12)(20, "submit-btn", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵlistener"]("onClick", function AddPenaltyRegulationsComponent_Template_submit_btn_onClick_20_listener() { return ctx.submit(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵtemplate"](21, AddPenaltyRegulationsComponent_reset_form_btn_21_Template, 1, 0, "reset-form-btn", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵtemplate"](21, AddPenaltyRegulationsComponent_reset_form_btn_21_Template, 1, 0, "reset-form-btn", 14);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](22, "mat-tab", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](22, "mat-tab", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipe"](23, "titlecase");
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipe"](24, "translate");
-        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](25, "app-penalty-regulations-details", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](25, "app-penalty-regulations-details", 15);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementEnd"]()()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](5);
@@ -429,7 +429,7 @@ AddPenaltyRegulationsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPO
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpropertyInterpolate"]("label", _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](23, 17, _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](24, 19, "penaltyRegulationDetails")));
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("penaltyRegulationId", ctx.penaltyRegulationId);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_5__.BackBtnComponent, _shared_components_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_6__.AddNewBtnComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_7__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_8__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_9__.PageTitleComponent, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_14__.Dir, _angular_material_tabs__WEBPACK_IMPORTED_MODULE_15__.MatTabGroup, _angular_material_tabs__WEBPACK_IMPORTED_MODULE_15__.MatTab, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_17__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormGroupDirective, _penalty_regulations_details_penalty_regulations_details_component__WEBPACK_IMPORTED_MODULE_10__.PenaltyRegulationsDetailsComponent, _angular_common__WEBPACK_IMPORTED_MODULE_13__.TitleCasePipe, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_18__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtcGVuYWx0eS1yZWd1bGF0aW9ucy5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_5__.BackBtnComponent, _shared_components_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_6__.AddNewBtnComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_7__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_8__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_9__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__.NgControlStatusGroup, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_14__.Dir, _angular_material_tabs__WEBPACK_IMPORTED_MODULE_15__.MatTabGroup, _angular_material_tabs__WEBPACK_IMPORTED_MODULE_15__.MatTab, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_17__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormGroupDirective, _penalty_regulations_details_penalty_regulations_details_component__WEBPACK_IMPORTED_MODULE_10__.PenaltyRegulationsDetailsComponent, _angular_common__WEBPACK_IMPORTED_MODULE_13__.TitleCasePipe, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_18__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtcGVuYWx0eS1yZWd1bGF0aW9ucy5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
@@ -733,7 +733,7 @@ PenaltyRegulationsDetailsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx.selectedPenaltyRegulationDetails);
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx.penaltyRegulationId);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_16__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_16__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_7__.InputComponent, _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_8__.MaterialTableComponent, _shared_components_dynamic_form_field_prime_ng_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.DropdownComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_10__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_11__.SubmitBtnComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_18__.MatDivider, _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_13__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZW5hbHR5LXJlZ3VsYXRpb25zLWRldGFpbHMuY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_16__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_16__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_7__.InputComponent, _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_8__.MaterialTableComponent, _shared_components_dynamic_form_field_prime_ng_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.DropdownComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_10__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_11__.SubmitBtnComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_18__.MatDivider, _angular_forms__WEBPACK_IMPORTED_MODULE_13__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZW5hbHR5LXJlZ3VsYXRpb25zLWRldGFpbHMuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
@@ -839,7 +839,7 @@ class PenaltyRegulationsIndexComponent extends app_shared_resources_app_helpers_
     }
 }
 PenaltyRegulationsIndexComponent.ɵfac = function PenaltyRegulationsIndexComponent_Factory(t) { return new (t || PenaltyRegulationsIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_penalty_regulations_service__WEBPACK_IMPORTED_MODULE_2__.PenaltyRegulationsService)); };
-PenaltyRegulationsIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: PenaltyRegulationsIndexComponent, selectors: [["app-penalty-regulations-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 7, consts: [[1, "row"], [1, "col-12"], ["title", "penaltyRegulations", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "actions", "onChangePage", "deleteRow"]], template: function PenaltyRegulationsIndexComponent_Template(rf, ctx) { if (rf & 1) {
+PenaltyRegulationsIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: PenaltyRegulationsIndexComponent, selectors: [["app-penalty-regulations-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 8, consts: [[1, "row"], [1, "col-12"], ["title", "penaltyRegulations", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function PenaltyRegulationsIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](5, "page-title", 2);
@@ -852,7 +852,7 @@ PenaltyRegulationsIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IM
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.penaltyRegulationsService)("actions", ctx.rowFunctions);
     } }, dependencies: [_shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, _angular_material_divider__WEBPACK_IMPORTED_MODULE_8__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZW5hbHR5LXJlZ3VsYXRpb25zLWluZGV4LmNvbXBvbmVudC5zY3NzIn0= */"] });
 
 
@@ -903,7 +903,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function ViolationTypesComponent_reset_form_btn_15_Template(rf, ctx) { if (rf & 1) {
     const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "reset-form-btn", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "reset-form-btn", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("click", function ViolationTypesComponent_reset_form_btn_15_Template_reset_form_btn_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵrestoreView"](_r2); const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵresetView"](ctx_r1.clearForm()); });
     _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 } }
@@ -1028,21 +1028,21 @@ class ViolationTypesComponent extends app_shared_resources_app_helpers__WEBPACK_
     }
 }
 ViolationTypesComponent.ɵfac = function ViolationTypesComponent_Factory(t) { return new (t || ViolationTypesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_violation_types_service__WEBPACK_IMPORTED_MODULE_3__.ViolationTypesService)); };
-ViolationTypesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: ViolationTypesComponent, selectors: [["app-violation-types"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵInheritDefinitionFeature"]], decls: 18, vars: 12, consts: [[1, "row"], [1, "col-12"], ["addTitle", "violationTypes", "editTitle", "editViolationType", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "actions", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function ViolationTypesComponent_Template(rf, ctx) { if (rf & 1) {
+ViolationTypesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: ViolationTypesComponent, selectors: [["app-violation-types"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵInheritDefinitionFeature"]], decls: 18, vars: 13, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "violationTypes", "editTitle", "editViolationType", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function ViolationTypesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](5, "page-title", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](6, "mat-card-content", 3)(7, "div", 0)(8, "div", 1)(9, "form", 4)(10, "div", 0)(11, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](12, "app-input", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](6, "mat-card-content", 4)(7, "div", 0)(8, "div", 1)(9, "form", 5)(10, "div", 0)(11, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](12, "app-input", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]()()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](13, "mat-card-actions", 7)(14, "submit-btn", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](13, "mat-card-actions", 8)(14, "submit-btn", 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("onClick", function ViolationTypesComponent_Template_submit_btn_onClick_14_listener() { return ctx.submit(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](15, ViolationTypesComponent_reset_form_btn_15_Template, 1, 0, "reset-form-btn", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](15, ViolationTypesComponent_reset_form_btn_15_Template, 1, 0, "reset-form-btn", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](16, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](17, "app-material-table", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](17, "app-material-table", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("onChangePage", function ViolationTypesComponent_Template_app_material_table_onChangePage_17_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("editRow", function ViolationTypesComponent_Template_app_material_table_editRow_17_listener($event) { return ctx.violationTypeToEdit($event); })("deleteRow", function ViolationTypesComponent_Template_app_material_table_deleteRow_17_listener($event) { return ctx.onDelete($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
@@ -1057,8 +1057,8 @@ ViolationTypesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MO
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aW9sYXRpb24tdHlwZXMuY29tcG9uZW50LnNjc3MifQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.violationTypesService)("actions", ctx.rowFunctions);
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aW9sYXRpb24tdHlwZXMuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
@@ -1119,7 +1119,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function AddViolationComponent_app_add_new_btn_6_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](0, "app-add-new-btn", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](0, "app-add-new-btn", 5);
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵpropertyInterpolate1"]("url", "/penalty-regulations-setup/", ctx_r0.moduleId, "/violations/add");
@@ -1127,7 +1127,7 @@ function AddViolationComponent_app_add_new_btn_6_Template(rf, ctx) { if (rf & 1)
 } }
 function AddViolationComponent_reset_form_btn_37_Template(rf, ctx) { if (rf & 1) {
     const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](0, "reset-form-btn", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](0, "reset-form-btn", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵlistener"]("click", function AddViolationComponent_reset_form_btn_37_Template_reset_form_btn_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵnextContext"](); return _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵresetView"](ctx_r2.clearForm()); });
     _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
 } }
@@ -1322,50 +1322,50 @@ class AddViolationComponent extends app_shared_resources_app_helpers__WEBPACK_IM
     }
 }
 AddViolationComponent.ɵfac = function AddViolationComponent_Factory(t) { return new (t || AddViolationComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_violations_service__WEBPACK_IMPORTED_MODULE_5__.ViolationsService), _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_violation_types_service__WEBPACK_IMPORTED_MODULE_6__.ViolationTypesService)); };
-AddViolationComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineComponent"]({ type: AddViolationComponent, selectors: [["app-add-violation"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵInheritDefinitionFeature"]], decls: 38, vars: 30, consts: [[1, "row"], [1, "col-12"], ["addTitle", "violations", "editTitle", "editViolation", 3, "id"], [3, "url", "params", 4, "ngIf"], [3, "url", "params"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "en_Name", 3, "control", "submitted"], ["label", "ar_Name", 3, "control", "submitted"], ["label", "variableCode", 3, "control", "submitted"], [1, "col-md-6", "col-12", "mtop-14"], ["label", "display_In_Result", 3, "control"], [1, "col-md-4", "col-12"], ["type", "number", "label", "renew_Month", 3, "control", "submitted"], ["type", "number", "label", "fromValue", 3, "control", "submitted"], ["type", "number", "label", "toValue", 3, "control", "submitted"], ["label", "violationType", 3, "control", "submitted", "List"], ["label", "typeName", 3, "control", "submitted", "List"], ["label", "renew_By_Period", 3, "control"], [3, "radioList", "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "click"]], template: function AddViolationComponent_Template(rf, ctx) { if (rf & 1) {
+AddViolationComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineComponent"]({ type: AddViolationComponent, selectors: [["app-add-violation"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵInheritDefinitionFeature"]], decls: 38, vars: 30, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "violations", "editTitle", "editViolation", 3, "id"], [3, "url", "params", 4, "ngIf"], [3, "url", "params"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "en_Name", 3, "control", "submitted"], ["label", "ar_Name", 3, "control", "submitted"], ["label", "variableCode", 3, "control", "submitted"], [1, "col-md-6", "col-12", "mtop-14"], ["label", "display_In_Result", 3, "control"], [1, "col-md-4", "col-12"], ["type", "number", "label", "renew_Month", 3, "control", "submitted"], ["type", "number", "label", "fromValue", 3, "control", "submitted"], ["type", "number", "label", "toValue", 3, "control", "submitted"], ["label", "violationType", 3, "control", "submitted", "List"], ["label", "typeName", 3, "control", "submitted", "List"], ["label", "renew_By_Period", 3, "control"], [3, "radioList", "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "click"]], template: function AddViolationComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](5, "page-title", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵtemplate"](6, AddViolationComponent_app_add_new_btn_6_Template, 1, 2, "app-add-new-btn", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](7, "app-back-btn", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](5, "page-title", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵtemplate"](6, AddViolationComponent_app_add_new_btn_6_Template, 1, 2, "app-add-new-btn", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](7, "app-back-btn", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](8, "mat-card-content", 5)(9, "div", 0)(10, "div", 1)(11, "form", 6)(12, "div", 0)(13, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](14, "app-input", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](8, "mat-card-content", 6)(9, "div", 0)(10, "div", 1)(11, "form", 7)(12, "div", 0)(13, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](14, "app-input", 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](15, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](16, "app-input", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](15, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](16, "app-input", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](17, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](18, "app-input", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](17, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](18, "app-input", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](19, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](20, "app-check-box", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](19, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](20, "app-check-box", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](21, "div", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](22, "app-input", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](21, "div", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](22, "app-input", 15);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](23, "div", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](24, "app-input", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](23, "div", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](24, "app-input", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](25, "div", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](26, "app-input", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](25, "div", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](26, "app-input", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](27, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](28, "app-prime-dropdown", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](27, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](28, "app-prime-dropdown", 18);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](29, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](30, "app-prime-dropdown", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](29, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](30, "app-prime-dropdown", 19);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](31, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](32, "app-check-box", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](31, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](32, "app-check-box", 20);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](33, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](34, "app-radio-button", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](33, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelement"](34, "app-radio-button", 21);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]()()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](35, "mat-card-actions", 21)(36, "submit-btn", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](35, "mat-card-actions", 22)(36, "submit-btn", 23);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵlistener"]("onClick", function AddViolationComponent_Template_submit_btn_onClick_36_listener() { return ctx.submit(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵtemplate"](37, AddViolationComponent_reset_form_btn_37_Template, 1, 0, "reset-form-btn", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵtemplate"](37, AddViolationComponent_reset_form_btn_37_Template, 1, 0, "reset-form-btn", 24);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵadvance"](5);
@@ -1403,7 +1403,7 @@ AddViolationComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODU
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵproperty"]("id", ctx.formCtrls.id.value);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value == 0);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_19__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_7__.InputComponent, _shared_components_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_8__.RadioButtonComponent, _shared_components_dynamic_form_field_prime_ng_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.DropdownComponent, _shared_components_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_10__.CheckBoxComponent, _shared_components_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_11__.BackBtnComponent, _shared_components_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_12__.AddNewBtnComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_13__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_14__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_15__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_20__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_20__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_20__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_20__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_21__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_17__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_17__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_17__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtdmlvbGF0aW9uLmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_19__.NgIf, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_7__.InputComponent, _shared_components_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_8__.RadioButtonComponent, _shared_components_dynamic_form_field_prime_ng_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.DropdownComponent, _shared_components_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_10__.CheckBoxComponent, _shared_components_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_11__.BackBtnComponent, _shared_components_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_12__.AddNewBtnComponent, _shared_components_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_13__.ResetFormBtnComponent, _shared_components_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_14__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_15__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_17__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_17__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_20__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_20__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_20__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_20__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_21__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_17__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtdmlvbGF0aW9uLmNvbXBvbmVudC5zY3NzIn0= */"] });
 
 
 /***/ }),
@@ -1527,7 +1527,7 @@ class ViolationsIndexComponent extends app_shared_resources_app_helpers__WEBPACK
     }
 }
 ViolationsIndexComponent.ɵfac = function ViolationsIndexComponent_Factory(t) { return new (t || ViolationsIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_penalty_regulations_setup_services_violations_service__WEBPACK_IMPORTED_MODULE_3__.ViolationsService)); };
-ViolationsIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: ViolationsIndexComponent, selectors: [["app-violations-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 7, consts: [[1, "row"], [1, "col-12"], ["title", "violations", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "actions", "onChangePage", "deleteRow"]], template: function ViolationsIndexComponent_Template(rf, ctx) { if (rf & 1) {
+ViolationsIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: ViolationsIndexComponent, selectors: [["app-violations-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 8, consts: [[1, "row"], [1, "col-12"], ["title", "violations", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function ViolationsIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](5, "page-title", 2);
@@ -1540,7 +1540,7 @@ ViolationsIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_M
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.violationsService)("actions", ctx.rowFunctions);
     } }, dependencies: [_shared_components_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardTitle, _angular_material_divider__WEBPACK_IMPORTED_MODULE_9__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_10__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aW9sYXRpb25zLWluZGV4LmNvbXBvbmVudC5zY3NzIn0= */"] });
 
 
@@ -1794,6 +1794,9 @@ class PenaltiesService extends app_shared_services_app_client_service__WEBPACK_I
             params: { Id: Id },
         });
     }
+    exportExcel() {
+        this.getAll();
+    }
 }
 PenaltiesService.ɵfac = function PenaltiesService_Factory(t) { return new (t || PenaltiesService)(); };
 PenaltiesService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: PenaltiesService, factory: PenaltiesService.ɵfac, providedIn: "root" });
@@ -1888,6 +1891,9 @@ class PenaltyRegulationsService extends app_shared_services_app_client_service__
             params: { Id: Id },
         });
     }
+    exportExcel() {
+        this.getAll();
+    }
 }
 PenaltyRegulationsService.ɵfac = function PenaltyRegulationsService_Factory(t) { return new (t || PenaltyRegulationsService)(); };
 PenaltyRegulationsService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: PenaltyRegulationsService, factory: PenaltyRegulationsService.ɵfac, providedIn: "root" });
@@ -1939,6 +1945,9 @@ class ViolationTypesService extends app_shared_services_app_client_service__WEBP
         return this.delete("ViolationTypeSetup/Delete", {
             params: { Id: Id },
         });
+    }
+    exportExcel() {
+        this.getAll();
     }
 }
 ViolationTypesService.ɵfac = function ViolationTypesService_Factory(t) { return new (t || ViolationTypesService)(); };
@@ -2011,6 +2020,9 @@ class ViolationsService extends app_shared_services_app_client_service__WEBPACK_
             });
             return res;
         }));
+    }
+    exportExcel() {
+        this.getAll();
     }
 }
 ViolationsService.ɵfac = function ViolationsService_Factory(t) { return new (t || ViolationsService)(); };

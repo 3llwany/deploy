@@ -4,7 +4,8 @@ span,
 section,
 a,
 li,
-ul {
+ul,
+.table-container td.mat-cell {
   /* font-family: "Almarai-Light" !important; */
   font-family: "Almarai" !important;
 }

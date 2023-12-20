@@ -38,6 +38,9 @@ class ContractTypeService extends app_shared_services_app_client_service__WEBPAC
             params: { Id: id },
         });
     }
+    exportExcel() {
+        this.getAll();
+    }
 }
 ContractTypeService.ɵfac = function ContractTypeService_Factory(t) { return new (t || ContractTypeService)(); };
 ContractTypeService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: ContractTypeService, factory: ContractTypeService.ɵfac, providedIn: "root" });
