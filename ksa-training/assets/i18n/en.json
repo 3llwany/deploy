@@ -149,7 +149,8 @@
     "sendToSomeSuccess": "The message has been sent to some successfully",
     "maxNoOfUsers": "The max number that you can send to at the same time:",
     "mainbannerheader": "Learning that gets you",
-    "mainbannerdesc": "Skills for your present (and your future). Get started with us."
+    "mainbannerdesc": "Skills for your present (and your future). Get started with us.",
+    "changeColumns": "Select table columns"
   },
   "Material": {
     "FilesBooksEmpty": "Files & Books is empty",
@@ -199,6 +200,9 @@
     "expectedDuration": "Expected duration (no. of days)",
     "Request": "Request",
     "Hours": "Hours",
+    "hr": "hr",
+    "min": "min",
+    "Minutes": "Minutes",
     "CourseName": "Course Name",
     "CreateEmployee": "Create Employee",
     "UpdateEmployee": "Update Employee",
@@ -531,7 +535,8 @@
     "From": "From ",
     "To": "To ",
     "smallerThan": "'To' value must be big than 'From' value",
-    "loginErro": "Email or password is not correct"
+    "loginErro": "Email or password is not correct",
+    "rate": "Rate"
   },
   "auth": {
     "Login": "Login",
@@ -733,6 +738,7 @@
     "Join": "Join",
     "CurrentCourse": "Current",
     "emptycourses": "No Courses Found ",
+    "emptyCart": "No courses in cart",
     "NoCoursesSearch": "Sorry, we couldn't find any results",
     "for": "for",
     "recommendedcourse": "Recommended",
@@ -753,7 +759,7 @@
     "seeMore": "See More",
     "ConfirmBuyCourses": "  Confirm Buy Courses",
     "buySuccesed": " Buy Successfully ",
-    "info": "info",
+    "info": "More Informations",
     "noDescription": "There is no description for this course.",
     "noObjectives": "There is no objectives for this course.",
     "noContent": "There is no content for this course.",
@@ -765,7 +771,12 @@
     "peopleRateDiploma": "people rate this diploma",
     "courseInfo": "Course Info",
     "DiplomaCourse": "Diploma Courses",
-    "Course": "Course"
+    "Course": "Course",
+    "diploma_en_name": "Diploma english name",
+    "diploma_ar_name": "Diploma arabic name",
+    "isArabic": "With Arabic language",
+    "isEnglish": "With English language",
+    "isFollow": "Follow diploma ?"
   },
   "articles": {
     "articles": "Articles",

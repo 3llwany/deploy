@@ -149,7 +149,8 @@
     "sendToSomeSuccess": "تم إرسال الرسالة إلى البعض بنجاح",
     "maxNoOfUsers": "أقصي عدد يمكن الإرسال له في المره الواحده:",
     "mainbannerheader": "تعلم بدون حدود",
-    "mainbannerdesc": "مهارات لحاضرك (ومستقبلك). ابدأ معنا"
+    "mainbannerdesc": "مهارات لحاضرك (ومستقبلك). ابدأ معنا",
+    "changeColumns": "اختيار عواميد الجدول"
   },
   "Material": {
     "FilesBooksEmpty": "الكتب & الملفات فارغة",
@@ -200,6 +201,8 @@
     "expectedDuration": "المده المتوقعه (عدد الأيام)",
     "Request": "طلب",
     "Hours": "ساعات",
+    "h": "س",
+    "min": "د",
     "NotApprove": "رفض",
     "NotApproved": "مرفوض",
     "EditAnnounce": "تعديل الاعلان",
@@ -576,7 +579,6 @@
     "Absent": "الغائبين",
     "attendees": "الحضور"
   },
-
   "Departments": {
     "addDepartment": " إضافة قسم",
     "arName": "الاسم العربي",
@@ -721,6 +723,7 @@
     "Join": "دخول ",
     "CurrentCourse": "الحالى ",
     "emptycourses": "لا يوجد كورسات",
+    "emptyCart": "لا يوجد كورسات في سلة المشتريات",
     "emptydiplomas": "لا يوجد كورسات و دبلومات",
     "NoCoursesSearch": "لا يوجد نتائج",
     "for": "ل",
@@ -754,7 +757,12 @@
     "peopleRateDiploma": "اشخاص قاموا بتقيم الدبلومة",
     "courseInfo": "معلومات عن الكورس",
     "DiplomaCourse": "كورسات الدبلومة",
-    "Course": "كورس"
+    "Course": "كورس",
+    "diploma_en_name": "الاسم العربي للدبلومة",
+    "diploma_ar_name": "الاسم الانجليزي للدبلومة",
+    "isArabic": "مع اللغه العربية",
+    "isEnglish": "مع اللغه الانجليزية",
+    "isFollow": "تابع لدبلومة ؟"
   },
   "articles": {
     "articles": "المقالات",

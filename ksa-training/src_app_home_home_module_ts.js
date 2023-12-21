@@ -356,32 +356,32 @@ function CourseCardDetailsComponent_p_5_span_1_Template(rf, ctx) {
   }
 
   if (rf & 2) {
-    var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](2);
+    var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate1"](" ", ctx_r3.languageService.isArabic ? ctx_r3.course == null ? null : ctx_r3.course.category[0] == null ? null : ctx_r3.course.category[0].ar_name : ctx_r3.course == null ? null : ctx_r3.course.category[0] == null ? null : ctx_r3.course.category[0].en_name, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate1"](" ", ctx_r4.languageService.isArabic ? ctx_r4.course == null ? null : ctx_r4.course.category[0] == null ? null : ctx_r4.course.category[0].ar_name : ctx_r4.course == null ? null : ctx_r4.course.category[0] == null ? null : ctx_r4.course.category[0].en_name, " ");
   }
 }
 
 function CourseCardDetailsComponent_p_5_span_2_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "span", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "span", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
   }
 
   if (rf & 2) {
-    var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("matTooltip", ctx_r4.getCategoresTooltip(ctx_r4.course.category));
+    var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("matTooltip", ctx_r5.getCategoresTooltip(ctx_r5.course.category));
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate1"](" + ", (ctx_r4.course == null ? null : ctx_r4.course.category == null ? null : ctx_r4.course.category.length) - 1, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate1"](" + ", (ctx_r5.course == null ? null : ctx_r5.course.category == null ? null : ctx_r5.course.category.length) - 1, " ");
   }
 }
 
 function CourseCardDetailsComponent_p_5_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "p", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](1, CourseCardDetailsComponent_p_5_span_1_Template, 2, 1, "span", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](2, CourseCardDetailsComponent_p_5_span_2_Template, 2, 2, "span", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "p", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](1, CourseCardDetailsComponent_p_5_span_1_Template, 2, 1, "span", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](2, CourseCardDetailsComponent_p_5_span_2_Template, 2, 2, "span", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
   }
 
@@ -403,27 +403,50 @@ var _c0 = function _c0(a0, a1) {
 
 function CourseCardDetailsComponent_i_7_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelement"](0, "i", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelement"](0, "i", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipe"](1, "round");
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipe"](2, "round");
   }
 
   if (rf & 2) {
-    var star_r5 = ctx.$implicit;
+    var star_r6 = ctx.$implicit;
     var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpureFunction2"](5, _c0, _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](1, 1, star_r5.rate <= ctx_r1.course.rate), _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](2, 3, star_r5.rate > ctx_r1.course.rate)));
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpureFunction2"](5, _c0, _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](1, 1, star_r6.rate <= ctx_r1.course.rate), _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](2, 3, star_r6.rate > ctx_r1.course.rate)));
   }
 }
 
-function CourseCardDetailsComponent_ng_container_22_button_1_Template(rf, ctx) {
-  if (rf & 1) {
-    var _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵgetCurrentView"]();
+var _c1 = function _c1(a1) {
+  return ["/home/course-info", a1];
+};
 
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "button", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵlistener"]("click", function CourseCardDetailsComponent_ng_container_22_button_1_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵrestoreView"](_r11);
-      var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](2);
-      return ctx_r10.addToCart(ctx_r10.course.subject_id);
+function CourseCardDetailsComponent_p_16_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "p", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](1, "a", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipe"](3, "translate");
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
+  }
+
+  if (rf & 2) {
+    var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpureFunction1"](4, _c1, ctx_r2.course.subject_id));
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](3, 2, "course.info"), " ");
+  }
+}
+
+function CourseCardDetailsComponent_ng_container_23_button_1_Template(rf, ctx) {
+  if (rf & 1) {
+    var _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵgetCurrentView"]();
+
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "button", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵlistener"]("click", function CourseCardDetailsComponent_ng_container_23_button_1_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵrestoreView"](_r12);
+      var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](2);
+      return ctx_r11.addToCart(ctx_r11.course.subject_id);
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipe"](2, "translate");
@@ -436,9 +459,9 @@ function CourseCardDetailsComponent_ng_container_22_button_1_Template(rf, ctx) {
   }
 }
 
-function CourseCardDetailsComponent_ng_container_22_span_2_Template(rf, ctx) {
+function CourseCardDetailsComponent_ng_container_23_span_2_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "span", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "span", 22);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipe"](2, "translate");
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
@@ -450,43 +473,43 @@ function CourseCardDetailsComponent_ng_container_22_span_2_Template(rf, ctx) {
   }
 }
 
-var _c1 = function _c1(a1) {
+var _c2 = function _c2(a1) {
   return ["/student/course", a1];
 };
 
-function CourseCardDetailsComponent_ng_container_22_a_3_Template(rf, ctx) {
+function CourseCardDetailsComponent_ng_container_23_a_3_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "a", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "a", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipe"](2, "translate");
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
   }
 
   if (rf & 2) {
-    var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpureFunction1"](4, _c1, ctx_r9.course.subject_id));
+    var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpureFunction1"](4, _c2, ctx_r10.course.subject_id));
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](2, 2, "course.GoToCourse"), " ");
   }
 }
 
-function CourseCardDetailsComponent_ng_container_22_Template(rf, ctx) {
+function CourseCardDetailsComponent_ng_container_23_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](1, CourseCardDetailsComponent_ng_container_22_button_1_Template, 3, 3, "button", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](2, CourseCardDetailsComponent_ng_container_22_span_2_Template, 3, 3, "span", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](3, CourseCardDetailsComponent_ng_container_22_a_3_Template, 3, 6, "a", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](1, CourseCardDetailsComponent_ng_container_23_button_1_Template, 3, 3, "button", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](2, CourseCardDetailsComponent_ng_container_23_span_2_Template, 3, 3, "span", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](3, CourseCardDetailsComponent_ng_container_23_a_3_Template, 3, 6, "a", 20);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementContainerEnd"]();
   }
 
   if (rf & 2) {
-    var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"]();
+    var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", !ctx_r2.course.isCard && !ctx_r2.course.isPaid && !ctx_r2.isAdmin);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", !ctx_r3.course.isCard && !ctx_r3.course.isPaid && !ctx_r3.isAdmin);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx_r2.course.isCard && !ctx_r2.course.isPaid);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx_r3.course.isCard && !ctx_r3.course.isPaid);
     _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx_r2.course.isPaid && ctx_r2.isStudent);
+    _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx_r3.course.isPaid && ctx_r3.isStudent);
   }
 }
 
@@ -592,9 +615,9 @@ CourseCardDetailsComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_
     addedToCard: "addedToCard",
     removeFromCard: "removeFromCard"
   },
-  decls: 23,
-  vars: 19,
-  consts: [[1, "course--cart-re", "mbottom-20"], [1, "coursecartimg", 3, "src", "error"], [1, "cart--divider"], [1, "maincoursetitle", "font-regular"], ["class", "coursecarttitle font-regular", 4, "ngIf"], [1, "rating", "mbottom-5"], ["class", "fa mright-3 font-size-15 rate-star", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "font-size-10"], [1, "font-size-10", "mright-3", "mleft-3", "d-block"], [1, "coursecartfooter"], [1, "price", "font-regular", "float-left"], [4, "ngIf"], [1, "coursecarttitle", "font-regular"], ["width", "22", "height", "22", "class", "round info font-size-10 padding-3 mleft-3 mright-3 b-info pointer", 3, "matTooltip", 4, "ngIf"], ["width", "22", "height", "22", 1, "round", "info", "font-size-10", "padding-3", "mleft-3", "mright-3", "b-info", "pointer", 3, "matTooltip"], [1, "fa", "mright-3", "font-size-15", "rate-star", 3, "ngClass"], ["class", "btn-outline-orange border-2 round float-right", 3, "click", 4, "ngIf"], ["class", "success font-regular float-right in-cart  mbottom-5 mleft-5", 4, "ngIf"], ["class", "btn-orange round float-right mbottom-5", 3, "routerLink", 4, "ngIf"], [1, "btn-outline-orange", "border-2", "round", "float-right", 3, "click"], [1, "success", "font-regular", "float-right", "in-cart", "mbottom-5", "mleft-5"], [1, "btn-orange", "round", "float-right", "mbottom-5", 3, "routerLink"]],
+  decls: 24,
+  vars: 20,
+  consts: [[1, "course--cart-re", "mbottom-20"], [1, "coursecartimg", 3, "src", "error"], [1, "cart--divider"], [1, "maincoursetitle", "font-regular"], ["class", "coursecarttitle font-regular", 4, "ngIf"], [1, "rating", "mbottom-5"], ["class", "fa mright-3 font-size-15 rate-star", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "font-size-10"], [1, "font-size-10", "mright-3", "mleft-3", "d-block"], [1, "coursecartfooter"], ["class", "rating mbottom-5", 4, "ngIf"], [1, "price", "font-regular", "float-left"], [4, "ngIf"], [1, "coursecarttitle", "font-regular"], ["width", "22", "height", "22", "class", "round info font-size-10 padding-3 mleft-3 mright-3 b-info pointer", 3, "matTooltip", 4, "ngIf"], ["width", "22", "height", "22", 1, "round", "info", "font-size-10", "padding-3", "mleft-3", "mright-3", "b-info", "pointer", 3, "matTooltip"], [1, "fa", "mright-3", "font-size-15", "rate-star", 3, "ngClass"], [1, "font-size-10", "mright-3", "mleft-3", "d-block", "infolink", 3, "routerLink"], ["class", "btn-outline-orange border-2 round float-right", 3, "click", 4, "ngIf"], ["class", "success font-regular float-right in-cart mbottom-5 mleft-5", 4, "ngIf"], ["class", "btn-orange round float-right mbottom-5", 3, "routerLink", 4, "ngIf"], [1, "btn-outline-orange", "border-2", "round", "float-right", 3, "click"], [1, "success", "font-regular", "float-right", "in-cart", "mbottom-5", "mleft-5"], [1, "btn-orange", "round", "float-right", "mbottom-5", 3, "routerLink"]],
   template: function CourseCardDetailsComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](0, "div", 0);
@@ -621,22 +644,23 @@ CourseCardDetailsComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](15, "div", 9);
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](16, "p", 10);
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](17, "small");
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtext"](18);
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipe"](19, "translate");
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](16, CourseCardDetailsComponent_p_16_Template, 4, 6, "p", 10);
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](17, "p", 11);
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](18, "small");
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtext"](19);
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipe"](20, "translate");
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](20, "strong");
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtext"](21);
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](21, "strong");
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtext"](22);
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](22, CourseCardDetailsComponent_ng_container_22_Template, 4, 3, "ng-container", 11);
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtemplate"](23, CourseCardDetailsComponent_ng_container_23_Template, 4, 3, "ng-container", 12);
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementEnd"]();
     }
 
     if (rf & 2) {
-      var tmp_7_0;
+      var tmp_8_0;
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("src", ctx.fileService.previewPicture(ctx.course.attach_path), _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵsanitizeUrl"]);
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](3);
@@ -646,13 +670,15 @@ CourseCardDetailsComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](2);
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngForOf", ctx.rates);
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](2);
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate2"](" ( ", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](10, 11, ctx.course.rate), " ", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](11, 13, "labels.outOf"), " 5) ");
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate2"](" ( ", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](10, 12, ctx.course.rate), " ", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](11, 14, "labels.outOf"), " 5) ");
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](4);
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate2"](" ", ctx.course.userRatesCount, " ", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](14, 15, "course.peopleRate"), " ");
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](5);
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](19, 17, "CurrencySymbol"));
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate2"](" ", ctx.course.userRatesCount, " ", _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](14, 16, "course.peopleRate"), " ");
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](3);
-      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate"]((tmp_7_0 = ctx.course.cost) !== null && tmp_7_0 !== undefined ? tmp_7_0 : 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", !ctx.course.isPaid && !ctx.isAdmin);
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵpipeBind1"](20, 18, "CurrencySymbol"));
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵtextInterpolate"]((tmp_8_0 = ctx.course.cost) !== null && tmp_8_0 !== undefined ? tmp_8_0 : 0);
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
       _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", !ctx.course.isFollow);
     }
@@ -3764,16 +3790,12 @@ var SearchCoursesComponent = /*#__PURE__*/function () {
           _this5.lastSearchName = courseSearchData.name;
 
           if (res) {
-            if (courseSearchData.courseCategory_id == 0) {
-              _this5.courses = res.subCategoryList;
-              _this5.diplomas = res.diplomaList;
-            } else {
-              _this5.courses = res === null || res === void 0 ? void 0 : res.subCategoryList[0].subjects;
-              _this5.selectedCategory = (res === null || res === void 0 ? void 0 : res.subCategoryList[0]) || res.diplomaCategoryList[0];
-              _this5.diplomas = res.diplomaCategoryList[0].diplomas;
-            }
+            _this5.courses = res.subCategoryList;
+            _this5.diplomas = res.diplomaList;
 
             _this5.location.go("home/search-courses/".concat(courseSearchData.courseCategory_id, "?courseName=").concat(courseSearchData.name));
+
+            if (courseSearchData.courseCategory_id > 0) _this5.getSelectedCategoryFormList();
           }
 
           _this5.spinner.hide();
