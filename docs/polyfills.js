@@ -3422,7 +3422,7 @@ __webpack_require__(/*! ../../modules/es.array.reduce-right */ 29296);
 __webpack_require__(/*! ../../modules/es.array.reverse */ 55975);
 __webpack_require__(/*! ../../modules/es.array.slice */ 68561);
 __webpack_require__(/*! ../../modules/es.array.some */ 26145);
-__webpack_require__(/*! ../../modules/es.array.sort */ 92833);
+__webpack_require__(/*! ../../modules/es.array.sort */ 66949);
 __webpack_require__(/*! ../../modules/es.array.species */ 4980);
 __webpack_require__(/*! ../../modules/es.array.splice */ 8193);
 __webpack_require__(/*! ../../modules/es.array.unscopables.flat */ 89205);
@@ -6708,7 +6708,7 @@ $({ target: 'Array', proto: true, forced: !STRICT_METHOD || !USES_TO_LENGTH }, {
 
 /***/ }),
 
-/***/ 92833:
+/***/ 66949:
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es.array.sort.js ***!
   \*******************************************************/

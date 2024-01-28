@@ -69,6 +69,21 @@
   border-color: #374761 !important;
 }
 
+// dark blue border btn
+.btn-darkBlue-border {
+  border: 2px solid #374761 !important;
+  color: black;
+  box-shadow: none !important;
+}
+
+.btn-darkBlue-border:hover,
+.btn-darkBlue-border:active,
+.btn-darkBlue-border:focus {
+  border: 2px solid #576579 !important;
+  color: black;
+  box-shadow: none !important;
+}
+
 // lightGreen btn
 .btn-lightGreen {
   color: #fff !important;
@@ -82,4 +97,51 @@
 .btn-lightGreen:focus {
   background-color: #42e1b9 !important;
   border-color: #42e1b9 !important;
+}
+
+.icon-lightGreen {
+  color: #30b79d !important;
+  cursor: pointer;
+}
+
+.btn-large {
+  padding-right: 40px !important;
+  padding-left: 45px !important;
+  line-height: 2.5 !important;
+}
+
+.darkBlue {
+  color: #374761 !important;
+}
+
+.line-height-1 {
+  line-height: 1 !important;
+}
+
+.line-height-1_5 {
+  line-height: 1.5 !important;
+}
+
+.line-height-2 {
+  line-height: 2 !important;
+}
+
+.line-height-2_5 {
+  line-height: 2.5 !important;
+}
+
+.line-height-3 {
+  line-height: 3 !important;
+}
+
+.line-height-3_5 {
+  line-height: 3.5 !important;
+}
+
+.line-height-4 {
+  line-height: 4 !important;
+}
+
+.line-height-4_5 {
+  line-height: 4.5 !important;
 }

@@ -18340,7 +18340,7 @@ footer.footer {
 .scroll-top {
   position: fixed;
   z-index: 1039;
-  bottom: 4%;
+  bottom: 8%;
   right: 2rem;
   padding: 0.4rem 0.8rem;
 }
@@ -25343,6 +25343,18 @@ html body.layout-dark.layout-transparent .accordion .card .card-header button:no
   background-color: #576579 !important;
   border-color: #374761 !important;
 }
+.btn-darkBlue-border {
+  border: 2px solid #374761 !important;
+  color: black;
+  box-shadow: none !important;
+}
+.btn-darkBlue-border:hover,
+.btn-darkBlue-border:active,
+.btn-darkBlue-border:focus {
+  border: 2px solid #576579 !important;
+  color: black;
+  box-shadow: none !important;
+}
 .btn-lightGreen {
   color: #fff !important;
   background-color: #30b79d !important;
@@ -25354,6 +25366,42 @@ html body.layout-dark.layout-transparent .accordion .card .card-header button:no
 .btn-lightGreen:focus {
   background-color: #42e1b9 !important;
   border-color: #42e1b9 !important;
+}
+.icon-lightGreen {
+  color: #30b79d !important;
+  cursor: pointer;
+}
+.btn-large {
+  padding-right: 40px !important;
+  padding-left: 45px !important;
+  line-height: 2.5 !important;
+}
+.darkBlue {
+  color: #374761 !important;
+}
+.line-height-1 {
+  line-height: 1 !important;
+}
+.line-height-1_5 {
+  line-height: 1.5 !important;
+}
+.line-height-2 {
+  line-height: 2 !important;
+}
+.line-height-2_5 {
+  line-height: 2.5 !important;
+}
+.line-height-3 {
+  line-height: 3 !important;
+}
+.line-height-3_5 {
+  line-height: 3.5 !important;
+}
+.line-height-4 {
+  line-height: 4 !important;
+}
+.line-height-4_5 {
+  line-height: 4.5 !important;
 }
 /*!****************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[2]!./src/assets/css/cairo-font-face.css ***!
@@ -37356,7 +37404,11 @@ button.toast-close-button {
   }
 }
 
-/* Start toastr Styles  */
+body {
+  background-color: #f0f2f5 !important;
+}
+
+/*#region ############ START: toastr Styles  */
 
 #toast-container > div {
   opacity: 1;
@@ -37423,11 +37475,9 @@ button.toast-close-button {
   padding: 0px 12px !important;
 }
 
-/* End Toast Styles */
+/*#endregion ############ END: Toast Styles */
 
-/* /////////////////////////////////// */
-
-/* START SCROLLBAR Styles */
+/*#region ############ START: SCROLLBAR Styles */
 
 *::-webkit-scrollbar {
   width: 8px;
@@ -37450,9 +37500,9 @@ button.toast-close-button {
   border-radius: 2px !important;
 } */
 
-/* END SCROLLBAR Styles */
+/*#endregion END SCROLLBAR Styles */
 
-/*//////////////////// Start Material Design Styles ///////////////////////// */
+/*#region ############ START: Material Design Styles ############ */
 
 .mat-form-field {
   display: block !important;
@@ -37504,6 +37554,11 @@ table {
   width: 100%;
 }
 
+.mat-card {
+  box-shadow: none !important;
+  border-radius: 10px !important;
+}
+
 .mat-card-title {
   margin-bottom: 15px !important;
 }
@@ -37512,8 +37567,14 @@ table {
   text-align: start;
 }
 
+.p-multiselect.p-disabled,
+.p-dropdown.p-disabled {
+  background: #e4e4e4 !important;
+}
+
 .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
-  background: #f4f6fa;
+  background: #eff0f1 !important;
+  opacity: 0.38;
 }
 
 .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start,
@@ -37546,12 +37607,70 @@ table {
   overflow-y: scroll !important;
 }
 
-/* End  */
+.cards-no-shadow .mat-card {
+  box-shadow: none;
+  border-radius: 10px;
+}
 
-/*/ ///////////////// Start PrimeNg Styles //////////////////////////////////////////*/
+.card-title-shadow {
+  box-shadow: 0 5px 4px 0 rgba(167, 167, 167, 0.25) !important;
+}
 
-.p-inputtext {
-  border-color: rgba(0, 0, 0, 0.17);
+.title-no-margin {
+  margin: 0 !important;
+}
+
+.title-no-margin #back_btn,
+.title-no-margin #add_new_btn {
+  margin-top: -3px !important;
+}
+
+.mat-stepper-horizontal,
+.mat-stepper-vertical {
+  background: none !important;
+}
+
+.mat-stepper-horizontal .mat-horizontal-stepper-header-container,
+.mat-stepper-vertical .mat-horizontal-stepper-header-container {
+  padding: 1rem 0;
+}
+
+.mat-stepper-horizontal .mat-horizontal-stepper-header-container .mat-step-header,
+.mat-stepper-vertical .mat-horizontal-stepper-header-container .mat-step-header {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.mat-stepper-horizontal .mat-horizontal-stepper-header-container .mat-step-icon-content,
+.mat-stepper-vertical .mat-horizontal-stepper-header-container .mat-step-icon-content {
+  line-height: normal;
+}
+
+.mat-stepper-horizontal .mat-horizontal-content-container,
+.mat-stepper-vertical .mat-horizontal-content-container {
+  padding: 0;
+}
+
+.has-fixed-title > .mat-stepper-horizontal .mat-horizontal-stepper-header-container,
+.mat-stepper-vertical .mat-horizontal-stepper-header-container {
+  margin-top: 67px;
+}
+
+.mat-checkbox-checked.mat-primary .mat-checkbox-background {
+  background-color: #abafb1 !important;
+}
+
+.mat-checkbox-disabled .mat-checkbox-inner-container {
+  opacity: 0.5 !important;
+}
+
+/*#endregion ############ END: Material Design Styles ############ */
+
+/*#region ############ START: PrimeNg Styles ############ */
+
+.p-inputtext,
+.p-dropdown-filter-container .p-inputtext {
+  border: 1px solid rgba(0, 0, 0, 0.17);
 }
 
 .prime-inpt {
@@ -37571,6 +37690,15 @@ table {
   color: #2f8be6 !important;
 }
 
+.p-dropdown .p-overlay {
+  min-width: 100% !important;
+  left: 0 !important;
+}
+
+.top-dropdown .p-overlay {
+  top: 53px !important;
+}
+
 .p-checkbox .p-checkbox-box.p-highlight {
   background: #2f8be6 !important;
   border-color: #2f8be6 !important;
@@ -37578,6 +37706,11 @@ table {
 
 .mat-checkbox-checked.mat-primary .mat-checkbox-background {
   background-color: #2f8be6 !important;
+}
+
+label.mat-checkbox-layout {
+  white-space: normal;
+  word-break: break-word;
 }
 
 .mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
@@ -37684,7 +37817,7 @@ p-dropdown.ng-touched.ng-invalid > .p-dropdown:not(.p-disabled).p-focus {
   padding: 0.9rem 0.75rem;
 }
 
-/* file upload */
+/* ############ START:  file upload */
 
 .p-fileupload-choose,
 .p-fileupload .p-fileupload-buttonbar .p-button {
@@ -37746,9 +37879,9 @@ p-dropdown.ng-touched.ng-invalid > .p-dropdown:not(.p-disabled).p-focus {
   padding: 7px !important;
 }
 
-/*////////////////  End PrimeNg  */
+/*#endregion ############ END:  PrimeNg  */
 
-/* //////////////////////// material table //////////////////////// */
+/*#region  ############ START:  material table ################ */
 
 .table-container {
   overflow-x: auto;
@@ -37784,6 +37917,30 @@ p-dropdown.ng-touched.ng-invalid > .p-dropdown:not(.p-disabled).p-focus {
   color: #101317;
   font-size: 1rem;
   padding: 27px 6px 28px 45px;
+}
+
+.small-table .table-container {
+  width: 60% !important;
+  margin: 0 15px;
+}
+
+.table-in-forms .table-container {
+  overflow-y: auto !important;
+  border: 1px solid #e0e0e0;
+  border-radius: 9.6px !important;
+}
+
+.table-in-forms .table-container th.mat-header-cell {
+  border-top: none;
+  border-bottom: 1.5px solid #eaeaea;
+}
+
+.table-in-forms .table-container td.mat-cell {
+  border-bottom: none;
+}
+
+.table-in-forms .table-container th.mat-header-cell:not(:last-child)::before {
+  content: none;
 }
 
 /* //////////////////////// filter columns (table) //////////////////////// */
@@ -37826,136 +37983,13 @@ button.mat-menu-item .mat-checkbox label .mat-checkbox-inner-container {
   margin-left: 0;
 }
 
-/* End */
-
-/* //////////////////////// home menu //////////////////////// */
-
-.home-container {
-  margin-left: -30px;
-  margin-right: -30px;
-  min-height: 100vh;
-  background-image: linear-gradient(135deg, rgba(29, 29, 29, 0.05) 0%, rgba(29, 29, 29, 0.05) 17%, rgba(27, 27, 27, 0.05) 17%, rgba(27, 27, 27, 0.05) 34%, rgba(31, 31, 31, 0.05) 34%, rgba(31, 31, 31, 0.05) 93%, rgba(242, 242, 242, 0.05) 93%, rgba(242, 242, 242, 0.05) 100%), linear-gradient(135deg, rgba(129, 129, 129, 0.05) 0%, rgba(129, 129, 129, 0.05) 66%, rgba(117, 117, 117, 0.05) 66%, rgba(117, 117, 117, 0.05) 91%, rgba(199, 199, 199, 0.05) 91%, rgba(199, 199, 199, 0.05) 100%), linear-gradient(135deg, rgba(31, 31, 31, 0.07) 0%, rgba(31, 31, 31, 0.07) 15%, rgba(139, 139, 139, 0.07) 15%, rgba(139, 139, 139, 0.07) 23%, rgba(200, 200, 200, 0.07) 23%, rgba(200, 200, 200, 0.07) 29%, rgba(102, 102, 102, 0.07) 29%, rgba(102, 102, 102, 0.07) 100%), linear-gradient(90deg, #002e7f, #42e1b9);
+.mat-divider {
+  border-top-color: #eaeaea !important;
 }
 
-.user-timeline-image {
-  filter: brightness(0.6);
-  width: 100%;
-  height: 100%;
-}
+/*#endregion  ############ END:  material table ################ */
 
-.title-overlay {
-  background-color: inherit;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  color: #fff;
-  font-size: 50px;
-  font-weight: 500;
-}
-
-/* .main-banner {
-	height: 300px;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-attachment: fixed;
-}
-
-.overbannerlay {
-	background: #00000075;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-wrap: nowrap;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-}
-.main-title {
-	text-align: center;
-	font-size: 50px;
-	font-weight: 500;
-	color: #fff;
-} */
-
-.menu-carts-container {
-  padding: 30px;
-}
-
-.content-header {
-  font-weight: 700 !important;
-  margin-top: 5px !important;
-  margin-bottom: 0.5rem !important;
-  color: #fff !important;
-}
-
-.menu-cart {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 5px;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  cursor: pointer;
-  max-height: 120px;
-  height: 120px;
-}
-
-.cart-icon {
-  padding-bottom: 5px;
-}
-
-.cart-icon > i {
-  font-size: 40px;
-}
-
-.menu-cart-title {
-  padding: 5px 0;
-}
-
-.bg-color1 {
-  background-color: #ab0809;
-}
-
-.bg-color2 {
-  background-color: #076d7c;
-}
-
-.bg-color3 {
-  background-color: #0357d4;
-}
-
-.bg-color4 {
-  background-color: #bc056d;
-}
-
-.bg-color5 {
-  background-color: #a400c3;
-}
-
-.bg-color6 {
-  background-color: #5c718c;
-}
-
-.bg-color7 {
-  background-color: #6d32aa;
-}
-
-/* End */
-
-/* //////////////////////// employee profile //////////////////////// */
+/*#region ############ START: employee profile ############ */
 
 .cardSection {
   background-color: #f7f7f8;
@@ -38075,6 +38109,11 @@ button.mat-menu-item .mat-checkbox label .mat-checkbox-inner-container {
 
 .card-vacations-custom {
   background-color: #30b79d !important;
+  height: 90%;
+}
+
+.card.card-vacations-custom {
+  margin: 0 !important;
 }
 
 .ca-title {
@@ -38088,6 +38127,42 @@ button.mat-menu-item .mat-checkbox label .mat-checkbox-inner-container {
 
 .dialog-emp-form .table-container {
   margin-top: 20px;
+}
+
+/* employee payment */
+
+.emp-payroll {
+  margin-top: 20px;
+}
+
+.emp-payroll .mat-expansion-panel {
+  margin: 16px 0 !important;
+  border-radius: 4px !important;
+}
+
+.emp-payroll .mat-expansion-panel-header.mat-expanded {
+  height: 48px;
+}
+
+.emp-payroll .mat-expansion-panel-header-title {
+  color: #374761 !important;
+  font-weight: bold;
+}
+
+.emp-payroll .mat-expansion-panel-content {
+  border-top: 1px solid #eaeaea;
+}
+
+.emp-payroll .mat-expansion-panel-body {
+  padding: 16px 24px !important;
+}
+
+.emp-payroll .mat-expansion-panel-body:empty {
+  padding: 0 !important;
+}
+
+.emp-payroll .mat-expansion-panel-body > div:last-child p {
+  margin-bottom: 0;
 }
 
 /* START: Employee Work Schedule calendar ##################################### */
@@ -38216,6 +38291,10 @@ button.mat-menu-item .mat-checkbox label .mat-checkbox-inner-container {
 }
 
 /* End: Employee Work Schedule calendar ##################################### */
+
+/*#endregion ############ End: employee profile ############ */
+
+/*#region ############ START: General Style   */
 
 html body.layout-dark.layout-transparent.bg-glass-1,
 html body.layout-dark.layout-transparent .bg-glass-1 {
@@ -38389,7 +38468,95 @@ body[data-menu=vertical-menu] .app-sidebar .navigation li.active > a:before {
   opacity: 0 !important;
 }
 
-/* ===============  start org chart =============== */
+.disable-link {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.icon-with-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-with-input app-input,
+.icon-with-input app-prime-dropdown,
+.icon-with-input .input-to-flex {
+  flex: 1;
+}
+
+.icon-with-input > i {
+  margin: 20px 10px 0 10px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ##### Strat: xng-breadcrumb */
+
+.xng-breadcrumb-root {
+  padding: 8px 16px;
+  display: inline-block;
+  background-color: #dadada;
+  width: 100%;
+}
+
+.xng-breadcrumb-separator {
+  padding: 0 4px;
+}
+
+/*##### End: xng-breadcrumb */
+
+/*##### START: sweetalert2 */
+
+.swal2-popup .swal2-styled {
+  margin: 0px 5px !important;
+}
+
+/*##### END: sweetalert2 */
+
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+  height: 220px !important;
+}
+
+form label,
+.form-group label {
+  text-transform: none;
+}
+
+.app-sidebar .logo,
+.app-sidebar .sidebar-content {
+  background: #374761 !important;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight .p-checkbox-icon.pi-check:before {
+  top: 7.5px;
+  left: 2.4px;
+}
+
+.title-section {
+  background: #fff;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.w-100 .mat-checkbox-layout {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.disabled .p-multiselect,
+.disabled .p-dropdown,
+.disabled .mat-form-field-outline {
+  background: #e4e4e4;
+}
+
+/*#endregion ############ End: General Style   */
+
+/*#region ===============  start org chart =============== */
 
 .organizationchart-container {
   border: 0.5px dashed grey;
@@ -38623,54 +38790,9 @@ body[data-menu=vertical-menu] .app-sidebar .navigation li.active > a:before {
   font-size: 2rem;
 }
 
-/*==========  end org chart =============== */
+/*#endregion ==========  end org chart =============== */
 
-.disable-link {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.icon-with-input {
-  display: flex;
-  justify-content: space-between;
-}
-
-.icon-with-input app-input,
-.icon-with-input app-prime-dropdown,
-.icon-with-input .input-to-flex {
-  flex: 1;
-}
-
-.icon-with-input > i {
-  margin: 20px 10px 0 10px;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-/*##### Strat: xng-breadcrumb */
-
-.xng-breadcrumb-root {
-  padding: 8px 16px;
-  display: inline-block;
-  background-color: #dadada;
-  width: 100%;
-}
-
-.xng-breadcrumb-separator {
-  padding: 0 4px;
-}
-
-/*##### End: xng-breadcrumb */
-
-/*##### START: sweetalert2 */
-
-.swal2-popup .swal2-styled {
-  margin: 0px 5px !important;
-}
-
-/*##### END: sweetalert2 */
-
-/*############ START: PRIMENG steps ############*/
+/*#region ############ START: PRIMENG steps ############*/
 
 .p-steps .p-steps-item .p-menuitem-link {
   flex-direction: column;
@@ -38704,16 +38826,15 @@ body[data-menu=vertical-menu] .app-sidebar .navigation li.active > a:before {
   border-color: #3f51b5 !important;
 }
 
-/*############ END: PRIMENG steps ############*/
+/*#endregion ############ END: PRIMENG steps ############*/
 
-/*############ START: PRIMENG Paginator ############*/
+/*#region ############ START: PRIMENG Paginator ############*/
 
 #add_new_btn,
 #back_btn,
 #close_dialog_btn,
 #reset_form_btn,
-#submit_btn,
-#custom_btn {
+#submit_btn {
   line-height: 2.5;
 }
 
@@ -38754,9 +38875,9 @@ body[data-menu=vertical-menu] .app-sidebar .navigation li.active > a:before {
   padding-bottom: 5px !important;
 }
 
-/*############ END: PRIMENG Paginator ############*/
+/*#endregion ############ END: PRIMENG Paginator ############*/
 
-/*############ START: PRIMENG File Upload  ############*/
+/*#region ############ START: PRIMENG File Upload  ############*/
 
 .empty .p-fileupload-content {
   opacity: 0;
@@ -38798,6 +38919,27 @@ body[data-menu=vertical-menu] .app-sidebar .navigation li.active > a:before {
   flex-direction: column;
 }
 
+.p-fileupload .drag-drop {
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: #0f0f0f;
+  margin-bottom: 10px;
+  gap: 20px !important;
+}
+
+.p-fileupload .drag-drop i {
+  font-size: 25px;
+  color: #374761;
+}
+
+.p-fileupload .drag-drop span:last-child {
+  color: #374761;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .p-fileupload primeng-file-upload-card {
   width: 100%;
   display: flex;
@@ -38805,11 +38947,13 @@ body[data-menu=vertical-menu] .app-sidebar .navigation li.active > a:before {
 
 .p-fileupload .p-fileupload-row {
   width: 30%;
+  min-width: 320px;
   border: 1px solid #d2d3d3;
   border-radius: 8px;
   margin: 10px 0;
   padding: 9px;
   align-items: flex-start !important;
+  overflow: auto;
 }
 
 .p-fileupload .p-fileupload-row div {
@@ -38825,24 +38969,96 @@ body[data-menu=vertical-menu] .app-sidebar .navigation li.active > a:before {
   display: none;
 }
 
-/*############ END: PRIMENG File Upload  ############*/
-
-.ql-toolbar.ql-snow + .ql-container.ql-snow {
-  height: 220px !important;
+.no-url-file-uploader .p-fileupload {
+  gap: 0;
 }
 
-form label,
-.form-group label {
-  text-transform: none;
+.drag-drop-container .p-fileupload-choose {
+  display: none !important;
 }
 
-.darkBlue {
-  color: #374761 !important;
+.drag-drop-container .p-fileupload-content {
+  padding-top: 20px;
 }
 
-.app-sidebar .logo,
-.app-sidebar .sidebar-content {
-  background: #374761 !important;
+/*#endregion ############ END: PRIMENG File Upload  ############*/
+
+/*#region ############ START: inputs box with label ############ */
+
+.inputs-box-with-label {
+  padding: 8px 0 5px 0;
+  border-radius: 8px;
+  border: 1px solid #cfd3d4;
+  margin-bottom: 20px;
 }
+
+.inputs-box-with-label .box-label {
+  padding: 0 8px 6px 16px;
+  border-bottom: 1px solid #cfd3d4;
+}
+
+.inputs-box-with-label .box-label .mat-checkbox-layout .mat-checkbox-label {
+  font-size: 0.9rem;
+}
+
+.inputs-box-with-label .box-label.no-content {
+  border-bottom: none !important;
+}
+
+.inputs-box-with-label .box-inputs {
+  padding: 16px 34px 0 16px;
+}
+
+.inputs-box-with-label .box-inputs .lableBeforeEnglish {
+  margin-right: 5px !important;
+}
+
+/*#endregion ############ END: inputs box with label ############ */
+
+/*#region ############ START: view box data ############ */
+
+.view-data-row-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.view-data-title {
+  font-weight: 600;
+  color: #5a5a5a;
+  margin-bottom: 7px;
+}
+
+.view-data-value {
+  color: #374761;
+  margin-bottom: 3px;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+/*#endregion ############ END: view box data ############ */
+
+.fixed-title {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+/*#region ############ START: steps footer ############ */
+
+.steps-footer {
+  position: fixed;
+  margin-bottom: 0 !important;
+  width: 110%;
+  bottom: 0;
+  right: 0;
+  border: solid 1px #cfcfcf;
+  background-color: #fff;
+  padding: 10px 25px !important;
+  z-index: 100;
+}
+
+/*#endregion ############ END: steps footer ############ */
 
 /*# sourceMappingURL=styles.css.map*/
