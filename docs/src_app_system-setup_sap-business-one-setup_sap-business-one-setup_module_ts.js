@@ -1,10 +1,86 @@
 "use strict";
-(self["webpackChunkhr"] = self["webpackChunkhr"] || []).push([["src_app_sap-business-one-setup_sap-business-one-setup_module_ts"],{
+(self["webpackChunkhr"] = self["webpackChunkhr"] || []).push([["src_app_system-setup_sap-business-one-setup_sap-business-one-setup_module_ts"],{
 
-/***/ 46376:
-/*!************************************************************************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/components/sap-account-map/add-sap-account-map/add-sap-account-map.component.ts ***!
-  \************************************************************************************************************************/
+/***/ 3710:
+/*!********************************************************!*\
+  !*** ./src/app/shared/Guards/check-is-allowd.guard.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CheckIsViewAllowedGuard": () => (/* binding */ CheckIsViewAllowedGuard)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var app_shared_services_loading_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/services/loading.service */ 67579);
+/* harmony import */ var app_auth_services_user_views_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/auth/services/user-views.service */ 24280);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 60124);
+
+
+
+
+
+
+class CheckIsViewAllowedGuard {
+    constructor(viewsService, router) {
+        this.viewsService = viewsService;
+        this.router = router;
+        this.loadingService = (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.inject)(app_shared_services_loading_service__WEBPACK_IMPORTED_MODULE_0__.LoadingService);
+        this.UserModules = viewsService.UserModules$.getValue();
+        this.loading = document.getElementById("page-loading");
+    }
+    canActivate(route, state) {
+        return true;
+        // un comment code for used
+        // let view = route.data?.view;
+        // this.showLoading();
+        // if (this.UserModules?.length > 0) {
+        //   if (!this.viewsService.isViewAllowed(view)) {
+        //     this.router.navigateByUrl("/auth/access-denied");
+        //     this.hideLoading();
+        //   }
+        //   else {
+        //     this.hideLoading();
+        //     return true;
+        //   }
+        // }
+        //
+        // else {
+        //   this.viewsService.UserModules$.subscribe((val) => {
+        //     if (val?.length > 0) {
+        //       if (!this.viewsService.isViewAllowed(view)) {
+        //         this.router.navigateByUrl("/auth/access-denied");
+        //         this.hideLoading();
+        //       }
+        //       else {
+        //         this.hideLoading();
+        //         return true;
+        //       }
+        //     }
+        //   });
+        // }
+    }
+    showLoading() {
+        this.loading.style.display = "block";
+        this.loading.style.opacity = "1";
+        this.loading.style.zIndex = "998";
+    }
+    hideLoading() {
+        this.loading.style.display = "none";
+        this.loading.style.opacity = "0";
+        this.loading.style.zIndex = "0";
+    }
+}
+CheckIsViewAllowedGuard.ɵfac = function CheckIsViewAllowedGuard_Factory(t) { return new (t || CheckIsViewAllowedGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](app_auth_services_user_views_service__WEBPACK_IMPORTED_MODULE_1__.UserViewsService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router)); };
+CheckIsViewAllowedGuard.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: CheckIsViewAllowedGuard, factory: CheckIsViewAllowedGuard.ɵfac, providedIn: "root" });
+
+
+/***/ }),
+
+/***/ 7696:
+/*!*************************************************************************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/components/sap-account-map/add-sap-account-map/add-sap-account-map.component.ts ***!
+  \*************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -12,33 +88,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AddSapAccountMapComponent": () => (/* binding */ AddSapAccountMapComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var app_sap_business_one_setup_mapper_sap_account_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/sap-business-one-setup/mapper/sap-account-map */ 49252);
+/* harmony import */ var app_system_setup_sap_business_one_setup_mapper_sap_account_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/sap-business-one-setup/mapper/sap-account-map */ 84935);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_validators_custom_validator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/shared/validators/custom.validator */ 78937);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_sap_business_one_setup_services_sap_account_map_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/sap-business-one-setup/services/sap-account-map.service */ 74033);
+/* harmony import */ var app_system_setup_sap_business_one_setup_services_sap_account_map_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/system-setup/sap-business-one-setup/services/sap-account-map.service */ 92762);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/radio-button/radio-button.component */ 92393);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
-/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
-/* harmony import */ var _shared_components_dropdowns_payment_dropdown_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/payment-dropdown/payment-dropdown.component */ 70955);
-/* harmony import */ var _shared_components_dropdowns_variable_by_payment_dropdown_variable_by_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/variable-by-payment-dropdown/variable-by-payment-dropdown.component */ 35501);
-/* harmony import */ var _shared_components_dropdowns_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/sap-system-instance-dropdown/sap-system-instance-dropdown.component */ 74137);
-/* harmony import */ var _shared_components_dropdowns_sap_integration_purpose_by_system_instance_dropdown_sap_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/sap-integration-purpose-by-system-instance-dropdown/sap-integration-purpose-by-system-instance-dropdown.component */ 74814);
-/* harmony import */ var _shared_components_dropdowns_job_family_by_org_dropdown_job_family_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/job-family-by-org-dropdown/job-family-by-org-dropdown.component */ 76774);
-/* harmony import */ var _shared_components_dropdowns_bank_dropdown_bank_dropdown_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/bank-dropdown/bank-dropdown.component */ 75968);
-/* harmony import */ var _shared_components_dropdowns_organization_by_org_type_dropdown_organization_by_org_type_dropdown_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/organization-by-org-type-dropdown/organization-by-org-type-dropdown.component */ 26511);
-/* harmony import */ var _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/add-new-btn/add-new-btn.component */ 52682);
-/* harmony import */ var _shared_components_dropdowns_job_title_by_org_dropdown_job_title_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/job-title-by-org-dropdown/job-title-by-org-dropdown.component */ 28973);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
-/* harmony import */ var _shared_components_dropdowns_org_types_dropdown_current_structure_org_types_dropdown_current_structure_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/org-types-dropdown-current-structure/org-types-dropdown-current-structure.component */ 15549);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../shared/components/resources/dynamic-form-field/radio-button/radio-button.component */ 92393);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
+/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
+/* harmony import */ var _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/add-new-btn/add-new-btn.component */ 52682);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/material/form-field */ 75074);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _shared_components_dropdowns_payroll_payment_dropdown_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/payroll/payment-dropdown/payment-dropdown.component */ 21194);
+/* harmony import */ var _shared_components_dropdowns_payroll_variable_by_payment_dropdown_variable_by_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/payroll/variable-by-payment-dropdown/variable-by-payment-dropdown.component */ 32012);
+/* harmony import */ var _shared_components_dropdowns_sap_business_one_setup_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/sap-business-one-setup/sap-system-instance-dropdown/sap-system-instance-dropdown.component */ 37034);
+/* harmony import */ var _shared_components_dropdowns_sap_business_one_setup_sap_integration_purpose_by_system_instance_dropdown_sap_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/sap-business-one-setup/sap-integration-purpose-by-system-instance-dropdown/sap-integration-purpose-by-system-instance-dropdown.component */ 38982);
+/* harmony import */ var _shared_components_dropdowns_org_management_setup_job_family_by_org_dropdown_job_family_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/org-management-setup/job-family-by-org-dropdown/job-family-by-org-dropdown.component */ 40363);
+/* harmony import */ var _shared_components_dropdowns_hr_setup_bank_dropdown_bank_dropdown_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/hr-setup/bank-dropdown/bank-dropdown.component */ 52013);
+/* harmony import */ var _shared_components_dropdowns_org_management_setup_org_organization_by_org_type_dropdown_organization_by_org_type_dropdown_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/org-management-setup/org/organization-by-org-type-dropdown/organization-by-org-type-dropdown.component */ 85443);
+/* harmony import */ var _shared_components_dropdowns_org_management_job_title_job_title_by_org_dropdown_job_title_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/org-management/job-title/job-title-by-org-dropdown/job-title-by-org-dropdown.component */ 15362);
+/* harmony import */ var _shared_components_dropdowns_org_management_setup_org_types_org_types_dropdown_current_structure_org_types_dropdown_current_structure_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/org-management-setup/org-types/org-types-dropdown-current-structure/org-types-dropdown-current-structure.component */ 50260);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
 
 
@@ -180,7 +256,7 @@ class AddSapAccountMapComponent extends app_shared_resources_app_helpers__WEBPAC
             .getById(this.sapAccountMapId)
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
-                let result = (0,app_sap_business_one_setup_mapper_sap_account_map__WEBPACK_IMPORTED_MODULE_0__.sapAccountGetAllToMap)(res.data);
+                let result = (0,app_system_setup_sap_business_one_setup_mapper_sap_account_map__WEBPACK_IMPORTED_MODULE_0__.sapAccountGetAllToMap)(res.data);
                 this.sapAccountMapToEdit(result[0]);
             }
             else
@@ -324,7 +400,7 @@ class AddSapAccountMapComponent extends app_shared_resources_app_helpers__WEBPAC
         }
     }
 }
-AddSapAccountMapComponent.ɵfac = function AddSapAccountMapComponent_Factory(t) { return new (t || AddSapAccountMapComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵdirectiveInject"](app_sap_business_one_setup_services_sap_account_map_service__WEBPACK_IMPORTED_MODULE_4__.SapAccountMapService)); };
+AddSapAccountMapComponent.ɵfac = function AddSapAccountMapComponent_Factory(t) { return new (t || AddSapAccountMapComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵdirectiveInject"](app_system_setup_sap_business_one_setup_services_sap_account_map_service__WEBPACK_IMPORTED_MODULE_4__.SapAccountMapService)); };
 AddSapAccountMapComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵdefineComponent"]({ type: AddSapAccountMapComponent, selectors: [["app-add-sap-account-map"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵInheritDefinitionFeature"]], decls: 84, vars: 97, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "sapAccountMap", "editTitle", "editSapAccountMap", 3, "id"], [3, "url", "params", 4, "ngIf"], [3, "url", "params"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], [3, "control", "submitted", "filter"], [3, "control", "systemInstanceControl", "submitted", "filter"], [3, "control", "paymentControl", "submitted", "filter"], [1, "col-md-3", "col-12"], ["label", "accountOrPartnerCode", 3, "control", "submitted"], ["label", "is_vendor", 1, "mtop-14", 3, "control", "onChange"], ["label", "is_Aggregated", 1, "mtop-14", 3, "control", "onChange"], ["label", "ignoreCostCenters", 1, "mtop-14", 3, "control"], [3, "control", "orgTypeControl", "submitted", "filter"], [1, "col-md-8", "col-12"], [1, "mtop-14", 3, "control", "radioList", "submitted", "change"], [1, "col-md-4", "col-12", 3, "ngClass"], [3, "control", "organizationControl", "organizationControlRequired", "submitted", "filter"], [1, "col-md-6", "col-12", 3, "ngClass"], ["label", "debitOrCredit", 3, "control", "radioList", "submitted"], [1, "col-md-4", "col-12"], ["label", "defualtOcrCode1", 3, "control", "submitted"], ["label", "defualtOcrCode2", 3, "control", "submitted"], ["label", "defualtOcrCode3", 3, "control", "submitted"], ["label", "defualtOcrCode4", 3, "control", "submitted"], ["label", "defualtOcrCode5", 3, "control", "submitted"], ["label", "defualtProj_Code", 3, "control", "submitted"], ["label", "udF1_Name", 3, "control", "submitted"], ["label", "udF1_Value", 3, "control", "submitted"], ["label", "udF2_Name", 3, "control", "submitted"], ["label", "udF2_Value", 3, "control", "submitted"], ["label", "udF3_Name", 3, "control", "submitted"], ["label", "udF3_Value", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "click"]], template: function AddSapAccountMapComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -515,15 +591,15 @@ AddSapAccountMapComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_
         _angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵproperty"]("id", ctx.formCtrls.id.value);
         _angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value == 0);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_24__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_24__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__.InputComponent, _shared_components_resources_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_6__.RadioButtonComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__.CheckBoxComponent, _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_8__.BackBtnComponent, _shared_components_dropdowns_payment_dropdown_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.PaymentDropdownComponent, _shared_components_dropdowns_variable_by_payment_dropdown_variable_by_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_10__.VariableByPaymentDropdownComponent, _shared_components_dropdowns_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_11__.SapSystemInstanceDropdownComponent, _shared_components_dropdowns_sap_integration_purpose_by_system_instance_dropdown_sap_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_12__.SapIntegrationPurposeBySystemInstanceDropdownComponent, _shared_components_dropdowns_job_family_by_org_dropdown_job_family_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_13__.JobFamilyDropdownComponent, _shared_components_dropdowns_bank_dropdown_bank_dropdown_component__WEBPACK_IMPORTED_MODULE_14__.BankDropdownComponent, _shared_components_dropdowns_organization_by_org_type_dropdown_organization_by_org_type_dropdown_component__WEBPACK_IMPORTED_MODULE_15__.OrganizationByOrgTypeDropdownComponent, _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_16__.AddNewBtnComponent, _shared_components_dropdowns_job_title_by_org_dropdown_job_title_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_17__.JobTitleByOrgDropdownComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_18__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_19__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_20__.PageTitleComponent, _shared_components_dropdowns_org_types_dropdown_current_structure_org_types_dropdown_current_structure_component__WEBPACK_IMPORTED_MODULE_21__.OrgTypesDropdownCurrentStructureComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_23__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_23__.NgControlStatusGroup, _angular_material_form_field__WEBPACK_IMPORTED_MODULE_25__.MatLabel, _angular_material_card__WEBPACK_IMPORTED_MODULE_26__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_26__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_26__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_26__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_27__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_23__.FormGroupDirective, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_28__.TranslatePipe], styles: ["mat-label[_ngcontent-%COMP%] {\n  display: inline-block;\n  margin-top: 20px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC1zYXAtYWNjb3VudC1tYXAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxxQkFBQTtFQUNBLDJCQUFBO0FBQ0YiLCJmaWxlIjoiYWRkLXNhcC1hY2NvdW50LW1hcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1sYWJlbCB7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIG1hcmdpbi10b3A6IDIwcHggIWltcG9ydGFudDtcclxufVxyXG4iXX0= */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_24__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_24__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__.InputComponent, _shared_components_resources_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_6__.RadioButtonComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__.CheckBoxComponent, _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_8__.BackBtnComponent, _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_9__.AddNewBtnComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_10__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_11__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_12__.PageTitleComponent, _angular_material_form_field__WEBPACK_IMPORTED_MODULE_25__.MatLabel, _angular_material_card__WEBPACK_IMPORTED_MODULE_26__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_26__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_26__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_26__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_27__.NgxSpinnerComponent, _shared_components_dropdowns_payroll_payment_dropdown_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_13__.PaymentDropdownComponent, _shared_components_dropdowns_payroll_variable_by_payment_dropdown_variable_by_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_14__.VariableByPaymentDropdownComponent, _shared_components_dropdowns_sap_business_one_setup_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_15__.SapSystemInstanceDropdownComponent, _shared_components_dropdowns_sap_business_one_setup_sap_integration_purpose_by_system_instance_dropdown_sap_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_16__.SapIntegrationPurposeBySystemInstanceDropdownComponent, _shared_components_dropdowns_org_management_setup_job_family_by_org_dropdown_job_family_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_17__.JobFamilyDropdownComponent, _shared_components_dropdowns_hr_setup_bank_dropdown_bank_dropdown_component__WEBPACK_IMPORTED_MODULE_18__.BankDropdownComponent, _shared_components_dropdowns_org_management_setup_org_organization_by_org_type_dropdown_organization_by_org_type_dropdown_component__WEBPACK_IMPORTED_MODULE_19__.OrganizationByOrgTypeDropdownComponent, _shared_components_dropdowns_org_management_job_title_job_title_by_org_dropdown_job_title_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_20__.JobTitleByOrgDropdownComponent, _shared_components_dropdowns_org_management_setup_org_types_org_types_dropdown_current_structure_org_types_dropdown_current_structure_component__WEBPACK_IMPORTED_MODULE_21__.OrgTypesDropdownCurrentStructureComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_23__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_23__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_23__.FormGroupDirective, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_28__.TranslatePipe], styles: ["mat-label[_ngcontent-%COMP%] {\n  display: inline-block;\n  margin-top: 20px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC1zYXAtYWNjb3VudC1tYXAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxxQkFBQTtFQUNBLDJCQUFBO0FBQ0YiLCJmaWxlIjoiYWRkLXNhcC1hY2NvdW50LW1hcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1sYWJlbCB7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIG1hcmdpbi10b3A6IDIwcHggIWltcG9ydGFudDtcclxufVxyXG4iXX0= */"] });
 
 
 /***/ }),
 
-/***/ 866:
-/*!****************************************************************************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/components/sap-account-map/sap-account-map-index/sap-account-map-index.component.ts ***!
-  \****************************************************************************************************************************/
+/***/ 33428:
+/*!*****************************************************************************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/components/sap-account-map/sap-account-map-index/sap-account-map-index.component.ts ***!
+  \*****************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -531,21 +607,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SapAccountMapIndexComponent": () => (/* binding */ SapAccountMapIndexComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_sap_business_one_setup_mapper_sap_account_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/sap-business-one-setup/mapper/sap-account-map */ 49252);
+/* harmony import */ var app_system_setup_sap_business_one_setup_mapper_sap_account_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/sap-business-one-setup/mapper/sap-account-map */ 84935);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_sap_business_one_setup_services_sap_account_map_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/sap-business-one-setup/services/sap-account-map.service */ 74033);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_dropdowns_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/sap-system-instance-dropdown/sap-system-instance-dropdown.component */ 74137);
-/* harmony import */ var _shared_components_dropdowns_sap_integration_purpose_by_system_instance_dropdown_sap_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/sap-integration-purpose-by-system-instance-dropdown/sap-integration-purpose-by-system-instance-dropdown.component */ 74814);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/button */ 84522);
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var app_system_setup_sap_business_one_setup_services_sap_account_map_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/sap-business-one-setup/services/sap-account-map.service */ 92762);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/button */ 84522);
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/card */ 82156);
+/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/divider */ 71528);
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _shared_components_dropdowns_sap_business_one_setup_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/sap-business-one-setup/sap-system-instance-dropdown/sap-system-instance-dropdown.component */ 37034);
+/* harmony import */ var _shared_components_dropdowns_sap_business_one_setup_sap_integration_purpose_by_system_instance_dropdown_sap_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/sap-business-one-setup/sap-integration-purpose-by-system-instance-dropdown/sap-integration-purpose-by-system-instance-dropdown.component */ 38982);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ 2508);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
 
 
@@ -624,6 +700,7 @@ class SapAccountMapIndexComponent extends app_shared_resources_app_helpers__WEBP
         }
     }
     getList(page, filter = {}, pageSize) {
+        this.isLoaded = false;
         this.removePageParams();
         this.page.pageIndex = page;
         if (pageSize)
@@ -642,7 +719,7 @@ class SapAccountMapIndexComponent extends app_shared_resources_app_helpers__WEBP
                     this.getList(this.prevPage);
                     return;
                 }
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_9__.MatTableDataSource((0,app_sap_business_one_setup_mapper_sap_account_map__WEBPACK_IMPORTED_MODULE_0__.sapAccountToMap)(res.data));
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_9__.MatTableDataSource((0,app_system_setup_sap_business_one_setup_mapper_sap_account_map__WEBPACK_IMPORTED_MODULE_0__.sapAccountToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -681,8 +758,8 @@ class SapAccountMapIndexComponent extends app_shared_resources_app_helpers__WEBP
         this.getList(this.firstPage);
     }
 }
-SapAccountMapIndexComponent.ɵfac = function SapAccountMapIndexComponent_Factory(t) { return new (t || SapAccountMapIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdirectiveInject"](app_sap_business_one_setup_services_sap_account_map_service__WEBPACK_IMPORTED_MODULE_3__.SapAccountMapService)); };
-SapAccountMapIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdefineComponent"]({ type: SapAccountMapIndexComponent, selectors: [["app-sap-account-map-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵInheritDefinitionFeature"]], decls: 22, vars: 17, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["title", "sapAccountMap", 3, "globalFunctions"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], [3, "control", "filter"], [3, "control", "systemInstanceControl", "filter"], ["align", "end"], ["mat-raised-button", "", 1, "btn", "btn-info", "bg-light-info", 3, "click"], [3, "click"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "exportService", "page", "actions", "onChangePage", "deleteRow"]], template: function SapAccountMapIndexComponent_Template(rf, ctx) { if (rf & 1) {
+SapAccountMapIndexComponent.ɵfac = function SapAccountMapIndexComponent_Factory(t) { return new (t || SapAccountMapIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdirectiveInject"](app_system_setup_sap_business_one_setup_services_sap_account_map_service__WEBPACK_IMPORTED_MODULE_3__.SapAccountMapService)); };
+SapAccountMapIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdefineComponent"]({ type: SapAccountMapIndexComponent, selectors: [["app-sap-account-map-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵInheritDefinitionFeature"]], decls: 22, vars: 17, consts: [[1, "row"], [1, "col-12"], [1, "index-card"], ["title", "sapAccountMap", 3, "globalFunctions"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], [3, "control", "filter"], [3, "control", "systemInstanceControl", "filter"], ["align", "end"], ["mat-raised-button", "", 1, "btn", "btn-info", "bg-light-info", 3, "click"], [3, "click"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "exportService", "page", "actions", "onChangePage", "deleteRow"]], template: function SapAccountMapIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](5, "page-title", 3);
@@ -718,15 +795,15 @@ SapAccountMapIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTE
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](18, 15, "General.search"), " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("exportService", ctx.sapAccountMapService)("page", ctx.page)("actions", ctx.rowFunctions);
-    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_dropdowns_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_5__.SapSystemInstanceDropdownComponent, _shared_components_dropdowns_sap_integration_purpose_by_system_instance_dropdown_sap_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_6__.SapIntegrationPurposeBySystemInstanceDropdownComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_7__.ResetFormBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__.NgControlStatusGroup, _angular_material_button__WEBPACK_IMPORTED_MODULE_12__.MatButton, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_11__.FormGroupDirective, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzYXAtYWNjb3VudC1tYXAtaW5kZXguY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_5__.ResetFormBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_6__.PageTitleComponent, _angular_material_button__WEBPACK_IMPORTED_MODULE_11__.MatButton, _angular_material_card__WEBPACK_IMPORTED_MODULE_12__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_12__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_12__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_12__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_13__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_14__.NgxSpinnerComponent, _shared_components_dropdowns_sap_business_one_setup_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_7__.SapSystemInstanceDropdownComponent, _shared_components_dropdowns_sap_business_one_setup_sap_integration_purpose_by_system_instance_dropdown_sap_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_8__.SapIntegrationPurposeBySystemInstanceDropdownComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_15__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_15__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.FormGroupDirective, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzYXAtYWNjb3VudC1tYXAtaW5kZXguY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
 
-/***/ 25082:
-/*!************************************************************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/components/sap-loan-type-account/sap-loan-type-account.component.ts ***!
-  \************************************************************************************************************/
+/***/ 81750:
+/*!*************************************************************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/components/sap-loan-type-account/sap-loan-type-account.component.ts ***!
+  \*************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -735,24 +812,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ 2508);
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_sap_business_one_setup_mapper_sap_loan_type__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/sap-business-one-setup/mapper/sap-loan-type */ 96237);
+/* harmony import */ var app_system_setup_sap_business_one_setup_mapper_sap_loan_type__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/sap-business-one-setup/mapper/sap-loan-type */ 66339);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_validators_custom_validator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/shared/validators/custom.validator */ 78937);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_sap_business_one_setup_services_sap_loan_type_account_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/sap-business-one-setup/services/sap-loan-type-account.service */ 26575);
+/* harmony import */ var app_system_setup_sap_business_one_setup_services_sap_loan_type_account_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/system-setup/sap-business-one-setup/services/sap-loan-type-account.service */ 20933);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
-/* harmony import */ var _shared_components_dropdowns_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../shared/components/dropdowns/sap-system-instance-dropdown/sap-system-instance-dropdown.component */ 74137);
-/* harmony import */ var _shared_components_dropdowns_loan_types_dropdown_loan_types_dropdown_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../shared/components/dropdowns/loan-types-dropdown/loan-types-dropdown.component */ 14149);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/divider */ 71528);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _shared_components_dropdowns_sap_business_one_setup_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/sap-business-one-setup/sap-system-instance-dropdown/sap-system-instance-dropdown.component */ 37034);
+/* harmony import */ var _shared_components_dropdowns_payroll_setup_loan_types_dropdown_loan_types_dropdown_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/payroll-setup/loan-types-dropdown/loan-types-dropdown.component */ 11526);
 
 
 
@@ -810,6 +887,7 @@ class SapLoanTypeAccountComponent extends app_shared_resources_app_helpers__WEBP
             this.getList(this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize)
             this.page.pageSize = pageSize;
@@ -822,7 +900,7 @@ class SapLoanTypeAccountComponent extends app_shared_resources_app_helpers__WEBP
             .pipe(this.cancelRequest())
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_15__.MatTableDataSource((0,app_sap_business_one_setup_mapper_sap_loan_type__WEBPACK_IMPORTED_MODULE_0__.sapLoanTypeToMap)(res.data));
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_15__.MatTableDataSource((0,app_system_setup_sap_business_one_setup_mapper_sap_loan_type__WEBPACK_IMPORTED_MODULE_0__.sapLoanTypeToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -912,7 +990,7 @@ class SapLoanTypeAccountComponent extends app_shared_resources_app_helpers__WEBP
         this.submitted = false;
     }
 }
-SapLoanTypeAccountComponent.ɵfac = function SapLoanTypeAccountComponent_Factory(t) { return new (t || SapLoanTypeAccountComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdirectiveInject"](app_sap_business_one_setup_services_sap_loan_type_account_service__WEBPACK_IMPORTED_MODULE_4__.SapLoanTypeAccountService)); };
+SapLoanTypeAccountComponent.ɵfac = function SapLoanTypeAccountComponent_Factory(t) { return new (t || SapLoanTypeAccountComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdirectiveInject"](app_system_setup_sap_business_one_setup_services_sap_loan_type_account_service__WEBPACK_IMPORTED_MODULE_4__.SapLoanTypeAccountService)); };
 SapLoanTypeAccountComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdefineComponent"]({ type: SapLoanTypeAccountComponent, selectors: [["app-sap-loan-type-account"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵInheritDefinitionFeature"]], decls: 26, vars: 22, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "sapLoanTypeAccount", "editTitle", "editSapLoanTypeAccount", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-4", "col-12"], [3, "control", "submitted", "filter"], ["label", "debitAccount", 3, "control", "submitted"], [1, "col-md-6", "col-12"], ["label", "creditAccount", 3, "control", "submitted"], ["label", "is_vendor", 1, "mtop-14", 3, "control"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function SapLoanTypeAccountComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -963,15 +1041,15 @@ SapLoanTypeAccountComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTE
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.sapLoanTypeAccountService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_16__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_6__.MaterialTableComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__.CheckBoxComponent, _shared_components_dropdowns_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_8__.SapSystemInstanceDropdownComponent, _shared_components_dropdowns_loan_types_dropdown_loan_types_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.LoanTypesDropdownComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_10__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_11__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_12__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_14__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_18__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_19__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_14__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzYXAtbG9hbi10eXBlLWFjY291bnQuY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_16__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_6__.MaterialTableComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__.CheckBoxComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_17__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_18__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_19__.NgxSpinnerComponent, _shared_components_dropdowns_sap_business_one_setup_sap_system_instance_dropdown_sap_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_11__.SapSystemInstanceDropdownComponent, _shared_components_dropdowns_payroll_setup_loan_types_dropdown_loan_types_dropdown_component__WEBPACK_IMPORTED_MODULE_12__.LoanTypesDropdownComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_14__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_14__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzYXAtbG9hbi10eXBlLWFjY291bnQuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
 
-/***/ 16932:
-/*!****************************************************************************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/components/system-instance/system-instance-index/system-instance-index.component.ts ***!
-  \****************************************************************************************************************************/
+/***/ 54893:
+/*!*****************************************************************************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/components/system-instance/system-instance-index/system-instance-index.component.ts ***!
+  \*****************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -982,13 +1060,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_sap_business_one_setup_services_system_instance_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/sap-business-one-setup/services/system-instance.service */ 52104);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var app_system_setup_sap_business_one_setup_services_system_instance_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/system-setup/sap-business-one-setup/services/system-instance.service */ 44222);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
-
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-spinner */ 88035);
 
 
 
@@ -1026,6 +1102,7 @@ class SystemInstanceIndexComponent extends app_shared_resources_app_helpers__WEB
             this.getList(this.pageFromUrl > 0 ? this.pageFromUrl : this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.removePageParams();
         this.page.pageIndex = page;
         if (pageSize)
@@ -1078,30 +1155,29 @@ class SystemInstanceIndexComponent extends app_shared_resources_app_helpers__WEB
         });
     }
 }
-SystemInstanceIndexComponent.ɵfac = function SystemInstanceIndexComponent_Factory(t) { return new (t || SystemInstanceIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](app_sap_business_one_setup_services_system_instance_service__WEBPACK_IMPORTED_MODULE_2__.SystemInstanceService)); };
-SystemInstanceIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: SystemInstanceIndexComponent, selectors: [["app-system-instance-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 8, consts: [[1, "row"], [1, "col-12"], ["title", "sapSystemInstance", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "exportService", "page", "actions", "onChangePage", "deleteRow"]], template: function SystemInstanceIndexComponent_Template(rf, ctx) { if (rf & 1) {
+SystemInstanceIndexComponent.ɵfac = function SystemInstanceIndexComponent_Factory(t) { return new (t || SystemInstanceIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](app_system_setup_sap_business_one_setup_services_system_instance_service__WEBPACK_IMPORTED_MODULE_2__.SystemInstanceService)); };
+SystemInstanceIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: SystemInstanceIndexComponent, selectors: [["app-system-instance-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 8, consts: [[1, "row"], [1, "col-12"], [1, "index-card"], ["title", "sapSystemInstance", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "exportService", "page", "actions", "onChangePage", "deleteRow"]], template: function SystemInstanceIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](5, "page-title", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](6, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](7, "app-material-table", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("onChangePage", function SystemInstanceIndexComponent_Template_app_material_table_onChangePage_7_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function SystemInstanceIndexComponent_Template_app_material_table_deleteRow_7_listener($event) { return ctx.onDelete($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](6, "app-material-table", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("onChangePage", function SystemInstanceIndexComponent_Template_app_material_table_onChangePage_6_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function SystemInstanceIndexComponent_Template_app_material_table_deleteRow_6_listener($event) { return ctx.onDelete($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("exportService", ctx.systemInstanceService)("page", ctx.page)("actions", ctx.rowFunctions);
-    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, _angular_material_divider__WEBPACK_IMPORTED_MODULE_8__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzeXN0ZW0taW5zdGFuY2UtaW5kZXguY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, ngx_spinner__WEBPACK_IMPORTED_MODULE_8__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzeXN0ZW0taW5zdGFuY2UtaW5kZXguY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
 
-/***/ 49252:
-/*!******************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/mapper/sap-account-map.ts ***!
-  \******************************************************************/
+/***/ 84935:
+/*!*******************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/mapper/sap-account-map.ts ***!
+  \*******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1117,7 +1193,7 @@ function sapAccountGetAllToMap(violations) {
             ...sapAccount._I_PAY_Variable_SAP_SystemInstance_AccountNumber_COMM_Bank,
             organizationTypeId: sapAccount.orgTypeId,
             systemInstanceId: sapAccount._I_PAY_Variable_SAP_SystemInstance_AccountNumber_COMM_Bank
-                .saP_IntegrationPurpose?.systemInstance_ID,
+                ?.saP_IntegrationPurpose?.systemInstance_ID,
         };
     });
 }
@@ -1125,7 +1201,7 @@ function sapAccountToMap(violations) {
     return violations.map((sapAccount) => {
         return {
             ...sapAccount,
-            integrationPurpose: sapAccount.saP_IntegrationPurpose.name,
+            integrationPurpose: sapAccount.saP_IntegrationPurpose?.name,
             accountType: sapAccount.is_Debit ? "Debit" : "Credit",
             variables: (0,app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__.msgTranslate)(sapAccount.pay_Variable?.arName, sapAccount.pay_Variable?.name),
             bothBankCash: sapAccount.bothBankCash && !sapAccount.bank_ID ? true : false,
@@ -1136,10 +1212,10 @@ function sapAccountToMap(violations) {
 
 /***/ }),
 
-/***/ 96237:
-/*!****************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/mapper/sap-loan-type.ts ***!
-  \****************************************************************/
+/***/ 66339:
+/*!*****************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/mapper/sap-loan-type.ts ***!
+  \*****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1152,8 +1228,8 @@ function sapLoanTypeToMap(sapLoanTypes) {
     return sapLoanTypes.map((sapLoanType) => {
         return {
             ...sapLoanType,
-            sapSystem: (0,app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__.msgTranslate)(sapLoanType.saP_SystemInstance.ar_Name, sapLoanType.saP_SystemInstance.en_Name),
-            loanType: (0,app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__.msgTranslate)(sapLoanType.paY_Loan_TYPE.ar_Name, sapLoanType.paY_Loan_TYPE.en_Name),
+            sapSystem: (0,app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__.msgTranslate)(sapLoanType.saP_SystemInstance?.ar_Name, sapLoanType.saP_SystemInstance?.en_Name),
+            loanType: (0,app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__.msgTranslate)(sapLoanType.paY_Loan_TYPE?.ar_Name, sapLoanType.paY_Loan_TYPE?.en_Name),
         };
     });
 }
@@ -1161,25 +1237,27 @@ function sapLoanTypeToMap(sapLoanTypes) {
 
 /***/ }),
 
-/***/ 42146:
-/*!*********************************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/sap-business-one-setup-routing.module.ts ***!
-  \*********************************************************************************/
+/***/ 96305:
+/*!**********************************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/sap-business-one-setup-routing.module.ts ***!
+  \**********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SapBusinessOneSetupRoutingModule": () => (/* binding */ SapBusinessOneSetupRoutingModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ 60124);
-/* harmony import */ var _components_system_instance_system_instance_index_system_instance_index_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/system-instance/system-instance-index/system-instance-index.component */ 16932);
-/* harmony import */ var _components_system_instance_add_system_instance_add_system_instance_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/system-instance/add-system-instance/add-system-instance.component */ 98838);
-/* harmony import */ var _components_sap_account_map_add_sap_account_map_add_sap_account_map_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/sap-account-map/add-sap-account-map/add-sap-account-map.component */ 46376);
-/* harmony import */ var _components_sap_account_map_sap_account_map_index_sap_account_map_index_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/sap-account-map/sap-account-map-index/sap-account-map-index.component */ 866);
-/* harmony import */ var _components_sap_loan_type_account_sap_loan_type_account_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/sap-loan-type-account/sap-loan-type-account.component */ 25082);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ 60124);
+/* harmony import */ var _components_system_instance_system_instance_index_system_instance_index_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/system-instance/system-instance-index/system-instance-index.component */ 54893);
+/* harmony import */ var _components_system_instance_add_system_instance_add_system_instance_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/system-instance/add-system-instance/add-system-instance.component */ 43130);
+/* harmony import */ var _components_sap_account_map_add_sap_account_map_add_sap_account_map_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/sap-account-map/add-sap-account-map/add-sap-account-map.component */ 7696);
+/* harmony import */ var _components_sap_account_map_sap_account_map_index_sap_account_map_index_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/sap-account-map/sap-account-map-index/sap-account-map-index.component */ 33428);
+/* harmony import */ var _components_sap_loan_type_account_sap_loan_type_account_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/sap-loan-type-account/sap-loan-type-account.component */ 81750);
 /* harmony import */ var app_shared_enums_route_path_match_enum__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/shared/enums/route-path-match.enum */ 36162);
 /* harmony import */ var app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/shared/resources/views-manager */ 74513);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! app/shared/Guards/check-is-allowd.guard */ 3710);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 22560);
+
 
 
 
@@ -1204,16 +1282,19 @@ const routes = [
                 path: "index",
                 component: _components_system_instance_system_instance_index_system_instance_index_component__WEBPACK_IMPORTED_MODULE_0__.SystemInstanceIndexComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_6__.ViewsManager.system_instance_index },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_7__.CheckIsViewAllowedGuard],
             },
             {
                 path: "add",
                 component: _components_system_instance_add_system_instance_add_system_instance_component__WEBPACK_IMPORTED_MODULE_1__.AddSystemInstanceComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_6__.ViewsManager.add_system_instance },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_7__.CheckIsViewAllowedGuard],
             },
             {
                 path: "edit/:systemInstanceId",
                 component: _components_system_instance_add_system_instance_add_system_instance_component__WEBPACK_IMPORTED_MODULE_1__.AddSystemInstanceComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_6__.ViewsManager.add_system_instance },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_7__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -1230,16 +1311,19 @@ const routes = [
                 path: "index",
                 component: _components_sap_account_map_sap_account_map_index_sap_account_map_index_component__WEBPACK_IMPORTED_MODULE_3__.SapAccountMapIndexComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_6__.ViewsManager.sap_account_map_index },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_7__.CheckIsViewAllowedGuard],
             },
             {
                 path: "add",
                 component: _components_sap_account_map_add_sap_account_map_add_sap_account_map_component__WEBPACK_IMPORTED_MODULE_2__.AddSapAccountMapComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_6__.ViewsManager.add_sap_account_map },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_7__.CheckIsViewAllowedGuard],
             },
             {
                 path: "edit/:sapAccountMapId",
                 component: _components_sap_account_map_add_sap_account_map_add_sap_account_map_component__WEBPACK_IMPORTED_MODULE_2__.AddSapAccountMapComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_6__.ViewsManager.add_sap_account_map },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_7__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -1247,37 +1331,38 @@ const routes = [
         path: "sap-loan-type-account",
         component: _components_sap_loan_type_account_sap_loan_type_account_component__WEBPACK_IMPORTED_MODULE_4__.SapLoanTypeAccountComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_6__.ViewsManager.sap_loan_type_account },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_7__.CheckIsViewAllowedGuard],
     },
 ];
 class SapBusinessOneSetupRoutingModule {
 }
 SapBusinessOneSetupRoutingModule.ɵfac = function SapBusinessOneSetupRoutingModule_Factory(t) { return new (t || SapBusinessOneSetupRoutingModule)(); };
-SapBusinessOneSetupRoutingModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineNgModule"]({ type: SapBusinessOneSetupRoutingModule });
-SapBusinessOneSetupRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵsetNgModuleScope"](SapBusinessOneSetupRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule] }); })();
+SapBusinessOneSetupRoutingModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineNgModule"]({ type: SapBusinessOneSetupRoutingModule });
+SapBusinessOneSetupRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_9__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_9__.RouterModule] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵsetNgModuleScope"](SapBusinessOneSetupRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_9__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_9__.RouterModule] }); })();
 
 
 /***/ }),
 
-/***/ 77068:
-/*!*************************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/sap-business-one-setup.module.ts ***!
-  \*************************************************************************/
+/***/ 9160:
+/*!**************************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/sap-business-one-setup.module.ts ***!
+  \**************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SapBusinessOneSetupModule": () => (/* binding */ SapBusinessOneSetupModule)
 /* harmony export */ });
-/* harmony import */ var _components_sap_loan_type_account_sap_loan_type_account_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sap-loan-type-account/sap-loan-type-account.component */ 25082);
+/* harmony import */ var _components_sap_loan_type_account_sap_loan_type_account_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sap-loan-type-account/sap-loan-type-account.component */ 81750);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ 94666);
 /* harmony import */ var app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/shared.module */ 44466);
-/* harmony import */ var _sap_business_one_setup_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sap-business-one-setup-routing.module */ 42146);
-/* harmony import */ var _components_system_instance_system_instance_index_system_instance_index_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/system-instance/system-instance-index/system-instance-index.component */ 16932);
-/* harmony import */ var _components_system_instance_add_system_instance_add_system_instance_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/system-instance/add-system-instance/add-system-instance.component */ 98838);
-/* harmony import */ var _components_system_instance_system_instance_purpose_system_instance_purpose_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/system-instance/system-instance-purpose/system-instance-purpose.component */ 93332);
-/* harmony import */ var _components_sap_account_map_sap_account_map_index_sap_account_map_index_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/sap-account-map/sap-account-map-index/sap-account-map-index.component */ 866);
-/* harmony import */ var _components_sap_account_map_add_sap_account_map_add_sap_account_map_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/sap-account-map/add-sap-account-map/add-sap-account-map.component */ 46376);
+/* harmony import */ var _sap_business_one_setup_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sap-business-one-setup-routing.module */ 96305);
+/* harmony import */ var _components_system_instance_system_instance_index_system_instance_index_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/system-instance/system-instance-index/system-instance-index.component */ 54893);
+/* harmony import */ var _components_system_instance_add_system_instance_add_system_instance_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/system-instance/add-system-instance/add-system-instance.component */ 43130);
+/* harmony import */ var _components_system_instance_system_instance_purpose_system_instance_purpose_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/system-instance/system-instance-purpose/system-instance-purpose.component */ 51691);
+/* harmony import */ var _components_sap_account_map_sap_account_map_index_sap_account_map_index_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/sap-account-map/sap-account-map-index/sap-account-map-index.component */ 33428);
+/* harmony import */ var _components_sap_account_map_add_sap_account_map_add_sap_account_map_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/sap-account-map/add-sap-account-map/add-sap-account-map.component */ 7696);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
@@ -1304,10 +1389,10 @@ SapBusinessOneSetupModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ 74033:
-/*!****************************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/services/sap-account-map.service.ts ***!
-  \****************************************************************************/
+/***/ 92762:
+/*!*****************************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/services/sap-account-map.service.ts ***!
+  \*****************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1373,10 +1458,10 @@ SapAccountMapService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODU
 
 /***/ }),
 
-/***/ 26575:
-/*!**********************************************************************************!*\
-  !*** ./src/app/sap-business-one-setup/services/sap-loan-type-account.service.ts ***!
-  \**********************************************************************************/
+/***/ 20933:
+/*!***********************************************************************************************!*\
+  !*** ./src/app/system-setup/sap-business-one-setup/services/sap-loan-type-account.service.ts ***!
+  \***********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1415,4 +1500,4 @@ SapLoanTypeAccountService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED
 /***/ })
 
 }]);
-//# sourceMappingURL=src_app_sap-business-one-setup_sap-business-one-setup_module_ts.js.map
+//# sourceMappingURL=src_app_system-setup_sap-business-one-setup_sap-business-one-setup_module_ts.js.map

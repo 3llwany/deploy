@@ -1,10 +1,86 @@
 "use strict";
-(self["webpackChunkhr"] = self["webpackChunkhr"] || []).push([["src_app_s4-setup_s4-setup_module_ts"],{
+(self["webpackChunkhr"] = self["webpackChunkhr"] || []).push([["src_app_system-setup_s4-setup_s4-setup_module_ts"],{
 
-/***/ 25243:
-/*!*******************************************************************************************************!*\
-  !*** ./src/app/s4-setup/components/s4-account-map/add-s4-account-map/add-s4-account-map.component.ts ***!
-  \*******************************************************************************************************/
+/***/ 3710:
+/*!********************************************************!*\
+  !*** ./src/app/shared/Guards/check-is-allowd.guard.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CheckIsViewAllowedGuard": () => (/* binding */ CheckIsViewAllowedGuard)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var app_shared_services_loading_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/services/loading.service */ 67579);
+/* harmony import */ var app_auth_services_user_views_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/auth/services/user-views.service */ 24280);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 60124);
+
+
+
+
+
+
+class CheckIsViewAllowedGuard {
+    constructor(viewsService, router) {
+        this.viewsService = viewsService;
+        this.router = router;
+        this.loadingService = (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.inject)(app_shared_services_loading_service__WEBPACK_IMPORTED_MODULE_0__.LoadingService);
+        this.UserModules = viewsService.UserModules$.getValue();
+        this.loading = document.getElementById("page-loading");
+    }
+    canActivate(route, state) {
+        return true;
+        // un comment code for used
+        // let view = route.data?.view;
+        // this.showLoading();
+        // if (this.UserModules?.length > 0) {
+        //   if (!this.viewsService.isViewAllowed(view)) {
+        //     this.router.navigateByUrl("/auth/access-denied");
+        //     this.hideLoading();
+        //   }
+        //   else {
+        //     this.hideLoading();
+        //     return true;
+        //   }
+        // }
+        //
+        // else {
+        //   this.viewsService.UserModules$.subscribe((val) => {
+        //     if (val?.length > 0) {
+        //       if (!this.viewsService.isViewAllowed(view)) {
+        //         this.router.navigateByUrl("/auth/access-denied");
+        //         this.hideLoading();
+        //       }
+        //       else {
+        //         this.hideLoading();
+        //         return true;
+        //       }
+        //     }
+        //   });
+        // }
+    }
+    showLoading() {
+        this.loading.style.display = "block";
+        this.loading.style.opacity = "1";
+        this.loading.style.zIndex = "998";
+    }
+    hideLoading() {
+        this.loading.style.display = "none";
+        this.loading.style.opacity = "0";
+        this.loading.style.zIndex = "0";
+    }
+}
+CheckIsViewAllowedGuard.ɵfac = function CheckIsViewAllowedGuard_Factory(t) { return new (t || CheckIsViewAllowedGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](app_auth_services_user_views_service__WEBPACK_IMPORTED_MODULE_1__.UserViewsService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router)); };
+CheckIsViewAllowedGuard.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: CheckIsViewAllowedGuard, factory: CheckIsViewAllowedGuard.ɵfac, providedIn: "root" });
+
+
+/***/ }),
+
+/***/ 95335:
+/*!********************************************************************************************************************!*\
+  !*** ./src/app/system-setup/s4-setup/components/s4-account-map/add-s4-account-map/add-s4-account-map.component.ts ***!
+  \********************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -12,31 +88,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AddS4AccountMapComponent": () => (/* binding */ AddS4AccountMapComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var app_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/s4-setup/mapper/s4-account-map */ 29577);
+/* harmony import */ var app_system_setup_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/s4-setup/mapper/s4-account-map */ 12306);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/s4-setup/services/s4-account-map.service */ 86819);
+/* harmony import */ var app_system_setup_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/s4-setup/services/s4-account-map.service */ 96757);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/radio-button/radio-button.component */ 92393);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
-/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
-/* harmony import */ var _shared_components_dropdowns_payment_dropdown_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/payment-dropdown/payment-dropdown.component */ 70955);
-/* harmony import */ var _shared_components_dropdowns_variable_by_payment_dropdown_variable_by_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/variable-by-payment-dropdown/variable-by-payment-dropdown.component */ 35501);
-/* harmony import */ var _shared_components_dropdowns_job_family_by_org_dropdown_job_family_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/job-family-by-org-dropdown/job-family-by-org-dropdown.component */ 76774);
-/* harmony import */ var _shared_components_dropdowns_bank_dropdown_bank_dropdown_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/bank-dropdown/bank-dropdown.component */ 75968);
-/* harmony import */ var _shared_components_dropdowns_organization_by_org_type_dropdown_organization_by_org_type_dropdown_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/organization-by-org-type-dropdown/organization-by-org-type-dropdown.component */ 26511);
-/* harmony import */ var _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/add-new-btn/add-new-btn.component */ 52682);
-/* harmony import */ var _shared_components_dropdowns_job_title_by_org_dropdown_job_title_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/job-title-by-org-dropdown/job-title-by-org-dropdown.component */ 28973);
-/* harmony import */ var _shared_components_dropdowns_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/s4-system-instance-dropdown/s4-system-instance-dropdown.component */ 92363);
-/* harmony import */ var _shared_components_dropdowns_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/s4-integration-purpose-by-system-instance-dropdown/s4-integration-purpose-by-system-instance-dropdown.component */ 85003);
-/* harmony import */ var _shared_components_dropdowns_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/gl-account-by-s4-system-instance-dropdown/gl-account-by-s4-system-instance-dropdown.component */ 33886);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
-/* harmony import */ var _shared_components_dropdowns_org_types_dropdown_current_structure_org_types_dropdown_current_structure_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/org-types-dropdown-current-structure/org-types-dropdown-current-structure.component */ 15549);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/resources/dynamic-form-field/radio-button/radio-button.component */ 92393);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
+/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
+/* harmony import */ var _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/add-new-btn/add-new-btn.component */ 52682);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _shared_components_dropdowns_payroll_payment_dropdown_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/payroll/payment-dropdown/payment-dropdown.component */ 21194);
+/* harmony import */ var _shared_components_dropdowns_payroll_variable_by_payment_dropdown_variable_by_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/payroll/variable-by-payment-dropdown/variable-by-payment-dropdown.component */ 32012);
+/* harmony import */ var _shared_components_dropdowns_org_management_setup_job_family_by_org_dropdown_job_family_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/org-management-setup/job-family-by-org-dropdown/job-family-by-org-dropdown.component */ 40363);
+/* harmony import */ var _shared_components_dropdowns_hr_setup_bank_dropdown_bank_dropdown_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/hr-setup/bank-dropdown/bank-dropdown.component */ 52013);
+/* harmony import */ var _shared_components_dropdowns_org_management_setup_org_organization_by_org_type_dropdown_organization_by_org_type_dropdown_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/org-management-setup/org/organization-by-org-type-dropdown/organization-by-org-type-dropdown.component */ 85443);
+/* harmony import */ var _shared_components_dropdowns_org_management_job_title_job_title_by_org_dropdown_job_title_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/org-management/job-title/job-title-by-org-dropdown/job-title-by-org-dropdown.component */ 15362);
+/* harmony import */ var _shared_components_dropdowns_s4_setup_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/s4-setup/s4-system-instance-dropdown/s4-system-instance-dropdown.component */ 44423);
+/* harmony import */ var _shared_components_dropdowns_s4_setup_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/s4-setup/s4-integration-purpose-by-system-instance-dropdown/s4-integration-purpose-by-system-instance-dropdown.component */ 94422);
+/* harmony import */ var _shared_components_dropdowns_s4_setup_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/s4-setup/gl-account-by-s4-system-instance-dropdown/gl-account-by-s4-system-instance-dropdown.component */ 70710);
+/* harmony import */ var _shared_components_dropdowns_org_management_setup_org_types_org_types_dropdown_current_structure_org_types_dropdown_current_structure_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/org-management-setup/org-types/org-types-dropdown-current-structure/org-types-dropdown-current-structure.component */ 50260);
 
 
 
@@ -162,7 +238,7 @@ class AddS4AccountMapComponent extends app_shared_resources_app_helpers__WEBPACK
             .getById(this.s4AccountMapId)
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
-                this.s4AccountMapToEdit((0,app_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__.s4AccountGetAllToMap)(res.data)[0]);
+                this.s4AccountMapToEdit((0,app_system_setup_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__.s4AccountGetAllToMap)(res.data)[0]);
             }
             else
                 this.errorList(res.message.messages);
@@ -288,7 +364,7 @@ class AddS4AccountMapComponent extends app_shared_resources_app_helpers__WEBPACK
         this.formCtrls.s4_LG_Account_Text.setValue(glAccount[0]?.Gl_text);
     }
 }
-AddS4AccountMapComponent.ɵfac = function AddS4AccountMapComponent_Factory(t) { return new (t || AddS4AccountMapComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdirectiveInject"](app_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__.S4AccountMapService)); };
+AddS4AccountMapComponent.ɵfac = function AddS4AccountMapComponent_Factory(t) { return new (t || AddS4AccountMapComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdirectiveInject"](app_system_setup_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__.S4AccountMapService)); };
 AddS4AccountMapComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdefineComponent"]({ type: AddS4AccountMapComponent, selectors: [["app-add-s4-account-map"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵInheritDefinitionFeature"]], decls: 46, vars: 65, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "s4AccountMap", "editTitle", "editS4AccountMap", 3, "id"], [3, "url", "params", 4, "ngIf"], [3, "url", "params"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-4", "col-12"], [3, "control", "submitted", "filter"], [3, "control", "s4SystemInstanceControl", "submitted", "filter"], [3, "control", "s4SystemInstanceControl", "submitted", "filter", "change"], [1, "col-md-6", "col-12"], [3, "control", "paymentControl", "submitted", "filter"], [1, "col-md-6", "col-12", "mb-3"], ["label", "is_Aggregated", 1, "mtop-14", 3, "control"], ["label", "ignoreCostCenters", 1, "mtop-14", 3, "control"], [3, "control", "orgTypeControl", "submitted", "filter"], [1, "col-md-8", "col-12"], [1, "mtop-14", 3, "control", "radioList", "submitted", "change"], [1, "col-md-4", "col-12", 3, "ngClass"], [3, "control", "organizationControl", "organizationControlRequired", "submitted", "filter"], [1, "col-md-6", "col-12", 3, "ngClass"], ["label", "debitOrCredit", 3, "control", "radioList", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "click"]], template: function AddS4AccountMapComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -396,15 +472,15 @@ AddS4AccountMapComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_M
         _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵproperty"]("id", ctx.formCtrls.id.value);
         _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value == 0);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_23__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_23__.NgIf, _shared_components_resources_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_4__.RadioButtonComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_5__.CheckBoxComponent, _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_6__.BackBtnComponent, _shared_components_dropdowns_payment_dropdown_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_7__.PaymentDropdownComponent, _shared_components_dropdowns_variable_by_payment_dropdown_variable_by_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_8__.VariableByPaymentDropdownComponent, _shared_components_dropdowns_job_family_by_org_dropdown_job_family_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.JobFamilyDropdownComponent, _shared_components_dropdowns_bank_dropdown_bank_dropdown_component__WEBPACK_IMPORTED_MODULE_10__.BankDropdownComponent, _shared_components_dropdowns_organization_by_org_type_dropdown_organization_by_org_type_dropdown_component__WEBPACK_IMPORTED_MODULE_11__.OrganizationByOrgTypeDropdownComponent, _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_12__.AddNewBtnComponent, _shared_components_dropdowns_job_title_by_org_dropdown_job_title_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_13__.JobTitleByOrgDropdownComponent, _shared_components_dropdowns_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_14__.S4SystemInstanceDropdownComponent, _shared_components_dropdowns_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_15__.S4IntegrationPurposeBySystemInstanceDropdownComponent, _shared_components_dropdowns_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_16__.GlAccountByS4SystemInstanceDropdownComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_17__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_18__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_19__.PageTitleComponent, _shared_components_dropdowns_org_types_dropdown_current_structure_org_types_dropdown_current_structure_component__WEBPACK_IMPORTED_MODULE_20__.OrgTypesDropdownCurrentStructureComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_22__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_22__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_24__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_24__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_24__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_24__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_25__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_22__.FormGroupDirective], styles: ["mat-label[_ngcontent-%COMP%] {\n  display: inline-block;\n  margin-top: 20px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC1zNC1hY2NvdW50LW1hcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0VBQ0EsMkJBQUE7QUFDRiIsImZpbGUiOiJhZGQtczQtYWNjb3VudC1tYXAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtbGFiZWwge1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBtYXJnaW4tdG9wOiAyMHB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuIl19 */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_23__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_23__.NgIf, _shared_components_resources_dynamic_form_field_radio_button_radio_button_component__WEBPACK_IMPORTED_MODULE_4__.RadioButtonComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_5__.CheckBoxComponent, _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_6__.BackBtnComponent, _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_7__.AddNewBtnComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_24__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_24__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_24__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_24__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_25__.NgxSpinnerComponent, _shared_components_dropdowns_payroll_payment_dropdown_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_11__.PaymentDropdownComponent, _shared_components_dropdowns_payroll_variable_by_payment_dropdown_variable_by_payment_dropdown_component__WEBPACK_IMPORTED_MODULE_12__.VariableByPaymentDropdownComponent, _shared_components_dropdowns_org_management_setup_job_family_by_org_dropdown_job_family_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_13__.JobFamilyDropdownComponent, _shared_components_dropdowns_hr_setup_bank_dropdown_bank_dropdown_component__WEBPACK_IMPORTED_MODULE_14__.BankDropdownComponent, _shared_components_dropdowns_org_management_setup_org_organization_by_org_type_dropdown_organization_by_org_type_dropdown_component__WEBPACK_IMPORTED_MODULE_15__.OrganizationByOrgTypeDropdownComponent, _shared_components_dropdowns_org_management_job_title_job_title_by_org_dropdown_job_title_by_org_dropdown_component__WEBPACK_IMPORTED_MODULE_16__.JobTitleByOrgDropdownComponent, _shared_components_dropdowns_s4_setup_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_17__.S4SystemInstanceDropdownComponent, _shared_components_dropdowns_s4_setup_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_18__.S4IntegrationPurposeBySystemInstanceDropdownComponent, _shared_components_dropdowns_s4_setup_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_19__.GlAccountByS4SystemInstanceDropdownComponent, _shared_components_dropdowns_org_management_setup_org_types_org_types_dropdown_current_structure_org_types_dropdown_current_structure_component__WEBPACK_IMPORTED_MODULE_20__.OrgTypesDropdownCurrentStructureComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_22__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_22__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_22__.FormGroupDirective], styles: ["mat-label[_ngcontent-%COMP%] {\n  display: inline-block;\n  margin-top: 20px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC1zNC1hY2NvdW50LW1hcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0VBQ0EsMkJBQUE7QUFDRiIsImZpbGUiOiJhZGQtczQtYWNjb3VudC1tYXAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtbGFiZWwge1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBtYXJnaW4tdG9wOiAyMHB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuIl19 */"] });
 
 
 /***/ }),
 
-/***/ 55091:
-/*!***********************************************************************************************************!*\
-  !*** ./src/app/s4-setup/components/s4-account-map/s4-account-map-index/s4-account-map-index.component.ts ***!
-  \***********************************************************************************************************/
+/***/ 12043:
+/*!************************************************************************************************************************!*\
+  !*** ./src/app/system-setup/s4-setup/components/s4-account-map/s4-account-map-index/s4-account-map-index.component.ts ***!
+  \************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -412,22 +488,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "S4AccountMapIndexComponent": () => (/* binding */ S4AccountMapIndexComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/s4-setup/mapper/s4-account-map */ 29577);
+/* harmony import */ var app_system_setup_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/s4-setup/mapper/s4-account-map */ 12306);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/s4-setup/services/s4-account-map.service */ 86819);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_dropdowns_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/s4-system-instance-dropdown/s4-system-instance-dropdown.component */ 92363);
-/* harmony import */ var _shared_components_dropdowns_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/s4-integration-purpose-by-system-instance-dropdown/s4-integration-purpose-by-system-instance-dropdown.component */ 85003);
-/* harmony import */ var _shared_components_dropdowns_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/gl-account-by-s4-system-instance-dropdown/gl-account-by-s4-system-instance-dropdown.component */ 33886);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/button */ 84522);
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var app_system_setup_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/s4-setup/services/s4-account-map.service */ 96757);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/button */ 84522);
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ 82156);
+/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/divider */ 71528);
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _shared_components_dropdowns_s4_setup_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/s4-setup/s4-system-instance-dropdown/s4-system-instance-dropdown.component */ 44423);
+/* harmony import */ var _shared_components_dropdowns_s4_setup_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/s4-setup/s4-integration-purpose-by-system-instance-dropdown/s4-integration-purpose-by-system-instance-dropdown.component */ 94422);
+/* harmony import */ var _shared_components_dropdowns_s4_setup_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/s4-setup/gl-account-by-s4-system-instance-dropdown/gl-account-by-s4-system-instance-dropdown.component */ 70710);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ 2508);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
 
 
@@ -506,6 +582,7 @@ class S4AccountMapIndexComponent extends app_shared_resources_app_helpers__WEBPA
         }
     }
     getList(page, filter = {}, pageSize) {
+        this.isLoaded = false;
         this.removePageParams();
         this.page.pageIndex = page;
         if (pageSize)
@@ -524,7 +601,7 @@ class S4AccountMapIndexComponent extends app_shared_resources_app_helpers__WEBPA
                     this.getList(this.prevPage);
                     return;
                 }
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_10__.MatTableDataSource((0,app_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__.s4AccountToMap)(res.data));
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_10__.MatTableDataSource((0,app_system_setup_s4_setup_mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_0__.s4AccountToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -573,7 +650,7 @@ class S4AccountMapIndexComponent extends app_shared_resources_app_helpers__WEBPA
             this.formCtrls.integrationPurpose_ID.setValue(null);
     }
 }
-S4AccountMapIndexComponent.ɵfac = function S4AccountMapIndexComponent_Factory(t) { return new (t || S4AccountMapIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__.S4AccountMapService)); };
+S4AccountMapIndexComponent.ɵfac = function S4AccountMapIndexComponent_Factory(t) { return new (t || S4AccountMapIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_system_setup_s4_setup_services_s4_account_map_service__WEBPACK_IMPORTED_MODULE_3__.S4AccountMapService)); };
 S4AccountMapIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineComponent"]({ type: S4AccountMapIndexComponent, selectors: [["app-s4-account-map-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵInheritDefinitionFeature"]], decls: 24, vars: 20, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["title", "s4AccountMap", 3, "globalFunctions"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-4", "col-12"], [3, "control", "filter"], [3, "control", "s4SystemInstanceControl", "filter", "change"], ["align", "end"], ["mat-raised-button", "", 1, "btn", "btn-info", "bg-light-info", 3, "click"], [3, "click"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function S4AccountMapIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -615,15 +692,15 @@ S4AccountMapIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵpipeBind1"](20, 18, "General.search"), " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.s4AccountMapService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_dropdowns_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_5__.S4SystemInstanceDropdownComponent, _shared_components_dropdowns_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_6__.S4IntegrationPurposeBySystemInstanceDropdownComponent, _shared_components_dropdowns_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_7__.GlAccountByS4SystemInstanceDropdownComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__.ResetFormBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_9__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__.NgControlStatusGroup, _angular_material_button__WEBPACK_IMPORTED_MODULE_13__.MatButton, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_14__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_15__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_16__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormGroupDirective, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_17__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzNC1hY2NvdW50LW1hcC1pbmRleC5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_5__.ResetFormBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_6__.PageTitleComponent, _angular_material_button__WEBPACK_IMPORTED_MODULE_12__.MatButton, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _shared_components_dropdowns_s4_setup_s4_system_instance_dropdown_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_7__.S4SystemInstanceDropdownComponent, _shared_components_dropdowns_s4_setup_s4_integration_purpose_by_system_instance_dropdown_s4_integration_purpose_by_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_8__.S4IntegrationPurposeBySystemInstanceDropdownComponent, _shared_components_dropdowns_s4_setup_gl_account_by_s4_system_instance_dropdown_gl_account_by_s4_system_instance_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.GlAccountByS4SystemInstanceDropdownComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_16__.FormGroupDirective, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_17__.TranslatePipe], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzNC1hY2NvdW50LW1hcC1pbmRleC5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
 
-/***/ 4696:
-/*!***********************************************************************************************************************!*\
-  !*** ./src/app/s4-setup/components/s4-system-instance/s4-system-instance-index/s4-system-instance-index.component.ts ***!
-  \***********************************************************************************************************************/
+/***/ 51134:
+/*!************************************************************************************************************************************!*\
+  !*** ./src/app/system-setup/s4-setup/components/s4-system-instance/s4-system-instance-index/s4-system-instance-index.component.ts ***!
+  \************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -634,13 +711,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_s4_setup_services_s4_sytem_instance_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/s4-setup/services/s4-sytem-instance.service */ 49704);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var app_system_setup_s4_setup_services_s4_sytem_instance_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/system-setup/s4-setup/services/s4-sytem-instance.service */ 65162);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
-
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-spinner */ 88035);
 
 
 
@@ -696,6 +771,7 @@ class S4SystemInstanceIndexComponent extends app_shared_resources_app_helpers__W
         }
     }
     getList(page, filter = {}, pageSize) {
+        this.isLoaded = false;
         this.removePageParams();
         this.page.pageIndex = page;
         if (pageSize)
@@ -753,30 +829,29 @@ class S4SystemInstanceIndexComponent extends app_shared_resources_app_helpers__W
         this.getList(this.firstPage);
     }
 }
-S4SystemInstanceIndexComponent.ɵfac = function S4SystemInstanceIndexComponent_Factory(t) { return new (t || S4SystemInstanceIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](app_s4_setup_services_s4_sytem_instance_service__WEBPACK_IMPORTED_MODULE_2__.S4SytemInstanceService)); };
-S4SystemInstanceIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: S4SystemInstanceIndexComponent, selectors: [["app-s4-system-instance-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 8, consts: [[1, "row"], [1, "col-12"], ["title", "s4SystemInstance", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function S4SystemInstanceIndexComponent_Template(rf, ctx) { if (rf & 1) {
+S4SystemInstanceIndexComponent.ɵfac = function S4SystemInstanceIndexComponent_Factory(t) { return new (t || S4SystemInstanceIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](app_system_setup_s4_setup_services_s4_sytem_instance_service__WEBPACK_IMPORTED_MODULE_2__.S4SytemInstanceService)); };
+S4SystemInstanceIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: S4SystemInstanceIndexComponent, selectors: [["app-s4-system-instance-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 8, consts: [[1, "row"], [1, "col-12"], [1, "index-card"], ["title", "s4SystemInstance", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function S4SystemInstanceIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](5, "page-title", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](6, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](7, "app-material-table", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("onChangePage", function S4SystemInstanceIndexComponent_Template_app_material_table_onChangePage_7_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function S4SystemInstanceIndexComponent_Template_app_material_table_deleteRow_7_listener($event) { return ctx.onDelete($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](6, "app-material-table", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("onChangePage", function S4SystemInstanceIndexComponent_Template_app_material_table_onChangePage_6_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function S4SystemInstanceIndexComponent_Template_app_material_table_deleteRow_6_listener($event) { return ctx.onDelete($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.s4SytemInstanceService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, _angular_material_divider__WEBPACK_IMPORTED_MODULE_8__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzNC1zeXN0ZW0taW5zdGFuY2UtaW5kZXguY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, ngx_spinner__WEBPACK_IMPORTED_MODULE_8__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzNC1zeXN0ZW0taW5zdGFuY2UtaW5kZXguY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
 
-/***/ 29577:
-/*!***************************************************!*\
-  !*** ./src/app/s4-setup/mapper/s4-account-map.ts ***!
-  \***************************************************/
+/***/ 12306:
+/*!****************************************************************!*\
+  !*** ./src/app/system-setup/s4-setup/mapper/s4-account-map.ts ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -798,7 +873,7 @@ function s4AccountToMap(violations) {
     return violations.map((s4Account) => {
         return {
             ...s4Account,
-            integrationPurpose: s4Account.s4_IntegrationPurpose.name,
+            integrationPurpose: s4Account.s4_IntegrationPurpose?.name,
             accountType: s4Account.is_Debit ? "Debit" : "Credit",
             variables: (0,app_shared_resources_helpers_functions__WEBPACK_IMPORTED_MODULE_0__.msgTranslate)(s4Account.pay_Variable?.arName, s4Account.pay_Variable?.name),
             bothBankCash: s4Account.bothBankCash && !s4Account.bank_ID ? true : false,
@@ -809,24 +884,26 @@ function s4AccountToMap(violations) {
 
 /***/ }),
 
-/***/ 951:
-/*!*****************************************************!*\
-  !*** ./src/app/s4-setup/s4-setup-routing.module.ts ***!
-  \*****************************************************/
+/***/ 24631:
+/*!******************************************************************!*\
+  !*** ./src/app/system-setup/s4-setup/s4-setup-routing.module.ts ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "S4SetupRoutingModule": () => (/* binding */ S4SetupRoutingModule)
 /* harmony export */ });
-/* harmony import */ var _components_s4_system_instance_s4_system_instance_index_s4_system_instance_index_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/s4-system-instance/s4-system-instance-index/s4-system-instance-index.component */ 4696);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 60124);
-/* harmony import */ var _components_s4_account_map_s4_account_map_index_s4_account_map_index_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/s4-account-map/s4-account-map-index/s4-account-map-index.component */ 55091);
-/* harmony import */ var _components_s4_account_map_add_s4_account_map_add_s4_account_map_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/s4-account-map/add-s4-account-map/add-s4-account-map.component */ 25243);
-/* harmony import */ var _components_s4_system_instance_add_s4_system_instance_add_s4_system_instance_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/s4-system-instance/add-s4-system-instance/add-s4-system-instance.component */ 45551);
+/* harmony import */ var _components_s4_system_instance_s4_system_instance_index_s4_system_instance_index_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/s4-system-instance/s4-system-instance-index/s4-system-instance-index.component */ 51134);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ 60124);
+/* harmony import */ var _components_s4_account_map_s4_account_map_index_s4_account_map_index_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/s4-account-map/s4-account-map-index/s4-account-map-index.component */ 12043);
+/* harmony import */ var _components_s4_account_map_add_s4_account_map_add_s4_account_map_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/s4-account-map/add-s4-account-map/add-s4-account-map.component */ 95335);
+/* harmony import */ var _components_s4_system_instance_add_s4_system_instance_add_s4_system_instance_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/s4-system-instance/add-s4-system-instance/add-s4-system-instance.component */ 62561);
 /* harmony import */ var app_shared_enums_route_path_match_enum__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/enums/route-path-match.enum */ 36162);
 /* harmony import */ var app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/shared/resources/views-manager */ 74513);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/shared/Guards/check-is-allowd.guard */ 3710);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 22560);
+
 
 
 
@@ -850,16 +927,19 @@ const routes = [
                 path: "index",
                 component: _components_s4_system_instance_s4_system_instance_index_s4_system_instance_index_component__WEBPACK_IMPORTED_MODULE_0__.S4SystemInstanceIndexComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_5__.ViewsManager.s4_system_instance_index },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_6__.CheckIsViewAllowedGuard],
             },
             {
                 path: "add",
                 component: _components_s4_system_instance_add_s4_system_instance_add_s4_system_instance_component__WEBPACK_IMPORTED_MODULE_3__.AddS4SystemInstanceComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_5__.ViewsManager.add_s4_system_instance },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_6__.CheckIsViewAllowedGuard],
             },
             {
                 path: "edit/:s4SystemInstanceId",
                 component: _components_s4_system_instance_add_s4_system_instance_add_s4_system_instance_component__WEBPACK_IMPORTED_MODULE_3__.AddS4SystemInstanceComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_5__.ViewsManager.add_s4_system_instance },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_6__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -876,16 +956,19 @@ const routes = [
                 path: "index",
                 component: _components_s4_account_map_s4_account_map_index_s4_account_map_index_component__WEBPACK_IMPORTED_MODULE_1__.S4AccountMapIndexComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_5__.ViewsManager.s4_account_map_index },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_6__.CheckIsViewAllowedGuard],
             },
             {
                 path: "add",
                 component: _components_s4_account_map_add_s4_account_map_add_s4_account_map_component__WEBPACK_IMPORTED_MODULE_2__.AddS4AccountMapComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_5__.ViewsManager.add_s4_account_map },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_6__.CheckIsViewAllowedGuard],
             },
             {
                 path: "edit/:s4AccountMapId",
                 component: _components_s4_account_map_add_s4_account_map_add_s4_account_map_component__WEBPACK_IMPORTED_MODULE_2__.AddS4AccountMapComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_5__.ViewsManager.add_s4_account_map },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_6__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -893,17 +976,17 @@ const routes = [
 class S4SetupRoutingModule {
 }
 S4SetupRoutingModule.ɵfac = function S4SetupRoutingModule_Factory(t) { return new (t || S4SetupRoutingModule)(); };
-S4SetupRoutingModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({ type: S4SetupRoutingModule });
-S4SetupRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_7__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_7__.RouterModule] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](S4SetupRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_7__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_7__.RouterModule] }); })();
+S4SetupRoutingModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineNgModule"]({ type: S4SetupRoutingModule });
+S4SetupRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵsetNgModuleScope"](S4SetupRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule] }); })();
 
 
 /***/ }),
 
-/***/ 43538:
-/*!*********************************************!*\
-  !*** ./src/app/s4-setup/s4-setup.module.ts ***!
-  \*********************************************/
+/***/ 63794:
+/*!**********************************************************!*\
+  !*** ./src/app/system-setup/s4-setup/s4-setup.module.ts ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -912,13 +995,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ 94666);
 /* harmony import */ var app_shared_shared_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/shared.module */ 44466);
-/* harmony import */ var _components_s4_account_map_s4_account_map_index_s4_account_map_index_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/s4-account-map/s4-account-map-index/s4-account-map-index.component */ 55091);
-/* harmony import */ var _components_s4_account_map_add_s4_account_map_add_s4_account_map_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/s4-account-map/add-s4-account-map/add-s4-account-map.component */ 25243);
-/* harmony import */ var _s4_setup_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./s4-setup-routing.module */ 951);
-/* harmony import */ var _components_s4_system_instance_s4_system_instance_index_s4_system_instance_index_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/s4-system-instance/s4-system-instance-index/s4-system-instance-index.component */ 4696);
-/* harmony import */ var _components_s4_system_instance_add_s4_system_instance_add_s4_system_instance_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/s4-system-instance/add-s4-system-instance/add-s4-system-instance.component */ 45551);
-/* harmony import */ var _components_s4_system_instance_s4_system_instance_methods_s4_system_instance_methods_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/s4-system-instance/s4-system-instance-methods/s4-system-instance-methods.component */ 2372);
-/* harmony import */ var _components_s4_system_instance_s4_system_instance_purpose_s4_system_instance_purpose_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/s4-system-instance/s4-system-instance-purpose/s4-system-instance-purpose.component */ 11962);
+/* harmony import */ var _components_s4_account_map_s4_account_map_index_s4_account_map_index_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/s4-account-map/s4-account-map-index/s4-account-map-index.component */ 12043);
+/* harmony import */ var _components_s4_account_map_add_s4_account_map_add_s4_account_map_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/s4-account-map/add-s4-account-map/add-s4-account-map.component */ 95335);
+/* harmony import */ var _s4_setup_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./s4-setup-routing.module */ 24631);
+/* harmony import */ var _components_s4_system_instance_s4_system_instance_index_s4_system_instance_index_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/s4-system-instance/s4-system-instance-index/s4-system-instance-index.component */ 51134);
+/* harmony import */ var _components_s4_system_instance_add_s4_system_instance_add_s4_system_instance_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/s4-system-instance/add-s4-system-instance/add-s4-system-instance.component */ 62561);
+/* harmony import */ var _components_s4_system_instance_s4_system_instance_methods_s4_system_instance_methods_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/s4-system-instance/s4-system-instance-methods/s4-system-instance-methods.component */ 75610);
+/* harmony import */ var _components_s4_system_instance_s4_system_instance_purpose_s4_system_instance_purpose_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/s4-system-instance/s4-system-instance-purpose/s4-system-instance-purpose.component */ 21231);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
@@ -945,10 +1028,10 @@ S4BusinessOneSetupModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_M
 
 /***/ }),
 
-/***/ 86819:
-/*!*************************************************************!*\
-  !*** ./src/app/s4-setup/services/s4-account-map.service.ts ***!
-  \*************************************************************/
+/***/ 96757:
+/*!**************************************************************************!*\
+  !*** ./src/app/system-setup/s4-setup/services/s4-account-map.service.ts ***!
+  \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -958,7 +1041,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_services_app_client_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/services/app-client.service */ 18521);
 /* harmony import */ var app_shared_resources_database_tabels__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/database-tabels */ 26315);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 86942);
-/* harmony import */ var _mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../mapper/s4-account-map */ 29577);
+/* harmony import */ var _mapper_s4_account_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../mapper/s4-account-map */ 12306);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
@@ -1011,4 +1094,4 @@ S4AccountMapService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODUL
 /***/ })
 
 }]);
-//# sourceMappingURL=src_app_s4-setup_s4-setup_module_ts.js.map
+//# sourceMappingURL=src_app_system-setup_s4-setup_s4-setup_module_ts.js.map

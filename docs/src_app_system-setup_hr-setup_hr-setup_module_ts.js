@@ -1,10 +1,86 @@
 "use strict";
-(self["webpackChunkhr"] = self["webpackChunkhr"] || []).push([["src_app_hr-setup_hr-setup_module_ts"],{
+(self["webpackChunkhr"] = self["webpackChunkhr"] || []).push([["src_app_system-setup_hr-setup_hr-setup_module_ts"],{
 
-/***/ 23264:
-/*!*****************************************************************************!*\
-  !*** ./src/app/hr-setup/components/bank/bank-index/bank-index.component.ts ***!
-  \*****************************************************************************/
+/***/ 3710:
+/*!********************************************************!*\
+  !*** ./src/app/shared/Guards/check-is-allowd.guard.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CheckIsViewAllowedGuard": () => (/* binding */ CheckIsViewAllowedGuard)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var app_shared_services_loading_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/services/loading.service */ 67579);
+/* harmony import */ var app_auth_services_user_views_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/auth/services/user-views.service */ 24280);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 60124);
+
+
+
+
+
+
+class CheckIsViewAllowedGuard {
+    constructor(viewsService, router) {
+        this.viewsService = viewsService;
+        this.router = router;
+        this.loadingService = (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.inject)(app_shared_services_loading_service__WEBPACK_IMPORTED_MODULE_0__.LoadingService);
+        this.UserModules = viewsService.UserModules$.getValue();
+        this.loading = document.getElementById("page-loading");
+    }
+    canActivate(route, state) {
+        return true;
+        // un comment code for used
+        // let view = route.data?.view;
+        // this.showLoading();
+        // if (this.UserModules?.length > 0) {
+        //   if (!this.viewsService.isViewAllowed(view)) {
+        //     this.router.navigateByUrl("/auth/access-denied");
+        //     this.hideLoading();
+        //   }
+        //   else {
+        //     this.hideLoading();
+        //     return true;
+        //   }
+        // }
+        //
+        // else {
+        //   this.viewsService.UserModules$.subscribe((val) => {
+        //     if (val?.length > 0) {
+        //       if (!this.viewsService.isViewAllowed(view)) {
+        //         this.router.navigateByUrl("/auth/access-denied");
+        //         this.hideLoading();
+        //       }
+        //       else {
+        //         this.hideLoading();
+        //         return true;
+        //       }
+        //     }
+        //   });
+        // }
+    }
+    showLoading() {
+        this.loading.style.display = "block";
+        this.loading.style.opacity = "1";
+        this.loading.style.zIndex = "998";
+    }
+    hideLoading() {
+        this.loading.style.display = "none";
+        this.loading.style.opacity = "0";
+        this.loading.style.zIndex = "0";
+    }
+}
+CheckIsViewAllowedGuard.ɵfac = function CheckIsViewAllowedGuard_Factory(t) { return new (t || CheckIsViewAllowedGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](app_auth_services_user_views_service__WEBPACK_IMPORTED_MODULE_1__.UserViewsService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router)); };
+CheckIsViewAllowedGuard.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: CheckIsViewAllowedGuard, factory: CheckIsViewAllowedGuard.ɵfac, providedIn: "root" });
+
+
+/***/ }),
+
+/***/ 11475:
+/*!******************************************************************************************!*\
+  !*** ./src/app/system-setup/hr-setup/components/bank/bank-index/bank-index.component.ts ***!
+  \******************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -15,13 +91,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_hr_setup_services_bank_bank_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/hr-setup/services/bank/bank.service */ 3418);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var app_system_setup_hr_setup_services_bank_bank_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/system-setup/hr-setup/services/bank/bank.service */ 30630);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
-
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-spinner */ 88035);
 
 
 
@@ -43,10 +117,13 @@ class BankIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
         // if (this.CheckNoBusinessOrCompany()) this.getList(this.currentPage);
     }
     onChangeBusinessAndCompanyId() {
+        if (this.dataSource?.data?.length > 0)
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_5__.MatTableDataSource(null);
         if (this.checkNoBusinessOrCompany())
             this.getList(this.pageFromUrl > 0 ? this.pageFromUrl : this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.removePageParams();
         this.page.pageIndex = page;
         if (pageSize)
@@ -104,30 +181,29 @@ class BankIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
         });
     }
 }
-BankIndexComponent.ɵfac = function BankIndexComponent_Factory(t) { return new (t || BankIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](app_hr_setup_services_bank_bank_service__WEBPACK_IMPORTED_MODULE_2__.BankService)); };
-BankIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: BankIndexComponent, selectors: [["app-bank-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 8, consts: [[1, "row"], [1, "col-12"], ["title", "bank", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function BankIndexComponent_Template(rf, ctx) { if (rf & 1) {
+BankIndexComponent.ɵfac = function BankIndexComponent_Factory(t) { return new (t || BankIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](app_system_setup_hr_setup_services_bank_bank_service__WEBPACK_IMPORTED_MODULE_2__.BankService)); };
+BankIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: BankIndexComponent, selectors: [["app-bank-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 8, consts: [[1, "row"], [1, "col-12"], [1, "index-card"], ["title", "bank", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function BankIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](5, "page-title", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](6, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](7, "app-material-table", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("onChangePage", function BankIndexComponent_Template_app_material_table_onChangePage_7_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function BankIndexComponent_Template_app_material_table_deleteRow_7_listener($event) { return ctx.onDelete($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](6, "app-material-table", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("onChangePage", function BankIndexComponent_Template_app_material_table_onChangePage_6_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function BankIndexComponent_Template_app_material_table_deleteRow_6_listener($event) { return ctx.onDelete($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.bankService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, _angular_material_divider__WEBPACK_IMPORTED_MODULE_8__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiYW5rLWluZGV4LmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, ngx_spinner__WEBPACK_IMPORTED_MODULE_8__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiYW5rLWluZGV4LmNvbXBvbmVudC5zY3NzIn0= */"] });
 
 
 /***/ }),
 
-/***/ 72883:
-/*!**************************************************************************************************************!*\
-  !*** ./src/app/hr-setup/components/documents/assign-attachment-to-job/assign-attachment-to-job.component.ts ***!
-  \**************************************************************************************************************/
+/***/ 6390:
+/*!***************************************************************************************************************************!*\
+  !*** ./src/app/system-setup/hr-setup/components/documents/assign-attachment-to-job/assign-attachment-to-job.component.ts ***!
+  \***************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -136,23 +212,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/forms */ 2508);
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_hr_setup_mapper_hire_document__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/hr-setup/mapper/hire-document */ 26657);
+/* harmony import */ var app_system_setup_hr_setup_mapper_hire_document__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/hr-setup/mapper/hire-document */ 77131);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_hr_setup_services_hire_documents_assign_doc_to_job_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/hr-setup/services/hire-documents/assign-doc-to-job.service */ 54399);
+/* harmony import */ var app_system_setup_hr_setup_services_hire_documents_assign_doc_to_job_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/hr-setup/services/hire-documents/assign-doc-to-job.service */ 27136);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_dropdowns_job_title_dropdown_job_title_dropdown_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/job-title-dropdown/job-title-dropdown.component */ 28548);
-/* harmony import */ var _shared_components_dropdowns_service_dropdown_service_dropdown_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/service-dropdown/service-dropdown.component */ 52780);
-/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
-/* harmony import */ var _shared_components_dropdowns_hiring_document_by_service_dropdown_hiring_document_by_service_dropdown_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../shared/components/dropdowns/hiring-document-by-service-dropdown/hiring-document-by-service-dropdown.component */ 71391);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/divider */ 71528);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _shared_components_dropdowns_org_management_job_title_job_title_dropdown_job_title_dropdown_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/org-management/job-title/job-title-dropdown/job-title-dropdown.component */ 62160);
+/* harmony import */ var _shared_components_dropdowns_general_setup_service_dropdown_service_dropdown_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/general-setup/service-dropdown/service-dropdown.component */ 10803);
+/* harmony import */ var _shared_components_dropdowns_hr_setup_hiring_document_by_service_dropdown_hiring_document_by_service_dropdown_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../../shared/components/dropdowns/hr-setup/hiring-document-by-service-dropdown/hiring-document-by-service-dropdown.component */ 80088);
 
 
 
@@ -185,7 +261,7 @@ class AssignAttachmentToJobComponent extends app_shared_resources_app_helpers__W
         this.jobTitleService = jobTitleService;
         this.submitted = false;
         this.attachmentList = [];
-        this.mandatoryColomns = ['Ser', 'jobTitleName', 'attachment', 'actions'];
+        this.mandatoryColomns = ["Ser", "jobTitleName", "attachment", "actions"];
         this.isLoaded = false;
         this.optionalColomns = [];
     }
@@ -210,11 +286,14 @@ class AssignAttachmentToJobComponent extends app_shared_resources_app_helpers__W
         return this.form.controls;
     }
     onChangeBusinessAndCompanyId() {
+        if (this.dataSource?.data?.length > 0)
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_14__.MatTableDataSource(null);
         if (this.checkNoBusinessOrCompany()) {
             this.getList(this.firstPage);
         }
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize) {
             this.page.pageSize = pageSize;
@@ -253,8 +332,8 @@ class AssignAttachmentToJobComponent extends app_shared_resources_app_helpers__W
                 //   result.push(obj);
                 // });
                 //#endregion
-                console.log((0,app_hr_setup_mapper_hire_document__WEBPACK_IMPORTED_MODULE_0__.documentJobTitleToMap)(res.data));
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_14__.MatTableDataSource((0,app_hr_setup_mapper_hire_document__WEBPACK_IMPORTED_MODULE_0__.documentJobTitleToMap)(res.data));
+                console.log((0,app_system_setup_hr_setup_mapper_hire_document__WEBPACK_IMPORTED_MODULE_0__.documentJobTitleToMap)(res.data));
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_14__.MatTableDataSource((0,app_system_setup_hr_setup_mapper_hire_document__WEBPACK_IMPORTED_MODULE_0__.documentJobTitleToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -268,7 +347,7 @@ class AssignAttachmentToJobComponent extends app_shared_resources_app_helpers__W
             Attachments_IDs: this.form.value.Attachments_IDs,
             SelecetedJobTitle: this.form.value.SelecetedJobTitle,
         };
-        console.log('model', model);
+        console.log("model", model);
         this.submitted = true;
         this.showLoading();
         this.jobTitleService
@@ -326,7 +405,7 @@ class AssignAttachmentToJobComponent extends app_shared_resources_app_helpers__W
         this.submitted = false;
     }
 }
-AssignAttachmentToJobComponent.ɵfac = function AssignAttachmentToJobComponent_Factory(t) { return new (t || AssignAttachmentToJobComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdirectiveInject"](app_hr_setup_services_hire_documents_assign_doc_to_job_service__WEBPACK_IMPORTED_MODULE_3__.AssignDocToJobtitleService)); };
+AssignAttachmentToJobComponent.ɵfac = function AssignAttachmentToJobComponent_Factory(t) { return new (t || AssignAttachmentToJobComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdirectiveInject"](app_system_setup_hr_setup_services_hire_documents_assign_doc_to_job_service__WEBPACK_IMPORTED_MODULE_3__.AssignDocToJobtitleService)); };
 AssignAttachmentToJobComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdefineComponent"]({ type: AssignAttachmentToJobComponent, selectors: [["app-assign-attachment-to-job"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵInheritDefinitionFeature"]], decls: 21, vars: 25, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "jobTitleHireDocuments", "editTitle", "editJobTitleHireDocuments", 3, "id"], [3, "url", "params"], [1, "container-fluid"], [3, "formGroup"], [1, "col-4"], [3, "control", "submitted", "filterId"], ["label", "attachments", 3, "control", "serviceControl", "submitted", "multiple", "filter"], [3, "control", "submitted", "multi", "filter"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "deleteRow"], [3, "click"]], template: function AssignAttachmentToJobComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -370,15 +449,15 @@ AssignAttachmentToJobComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPO
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.jobTitleService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_15__.NgIf, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_dropdowns_job_title_dropdown_job_title_dropdown_component__WEBPACK_IMPORTED_MODULE_5__.JobTitleDropdownComponent, _shared_components_dropdowns_service_dropdown_service_dropdown_component__WEBPACK_IMPORTED_MODULE_6__.ServiceDropdownComponent, _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_7__.BackBtnComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__.PageTitleComponent, _shared_components_dropdowns_hiring_document_by_service_dropdown_hiring_document_by_service_dropdown_component__WEBPACK_IMPORTED_MODULE_11__.HiringDocumentByServiceDropdownComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_17__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_18__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_13__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhc3NpZ24tYXR0YWNobWVudC10by1qb2IuY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_15__.NgIf, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_5__.BackBtnComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_16__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_17__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_18__.NgxSpinnerComponent, _shared_components_dropdowns_org_management_job_title_job_title_dropdown_job_title_dropdown_component__WEBPACK_IMPORTED_MODULE_9__.JobTitleDropdownComponent, _shared_components_dropdowns_general_setup_service_dropdown_service_dropdown_component__WEBPACK_IMPORTED_MODULE_10__.ServiceDropdownComponent, _shared_components_dropdowns_hr_setup_hiring_document_by_service_dropdown_hiring_document_by_service_dropdown_component__WEBPACK_IMPORTED_MODULE_11__.HiringDocumentByServiceDropdownComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_13__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhc3NpZ24tYXR0YWNobWVudC10by1qb2IuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
 
-/***/ 76610:
-/*!************************************************************************************!*\
-  !*** ./src/app/hr-setup/components/education-degree/education-degree.component.ts ***!
-  \************************************************************************************/
+/***/ 6215:
+/*!*************************************************************************************************!*\
+  !*** ./src/app/system-setup/hr-setup/components/education-degree/education-degree.component.ts ***!
+  \*************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -391,13 +470,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_validators_custom_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/validators/custom.validator */ 78937);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_hr_setup_services_education_degree_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/hr-setup/services/education-degree.service */ 37507);
+/* harmony import */ var app_system_setup_hr_setup_services_education_degree_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/hr-setup/services/education-degree.service */ 97991);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/divider */ 71528);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-spinner */ 88035);
@@ -450,6 +529,7 @@ class EducationDegreeComponent extends app_shared_resources_app_helpers__WEBPACK
             this.getList(this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize)
             this.page.pageSize = pageSize;
@@ -544,7 +624,7 @@ class EducationDegreeComponent extends app_shared_resources_app_helpers__WEBPACK
         this.submitted = false;
     }
 }
-EducationDegreeComponent.ɵfac = function EducationDegreeComponent_Factory(t) { return new (t || EducationDegreeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_hr_setup_services_education_degree_service__WEBPACK_IMPORTED_MODULE_3__.EducationDegreeService)); };
+EducationDegreeComponent.ɵfac = function EducationDegreeComponent_Factory(t) { return new (t || EducationDegreeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_system_setup_hr_setup_services_education_degree_service__WEBPACK_IMPORTED_MODULE_3__.EducationDegreeService)); };
 EducationDegreeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: EducationDegreeComponent, selectors: [["app-education-degree"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵInheritDefinitionFeature"]], decls: 20, vars: 15, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "educationDegree", "editTitle", "editEducationDegree", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "en_Name", 3, "control", "submitted"], ["label", "ar_Name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function EducationDegreeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -580,15 +660,15 @@ EducationDegreeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_M
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.educationDegreeService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZHVjYXRpb24tZGVncmVlLmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZHVjYXRpb24tZGVncmVlLmNvbXBvbmVudC5zY3NzIn0= */"] });
 
 
 /***/ }),
 
-/***/ 71666:
-/*!**************************************************************************************!*\
-  !*** ./src/app/hr-setup/components/finincial-company/financial-company.component.ts ***!
-  \**************************************************************************************/
+/***/ 65186:
+/*!***************************************************************************************************!*\
+  !*** ./src/app/system-setup/hr-setup/components/finincial-company/financial-company.component.ts ***!
+  \***************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -601,13 +681,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_validators_custom_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/validators/custom.validator */ 78937);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_hr_setup_services_financial_company_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/hr-setup/services/financial-company.service */ 23039);
+/* harmony import */ var app_system_setup_hr_setup_services_financial_company_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/hr-setup/services/financial-company.service */ 83089);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/divider */ 71528);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-spinner */ 88035);
@@ -660,6 +740,7 @@ class FinancialCompanyComponent extends app_shared_resources_app_helpers__WEBPAC
             this.getList(this.firstPage);
     }
     getList(page, pagesize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pagesize)
             this.page.pageSize = pagesize;
@@ -758,7 +839,7 @@ class FinancialCompanyComponent extends app_shared_resources_app_helpers__WEBPAC
         this.submitted = false;
     }
 }
-FinancialCompanyComponent.ɵfac = function FinancialCompanyComponent_Factory(t) { return new (t || FinancialCompanyComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_hr_setup_services_financial_company_service__WEBPACK_IMPORTED_MODULE_3__.FinancialCompanyService)); };
+FinancialCompanyComponent.ɵfac = function FinancialCompanyComponent_Factory(t) { return new (t || FinancialCompanyComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_system_setup_hr_setup_services_financial_company_service__WEBPACK_IMPORTED_MODULE_3__.FinancialCompanyService)); };
 FinancialCompanyComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: FinancialCompanyComponent, selectors: [["app-FinancialCompany"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵInheritDefinitionFeature"]], decls: 18, vars: 15, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "financialCompany", "editTitle", "editFinancialCompany", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "ar_Name", 3, "control", "submitted"], ["label", "en_Name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "actions", "exportService", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function FinancialCompanyComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -794,42 +875,44 @@ FinancialCompanyComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions)("exportService", ctx.financialService);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJmaW5hbmNpYWwtY29tcGFueS5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJmaW5hbmNpYWwtY29tcGFueS5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
 
-/***/ 58445:
-/*!*****************************************************!*\
-  !*** ./src/app/hr-setup/hr-setup-routing.module.ts ***!
-  \*****************************************************/
+/***/ 91080:
+/*!******************************************************************!*\
+  !*** ./src/app/system-setup/hr-setup/hr-setup-routing.module.ts ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HrSetupRoutingModule": () => (/* binding */ HrSetupRoutingModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/router */ 60124);
-/* harmony import */ var _components_nationality_nationality_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/nationality/nationality.component */ 18853);
-/* harmony import */ var _components_country_country_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/country/country.component */ 36608);
-/* harmony import */ var _components_education_degree_education_degree_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/education-degree/education-degree.component */ 76610);
-/* harmony import */ var _components_contract_type_contract_type_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/contract-type/contract-type.component */ 93177);
-/* harmony import */ var _components_religion_religion_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/religion/religion.component */ 94231);
-/* harmony import */ var _components_insurance_office_insurance_office_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/insurance-office/insurance-office.component */ 58816);
-/* harmony import */ var _components_institution_institution_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/institution/institution.component */ 35694);
-/* harmony import */ var _components_kpi_kpi_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/kpi/kpi.component */ 41932);
-/* harmony import */ var _components_bank_add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/bank/add-bank/add-bank.component */ 33669);
-/* harmony import */ var _components_bank_bank_index_bank_index_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/bank/bank-index/bank-index.component */ 23264);
-/* harmony import */ var _components_identity_type_identity_type_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/identity-type/identity-type.component */ 11297);
-/* harmony import */ var _components_documents_hire_documents_hire_documents_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/documents/hire-documents/hire-documents.component */ 4568);
-/* harmony import */ var _components_documents_assign_attachment_to_job_assign_attachment_to_job_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/documents/assign-attachment-to-job/assign-attachment-to-job.component */ 72883);
-/* harmony import */ var _components_governorate_governorate_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/governorate/governorate.component */ 31293);
-/* harmony import */ var _components_finincial_company_financial_company_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/finincial-company/financial-company.component */ 71666);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/router */ 60124);
+/* harmony import */ var _components_nationality_nationality_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/nationality/nationality.component */ 8374);
+/* harmony import */ var _components_country_country_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/country/country.component */ 2438);
+/* harmony import */ var _components_education_degree_education_degree_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/education-degree/education-degree.component */ 6215);
+/* harmony import */ var _components_contract_type_contract_type_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/contract-type/contract-type.component */ 14244);
+/* harmony import */ var _components_religion_religion_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/religion/religion.component */ 148);
+/* harmony import */ var _components_insurance_office_insurance_office_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/insurance-office/insurance-office.component */ 54771);
+/* harmony import */ var _components_institution_institution_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/institution/institution.component */ 28061);
+/* harmony import */ var _components_kpi_kpi_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/kpi/kpi.component */ 52045);
+/* harmony import */ var _components_bank_add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/bank/add-bank/add-bank.component */ 76422);
+/* harmony import */ var _components_bank_bank_index_bank_index_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/bank/bank-index/bank-index.component */ 11475);
+/* harmony import */ var _components_identity_type_identity_type_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/identity-type/identity-type.component */ 28976);
+/* harmony import */ var _components_documents_hire_documents_hire_documents_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/documents/hire-documents/hire-documents.component */ 97958);
+/* harmony import */ var _components_documents_assign_attachment_to_job_assign_attachment_to_job_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/documents/assign-attachment-to-job/assign-attachment-to-job.component */ 6390);
+/* harmony import */ var _components_governorate_governorate_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/governorate/governorate.component */ 22854);
+/* harmony import */ var _components_finincial_company_financial_company_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/finincial-company/financial-company.component */ 65186);
 /* harmony import */ var app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! app/shared/resources/views-manager */ 74513);
 /* harmony import */ var app_shared_enums_route_path_match_enum__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! app/shared/enums/route-path-match.enum */ 36162);
-/* harmony import */ var _components_contact_type_contact_type_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/contact-type/contact-type.component */ 4182);
-/* harmony import */ var _components_contact_category_contact_category_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/contact-category/contact-category.component */ 50336);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var _components_contact_type_contact_type_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/contact-type/contact-type.component */ 39757);
+/* harmony import */ var _components_contact_category_contact_category_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/contact-category/contact-category.component */ 10873);
+/* harmony import */ var app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! app/shared/Guards/check-is-allowd.guard */ 3710);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/core */ 22560);
+
 
 
 
@@ -857,51 +940,61 @@ const routes = [
         path: "nationality",
         component: _components_nationality_nationality_component__WEBPACK_IMPORTED_MODULE_0__.NationalityComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.nationality },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "country",
         component: _components_country_country_component__WEBPACK_IMPORTED_MODULE_1__.CountryComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.country },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "education-degree",
         component: _components_education_degree_education_degree_component__WEBPACK_IMPORTED_MODULE_2__.EducationDegreeComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.education_degree },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "contract-type",
         component: _components_contract_type_contract_type_component__WEBPACK_IMPORTED_MODULE_3__.ContractTypeComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.contract_type },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "contact-type",
         component: _components_contact_type_contact_type_component__WEBPACK_IMPORTED_MODULE_17__.ContactTypeComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.contact_type },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "contact-category",
         component: _components_contact_category_contact_category_component__WEBPACK_IMPORTED_MODULE_18__.ContactCategoryComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.contact_category },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "religion",
         component: _components_religion_religion_component__WEBPACK_IMPORTED_MODULE_4__.ReligionComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.religion },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "finincial-company",
         component: _components_finincial_company_financial_company_component__WEBPACK_IMPORTED_MODULE_14__.FinancialCompanyComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.finincial_company },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "insurance-office",
         component: _components_insurance_office_insurance_office_component__WEBPACK_IMPORTED_MODULE_5__.InsuranceOfficeComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.insurance_office },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "institution",
         component: _components_institution_institution_component__WEBPACK_IMPORTED_MODULE_6__.InstitutionComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.institution },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "bank",
@@ -915,16 +1008,19 @@ const routes = [
                 path: "index",
                 component: _components_bank_bank_index_bank_index_component__WEBPACK_IMPORTED_MODULE_9__.BankIndexComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.bank_index },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
             },
             {
                 path: "add",
                 component: _components_bank_add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_8__.AddBankComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.add_bank },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
             },
             {
                 path: "edit/:bankid",
                 component: _components_bank_add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_8__.AddBankComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.add_bank },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -940,11 +1036,13 @@ const routes = [
                 path: "index",
                 component: _components_documents_hire_documents_hire_documents_component__WEBPACK_IMPORTED_MODULE_11__.HireDocumentsComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.hire_documents },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
             },
             {
                 path: "assign-to-job",
                 component: _components_documents_assign_attachment_to_job_assign_attachment_to_job_component__WEBPACK_IMPORTED_MODULE_12__.AssignAttachmentToJobComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.assign_to_job },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -952,32 +1050,35 @@ const routes = [
         path: "governorate",
         component: _components_governorate_governorate_component__WEBPACK_IMPORTED_MODULE_13__.GovernorateComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.governorate },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "kpi",
         component: _components_kpi_kpi_component__WEBPACK_IMPORTED_MODULE_7__.KpiComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.kpi },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
     {
         path: "identity-type",
         component: _components_identity_type_identity_type_component__WEBPACK_IMPORTED_MODULE_10__.IdentityTypeComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_15__.ViewsManager.identity_type },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_19__.CheckIsViewAllowedGuard],
     },
 ];
 class HrSetupRoutingModule {
 }
 HrSetupRoutingModule.ɵfac = function HrSetupRoutingModule_Factory(t) { return new (t || HrSetupRoutingModule)(); };
-HrSetupRoutingModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_19__["ɵɵdefineNgModule"]({ type: HrSetupRoutingModule });
-HrSetupRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_19__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_20__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_20__.RouterModule] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_19__["ɵɵsetNgModuleScope"](HrSetupRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_20__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_20__.RouterModule] }); })();
+HrSetupRoutingModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_20__["ɵɵdefineNgModule"]({ type: HrSetupRoutingModule });
+HrSetupRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_20__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_21__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_21__.RouterModule] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_20__["ɵɵsetNgModuleScope"](HrSetupRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_21__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_21__.RouterModule] }); })();
 
 
 /***/ }),
 
-/***/ 95040:
-/*!*********************************************!*\
-  !*** ./src/app/hr-setup/hr-setup.module.ts ***!
-  \*********************************************/
+/***/ 21328:
+/*!**********************************************************!*\
+  !*** ./src/app/system-setup/hr-setup/hr-setup.module.ts ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -986,25 +1087,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/common */ 94666);
 /* harmony import */ var app_shared_shared_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/shared.module */ 44466);
-/* harmony import */ var _components_bank_add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/bank/add-bank/add-bank.component */ 33669);
-/* harmony import */ var _components_bank_bank_branch_bank_branch_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/bank/bank-branch/bank-branch.component */ 20709);
-/* harmony import */ var _components_bank_bank_index_bank_index_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/bank/bank-index/bank-index.component */ 23264);
-/* harmony import */ var _components_contract_type_contract_type_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/contract-type/contract-type.component */ 93177);
-/* harmony import */ var _components_country_country_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/country/country.component */ 36608);
-/* harmony import */ var _components_documents_assign_attachment_to_job_assign_attachment_to_job_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/documents/assign-attachment-to-job/assign-attachment-to-job.component */ 72883);
-/* harmony import */ var _components_documents_hire_documents_hire_documents_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/documents/hire-documents/hire-documents.component */ 4568);
-/* harmony import */ var _components_education_degree_education_degree_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/education-degree/education-degree.component */ 76610);
-/* harmony import */ var _components_finincial_company_financial_company_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/finincial-company/financial-company.component */ 71666);
-/* harmony import */ var _components_governorate_governorate_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/governorate/governorate.component */ 31293);
-/* harmony import */ var _components_identity_type_identity_type_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/identity-type/identity-type.component */ 11297);
-/* harmony import */ var _components_institution_institution_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/institution/institution.component */ 35694);
-/* harmony import */ var _components_insurance_office_insurance_office_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/insurance-office/insurance-office.component */ 58816);
-/* harmony import */ var _components_kpi_kpi_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/kpi/kpi.component */ 41932);
-/* harmony import */ var _components_nationality_nationality_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/nationality/nationality.component */ 18853);
-/* harmony import */ var _components_religion_religion_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/religion/religion.component */ 94231);
-/* harmony import */ var _hr_setup_routing_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./hr-setup-routing.module */ 58445);
-/* harmony import */ var _components_contact_type_contact_type_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/contact-type/contact-type.component */ 4182);
-/* harmony import */ var _components_contact_category_contact_category_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/contact-category/contact-category.component */ 50336);
+/* harmony import */ var _components_bank_add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/bank/add-bank/add-bank.component */ 76422);
+/* harmony import */ var _components_bank_bank_branch_bank_branch_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/bank/bank-branch/bank-branch.component */ 34380);
+/* harmony import */ var _components_bank_bank_index_bank_index_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/bank/bank-index/bank-index.component */ 11475);
+/* harmony import */ var _components_contract_type_contract_type_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/contract-type/contract-type.component */ 14244);
+/* harmony import */ var _components_country_country_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/country/country.component */ 2438);
+/* harmony import */ var _components_documents_assign_attachment_to_job_assign_attachment_to_job_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/documents/assign-attachment-to-job/assign-attachment-to-job.component */ 6390);
+/* harmony import */ var _components_documents_hire_documents_hire_documents_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/documents/hire-documents/hire-documents.component */ 97958);
+/* harmony import */ var _components_education_degree_education_degree_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/education-degree/education-degree.component */ 6215);
+/* harmony import */ var _components_finincial_company_financial_company_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/finincial-company/financial-company.component */ 65186);
+/* harmony import */ var _components_governorate_governorate_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/governorate/governorate.component */ 22854);
+/* harmony import */ var _components_identity_type_identity_type_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/identity-type/identity-type.component */ 28976);
+/* harmony import */ var _components_institution_institution_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/institution/institution.component */ 28061);
+/* harmony import */ var _components_insurance_office_insurance_office_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/insurance-office/insurance-office.component */ 54771);
+/* harmony import */ var _components_kpi_kpi_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/kpi/kpi.component */ 52045);
+/* harmony import */ var _components_nationality_nationality_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/nationality/nationality.component */ 8374);
+/* harmony import */ var _components_religion_religion_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/religion/religion.component */ 148);
+/* harmony import */ var _hr_setup_routing_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./hr-setup-routing.module */ 91080);
+/* harmony import */ var _components_contact_type_contact_type_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/contact-type/contact-type.component */ 39757);
+/* harmony import */ var _components_contact_category_contact_category_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/contact-category/contact-category.component */ 10873);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
@@ -1055,10 +1156,10 @@ HrSetupModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_20__[
 
 /***/ }),
 
-/***/ 23039:
-/*!****************************************************************!*\
-  !*** ./src/app/hr-setup/services/financial-company.service.ts ***!
-  \****************************************************************/
+/***/ 83089:
+/*!*****************************************************************************!*\
+  !*** ./src/app/system-setup/hr-setup/services/financial-company.service.ts ***!
+  \*****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1102,10 +1203,10 @@ FinancialCompanyService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_M
 
 /***/ }),
 
-/***/ 54399:
-/*!*******************************************************************************!*\
-  !*** ./src/app/hr-setup/services/hire-documents/assign-doc-to-job.service.ts ***!
-  \*******************************************************************************/
+/***/ 27136:
+/*!********************************************************************************************!*\
+  !*** ./src/app/system-setup/hr-setup/services/hire-documents/assign-doc-to-job.service.ts ***!
+  \********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1152,4 +1253,4 @@ AssignDocToJobtitleService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTE
 /***/ })
 
 }]);
-//# sourceMappingURL=src_app_hr-setup_hr-setup_module_ts.js.map
+//# sourceMappingURL=src_app_system-setup_hr-setup_hr-setup_module_ts.js.map

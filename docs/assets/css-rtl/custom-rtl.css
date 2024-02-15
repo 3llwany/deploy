@@ -219,7 +219,7 @@ body .sidebar-content .ps__rail-y {
 }
 
 .table-container th.mat-header-cell {
-  padding: 15px 45px 14px 12px;
+  padding: 15px 45px 14px 12px !important;
 }
 
 .table-container th.mat-header-cell:not(:last-child)::before {
@@ -228,7 +228,15 @@ body .sidebar-content .ps__rail-y {
 }
 
 .table-container td.mat-cell {
-  padding: 27px 45px 28px 6px;
+  padding: 27px 45px 28px 6px !important;
+}
+
+.table-in-forms .table-container td.mat-cell {
+  padding: 15px 20px 15px 6px !important;
+}
+
+.table-in-forms .table-container th.mat-header-cell {
+  padding: 15px 20px 14px 12px !important;
 }
 
 .filter-container .p-button {
@@ -266,4 +274,16 @@ body .sidebar-content .ps__rail-y {
 .steps-footer {
   right: auto;
   left: 0;
+}
+
+.weekdays-checkbox-label {
+  margin: 10px 10px 10px 20px !important;
+}
+
+.tabs-menu-container .arrow-fixed.left {
+  left: 0 !important;
+}
+
+.tabs-menu-container .arrow-fixed.right {
+  right: 32px !important;
 }

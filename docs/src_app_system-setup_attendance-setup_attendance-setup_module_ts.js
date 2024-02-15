@@ -1,39 +1,117 @@
 "use strict";
-(self["webpackChunkhr"] = self["webpackChunkhr"] || []).push([["src_app_attendance-setup_attendance-setup_module_ts"],{
+(self["webpackChunkhr"] = self["webpackChunkhr"] || []).push([["src_app_system-setup_attendance-setup_attendance-setup_module_ts"],{
 
-/***/ 53670:
-/*!*********************************************************************!*\
-  !*** ./src/app/attendance-setup/attendance-setup-routing.module.ts ***!
-  \*********************************************************************/
+/***/ 3710:
+/*!********************************************************!*\
+  !*** ./src/app/shared/Guards/check-is-allowd.guard.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CheckIsViewAllowedGuard": () => (/* binding */ CheckIsViewAllowedGuard)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var app_shared_services_loading_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/services/loading.service */ 67579);
+/* harmony import */ var app_auth_services_user_views_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/auth/services/user-views.service */ 24280);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 60124);
+
+
+
+
+
+
+class CheckIsViewAllowedGuard {
+    constructor(viewsService, router) {
+        this.viewsService = viewsService;
+        this.router = router;
+        this.loadingService = (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.inject)(app_shared_services_loading_service__WEBPACK_IMPORTED_MODULE_0__.LoadingService);
+        this.UserModules = viewsService.UserModules$.getValue();
+        this.loading = document.getElementById("page-loading");
+    }
+    canActivate(route, state) {
+        return true;
+        // un comment code for used
+        // let view = route.data?.view;
+        // this.showLoading();
+        // if (this.UserModules?.length > 0) {
+        //   if (!this.viewsService.isViewAllowed(view)) {
+        //     this.router.navigateByUrl("/auth/access-denied");
+        //     this.hideLoading();
+        //   }
+        //   else {
+        //     this.hideLoading();
+        //     return true;
+        //   }
+        // }
+        //
+        // else {
+        //   this.viewsService.UserModules$.subscribe((val) => {
+        //     if (val?.length > 0) {
+        //       if (!this.viewsService.isViewAllowed(view)) {
+        //         this.router.navigateByUrl("/auth/access-denied");
+        //         this.hideLoading();
+        //       }
+        //       else {
+        //         this.hideLoading();
+        //         return true;
+        //       }
+        //     }
+        //   });
+        // }
+    }
+    showLoading() {
+        this.loading.style.display = "block";
+        this.loading.style.opacity = "1";
+        this.loading.style.zIndex = "998";
+    }
+    hideLoading() {
+        this.loading.style.display = "none";
+        this.loading.style.opacity = "0";
+        this.loading.style.zIndex = "0";
+    }
+}
+CheckIsViewAllowedGuard.ɵfac = function CheckIsViewAllowedGuard_Factory(t) { return new (t || CheckIsViewAllowedGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](app_auth_services_user_views_service__WEBPACK_IMPORTED_MODULE_1__.UserViewsService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router)); };
+CheckIsViewAllowedGuard.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: CheckIsViewAllowedGuard, factory: CheckIsViewAllowedGuard.ɵfac, providedIn: "root" });
+
+
+/***/ }),
+
+/***/ 62886:
+/*!**********************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/attendance-setup-routing.module.ts ***!
+  \**********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AttendanceSetupRoutingModule": () => (/* binding */ AttendanceSetupRoutingModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/router */ 60124);
-/* harmony import */ var _components_official_holidays_official_holidays_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/official-holidays/official-holidays.component */ 24260);
-/* harmony import */ var _components_attandance_device_attendance_device_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/attandance-device/attendance-device.component */ 91767);
-/* harmony import */ var _components_location_location_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/location/location.component */ 13586);
-/* harmony import */ var _components_permissions_add_permission_add_permission_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/permissions/add-permission/add-permission.component */ 95733);
-/* harmony import */ var _components_permissions_permission_index_permission_index_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/permissions/permission-index/permission-index.component */ 48746);
-/* harmony import */ var _components_vacation_vacation_type_vacation_type_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/vacation/vacation-type/vacation-type.component */ 41918);
-/* harmony import */ var _components_vacation_vacation_index_vacation_index_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/vacation/vacation-index/vacation-index.component */ 11040);
-/* harmony import */ var _components_attendance_element_attendance_element_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/attendance-element/attendance-element.component */ 91215);
-/* harmony import */ var _components_over_time_type_over_time_type_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/over-time-type/over-time-type.component */ 58165);
-/* harmony import */ var _components_shifts_add_shifts_add_shifts_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/shifts/add-shifts/add-shifts.component */ 60601);
-/* harmony import */ var _components_shifts_shifts_index_shifts_index_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/shifts/shifts-index/shifts-index.component */ 70361);
-/* harmony import */ var _components_plan_plan_index_plan_index_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/plan/plan-index/plan-index.component */ 48415);
-/* harmony import */ var _components_plan_add_plan_add_plan_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/plan/add-plan/add-plan.component */ 74975);
-/* harmony import */ var _components_attendance_period_attendance_period_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/attendance-period/attendance-period.component */ 35923);
-/* harmony import */ var _components_attendance_penalty_setup_attendance_penalty_setup_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/attendance-penalty-setup/attendance-penalty-setup.component */ 21906);
-/* harmony import */ var _components_plan_shrink_shrink_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/plan/shrink/shrink.component */ 82118);
-/* harmony import */ var _components_plan_extend_without_change_extend_without_change_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/plan/extend-without-change/extend-without-change.component */ 86725);
-/* harmony import */ var _components_plan_extend_with_change_extend_with_change_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/plan/extend-with-change/extend-with-change.component */ 41922);
-/* harmony import */ var _components_plan_plan_details_plan_details_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/plan/plan-details/plan-details.component */ 67552);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/router */ 60124);
+/* harmony import */ var _components_official_holidays_official_holidays_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/official-holidays/official-holidays.component */ 65997);
+/* harmony import */ var _components_attandance_device_attendance_device_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/attandance-device/attendance-device.component */ 95455);
+/* harmony import */ var _components_location_location_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/location/location.component */ 37734);
+/* harmony import */ var _components_permissions_add_permission_add_permission_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/permissions/add-permission/add-permission.component */ 39709);
+/* harmony import */ var _components_permissions_permission_index_permission_index_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/permissions/permission-index/permission-index.component */ 22019);
+/* harmony import */ var _components_vacation_vacation_type_vacation_type_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/vacation/vacation-type/vacation-type.component */ 15403);
+/* harmony import */ var _components_vacation_vacation_index_vacation_index_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/vacation/vacation-index/vacation-index.component */ 29268);
+/* harmony import */ var _components_attendance_element_attendance_element_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/attendance-element/attendance-element.component */ 11503);
+/* harmony import */ var _components_over_time_type_over_time_type_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/over-time-type/over-time-type.component */ 5411);
+/* harmony import */ var _components_shifts_add_shifts_add_shifts_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/shifts/add-shifts/add-shifts.component */ 51160);
+/* harmony import */ var _components_shifts_shifts_index_shifts_index_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/shifts/shifts-index/shifts-index.component */ 83039);
+/* harmony import */ var _components_plan_plan_index_plan_index_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/plan/plan-index/plan-index.component */ 72079);
+/* harmony import */ var _components_plan_add_plan_add_plan_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/plan/add-plan/add-plan.component */ 32521);
+/* harmony import */ var _components_attendance_period_attendance_period_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/attendance-period/attendance-period.component */ 29751);
+/* harmony import */ var _components_attendance_penalty_setup_attendance_penalty_setup_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/attendance-penalty-setup/attendance-penalty-setup.component */ 61905);
+/* harmony import */ var _components_plan_shrink_shrink_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/plan/shrink/shrink.component */ 40823);
+/* harmony import */ var _components_plan_extend_without_change_extend_without_change_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/plan/extend-without-change/extend-without-change.component */ 68216);
+/* harmony import */ var _components_plan_extend_with_change_extend_with_change_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/plan/extend-with-change/extend-with-change.component */ 594);
+/* harmony import */ var _components_plan_plan_details_plan_details_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/plan/plan-details/plan-details.component */ 48286);
 /* harmony import */ var app_shared_enums_route_path_match_enum__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! app/shared/enums/route-path-match.enum */ 36162);
 /* harmony import */ var app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! app/shared/resources/views-manager */ 74513);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! app/shared/Guards/check-is-allowd.guard */ 3710);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/core */ 22560);
+
 
 
 
@@ -63,31 +141,37 @@ const routes = [
         path: "attendance-devices",
         component: _components_attandance_device_attendance_device_component__WEBPACK_IMPORTED_MODULE_1__.AttendanceDeviceComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.attendance_devices },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
     },
     {
         path: "official-holidays",
         component: _components_official_holidays_official_holidays_component__WEBPACK_IMPORTED_MODULE_0__.OfficialHolidaysComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.official_holidays },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
     },
     {
         path: "holidays-calendar/:holidayid",
         component: _components_official_holidays_official_holidays_component__WEBPACK_IMPORTED_MODULE_0__.OfficialHolidaysComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.holidays_calendar },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
     },
     {
         path: "location",
         component: _components_location_location_component__WEBPACK_IMPORTED_MODULE_2__.LocationComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.location },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
     },
     {
         path: "attendance-element",
         component: _components_attendance_element_attendance_element_component__WEBPACK_IMPORTED_MODULE_7__.AttendanceElementComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.attendance_element },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
     },
     {
         path: "over-time-type",
         component: _components_over_time_type_over_time_type_component__WEBPACK_IMPORTED_MODULE_8__.OverTimeTypeComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.over_time_type },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
     },
     {
         path: "permissions",
@@ -101,16 +185,19 @@ const routes = [
                 path: "index",
                 component: _components_permissions_permission_index_permission_index_component__WEBPACK_IMPORTED_MODULE_4__.PermissionIndexComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.permission_index },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "add",
                 component: _components_permissions_add_permission_add_permission_component__WEBPACK_IMPORTED_MODULE_3__.AddPermissionComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.add_permission },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "edit/:permissionId",
                 component: _components_permissions_add_permission_add_permission_component__WEBPACK_IMPORTED_MODULE_3__.AddPermissionComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.edit_permission },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -126,16 +213,19 @@ const routes = [
                 path: "index",
                 component: _components_vacation_vacation_index_vacation_index_component__WEBPACK_IMPORTED_MODULE_6__.VacationIndexComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.vacation_index },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "add",
                 component: _components_vacation_vacation_type_vacation_type_component__WEBPACK_IMPORTED_MODULE_5__.VacationTypeComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.add_vacation },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "edit/:vacationId",
                 component: _components_vacation_vacation_type_vacation_type_component__WEBPACK_IMPORTED_MODULE_5__.VacationTypeComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.add_vacation },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -151,16 +241,19 @@ const routes = [
                 path: "index",
                 component: _components_shifts_shifts_index_shifts_index_component__WEBPACK_IMPORTED_MODULE_10__.ShiftsIndexComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.shifts_index },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "add",
                 component: _components_shifts_add_shifts_add_shifts_component__WEBPACK_IMPORTED_MODULE_9__.ShiftsComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.add_shift },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "edit/:shiftId",
                 component: _components_shifts_add_shifts_add_shifts_component__WEBPACK_IMPORTED_MODULE_9__.ShiftsComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.add_shift },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -176,36 +269,43 @@ const routes = [
                 path: "index",
                 component: _components_plan_plan_index_plan_index_component__WEBPACK_IMPORTED_MODULE_11__.PlanIndexComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.plan_index },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "add",
                 component: _components_plan_add_plan_add_plan_component__WEBPACK_IMPORTED_MODULE_12__.AddPlanComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.add_plan },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "edit/:planId",
                 component: _components_plan_add_plan_add_plan_component__WEBPACK_IMPORTED_MODULE_12__.AddPlanComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.add_plan },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "shrink/:planId",
                 component: _components_plan_shrink_shrink_component__WEBPACK_IMPORTED_MODULE_15__.ShrinkComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.shrink },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "extend-without-change/:planId",
                 component: _components_plan_extend_without_change_extend_without_change_component__WEBPACK_IMPORTED_MODULE_16__.ExtendWithoutChangeComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.extend_without_change },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "extend-with-change/:planId",
                 component: _components_plan_extend_with_change_extend_with_change_component__WEBPACK_IMPORTED_MODULE_17__.ExtendWithChangeComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.extend_with_change },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
             {
                 path: "details/:planId",
                 component: _components_plan_plan_details_plan_details_component__WEBPACK_IMPORTED_MODULE_18__.PlanDetailsComponent,
                 data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.plan_details },
+                canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
             },
         ],
     },
@@ -213,27 +313,29 @@ const routes = [
         path: "attendance-period",
         component: _components_attendance_period_attendance_period_component__WEBPACK_IMPORTED_MODULE_13__.AttendancePeriodComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.attendance_period },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
     },
     {
         path: "attendance-penalty-setup",
         component: _components_attendance_penalty_setup_attendance_penalty_setup_component__WEBPACK_IMPORTED_MODULE_14__.AttendancePenaltySetupComponent,
         data: { view: app_shared_resources_views_manager__WEBPACK_IMPORTED_MODULE_20__.ViewsManager.attendance_penalty_setup },
+        canActivate: [app_shared_Guards_check_is_allowd_guard__WEBPACK_IMPORTED_MODULE_21__.CheckIsViewAllowedGuard],
     },
 ];
 class AttendanceSetupRoutingModule {
 }
 AttendanceSetupRoutingModule.ɵfac = function AttendanceSetupRoutingModule_Factory(t) { return new (t || AttendanceSetupRoutingModule)(); };
-AttendanceSetupRoutingModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdefineNgModule"]({ type: AttendanceSetupRoutingModule });
-AttendanceSetupRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_22__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_22__.RouterModule] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵsetNgModuleScope"](AttendanceSetupRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_22__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_22__.RouterModule] }); })();
+AttendanceSetupRoutingModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵdefineNgModule"]({ type: AttendanceSetupRoutingModule });
+AttendanceSetupRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_23__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_23__.RouterModule] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_22__["ɵɵsetNgModuleScope"](AttendanceSetupRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_23__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_23__.RouterModule] }); })();
 
 
 /***/ }),
 
-/***/ 63249:
-/*!*************************************************************!*\
-  !*** ./src/app/attendance-setup/attendance-setup.module.ts ***!
-  \*************************************************************/
+/***/ 10543:
+/*!**************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/attendance-setup.module.ts ***!
+  \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -241,30 +343,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AttendanceSetupModule": () => (/* binding */ AttendanceSetupModule)
 /* harmony export */ });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _attendance_setup_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./attendance-setup-routing.module */ 53670);
-/* harmony import */ var _components_attandance_device_attendance_device_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/attandance-device/attendance-device.component */ 91767);
+/* harmony import */ var _attendance_setup_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./attendance-setup-routing.module */ 62886);
+/* harmony import */ var _components_attandance_device_attendance_device_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/attandance-device/attendance-device.component */ 95455);
 /* harmony import */ var app_shared_shared_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/shared.module */ 44466);
-/* harmony import */ var _components_official_holidays_official_holidays_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/official-holidays/official-holidays.component */ 24260);
-/* harmony import */ var _components_location_location_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/location/location.component */ 13586);
-/* harmony import */ var _components_attendance_element_attendance_element_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/attendance-element/attendance-element.component */ 91215);
-/* harmony import */ var _components_over_time_type_over_time_type_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/over-time-type/over-time-type.component */ 58165);
-/* harmony import */ var _components_shifts_add_shifts_add_shifts_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/shifts/add-shifts/add-shifts.component */ 60601);
-/* harmony import */ var _components_shifts_shifts_index_shifts_index_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/shifts/shifts-index/shifts-index.component */ 70361);
-/* harmony import */ var _components_permissions_add_permission_add_permission_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/permissions/add-permission/add-permission.component */ 95733);
-/* harmony import */ var _components_permissions_permission_index_permission_index_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/permissions/permission-index/permission-index.component */ 48746);
-/* harmony import */ var _components_vacation_vacation_insurance_vacation_insurance_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/vacation/vacation-insurance/vacation-insurance.component */ 5594);
-/* harmony import */ var _components_vacation_vacation_type_vacation_type_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/vacation/vacation-type/vacation-type.component */ 41918);
-/* harmony import */ var _components_vacation_vacation_age_vacation_age_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/vacation/vacation-age/vacation-age.component */ 36482);
-/* harmony import */ var _components_vacation_vacation_index_vacation_index_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/vacation/vacation-index/vacation-index.component */ 11040);
-/* harmony import */ var _components_plan_plan_index_plan_index_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/plan/plan-index/plan-index.component */ 48415);
-/* harmony import */ var _components_plan_add_plan_add_plan_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/plan/add-plan/add-plan.component */ 74975);
-/* harmony import */ var _components_plan_shrink_shrink_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/plan/shrink/shrink.component */ 82118);
-/* harmony import */ var _components_attendance_period_attendance_period_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/attendance-period/attendance-period.component */ 35923);
-/* harmony import */ var _components_attendance_penalty_setup_attendance_penalty_setup_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/attendance-penalty-setup/attendance-penalty-setup.component */ 21906);
-/* harmony import */ var _components_plan_extend_with_change_extend_with_change_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/plan/extend-with-change/extend-with-change.component */ 41922);
-/* harmony import */ var _components_plan_extend_without_change_extend_without_change_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/plan/extend-without-change/extend-without-change.component */ 86725);
-/* harmony import */ var _components_plan_plan_details_plan_details_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/plan/plan-details/plan-details.component */ 67552);
-/* harmony import */ var _components_plan_plan_form_plan_form_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/plan/plan-form/plan-form.component */ 92469);
+/* harmony import */ var _components_official_holidays_official_holidays_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/official-holidays/official-holidays.component */ 65997);
+/* harmony import */ var _components_location_location_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/location/location.component */ 37734);
+/* harmony import */ var _components_attendance_element_attendance_element_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/attendance-element/attendance-element.component */ 11503);
+/* harmony import */ var _components_over_time_type_over_time_type_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/over-time-type/over-time-type.component */ 5411);
+/* harmony import */ var _components_shifts_add_shifts_add_shifts_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/shifts/add-shifts/add-shifts.component */ 51160);
+/* harmony import */ var _components_shifts_shifts_index_shifts_index_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/shifts/shifts-index/shifts-index.component */ 83039);
+/* harmony import */ var _components_permissions_add_permission_add_permission_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/permissions/add-permission/add-permission.component */ 39709);
+/* harmony import */ var _components_permissions_permission_index_permission_index_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/permissions/permission-index/permission-index.component */ 22019);
+/* harmony import */ var _components_vacation_vacation_insurance_vacation_insurance_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/vacation/vacation-insurance/vacation-insurance.component */ 84983);
+/* harmony import */ var _components_vacation_vacation_type_vacation_type_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/vacation/vacation-type/vacation-type.component */ 15403);
+/* harmony import */ var _components_vacation_vacation_age_vacation_age_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/vacation/vacation-age/vacation-age.component */ 32267);
+/* harmony import */ var _components_vacation_vacation_index_vacation_index_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/vacation/vacation-index/vacation-index.component */ 29268);
+/* harmony import */ var _components_plan_plan_index_plan_index_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/plan/plan-index/plan-index.component */ 72079);
+/* harmony import */ var _components_plan_add_plan_add_plan_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/plan/add-plan/add-plan.component */ 32521);
+/* harmony import */ var _components_plan_shrink_shrink_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/plan/shrink/shrink.component */ 40823);
+/* harmony import */ var _components_attendance_period_attendance_period_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/attendance-period/attendance-period.component */ 29751);
+/* harmony import */ var _components_attendance_penalty_setup_attendance_penalty_setup_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/attendance-penalty-setup/attendance-penalty-setup.component */ 61905);
+/* harmony import */ var _components_plan_extend_with_change_extend_with_change_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/plan/extend-with-change/extend-with-change.component */ 594);
+/* harmony import */ var _components_plan_extend_without_change_extend_without_change_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/plan/extend-without-change/extend-without-change.component */ 68216);
+/* harmony import */ var _components_plan_plan_details_plan_details_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/plan/plan-details/plan-details.component */ 48286);
+/* harmony import */ var _components_plan_plan_form_plan_form_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/plan/plan-form/plan-form.component */ 7090);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
@@ -324,10 +426,10 @@ AttendanceSetupModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODU
 
 /***/ }),
 
-/***/ 91767:
-/*!**********************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/attandance-device/attendance-device.component.ts ***!
-  \**********************************************************************************************/
+/***/ 95455:
+/*!***********************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/attandance-device/attendance-device.component.ts ***!
+  \***********************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -340,13 +442,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_validators_custom_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/validators/custom.validator */ 78937);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_attendance_device_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/attendance-setup/services/attendance-device.service */ 12138);
+/* harmony import */ var app_system_setup_attendance_setup_services_attendance_device_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/attendance-device.service */ 40872);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/divider */ 71528);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-spinner */ 88035);
@@ -402,6 +504,7 @@ class AttendanceDeviceComponent extends app_shared_resources_app_helpers__WEBPAC
             this.getList(this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize)
             this.page.pageSize = pageSize;
@@ -499,7 +602,7 @@ class AttendanceDeviceComponent extends app_shared_resources_app_helpers__WEBPAC
         this.submitted = false;
     }
 }
-AttendanceDeviceComponent.ɵfac = function AttendanceDeviceComponent_Factory(t) { return new (t || AttendanceDeviceComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_attendance_setup_services_attendance_device_service__WEBPACK_IMPORTED_MODULE_3__.AttendanceDeviceService)); };
+AttendanceDeviceComponent.ɵfac = function AttendanceDeviceComponent_Factory(t) { return new (t || AttendanceDeviceComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_attendance_device_service__WEBPACK_IMPORTED_MODULE_3__.AttendanceDeviceService)); };
 AttendanceDeviceComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: AttendanceDeviceComponent, selectors: [["app-attendance-device"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵInheritDefinitionFeature"]], decls: 20, vars: 15, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "attendanceDevices", "editTitle", "attendanceDeviceEdit", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["label", "machineIP", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function AttendanceDeviceComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -535,15 +638,15 @@ AttendanceDeviceComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.attendanceDeviceService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhdHRlbmRhbmNlLWRldmljZS5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhdHRlbmRhbmNlLWRldmljZS5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
 
-/***/ 91215:
-/*!************************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/attendance-element/attendance-element.component.ts ***!
-  \************************************************************************************************/
+/***/ 11503:
+/*!*************************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/attendance-element/attendance-element.component.ts ***!
+  \*************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -552,19 +655,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ 2508);
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_attendance_setup_mapper_attendance_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/attendance-setup/mapper/attendance-element */ 58018);
+/* harmony import */ var app_system_setup_attendance_setup_mapper_attendance_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/attendance-setup/mapper/attendance-element */ 57074);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_validators_custom_validator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/shared/validators/custom.validator */ 78937);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_attendance_element_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/attendance-setup/services/attendance-element.service */ 91729);
+/* harmony import */ var app_system_setup_attendance_setup_services_attendance_element_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/attendance-element.service */ 28778);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/divider */ 71528);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ngx-spinner */ 88035);
@@ -625,10 +728,13 @@ class AttendanceElementComponent extends app_shared_resources_app_helpers__WEBPA
         return this.form.controls;
     }
     onChangeBusinessAndCompanyId() {
+        if (this.dataSource?.data?.length > 0)
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_13__.MatTableDataSource(null);
         if (this.checkNoBusinessOrCompany())
             this.getList(this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize)
             this.page.pageSize = pageSize;
@@ -642,7 +748,7 @@ class AttendanceElementComponent extends app_shared_resources_app_helpers__WEBPA
             .pipe(this.cancelRequest())
             .subscribe((res) => {
             if (res.message.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_13__.MatTableDataSource((0,app_attendance_setup_mapper_attendance_element__WEBPACK_IMPORTED_MODULE_0__.attendanceElementToMap)(res.data));
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_13__.MatTableDataSource((0,app_system_setup_attendance_setup_mapper_attendance_element__WEBPACK_IMPORTED_MODULE_0__.attendanceElementToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -732,7 +838,7 @@ class AttendanceElementComponent extends app_shared_resources_app_helpers__WEBPA
         this.submitted = false;
     }
 }
-AttendanceElementComponent.ɵfac = function AttendanceElementComponent_Factory(t) { return new (t || AttendanceElementComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_attendance_setup_services_attendance_element_service__WEBPACK_IMPORTED_MODULE_4__.AttendanceElementService)); };
+AttendanceElementComponent.ɵfac = function AttendanceElementComponent_Factory(t) { return new (t || AttendanceElementComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_attendance_element_service__WEBPACK_IMPORTED_MODULE_4__.AttendanceElementService)); };
 AttendanceElementComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineComponent"]({ type: AttendanceElementComponent, selectors: [["app-attendance-element"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵInheritDefinitionFeature"]], decls: 23, vars: 18, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "attendance_Element", "editTitle", "edit_Attendance_Element", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-4", "col-12"], ["label", "ar_Name", 3, "control", "submitted"], ["label", "en name", 3, "control", "submitted"], ["label", "code", 3, "control", "submitted"], [1, "col-md-4", "col-12", "p-2", "align-text-center"], ["label", "display_In_Result", 3, "control"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow", "editRow"], [3, "click"]], template: function AttendanceElementComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -778,15 +884,15 @@ AttendanceElementComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.attendanceElementService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_14__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_6__.MaterialTableComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__.CheckBoxComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_16__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_17__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhdHRlbmRhbmNlLWVsZW1lbnQuY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_14__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_5__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_6__.MaterialTableComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_7__.CheckBoxComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_8__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_9__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_10__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_16__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_17__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhdHRlbmRhbmNlLWVsZW1lbnQuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
 
-/***/ 21906:
-/*!************************************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/attendance-penalty-setup/attendance-penalty-setup.component.ts ***!
-  \************************************************************************************************************/
+/***/ 61905:
+/*!*************************************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/attendance-penalty-setup/attendance-penalty-setup.component.ts ***!
+  \*************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -797,13 +903,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var ngx_custom_validators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-custom-validators */ 79512);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_attendance_penalty_setup_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/attendance-setup/services/attendance-penalty-setup.service */ 84306);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/components/page-title/page-title.component */ 46896);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var app_system_setup_attendance_setup_services_attendance_penalty_setup_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/attendance-penalty-setup.service */ 52673);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/card */ 82156);
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ 2508);
 
 
 
@@ -884,7 +990,7 @@ class AttendancePenaltySetupComponent extends app_shared_resources_app_helpers__
         });
     }
 }
-AttendancePenaltySetupComponent.ɵfac = function AttendancePenaltySetupComponent_Factory(t) { return new (t || AttendancePenaltySetupComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_attendance_setup_services_attendance_penalty_setup_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePenaltySetupService)); };
+AttendancePenaltySetupComponent.ɵfac = function AttendancePenaltySetupComponent_Factory(t) { return new (t || AttendancePenaltySetupComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_attendance_penalty_setup_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePenaltySetupService)); };
 AttendancePenaltySetupComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: AttendancePenaltySetupComponent, selectors: [["app-attendance-penalty-setup"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 13, vars: 5, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "attendancePenaltySetup", "editTitle", "editattendancePenaltySetup", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["type", "number", "label", "maxDeductionLimitDays", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"]], template: function AttendancePenaltySetupComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -905,15 +1011,15 @@ AttendancePenaltySetupComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMP
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("control", ctx.formCtrls.maxDeductionLimitDays)("submitted", ctx.submitted);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("id", ctx.formCtrls.id.value);
-    } }, dependencies: [_shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_3__.InputComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_4__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_10__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhdHRlbmRhbmNlLXBlbmFsdHktc2V0dXAuY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, dependencies: [_shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_3__.InputComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_4__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhdHRlbmRhbmNlLXBlbmFsdHktc2V0dXAuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
 
-/***/ 35923:
-/*!**********************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/attendance-period/attendance-period.component.ts ***!
-  \**********************************************************************************************/
+/***/ 29751:
+/*!***********************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/attendance-period/attendance-period.component.ts ***!
+  \***********************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -925,10 +1031,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var ngx_custom_validators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-custom-validators */ 79512);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_attendance_period_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/attendance-setup/services/attendance-period.service */ 67315);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var app_system_setup_attendance_setup_services_attendance_period_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/attendance-period.service */ 88338);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-spinner */ 88035);
 
@@ -1023,7 +1129,7 @@ class AttendancePeriodComponent extends app_shared_resources_app_helpers__WEBPAC
         });
     }
 }
-AttendancePeriodComponent.ɵfac = function AttendancePeriodComponent_Factory(t) { return new (t || AttendancePeriodComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdirectiveInject"](app_attendance_setup_services_attendance_period_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePeriodService)); };
+AttendancePeriodComponent.ɵfac = function AttendancePeriodComponent_Factory(t) { return new (t || AttendancePeriodComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_attendance_period_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePeriodService)); };
 AttendancePeriodComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineComponent"]({ type: AttendancePeriodComponent, selectors: [["app-attendance-period"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵInheritDefinitionFeature"]], decls: 15, vars: 7, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "attendancePeriod", "editTitle", "editattendancePeriod", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-4", "col-12"], ["type", "number", "label", "startDay", 3, "control", "submitted"], ["type", "number", "label", "startMonth", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"]], template: function AttendancePeriodComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -1049,15 +1155,15 @@ AttendancePeriodComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_
         _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("control", ctx.formCtrls.startMonth)("submitted", ctx.submitted);
         _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("id", ctx.formCtrls.id.value);
-    } }, dependencies: [_shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_3__.InputComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_4__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_10__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhdHRlbmRhbmNlLXBlcmlvZC5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, dependencies: [_shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_3__.InputComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_4__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_9__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_10__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhdHRlbmRhbmNlLXBlcmlvZC5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
 
-/***/ 24260:
-/*!**********************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/official-holidays/official-holidays.component.ts ***!
-  \**********************************************************************************************/
+/***/ 65997:
+/*!***********************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/official-holidays/official-holidays.component.ts ***!
+  \***********************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1070,13 +1176,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_validators_custom_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/validators/custom.validator */ 78937);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_official_holidays_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/attendance-setup/services/official-holidays.service */ 64252);
+/* harmony import */ var app_system_setup_attendance_setup_services_official_holidays_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/official-holidays.service */ 62680);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/divider */ 71528);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-spinner */ 88035);
@@ -1132,6 +1238,7 @@ class OfficialHolidaysComponent extends app_shared_resources_app_helpers__WEBPAC
             this.getList(this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize)
             this.page.pageSize = pageSize;
@@ -1235,7 +1342,7 @@ class OfficialHolidaysComponent extends app_shared_resources_app_helpers__WEBPAC
         this.submitted = false;
     }
 }
-OfficialHolidaysComponent.ɵfac = function OfficialHolidaysComponent_Factory(t) { return new (t || OfficialHolidaysComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_attendance_setup_services_official_holidays_service__WEBPACK_IMPORTED_MODULE_3__.OfficialHolidaysService)); };
+OfficialHolidaysComponent.ɵfac = function OfficialHolidaysComponent_Factory(t) { return new (t || OfficialHolidaysComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_official_holidays_service__WEBPACK_IMPORTED_MODULE_3__.OfficialHolidaysService)); };
 OfficialHolidaysComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: OfficialHolidaysComponent, selectors: [["app-official-holidays"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵInheritDefinitionFeature"]], decls: 18, vars: 15, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "officialHolidays", "editTitle", "editHoliday", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "en_Name", 3, "control", "submitted"], ["label", "ar_Name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "actions", "exportService", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function OfficialHolidaysComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -1271,15 +1378,15 @@ OfficialHolidaysComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions)("exportService", ctx.holidayService);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJvZmZpY2lhbC1ob2xpZGF5cy5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJvZmZpY2lhbC1ob2xpZGF5cy5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
 
-/***/ 58165:
-/*!****************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/over-time-type/over-time-type.component.ts ***!
-  \****************************************************************************************/
+/***/ 5411:
+/*!*****************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/over-time-type/over-time-type.component.ts ***!
+  \*****************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1292,13 +1399,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_validators_custom_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/validators/custom.validator */ 78937);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_over_time_type_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/attendance-setup/services/over-time-type.service */ 41224);
+/* harmony import */ var app_system_setup_attendance_setup_services_over_time_type_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/over-time-type.service */ 80733);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/divider */ 71528);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-spinner */ 88035);
@@ -1348,10 +1455,13 @@ class OverTimeTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IM
         return this.form.controls;
     }
     onChangeBusinessAndCompanyId() {
+        if (this.dataSource?.data?.length > 0)
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_11__.MatTableDataSource(null);
         if (this.checkNoBusinessOrCompany())
             this.getList(this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize)
             this.page.pageSize = pageSize;
@@ -1447,7 +1557,7 @@ class OverTimeTypeComponent extends app_shared_resources_app_helpers__WEBPACK_IM
         this.submitted = false;
     }
 }
-OverTimeTypeComponent.ɵfac = function OverTimeTypeComponent_Factory(t) { return new (t || OverTimeTypeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_attendance_setup_services_over_time_type_service__WEBPACK_IMPORTED_MODULE_3__.OverTimeTypeService)); };
+OverTimeTypeComponent.ɵfac = function OverTimeTypeComponent_Factory(t) { return new (t || OverTimeTypeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_over_time_type_service__WEBPACK_IMPORTED_MODULE_3__.OverTimeTypeService)); };
 OverTimeTypeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: OverTimeTypeComponent, selectors: [["app-over-time-type"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵInheritDefinitionFeature"]], decls: 18, vars: 15, consts: [[1, "row"], [1, "col-12"], [1, "form-card"], ["addTitle", "overtimetype", "editTitle", "editOverTimeType", 3, "id"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "name", 3, "control", "submitted"], ["label", "ar_Name", 3, "control", "submitted"], ["align", "end"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "actions", "exportService", "onChangePage", "editRow", "deleteRow"], [3, "click"]], template: function OverTimeTypeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -1483,15 +1593,15 @@ OverTimeTypeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODU
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("actions", ctx.rowFunctions)("exportService", ctx.overTimeTypeService);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJvdmVyLXRpbWUtdHlwZS5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_5__.MaterialTableComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_6__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_7__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_8__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_13__.MatCardActions, _angular_material_divider__WEBPACK_IMPORTED_MODULE_14__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_15__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJvdmVyLXRpbWUtdHlwZS5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
 
-/***/ 48746:
-/*!********************************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/permissions/permission-index/permission-index.component.ts ***!
-  \********************************************************************************************************/
+/***/ 22019:
+/*!*********************************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/permissions/permission-index/permission-index.component.ts ***!
+  \*********************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1502,13 +1612,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_permissions_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/attendance-setup/services/permissions.service */ 60927);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var app_system_setup_attendance_setup_services_permissions_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/permissions.service */ 96391);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
-
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-spinner */ 88035);
 
 
 
@@ -1546,10 +1654,13 @@ class PermissionIndexComponent extends app_shared_resources_app_helpers__WEBPACK
         // }
     }
     onChangeBusinessAndCompanyId() {
+        if (this.dataSource?.data?.length > 0)
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_5__.MatTableDataSource(null);
         if (this.checkNoBusinessOrCompany())
             this.getList(this.pageFromUrl > 0 ? this.pageFromUrl : this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize)
             this.page.pageSize = pageSize;
@@ -1610,30 +1721,29 @@ class PermissionIndexComponent extends app_shared_resources_app_helpers__WEBPACK
         });
     }
 }
-PermissionIndexComponent.ɵfac = function PermissionIndexComponent_Factory(t) { return new (t || PermissionIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](app_attendance_setup_services_permissions_service__WEBPACK_IMPORTED_MODULE_2__.PermissionTypeService)); };
-PermissionIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: PermissionIndexComponent, selectors: [["app-permission-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 8, consts: [[1, "row"], [1, "col-12"], ["title", "permissionType", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function PermissionIndexComponent_Template(rf, ctx) { if (rf & 1) {
+PermissionIndexComponent.ɵfac = function PermissionIndexComponent_Factory(t) { return new (t || PermissionIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_permissions_service__WEBPACK_IMPORTED_MODULE_2__.PermissionTypeService)); };
+PermissionIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: PermissionIndexComponent, selectors: [["app-permission-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 8, consts: [[1, "row"], [1, "col-12"], [1, "index-card"], ["title", "permissionType", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function PermissionIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](5, "page-title", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](6, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](7, "app-material-table", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("onChangePage", function PermissionIndexComponent_Template_app_material_table_onChangePage_7_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function PermissionIndexComponent_Template_app_material_table_deleteRow_7_listener($event) { return ctx.onDelete($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](6, "app-material-table", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("onChangePage", function PermissionIndexComponent_Template_app_material_table_onChangePage_6_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function PermissionIndexComponent_Template_app_material_table_deleteRow_6_listener($event) { return ctx.onDelete($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
-        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.permissionService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, _angular_material_divider__WEBPACK_IMPORTED_MODULE_8__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZXJtaXNzaW9uLWluZGV4LmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_3__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_4__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, ngx_spinner__WEBPACK_IMPORTED_MODULE_8__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZXJtaXNzaW9uLWluZGV4LmNvbXBvbmVudC5zY3NzIn0= */"] });
 
 
 /***/ }),
 
-/***/ 41922:
-/*!*****************************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/plan/extend-with-change/extend-with-change.component.ts ***!
-  \*****************************************************************************************************/
+/***/ 594:
+/*!******************************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/plan/extend-with-change/extend-with-change.component.ts ***!
+  \******************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1643,9 +1753,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/attendance-setup/services/attendance-plan.service */ 5420);
+/* harmony import */ var app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/attendance-plan.service */ 86280);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-spinner */ 88035);
-/* harmony import */ var _plan_form_plan_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../plan-form/plan-form.component */ 92469);
+/* harmony import */ var _plan_form_plan_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../plan-form/plan-form.component */ 7090);
 
 
 
@@ -1676,7 +1786,7 @@ class ExtendWithChangeComponent extends app_shared_resources_app_helpers__WEBPAC
         });
     }
 }
-ExtendWithChangeComponent.ɵfac = function ExtendWithChangeComponent_Factory(t) { return new (t || ExtendWithChangeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePlanService)); };
+ExtendWithChangeComponent.ɵfac = function ExtendWithChangeComponent_Factory(t) { return new (t || ExtendWithChangeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePlanService)); };
 ExtendWithChangeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: ExtendWithChangeComponent, selectors: [["app-extendwithchange"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 2, vars: 2, consts: [["pageTitle", "extendWithChange", 3, "disabelControls", "isExtendWithChange", "onSubmit"]], template: function ExtendWithChangeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "app-plan-form", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("onSubmit", function ExtendWithChangeComponent_Template_app_plan_form_onSubmit_0_listener($event) { return ctx.submit($event); });
@@ -1689,10 +1799,10 @@ ExtendWithChangeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ 86725:
-/*!***********************************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/plan/extend-without-change/extend-without-change.component.ts ***!
-  \***********************************************************************************************************/
+/***/ 68216:
+/*!************************************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/plan/extend-without-change/extend-without-change.component.ts ***!
+  \************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1702,9 +1812,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/attendance-setup/services/attendance-plan.service */ 5420);
+/* harmony import */ var app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/attendance-plan.service */ 86280);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-spinner */ 88035);
-/* harmony import */ var _plan_form_plan_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../plan-form/plan-form.component */ 92469);
+/* harmony import */ var _plan_form_plan_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../plan-form/plan-form.component */ 7090);
 
 
 
@@ -1738,7 +1848,7 @@ class ExtendWithoutChangeComponent extends app_shared_resources_app_helpers__WEB
         });
     }
 }
-ExtendWithoutChangeComponent.ɵfac = function ExtendWithoutChangeComponent_Factory(t) { return new (t || ExtendWithoutChangeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePlanService)); };
+ExtendWithoutChangeComponent.ɵfac = function ExtendWithoutChangeComponent_Factory(t) { return new (t || ExtendWithoutChangeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePlanService)); };
 ExtendWithoutChangeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: ExtendWithoutChangeComponent, selectors: [["app-extendwithoutchange"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 2, vars: 2, consts: [["pageTitle", "extendWithoutChange", 3, "showDaysTable", "disabelControls", "onSubmit"]], template: function ExtendWithoutChangeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "app-plan-form", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("onSubmit", function ExtendWithoutChangeComponent_Template_app_plan_form_onSubmit_0_listener($event) { return ctx.submit($event); });
@@ -1751,27 +1861,27 @@ ExtendWithoutChangeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORT
 
 /***/ }),
 
-/***/ 67552:
-/*!*****************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/plan/plan-details/plan-details.component.ts ***!
-  \*****************************************************************************************/
+/***/ 48286:
+/*!******************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/plan/plan-details/plan-details.component.ts ***!
+  \******************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "PlanDetailsComponent": () => (/* binding */ PlanDetailsComponent)
 /* harmony export */ });
-/* harmony import */ var app_attendance_setup_mapper_attendance_plan__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/attendance-setup/mapper/attendance-plan */ 8900);
+/* harmony import */ var app_system_setup_attendance_setup_mapper_attendance_plan__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/attendance-setup/mapper/attendance-plan */ 3371);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ 92218);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs/operators */ 85921);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/attendance-setup/services/attendance-plan.service */ 5420);
+/* harmony import */ var app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/attendance-plan.service */ 86280);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/expansion */ 17591);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-spinner */ 88035);
@@ -1833,7 +1943,7 @@ class PlanDetailsComponent extends app_shared_resources_app_helpers__WEBPACK_IMP
             .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.takeUntil)(this.destroy$))
             .subscribe((res) => {
             if (res?.message?.messageType == app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
-                this.groupedPlans = this.groupPlansByIterationNumber((0,app_attendance_setup_mapper_attendance_plan__WEBPACK_IMPORTED_MODULE_0__.planDetailsToMap)(res.data));
+                this.groupedPlans = this.groupPlansByIterationNumber((0,app_system_setup_attendance_setup_mapper_attendance_plan__WEBPACK_IMPORTED_MODULE_0__.planDetailsToMap)(res.data));
             }
             else {
                 this.errorList(res.message.messages);
@@ -1861,7 +1971,7 @@ class PlanDetailsComponent extends app_shared_resources_app_helpers__WEBPACK_IMP
         this.destroy$.complete();
     }
 }
-PlanDetailsComponent.ɵfac = function PlanDetailsComponent_Factory(t) { return new (t || PlanDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_3__.AttendancePlanService)); };
+PlanDetailsComponent.ɵfac = function PlanDetailsComponent_Factory(t) { return new (t || PlanDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_3__.AttendancePlanService)); };
 PlanDetailsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: PlanDetailsComponent, selectors: [["app-plan-details"]], inputs: { planId: "planId" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 10, vars: 6, consts: [[1, "row"], [1, "col-12"], [1, "mb-2"], ["title", "attendancePlansDetails"], [3, "url", "params"], ["class", "mb-2", 4, "ngFor", "ngForOf"], [3, "isLoaded", "mandatoryColomns", "optionalColomns", "showPaginator", "showFilter", "showLoader", "dataSource"]], template: function PlanDetailsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title")(5, "div");
@@ -1881,10 +1991,10 @@ PlanDetailsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODUL
 
 /***/ }),
 
-/***/ 48415:
-/*!*************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/plan/plan-index/plan-index.component.ts ***!
-  \*************************************************************************************/
+/***/ 72079:
+/*!**************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/plan/plan-index/plan-index.component.ts ***!
+  \**************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1892,17 +2002,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "PlanIndexComponent": () => (/* binding */ PlanIndexComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_attendance_setup_mapper_attendance_plan__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/attendance-setup/mapper/attendance-plan */ 8900);
+/* harmony import */ var app_system_setup_attendance_setup_mapper_attendance_plan__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/attendance-setup/mapper/attendance-plan */ 3371);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/attendance-setup/services/attendance-plan.service */ 5420);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/attendance-plan.service */ 86280);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-spinner */ 88035);
-
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
 
 
 
@@ -1930,10 +2038,13 @@ class PlanIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
     }
     ngOnInit() { }
     onChangeBusinessAndCompanyId() {
+        if (this.dataSource?.data?.length > 0)
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource(null);
         if (this.checkNoBusinessOrCompany())
             this.getList(this.pageFromUrl > 0 ? this.pageFromUrl : this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize)
             this.page.pageSize = pageSize;
@@ -1952,7 +2063,7 @@ class PlanIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
                     this.getList(this.prevPage);
                     return;
                 }
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource((0,app_attendance_setup_mapper_attendance_plan__WEBPACK_IMPORTED_MODULE_0__.attendancePlanToMap)(res.data));
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource((0,app_system_setup_attendance_setup_mapper_attendance_plan__WEBPACK_IMPORTED_MODULE_0__.attendancePlanToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -1987,30 +2098,29 @@ class PlanIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMPOR
         });
     }
 }
-PlanIndexComponent.ɵfac = function PlanIndexComponent_Factory(t) { return new (t || PlanIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_3__.AttendancePlanService)); };
-PlanIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: PlanIndexComponent, selectors: [["app-plan-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 8, consts: [[1, "row"], [1, "col-12"], ["title", "attendance_Plans", 3, "globalFunctions"], [3, "isLoaded", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "dataSource", "onChangePage", "deleteRow"]], template: function PlanIndexComponent_Template(rf, ctx) { if (rf & 1) {
+PlanIndexComponent.ɵfac = function PlanIndexComponent_Factory(t) { return new (t || PlanIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_3__.AttendancePlanService)); };
+PlanIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: PlanIndexComponent, selectors: [["app-plan-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 8, consts: [[1, "row"], [1, "col-12"], [1, "index-card"], ["title", "attendance_Plans", 3, "globalFunctions"], [3, "isLoaded", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "dataSource", "onChangePage", "deleteRow"]], template: function PlanIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](5, "page-title", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](6, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](7, "app-material-table", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("onChangePage", function PlanIndexComponent_Template_app_material_table_onChangePage_7_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function PlanIndexComponent_Template_app_material_table_deleteRow_7_listener($event) { return ctx.onDelete($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](6, "app-material-table", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("onChangePage", function PlanIndexComponent_Template_app_material_table_onChangePage_6_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function PlanIndexComponent_Template_app_material_table_deleteRow_6_listener($event) { return ctx.onDelete($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.planService)("actions", ctx.rowFunctions)("dataSource", ctx.dataSource);
-    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardTitle, _angular_material_divider__WEBPACK_IMPORTED_MODULE_9__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_10__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwbGFuLWluZGV4LmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardTitle, ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwbGFuLWluZGV4LmNvbXBvbmVudC5zY3NzIn0= */"] });
 
 
 /***/ }),
 
-/***/ 82118:
-/*!*****************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/plan/shrink/shrink.component.ts ***!
-  \*****************************************************************************/
+/***/ 40823:
+/*!******************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/plan/shrink/shrink.component.ts ***!
+  \******************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2020,9 +2130,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/attendance-setup/services/attendance-plan.service */ 5420);
+/* harmony import */ var app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/attendance-plan.service */ 86280);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-spinner */ 88035);
-/* harmony import */ var _plan_form_plan_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../plan-form/plan-form.component */ 92469);
+/* harmony import */ var _plan_form_plan_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../plan-form/plan-form.component */ 7090);
 
 
 
@@ -2054,7 +2164,7 @@ class ShrinkComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTED
         });
     }
 }
-ShrinkComponent.ɵfac = function ShrinkComponent_Factory(t) { return new (t || ShrinkComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](app_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePlanService)); };
+ShrinkComponent.ɵfac = function ShrinkComponent_Factory(t) { return new (t || ShrinkComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_attendance_plan_service__WEBPACK_IMPORTED_MODULE_2__.AttendancePlanService)); };
 ShrinkComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: ShrinkComponent, selectors: [["app-shrink"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 2, vars: 2, consts: [["pageTitle", "shrink", 3, "showDaysTable", "disabelControls", "onSubmit"]], template: function ShrinkComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "app-plan-form", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("onSubmit", function ShrinkComponent_Template_app_plan_form_onSubmit_0_listener($event) { return ctx.submit($event); });
@@ -2067,10 +2177,10 @@ ShrinkComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__
 
 /***/ }),
 
-/***/ 60601:
-/*!***************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/shifts/add-shifts/add-shifts.component.ts ***!
-  \***************************************************************************************/
+/***/ 51160:
+/*!****************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/shifts/add-shifts/add-shifts.component.ts ***!
+  \****************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2082,16 +2192,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var app_shared_validators_custom_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/validators/custom.validator */ 78937);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_shifts_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/attendance-setup/services/shifts.service */ 72631);
+/* harmony import */ var app_system_setup_attendance_setup_services_shifts_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/shifts.service */ 25470);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
-/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
-/* harmony import */ var _shared_components_resources_dynamic_form_field_timepicker_timepicker_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../shared/components/resources/dynamic-form-field/timepicker/timepicker.component */ 47383);
-/* harmony import */ var _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/add-new-btn/add-new-btn.component */ 52682);
-/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
-/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/resources/dynamic-form-field/input/input.component */ 25273);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/resources/dynamic-form-field/check-box/check-box.component */ 12613);
+/* harmony import */ var _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/back-btn/back-btn.component */ 61064);
+/* harmony import */ var _shared_components_resources_dynamic_form_field_timepicker_timepicker_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../shared/components/resources/dynamic-form-field/timepicker/timepicker.component */ 47383);
+/* harmony import */ var _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/add-new-btn/add-new-btn.component */ 52682);
+/* harmony import */ var _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/reset-form-btn/reset-form-btn.component */ 56500);
+/* harmony import */ var _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../shared/components/resources/buttons/submit-btn/submit-btn.component */ 57566);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/card */ 82156);
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-spinner */ 88035);
 
@@ -2325,7 +2435,7 @@ class ShiftsComponent extends app_shared_resources_app_helpers__WEBPACK_IMPORTED
         this.submitted = false;
     }
 }
-ShiftsComponent.ɵfac = function ShiftsComponent_Factory(t) { return new (t || ShiftsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdirectiveInject"](app_attendance_setup_services_shifts_service__WEBPACK_IMPORTED_MODULE_3__.ShiftsService)); };
+ShiftsComponent.ɵfac = function ShiftsComponent_Factory(t) { return new (t || ShiftsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_shifts_service__WEBPACK_IMPORTED_MODULE_3__.ShiftsService)); };
 ShiftsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdefineComponent"]({ type: ShiftsComponent, selectors: [["app-shifts"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵInheritDefinitionFeature"]], decls: 59, vars: 40, consts: [[1, "row"], [1, "col-12"], [1, "p-2", "form-card"], ["addTitle", "shifts", "editTitle", "editShifts", 3, "id"], ["label", "addshifts", 3, "url", "params", 4, "ngIf"], [3, "url", "params"], [1, "container-fluid"], [3, "formGroup"], [1, "col-md-6", "col-12"], ["label", "ar_Name", 3, "control", "submitted"], ["label", "en_Name", 3, "control", "submitted"], [1, "row", "mb-2"], [1, "col-md-6", "col-6"], ["label", "is_Just_Attend", 3, "control", "onChange"], ["label", "is_Target", 3, "control", "onChange"], [1, "row", "mt-3"], [1, "col-md-3", "col-12"], ["label", "hour_Number", "type", "number", 3, "control", "submitted"], ["type", "number", "label", "ovtTargetFactor", 3, "control", "submitted"], ["type", "number", "label", "ovtTargetMaxLimit", 3, "control", "submitted"], [1, "col-md-3", "col-6"], ["label", "delay_Tolerance", "type", "number", 3, "control", "submitted"], [1, "row", "mt-2"], [1, "col-md-4", "col-6"], ["label", "acrossMidNight", 3, "control"], [1, "col-md-4", "col-12"], ["label", "isNight", 3, "control"], [1, "col-md-4"], ["label", "is_DefaultAttend", 3, "control"], ["label", "start_Time", 3, "control", "submitted"], ["label", "end_Time", 3, "control", "submitted"], ["label", "calc_Delay_From", 3, "control", "submitted"], ["label", "calc_Departure_From", 3, "control", "submitted"], ["label", "start_Time_Lower_Limit", 3, "control", "submitted"], ["label", "start_Time_Upper_Limit", 3, "control", "submitted", "change"], ["label", " end_Time_Lower_Limit", 3, "control", "submitted"], ["label", "end_Time_Upper_Limit", 3, "control", "submitted"], ["align", "end", 1, "m-2"], [3, "id", "onClick"], [3, "click", 4, "ngIf"], ["label", "addshifts", 3, "url", "params"], [3, "click"]], template: function ShiftsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelement"](0, "ngx-spinner");
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
@@ -2447,15 +2557,15 @@ ShiftsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_12_
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("id", ctx.formCtrls.id.value);
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵproperty"]("ngIf", ctx.formCtrls.id.value > 0);
-    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_14__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_5__.CheckBoxComponent, _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_6__.BackBtnComponent, _shared_components_resources_dynamic_form_field_timepicker_timepicker_component__WEBPACK_IMPORTED_MODULE_7__.TimepickerComponent, _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_8__.AddNewBtnComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_9__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_10__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_11__.PageTitleComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__.NgControlStatusGroup, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_16__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_13__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtc2hpZnRzLmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_14__.NgIf, _shared_components_resources_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_4__.InputComponent, _shared_components_resources_dynamic_form_field_check_box_check_box_component__WEBPACK_IMPORTED_MODULE_5__.CheckBoxComponent, _shared_components_resources_buttons_back_btn_back_btn_component__WEBPACK_IMPORTED_MODULE_6__.BackBtnComponent, _shared_components_resources_dynamic_form_field_timepicker_timepicker_component__WEBPACK_IMPORTED_MODULE_7__.TimepickerComponent, _shared_components_resources_buttons_add_new_btn_add_new_btn_component__WEBPACK_IMPORTED_MODULE_8__.AddNewBtnComponent, _shared_components_resources_buttons_reset_form_btn_reset_form_btn_component__WEBPACK_IMPORTED_MODULE_9__.ResetFormBtnComponent, _shared_components_resources_buttons_submit_btn_submit_btn_component__WEBPACK_IMPORTED_MODULE_10__.SubmitBtnComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_11__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_15__.MatCardActions, ngx_spinner__WEBPACK_IMPORTED_MODULE_16__.NgxSpinnerComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_13__.FormGroupDirective], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtc2hpZnRzLmNvbXBvbmVudC5zY3NzIn0= */"] });
 
 
 /***/ }),
 
-/***/ 70361:
-/*!*******************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/shifts/shifts-index/shifts-index.component.ts ***!
-  \*******************************************************************************************/
+/***/ 83039:
+/*!********************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/shifts/shifts-index/shifts-index.component.ts ***!
+  \********************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2463,17 +2573,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ShiftsIndexComponent": () => (/* binding */ ShiftsIndexComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_attendance_setup_mapper_shifts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/attendance-setup/mapper/shifts */ 78699);
+/* harmony import */ var app_system_setup_attendance_setup_mapper_shifts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/attendance-setup/mapper/shifts */ 82539);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_shifts_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/attendance-setup/services/shifts.service */ 72631);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var app_system_setup_attendance_setup_services_shifts_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/shifts.service */ 25470);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-spinner */ 88035);
-
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
 
 
 
@@ -2528,6 +2636,7 @@ class ShiftsIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMP
             this.getList(this.pageFromUrl > 0 ? this.pageFromUrl : this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize)
             this.page.pageSize = pageSize;
@@ -2546,7 +2655,7 @@ class ShiftsIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMP
                     this.getList(this.prevPage);
                     return;
                 }
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource((0,app_attendance_setup_mapper_shifts__WEBPACK_IMPORTED_MODULE_0__.shiftToMap)(res.data));
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource((0,app_system_setup_attendance_setup_mapper_shifts__WEBPACK_IMPORTED_MODULE_0__.shiftToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -2586,30 +2695,29 @@ class ShiftsIndexComponent extends app_shared_resources_app_helpers__WEBPACK_IMP
         });
     }
 }
-ShiftsIndexComponent.ɵfac = function ShiftsIndexComponent_Factory(t) { return new (t || ShiftsIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_attendance_setup_services_shifts_service__WEBPACK_IMPORTED_MODULE_3__.ShiftsService)); };
-ShiftsIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: ShiftsIndexComponent, selectors: [["app-shifts-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 8, consts: [[1, "row"], [1, "col-12"], ["title", "shifts", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function ShiftsIndexComponent_Template(rf, ctx) { if (rf & 1) {
+ShiftsIndexComponent.ɵfac = function ShiftsIndexComponent_Factory(t) { return new (t || ShiftsIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_shifts_service__WEBPACK_IMPORTED_MODULE_3__.ShiftsService)); };
+ShiftsIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: ShiftsIndexComponent, selectors: [["app-shifts-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 8, consts: [[1, "row"], [1, "col-12"], [1, "index-card"], ["title", "shifts", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function ShiftsIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](5, "page-title", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](6, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](7, "app-material-table", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("onChangePage", function ShiftsIndexComponent_Template_app_material_table_onChangePage_7_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function ShiftsIndexComponent_Template_app_material_table_deleteRow_7_listener($event) { return ctx.onDelete($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](6, "app-material-table", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("onChangePage", function ShiftsIndexComponent_Template_app_material_table_onChangePage_6_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function ShiftsIndexComponent_Template_app_material_table_deleteRow_6_listener($event) { return ctx.onDelete($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.shiftsService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardTitle, _angular_material_divider__WEBPACK_IMPORTED_MODULE_9__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_10__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzaGlmdHMtaW5kZXguY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardTitle, ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzaGlmdHMtaW5kZXguY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ }),
 
-/***/ 11040:
-/*!*************************************************************************************************!*\
-  !*** ./src/app/attendance-setup/components/vacation/vacation-index/vacation-index.component.ts ***!
-  \*************************************************************************************************/
+/***/ 29268:
+/*!**************************************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/components/vacation/vacation-index/vacation-index.component.ts ***!
+  \**************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2617,17 +2725,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "VacationIndexComponent": () => (/* binding */ VacationIndexComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/table */ 85288);
-/* harmony import */ var app_attendance_setup_mapper_vacation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/attendance-setup/mapper/vacation */ 84504);
+/* harmony import */ var app_system_setup_attendance_setup_mapper_vacation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/system-setup/attendance-setup/mapper/vacation */ 97986);
 /* harmony import */ var app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/shared/enums/message-types.enum */ 15602);
 /* harmony import */ var app_shared_resources_app_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/resources/app-helpers */ 95751);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var app_attendance_setup_services_vacation_vacation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/attendance-setup/services/vacation/vacation.service */ 78292);
-/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/components/resources/material-table/material-table.component */ 93410);
-/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../shared/components/page-title/page-title.component */ 46896);
+/* harmony import */ var app_system_setup_attendance_setup_services_vacation_vacation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/system-setup/attendance-setup/services/vacation/vacation.service */ 37343);
+/* harmony import */ var _shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../shared/components/resources/material-table/material-table.component */ 93410);
+/* harmony import */ var _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../shared/components/page-title/page-title.component */ 46896);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/card */ 82156);
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/divider */ 71528);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-spinner */ 88035);
-
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ 88035);
 
 
 
@@ -2683,10 +2789,13 @@ class VacationIndexComponent extends app_shared_resources_app_helpers__WEBPACK_I
         // }
     }
     onChangeBusinessAndCompanyId() {
+        if (this.dataSource?.data?.length > 0)
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource(null);
         if (this.checkNoBusinessOrCompany())
             this.getList(this.pageFromUrl > 0 ? this.pageFromUrl : this.firstPage);
     }
     getList(page, pageSize) {
+        this.isLoaded = false;
         this.page.pageIndex = page;
         if (pageSize) {
             this.page.pageSize = pageSize;
@@ -2702,7 +2811,7 @@ class VacationIndexComponent extends app_shared_resources_app_helpers__WEBPACK_I
             .pipe(this.cancelRequest())
             .subscribe((res) => {
             if (res.message.messageType === app_shared_enums_message_types_enum__WEBPACK_IMPORTED_MODULE_1__.MessageTypes.Success) {
-                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource((0,app_attendance_setup_mapper_vacation__WEBPACK_IMPORTED_MODULE_0__.vacationToMap)(res.data));
+                this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__.MatTableDataSource((0,app_system_setup_attendance_setup_mapper_vacation__WEBPACK_IMPORTED_MODULE_0__.vacationToMap)(res.data));
                 this.isLoaded = true;
                 this.page.length = res.meta.totalItemCount;
             }
@@ -2746,30 +2855,29 @@ class VacationIndexComponent extends app_shared_resources_app_helpers__WEBPACK_I
         });
     }
 }
-VacationIndexComponent.ɵfac = function VacationIndexComponent_Factory(t) { return new (t || VacationIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_attendance_setup_services_vacation_vacation_service__WEBPACK_IMPORTED_MODULE_3__.VacationService)); };
-VacationIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: VacationIndexComponent, selectors: [["app-vacation-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 8, vars: 8, consts: [[1, "row"], [1, "col-12"], ["title", "vacationType", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function VacationIndexComponent_Template(rf, ctx) { if (rf & 1) {
+VacationIndexComponent.ɵfac = function VacationIndexComponent_Factory(t) { return new (t || VacationIndexComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](app_system_setup_attendance_setup_services_vacation_vacation_service__WEBPACK_IMPORTED_MODULE_3__.VacationService)); };
+VacationIndexComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: VacationIndexComponent, selectors: [["app-vacation-index"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 8, consts: [[1, "row"], [1, "col-12"], [1, "index-card"], ["title", "vacationType", 3, "globalFunctions"], [3, "isLoaded", "dataSource", "mandatoryColomns", "optionalColomns", "page", "exportService", "actions", "onChangePage", "deleteRow"]], template: function VacationIndexComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "ngx-spinner");
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card")(4, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](5, "page-title", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div", 0)(2, "div", 1)(3, "mat-card", 2)(4, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](5, "page-title", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](6, "mat-divider");
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](7, "app-material-table", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("onChangePage", function VacationIndexComponent_Template_app_material_table_onChangePage_7_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function VacationIndexComponent_Template_app_material_table_deleteRow_7_listener($event) { return ctx.onDelete($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](6, "app-material-table", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("onChangePage", function VacationIndexComponent_Template_app_material_table_onChangePage_6_listener($event) { return ctx.getList($event.pageIndex + 1, $event.pageSize); })("deleteRow", function VacationIndexComponent_Template_app_material_table_deleteRow_6_listener($event) { return ctx.onDelete($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("globalFunctions", ctx.globalFunctions);
-        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("isLoaded", ctx.isLoaded)("dataSource", ctx.dataSource)("mandatoryColomns", ctx.mandatoryColomns)("optionalColomns", ctx.optionalColomns)("page", ctx.page)("exportService", ctx.vacationService)("actions", ctx.rowFunctions);
-    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardTitle, _angular_material_divider__WEBPACK_IMPORTED_MODULE_9__.MatDivider, ngx_spinner__WEBPACK_IMPORTED_MODULE_10__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2YWNhdGlvbi1pbmRleC5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, dependencies: [_shared_components_resources_material_table_material_table_component__WEBPACK_IMPORTED_MODULE_4__.MaterialTableComponent, _shared_components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_5__.PageTitleComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardTitle, ngx_spinner__WEBPACK_IMPORTED_MODULE_9__.NgxSpinnerComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2YWNhdGlvbi1pbmRleC5jb21wb25lbnQuc2NzcyJ9 */"] });
 
 
 /***/ }),
 
-/***/ 58018:
-/*!***************************************************************!*\
-  !*** ./src/app/attendance-setup/mapper/attendance-element.ts ***!
-  \***************************************************************/
+/***/ 57074:
+/*!****************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/mapper/attendance-element.ts ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2780,11 +2888,11 @@ function attendanceElementToMap(attendanceElements) {
     return attendanceElements.map((item) => {
         return {
             ...item,
-            arName: item.att_Attendance_Element.ar_Name,
-            name: item.att_Attendance_Element.en_Name,
-            code: item.att_Attendance_Element.code,
-            id: item.att_Attendance_Element.id,
-            display_In_Result: item.paY_Variable.display_In_Result,
+            arName: item.att_Attendance_Element?.ar_Name,
+            name: item.att_Attendance_Element?.en_Name,
+            code: item.att_Attendance_Element?.code,
+            id: item.att_Attendance_Element?.id,
+            display_In_Result: item.paY_Variable?.display_In_Result,
         };
     });
 }
@@ -2792,10 +2900,10 @@ function attendanceElementToMap(attendanceElements) {
 
 /***/ }),
 
-/***/ 8900:
-/*!************************************************************!*\
-  !*** ./src/app/attendance-setup/mapper/attendance-plan.ts ***!
-  \************************************************************/
+/***/ 3371:
+/*!*************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/mapper/attendance-plan.ts ***!
+  \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2827,10 +2935,10 @@ function planDetailsToMap(planDetails) {
 
 /***/ }),
 
-/***/ 78699:
-/*!***************************************************!*\
-  !*** ./src/app/attendance-setup/mapper/shifts.ts ***!
-  \***************************************************/
+/***/ 82539:
+/*!****************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/mapper/shifts.ts ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2858,10 +2966,10 @@ function shiftToMap(shifts) {
 
 /***/ }),
 
-/***/ 12138:
-/*!************************************************************************!*\
-  !*** ./src/app/attendance-setup/services/attendance-device.service.ts ***!
-  \************************************************************************/
+/***/ 40872:
+/*!*************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/services/attendance-device.service.ts ***!
+  \*************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2903,10 +3011,10 @@ AttendanceDeviceService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_M
 
 /***/ }),
 
-/***/ 91729:
-/*!*************************************************************************!*\
-  !*** ./src/app/attendance-setup/services/attendance-element.service.ts ***!
-  \*************************************************************************/
+/***/ 28778:
+/*!**************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/services/attendance-element.service.ts ***!
+  \**************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2955,10 +3063,10 @@ AttendanceElementService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ 84306:
-/*!*******************************************************************************!*\
-  !*** ./src/app/attendance-setup/services/attendance-penalty-setup.service.ts ***!
-  \*******************************************************************************/
+/***/ 52673:
+/*!********************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/services/attendance-penalty-setup.service.ts ***!
+  \********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2989,10 +3097,10 @@ AttendancePenaltySetupService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPO
 
 /***/ }),
 
-/***/ 67315:
-/*!************************************************************************!*\
-  !*** ./src/app/attendance-setup/services/attendance-period.service.ts ***!
-  \************************************************************************/
+/***/ 88338:
+/*!*************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/services/attendance-period.service.ts ***!
+  \*************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3023,10 +3131,10 @@ AttendancePeriodService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_M
 
 /***/ }),
 
-/***/ 64252:
-/*!************************************************************************!*\
-  !*** ./src/app/attendance-setup/services/official-holidays.service.ts ***!
-  \************************************************************************/
+/***/ 62680:
+/*!*************************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/services/official-holidays.service.ts ***!
+  \*************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3077,10 +3185,10 @@ OfficialHolidaysService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_M
 
 /***/ }),
 
-/***/ 41224:
-/*!*********************************************************************!*\
-  !*** ./src/app/attendance-setup/services/over-time-type.service.ts ***!
-  \*********************************************************************/
+/***/ 80733:
+/*!**********************************************************************************!*\
+  !*** ./src/app/system-setup/attendance-setup/services/over-time-type.service.ts ***!
+  \**********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3123,4 +3231,4 @@ OverTimeTypeService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODUL
 /***/ })
 
 }]);
-//# sourceMappingURL=src_app_attendance-setup_attendance-setup_module_ts.js.map
+//# sourceMappingURL=src_app_system-setup_attendance-setup_attendance-setup_module_ts.js.map

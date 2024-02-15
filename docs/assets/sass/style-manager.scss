@@ -105,13 +105,17 @@
 }
 
 .btn-large {
-  padding-right: 40px !important;
-  padding-left: 45px !important;
+  padding-right: 25px !important;
+  padding-left: 25px !important;
   line-height: 2.5 !important;
 }
 
 .darkBlue {
   color: #374761 !important;
+}
+
+.bg-darkBlue {
+  background: #374761 !important;
 }
 
 .line-height-1 {
@@ -144,4 +148,28 @@
 
 .line-height-4_5 {
   line-height: 4.5 !important;
+}
+
+vertical-align-middle {
+  vertical-align: middle !important;
+}
+
+.gray {
+  color: gray !important
+}
+
+.font-dark {
+  color: #4f4f4f !important
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.bg-gray-light {
+  background-color: #fafafa !important;
 }
