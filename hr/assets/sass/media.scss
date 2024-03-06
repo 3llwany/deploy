@@ -1,0 +1,317 @@
+// Small devices (landscape phones,tablets) 576px to 991px)
+
+//#region ############ START: phones,tablets ############
+@media (min-width: 320px) and (max-width: 991px) {
+  td.mat-cell,
+  th.mat-header-cell,
+  .table-container td.mat-cell, .table-container th.mat-header-cell {
+    padding: 10px !important;
+    font-size: 10px !important;
+  }
+
+  .mat-sort-header-content {
+    font-size: 10px;
+  }
+
+  .p-paginator {
+    justify-content: center !important;
+  }
+
+  .p-paginator .p-paginator-first,
+  .p-paginator .p-paginator-prev,
+  .p-paginator .p-paginator-next,
+  .p-paginator .p-paginator-last, .p-paginator .p-paginator-pages .p-paginator-page {
+    min-width: 2rem !important;
+    height: 2rem !important;
+    margin-bottom: 6px;
+  }
+
+  .page-title {
+    font-size: 15px !important;
+  }
+
+  .emp-card-title {
+    font-size: 17px !important;
+  }
+
+  .emp-card-title h5 {
+    font-size: 17px !important;
+  }
+
+  .col-xl,
+  .col-xl-auto,
+  .col-xl-12,
+  .col-xl-11,
+  .col-xl-10,
+  .col-xl-9,
+  .col-xl-8,
+  .col-xl-7,
+  .col-xl-6,
+  .col-xl-5,
+  .col-xl-4,
+  .col-xl-3,
+  .col-xl-2,
+  .col-xl-1,
+  .col-lg,
+  .col-lg-auto,
+  .col-lg-12,
+  .col-lg-11,
+  .col-lg-10,
+  .col-lg-9,
+  .col-lg-8,
+  .col-lg-7,
+  .col-lg-6,
+  .col-lg-5,
+  .col-lg-4,
+  .col-lg-3,
+  .col-lg-2,
+  .col-lg-1,
+  .col-md,
+  .col-md-auto,
+  .col-md-12,
+  .col-md-11,
+  .col-md-10,
+  .col-md-9,
+  .col-md-8,
+  .col-md-7,
+  .col-md-6,
+  .col-md-5,
+  .col-md-4,
+  .col-md-3,
+  .col-md-2,
+  .col-md-1,
+  .col-sm,
+  .col-sm-auto,
+  .col-sm-12,
+  .col-sm-11,
+  .col-sm-10,
+  .col-sm-9,
+  .col-sm-8,
+  .col-sm-7,
+  .col-sm-6,
+  .col-sm-5,
+  .col-sm-4,
+  .col-sm-3,
+  .col-sm-2,
+  .col-sm-1,
+  .col,
+  .col-auto,
+  .col-12,
+  .col-11,
+  .col-10,
+  .col-9,
+  .col-8,
+  .col-7,
+  .col-6,
+  .col-5,
+  .col-4,
+  .col-3,
+  .col-2,
+  .col-1 {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .navbar-header {
+    .navbar-nav > li {
+      width: 100px;
+    }
+  }
+
+  .mat-card {
+    padding: 5px !important;
+  }
+
+  .card-view {
+    .cardSectionTitle {
+      border-bottom: 1px solid #ddd !important;
+      padding: 5px 2px 3px !important;
+      font-size: 14px !important;
+    }
+
+    .side_title > h5 {
+      font-size: 14px !important;
+    }
+  }
+
+  .view-data-title {
+    font-size: 11px !important;
+    margin-top: 8px !important;
+  }
+
+  .view-data-value {
+    font-size: 12px !important;
+  }
+
+  .row {
+    padding: 5px !important;
+  }
+
+  .see-more-box {
+    margin-top: 7px;
+
+    .view_see_more {
+      font-size: 12px !important;
+    }
+  }
+
+  .add-employee-container {
+    .media.user-box {
+      padding: 5px 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      .users-view-name {
+        font-size: 12px;
+        margin-bottom: -5px;
+      }
+
+      .user-job {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .map-box {
+    margin: 0 5px !important;
+
+    .map-text {
+      font-size: 10px !important;
+    }
+
+    .day-before::before {
+      width: 8px !important;
+      height: 8px !important;
+    }
+  }
+
+  .small-table .table-container {
+    width: calc(100% - 10px) !important;
+    margin: 0 5px !important;
+  }
+
+  .p-fileupload {
+    flex-direction: column;
+    gap: 20px !important;
+  }
+
+  .mat-card-actions {
+    padding: 5px !important;
+  }
+
+  .part-of-title {
+    font-size: 13px;
+  }
+
+  .filter-container {
+    clear: both;
+  }
+
+  .has-fixed-title .sub-fixed-section {
+    margin-top: 110px !important;
+  }
+
+  .w-md-20 {
+    width: 25% !important;
+  }
+
+  .card.card-vacations-custom {
+    margin-bottom: 20px !important;
+  }
+
+  .add-employee-container {
+    .view-tabs-group {
+      padding: 0 !important;
+    }
+
+    .emp-header-card {
+      padding: 0 10px !important;
+
+      .row {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .cardSection.skeleton {
+    margin: 10px 10px 20px;
+  }
+
+  .global-fun-btn, button, .btn {
+    font-size: 10px;
+
+    i {
+      font-size: 10px !important
+    }
+  }
+
+
+  .index-card .mat-card-title {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 0 !important;
+  }
+
+  .mat-step-header .mat-step-label.mat-step-label-active,
+  .p-organizationchart .employees-no-section i,
+  .p-organizationchart .main-data p,
+  .company-chart .p-organizationchart .node-header span,
+  .p-organizationchart .node-footer {
+    font-size: 10px;
+  }
+
+  .title-no-margin #back_btn, .title-no-margin #add_new_btn {
+    margin-top: 5px !important;
+  }
+
+  .mat-card-title.fixed-title {
+    padding: 5px 10px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .percentage {
+    margin-bottom: 4px !important;
+  }
+
+  .nested-job-table {
+    margin: -60px 0 0 !important;
+  }
+
+  .toast-delete {
+    width: 20rem !important;
+  }
+  //end
+}
+
+//#endregion
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) and (max-width: 991px) {
+//
+//
+//}
+
+// Large devices (desktops, 992px and up)
+//#region ############ START: desktops 992px to 1999px ############
+@media (min-width: 992px) and (max-width: 1999px) {
+  .card.card-vacations-custom {
+
+    strong {
+      font-size: 20px;
+    }
+
+    small {
+      font-size: 17px;
+    }
+
+    .ca-title {
+      font-size: 14px;
+    }
+  }
+}
+
+//#endregion
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
