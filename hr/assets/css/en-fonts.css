@@ -1,11 +1,14 @@
 p,
 div,
-span,
 section,
 a,
 li,
-ul {
-  font-family: "Axi-Regular" !important;
+ul,
+button,
+.btn,
+.mat-raised-button {
+  /* font-family: "Axi-Regular" !important;*/
+  font-family: "interRegular", serif !important;
 }
 
 h1,
@@ -14,52 +17,56 @@ h3,
 h4,
 h5,
 h6,
+mat-label,
+label,
 .mat-card-title,
 .card .card-title,
-.content-header {
-  font-family: "Axi-bold" !important;
+.content-header, .page-title,
+.table-container td.mat-cell, .table-container td.mat-cell > span, th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  /*font-family: "Axi-bold" !important;*/
+  font-family: "interMedium", serif !important;
 }
 
 /*  Axi Font   */
 
 .font-axi-regular {
-  font-family: "Axi-Regular" !important;
+  font-family: "Axi-Regular", serif !important;
 }
 
 .font-axi-light {
-  font-family: "Axi-Light" !important;
+  font-family: "Axi-Light", serif !important;
 }
 
 .font-axi-semi-bold {
-  font-family: "Axi-SemiBold" !important;
+  font-family: "Axi-SemiBold", serif !important;
 }
 
 .font-axi-bold {
-  font-family: "Axi-Bold" !important;
+  font-family: "Axi-Bold", serif !important;
 }
 
 .font-axi-bold-italic {
-  font-family: "Axi-BoldItalic" !important;
+  font-family: "Axi-BoldItalic", serif !important;
 }
 
 /*  Axi Font General   using same classes name in ar file fonts  */
 
 .font-regular {
-  font-family: "Axi-Regular" !important;
+  font-family: "Axi-Regular", serif !important;
 }
 
 .font-light {
-  font-family: "Axi-Light" !important;
+  font-family: "Axi-Light", serif !important;
 }
 
 .font-semi-bold {
-  font-family: "Axi-SemiBold" !important;
+  font-family: "Axi-SemiBold", serif !important;
 }
 
 .font-bold {
-  font-family: "Axi-Bold" !important;
+  font-family: "Axi-Bold", serif !important;
 }
 
 .font-bold-italic {
-  font-family: "Axi-BoldItalic" !important;
+  font-family: "Axi-BoldItalic", serif !important;
 }

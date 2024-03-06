@@ -1,6 +1,6 @@
 body.bodyrtl {
-	overflow-x: hidden;
-	font-family: "Almarai", sans-serif !important;
+  overflow-x: hidden;
+  font-family: "Almarai", sans-serif !important;
 }
 
 .mat-card,
@@ -33,64 +33,64 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-family: "Almarai", sans-serif;
+  font-family: "Almarai", sans-serif;
 }
 
 body.bodyrtl .page-user-profile .user-profile-images .user-profile-image {
-	right: 20px;
-	left: auto;
+  right: 20px;
+  left: auto;
 }
 
 body.bodyrtl .page-user-profile .user-profile-text {
-	right: 190px;
-	left: auto;
+  right: 190px;
+  left: auto;
 }
 
 .page-user-profile .user-profile-buttons {
-	padding-right: 11.25rem;
-	/* padding-left: 0; */
-	/* justify-content: flex-end !important; */
+  padding-right: 11.25rem;
+  /* padding-left: 0; */
+  /* justify-content: flex-end !important; */
 }
 
 .page-user-profile .user-profile-buttons button {
-	margin-right: 1.5rem !important;
-	margin-left: 0 !important;
+  margin-right: 1.5rem !important;
+  margin-left: 0 !important;
 }
 
 .page-user-profile .user-profile-images .user-timeline-image {
-	min-height: 200px;
-	/* max-height: 200px; */
-	height: 300px;
-	width: 100%;
-	-o-object-fit: fill;
-	object-fit: fill;
+  min-height: 200px;
+  /* max-height: 200px; */
+  height: 300px;
+  width: 100%;
+  -o-object-fit: fill;
+  object-fit: fill;
   /* object-fit: cover; */
 }
 
 .cart-tabsec .card.chpter {
-	min-height: 355px;
-	padding: 15px !important;
-	width: 100%;
+  min-height: 355px;
+  padding: 15px !important;
+  width: 100%;
 }
 
 .cart-tabsec .card.chpter img {
-	width: 269px;
-	height: 180px;
-	margin: -15px -15px -15px -15px;
+  width: 269px;
+  height: 180px;
+  margin: -15px -15px -15px -15px;
 }
 
 .cart-tabsec .card {
-	box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 body.bodyrtl .mat-select-value {
-	text-align: right;
+  text-align: right;
 }
 
 body.bodyrtl .mat-form-field-empty.mat-form-field-label,
 body.bodyrtl .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
-	text-align: right;
-	font-family: "Almarai", sans-serif !important;
+  text-align: right;
+  font-family: "Almarai", sans-serif !important;
 }
 
 .brief p,
@@ -104,90 +104,90 @@ div.cart-desc > p,
 .mats4 .mat-desc p,
 .bg-newdesignser .ct,
 .bg-newdesignser .cd {
-	font-family: "Almarai", sans-serif !important;
+  font-family: "Almarai", sans-serif !important;
 }
 
 body.bodyrtl .mat-option {
-	text-align: right;
+  text-align: right;
 }
 
 body.bodyrtl input.mat-input-element {
-	text-align: right;
-	font-family: "Almarai", sans-serif !important;
+  text-align: right;
+  font-family: "Almarai", sans-serif !important;
 }
 
 body.bodyrtl .rtl {
-	direction: rtl !important;
-	text-align: right !important;
+  direction: rtl !important;
+  text-align: right !important;
 }
 
 body.bodyrtl .home-teachers {
-	direction: ltr;
+  direction: ltr;
 }
 
 body.bodyrtl .mat-radio-label-content {
-	padding-right: 8px;
-	padding-left: 0;
+  padding-right: 8px;
+  padding-left: 0;
 }
 
 body.bodyrtl .radio label::after {
-	position: absolute;
-	right: 12px;
+  position: absolute;
+  right: 12px;
 }
 
 body.bodyrtl .chat-application .chat-app-window,
 body.bodyrtl .chat-application .chat-app-form,
 body.bodyrtl .chat-application .chat-name {
-	margin-right: 300px;
-	margin-left: 0;
+  margin-right: 300px;
+  margin-left: 0;
 }
 
 body.bodyrtl .chat-application .chat-sidebar {
-	border-left: 1px solid #e0e0e0;
-	border-right: 0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 0;
 }
 
 body.bodyrtl .escprev {
-	right: 9px !important;
+  right: 9px !important;
 }
 
 body.bodyrtl .mat-paginator-container {
-	direction: ltr;
-	justify-content: flex-start;
+  direction: ltr;
+  justify-content: flex-start;
 }
 
 body.bodyrtl .mat-tab-group {
-	direction: rtl;
-	text-align: right;
+  direction: rtl;
+  text-align: right;
 }
 
 body.bodyrtl .mat-tab-labels {
-	direction: rtl;
-	justify-content: flex-start;
+  direction: rtl;
+  justify-content: flex-start;
 }
 
 body.bodyrtl .mat-checkbox-inner-container {
-	margin-left: 8px;
-	margin-right: 0;
+  margin-left: 8px;
+  margin-right: 0;
 }
 
 .carousel-control-prev {
-	right: 0 !important;
-	left: auto !important;
+  right: 0 !important;
+  left: auto !important;
 }
 
 .carousel-control-next {
-	left: 0 !important;
-	right: auto !important;
+  left: 0 !important;
+  right: auto !important;
 }
 
 .postcontainer .media {
-	direction: rtl;
-	text-align: right;
+  direction: rtl;
+  text-align: right;
 }
 
 pagination-controls {
-	direction: ltr;
+  direction: ltr;
 }
 
 /* body.bodyrtl .mat-tab-group.mat-primary .mat-ink-bar,
@@ -196,12 +196,12 @@ body.bodyrtl .mat-tab-nav-bar.mat-primary .mat-ink-bar {
 } */
 
 body.bodyrtl .mat-dialog-content {
-	direction: rtl !important;
+  direction: rtl !important;
 }
 
 body.bodyrtl .exam-radio-group,
 .mat-form-field-infix {
-	text-align: right !important;
+  text-align: right !important;
 }
 
 /* body.bodyrtl */
@@ -209,35 +209,35 @@ body.bodyrtl .exam-radio-group,
 /* // Start new home edits arabic  */
 
 body.bodyrtl .img-mask-borders {
-	transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 body.bodyrtl .section.has-background > svg {
-	right: -50px;
-	left: auto;
-	transform: rotate(180deg);
+  right: -50px;
+  left: auto;
+  transform: rotate(180deg);
 }
 
 body.bodyrtl .content-list li.no-heading:before {
-	right: -25px;
-	left: auto;
-	transform: rotate(180deg);
+  right: -25px;
+  left: auto;
+  transform: rotate(180deg);
 }
 
 body.bodyrtl .br-1 {
-	border-left: 1px solid white;
-	border-right: 0;
+  border-left: 1px solid white;
+  border-right: 0;
 }
 
 body.bodyrtl .navlogo {
-	font-family: "Almarai-Bold", sans-serif !important;
+  font-family: "Almarai-Bold", sans-serif !important;
 }
 
 /**/
 
 body.bodyrtl .has-lr-font-size,
 body.bodyrtl .has-xl-font-size {
-	font-family: "Almarai-light", serif !important;
+  font-family: "Almarai-light", serif !important;
 }
 
 body.bodyrtl .has-xxl-font-size,
@@ -245,7 +245,7 @@ body.bodyrtl .has-xxl-font-size strong,
 body.bodyrtl .section-title h2,
 body.bodyrtl .has-xlr-font-size strong,
 body.bodyrtl .has-xl-font-size strong {
-	font-family: "Almarai-Bold", serif !important;
+  font-family: "Almarai-Bold", serif !important;
 }
 
 body.bodyrtl .has-xs-font-size,
@@ -255,89 +255,96 @@ body.bodyrtl .has-m-font-size,
 body.bodyrtl .reg-font,
 body.bodyrtl .has-xs-font-size,
 body.bodyrtl .has-s-font-size {
-	font-family: "Almarai", serif !important;
+  font-family: "Almarai", serif !important;
 }
 
 body.bodyrtl .img-mask-borders {
-	right: -1px !important;
+  right: -1px !important;
 }
 
 /* // start new design */
 
 body.bodyrtl .wtyl li {
-	padding-left: 35px;
-	padding-right: 0;
+  padding-left: 35px;
+  padding-right: 0;
 }
 
 body.bodyrtl .wtyl li::before {
-	margin-right: -24px !important;
-	margin-left: 10px !important;
+  margin-right: -24px !important;
+  margin-left: 10px !important;
 }
 
 body.bodyrtl .features-ul li i {
-	margin-left: 10px;
-	margin-right: 0;
+  margin-left: 10px;
+  margin-right: 0;
 }
 
 .mat-expansion-panel-header-description {
-	margin-right: 0;
-	margin-left: 16px;
+  margin-right: 0;
+  margin-left: 16px;
 }
 
 /* // stahy */
 
 body.bodyrtl .input-group > .input-group-append > .btn {
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 body.bodyrtl .input-group input.searchinput {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 body.bodyrtl .input-group .searchDropdown {
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 body.bodyrtl .owl-carousel .owl-stage-outer {
-	direction: ltr;
+  direction: ltr;
 }
 
 body.bodyrtl .owl-carousel .owl-item {
-	direction: rtl;
+  direction: rtl;
 }
 
 .search-ingeneral-nav {
-	margin-right: 30px;
-	margin-left: 0;
+  margin-right: 30px;
+  margin-left: 0;
 }
 
 .navbar .navbar-nav .nav-search .search-input .search-input-close {
-	right: auto;
+  right: auto;
 }
 
 .navbar .navbar-nav .nav-search .search-input .search-input-icon {
-	left: auto;
+  left: auto;
 }
 
 body.bodyrtl .mat-form-field-empty.mat-form-field-label,
 body.bodyrtl .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
-	text-align: right;
-	font-family: "Almarai", sans-serif !important;
+  text-align: right;
+  font-family: "Almarai", sans-serif !important;
 }
+
+body .app-sidebar .navigation li > a:before, body[data-menu=vertical-menu] .app-sidebar .navigation li.active > a:before {
+  border-color: #42e1b9;
+  border-right: 0
+}
+
 
 /* // End new home edits arabic  */
 
 @media (min-width: 320px) and (max-width: 750px) {
-	body.bodyrtl .chat-application .chat-app-window,
-	body.bodyrtl .chat-application .chat-app-form,
-	body.bodyrtl .chat-application .chat-name {
-		margin-right: 0;
-		margin-left: 0;
-	}
-	body.bodyrtl .page-user-profile .user-profile-text {
-		right: auto;
-	}
+  body.bodyrtl .chat-application .chat-app-window,
+  body.bodyrtl .chat-application .chat-app-form,
+  body.bodyrtl .chat-application .chat-name {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  body.bodyrtl .page-user-profile .user-profile-text {
+    right: auto;
+  }
 }

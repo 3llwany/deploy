@@ -1,3 +1,4 @@
+
 body {
   direction: rtl;
 }
@@ -158,8 +159,8 @@ body .sidebar-content .ps__rail-y {
 }
 
 .p-multiselect.p-multiselect-chip
-  .p-multiselect-token
-  .p-multiselect-token-icon {
+.p-multiselect-token
+.p-multiselect-token-icon {
   margin-right: 0.5rem;
   margin-left: 0;
 }
@@ -182,18 +183,18 @@ body .sidebar-content .ps__rail-y {
 }
 
 .p-multiselect-panel
-  .p-multiselect-header
-  .p-multiselect-filter-container
-  .p-multiselect-filter-icon,
+.p-multiselect-header
+.p-multiselect-filter-container
+.p-multiselect-filter-icon,
 .p-dropdown-panel .p-dropdown-header .p-dropdown-filter-icon {
   left: 0.75rem;
   right: auto;
 }
 
 .p-multiselect-panel
-  .p-multiselect-header
-  .p-multiselect-filter-container
-  .p-inputtext,
+.p-multiselect-header
+.p-multiselect-filter-container
+.p-inputtext,
 .p-dropdown-panel .p-dropdown-header .p-dropdown-filter {
   padding-left: 1.75rem;
   padding-right: 4px;
@@ -290,4 +291,15 @@ body .sidebar-content .ps__rail-y {
 
 .add-employee-container .emp-header-card {
   padding: 0.375rem 2.25rem 0.375rem 0.375rem;
+}
+
+
+/* Set top-lef and bottom-left corner radius */
+.mat-form-field-outline-start {
+  border-radius: 0 8px 8px 0 !important;
+}
+
+/* Set top-right and bottom-right corner radius */
+.mat-form-field-outline-end {
+  border-radius: 8px 0 0 8px !important;
 }
