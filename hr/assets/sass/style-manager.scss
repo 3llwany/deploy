@@ -117,6 +117,13 @@
   color: $main-color !important;
 }
 
+.darkBlue:hover,
+.darkBlue:active,
+.darkBlue:focus {
+  color: #576579 !important;
+}
+
+
 .bg-darkBlue {
   background: $main-color !important;
 }
@@ -135,6 +142,10 @@
 
 .line-height-2_5 {
   line-height: 2.5 !important;
+}
+
+.line-height-2_7 {
+  line-height: 2.7 !important;
 }
 
 .line-height-3 {
@@ -175,6 +186,10 @@ vertical-align-middle {
 
 .w-15 {
   width: 15% !important;
+}
+
+.w-90 {
+  width: 90% !important;
 }
 
 .bg-gray-light {

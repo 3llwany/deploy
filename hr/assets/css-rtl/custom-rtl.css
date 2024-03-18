@@ -273,7 +273,7 @@ body .sidebar-content .ps__rail-y {
 }
 
 .steps-footer {
-  right: auto;
+  right: auto !important;
   left: 0;
 }
 
