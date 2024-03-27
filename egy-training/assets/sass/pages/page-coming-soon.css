@@ -1,0 +1,22 @@
+.card-coming-soon .getting-started {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .card-coming-soon {
+    top: -12px;
+  }
+  .card-coming-soon img {
+    width: 150px;
+  }
+}
+/*# sourceMappingURL=page-coming-soon.css.map */
