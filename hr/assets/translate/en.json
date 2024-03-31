@@ -938,7 +938,10 @@
   "weekEnd": "weekend",
   "totalOfYearsMustBeEqualPenaltyPercentage": "total of years  must be equal penalty percentage",
   "candidate": "Candidate",
+  "candidates": "Candidates",
+  "addCandidate": "Add candidate",
   "jobVacancy": "Job vacancy",
+  "validTill": "Valid till",
   "registrationDate": "Registration date",
   "sourcingType": "Sourcing type",
   "sourcingName": "Sourcing name",
@@ -956,7 +959,13 @@
   "confirmAdd": "Confirm Add",
   "confirmAddNoEditMsg": "Are you sure (there is no edit)",
   "reference": "Reference",
-  "pleaseEnterAllRequiredData": "Please enter all required data",
   "finallyAllIsDone": "Finally ! , All is done",
-  "justWaitOurReplyViaYourEmail": "Just wait our reply via your email"
+  "justWaitOurReplyViaYourEmail": "Just wait our reply via your email",
+  "implementationViewcore": "Implementation view",
+  "pleaseEnterAllRequiredData": "Please enter all required data",
+  "countryName": "Country",
+  "versions": "Versions",
+  "suitableRequisitions": "Suitable requisitions",
+  "relatedRequests": "Related requests",
+  "fullName": "Full name"
 }

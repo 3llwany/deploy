@@ -936,7 +936,10 @@
   "weekEnd": "نهاية الاسبوع",
   "totalOfYearsMustBeEqualPenaltyPercentage": "يجب أن يكون مجموع السنوات يساوي النسبة المئوية",
   "candidate": "متقدم للوظيفة",
+  "candidates": "المتقدمين للوظيفة",
+  "addCandidate": "اضافة متقدم للوظيفة",
   "jobVacancy": "وظيفة شاغرة",
+  "validTill": "متاح حتى",
   "registrationDate": "تاريخ التسجيل",
   "sourcingType": "نوع المصدر",
   "sourcingName": "اسم المصدر",
@@ -954,7 +957,13 @@
   "confirmAdd": "تأكيد الإضافة",
   "confirmAddNoEditMsg": "هل أنت متأكد (لا يوجد تعديل)",
   "reference": "التأكد من بيانات المتقدم للوظيفة",
-  "pleaseEnterAllRequiredData": "الرجاء إدخال كافة البيانات المطلوبة",
   "finallyAllIsDone": "أخيراً ! ، تمت الاضافة",
-  "justWaitOurReplyViaYourEmail": "فقط إنتظر ردنا عبر بريدك الإلكتروني"
+  "justWaitOurReplyViaYourEmail": "فقط إنتظر ردنا عبر بريدك الإلكتروني",
+  "implementationViewcore": "عرض تنفيذ الدورات",
+  "pleaseEnterAllRequiredData": "من فضلك ادخل كل الحقول المطلوبة",
+  "countryName": "الدولة",
+  "versions": "الاصدارات",
+  "suitableRequisitions": "الطلبات المناسبة",
+  "relatedRequests": "طلب التوظيف",
+  "fullName": "الاسم بالكامل"
 }
