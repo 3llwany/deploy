@@ -1,0 +1,82 @@
+@font-face {
+  font-family: agrandirRegular;
+  src: url(../fonts/agrandir/Agrandir-Regular.otf);
+}
+
+@font-face {
+  font-family: agrandirBold;
+  src: url(../fonts/agrandir/Agrandir-TextBold.otf);
+}
+
+@font-face {
+  font-family: agrandirGrandHeavy;
+  src: url(../fonts/agrandir/Agrandir-GrandHeavy.otf);
+}
+
+@font-face {
+  font-family: agrandirGrandLight;
+  src: url(../fonts/agrandir/Agrandir-GrandLight.otf);
+}
+
+@font-face {
+  font-family: agrandirNarrow;
+  src: url(../fonts/agrandir/Agrandir-Narrow.otf);
+}
+
+@font-face {
+  font-family: agrandirThinItalic;
+  src: url(../fonts/agrandir/Agrandir-ThinItalic.otf);
+}
+
+@font-face {
+  font-family: agrandirTight;
+  src: url(../fonts/agrandir/Agrandir-Tight.otf);
+}
+
+@font-face {
+  font-family: agrandirWideBlackItalic;
+  src: url(../fonts/agrandir/Agrandir-WideBlackItalic.otf);
+}
+
+@font-face {
+  font-family: agrandirWideLight;
+  src: url(../fonts/agrandir/Agrandir-WideLight.otf);
+}
+
+
+.agrandir-regular {
+  font-family: agrandirRegular, serif !important;
+}
+
+.agrandir-bold {
+  font-family: agrandirBold, serif !important;
+}
+
+.agrandir-grandHeavy {
+  font-family: agrandirGrandHeavy, serif !important;
+}
+
+.agrandir-grandLight {
+  font-family: agrandirGrandLight, serif !important;
+}
+
+.agrandir-narrow {
+  font-family: agrandirNarrow, serif !important;
+}
+
+.agrandir-thinItalic {
+  font-family: agrandirThinItalic, serif !important;
+}
+
+.agrandir-tight {
+  font-family: agrandirTight, serif !important;
+}
+
+.agrandir-wideBlackItalic {
+  font-family: agrandirWideBlackItalic, serif !important;
+}
+
+.agrandir-wideLight {
+  font-family: agrandirWideLight, serif !important;
+}
+

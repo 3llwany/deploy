@@ -1,61 +1,77 @@
-/* p,
-div,
-span,
-section {
-  font-family: "Axi-Light" !important;
-} */
+/* Font used in admin UI*/
+.admin-font {
+  & p,
+  & div,
+  & section,
+  & a,
+  & li,
+  & ul,
+  & button,
+  .btn,
+  .mat-raised-button,
+  & mat-label,
+  & label {
+    font-family: "Roboto-Regular", serif !important;
+  }
 
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  .mat-card-title,
+  .card .card-title,
+  .content-header, .page-title,
+  .navlogo,
+  .mat-card.course-card .description .title p {
+    font-family: "Roboto-Bold", serif !important;
+  }
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.mat-card-title {
-  font-family: "Axi-Regular" !important;
-} */
-
-
-/*  Axi Font   */
-.font-axi-regular {
-    font-family: "Axi-Regular" !important;
+  .table-container td.mat-cell,
+  .table-container td.mat-cell > span,
+  & th.mat-header-cell,
+  & td.mat-cell,
+  & td.mat-footer-cell,
+  & mat-sort-header-container {
+    font-family: Roboto-Medium, serif !important;
+  }
 }
 
-.font-axi-light {
-    font-family: "Axi-Light" !important;
+
+/* Font used in Employee UI*/
+.default-font {
+  & p,
+  & div,
+  & section,
+  & a,
+  & li,
+  & ul,
+  & button,
+  .btn,
+  .mat-raised-button,
+  & mat-label,
+  & label {
+    font-family: "agrandirRegular", serif !important;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  .mat-card-title,
+  .card .card-title,
+  .content-header, .page-title,
+  .table-container td.mat-cell,
+  .table-container td.mat-cell > span,
+  & th.mat-header-cell,
+  & td.mat-cell,
+  & td.mat-footer-cell,
+  .navlogo,
+  .mat-card.course-card .description .title p {
+    font-family: "agrandirBold", serif !important;
+  }
 }
 
-.font-axi-semi-bold {
-    font-family: "Axi-SemiBold" !important;
-}
-
-.font-axi-bold {
-    font-family: "Axi-Bold" !important;
-}
-
-.font-axi-bold-italic {
-    font-family: "Axi-BoldItalic" !important;
-}
-
-
-/*  Axi Font General   using same classes name in ar file fonts  */
-.font-regular {
-    font-family: "Axi-Regular" !important;
-}
-
-.font-light {
-    font-family: "Axi-Light" !important;
-}
-
-.font-semi-bold {
-    font-family: "Axi-SemiBold" !important;
-}
-
-.font-bold {
-    font-family: "Axi-Bold" !important;
-}
-
-.font-bold-italic {
-    font-family: "Axi-BoldItalic" !important;
-}

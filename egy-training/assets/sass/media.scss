@@ -1,0 +1,120 @@
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// Large devices (desktops, 992px and up)
+//#region ############ START: desktops 992px to 1999px ############
+@media (max-width: 1999px) {
+}
+
+//#endregion
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) {
+  .home-categories .categories-cards {
+    gap: 30px 12.5% !important;
+  }
+
+  .home-header .first-row-info {
+    padding: 0 60px !important;
+    margin: 30px 0 0 !important;
+
+    .description {
+      padding: 0 5px !important;
+      width: auto;
+    }
+  }
+
+  .home-background {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .courses .course-cards {
+    gap: 30px 12.5% !important;
+  }
+
+  .gifts-background {
+    .history-img {
+      margin: 30px 0 !important;
+    }
+  }
+
+  .profile-background .profile-data-view .course-card .card-content {
+    flex-wrap: wrap;
+  }
+
+  .requests-tabs {
+    .mat-tab-list {
+      padding: 0 !important;
+    }
+  }
+}
+
+// Small devices (landscape phones,tablets) 576px to 991px)
+//#region ############ START: phones,tablets ############
+@media (max-width: 768px) {
+  .home-categories .categories-cards {
+    gap: 30px 16.6% !important;
+  }
+
+  .base-home-container {
+    margin-right: 15px !important;
+    margin-left: 15px !important;
+  }
+
+  .home-header .first-row-info {
+    padding: 0 20px !important;
+  }
+
+  .requests-background {
+    .card-container {
+      padding: 0 !important;
+
+      .mat-card {
+        padding: 15px !important;
+      }
+    }
+  }
+
+  .courses .course-cards {
+    gap: 30px 16.6% !important;
+  }
+
+  .notification-background {
+    .notification-icon {
+      margin: 30px 0 !important;
+    }
+  }
+
+  .my-course-content {
+    .unit-content-conteiner {
+      position: relative !important;
+      top: 0 !important;
+    }
+
+    .video-content {
+      position: relative !important;
+      right: auto !important;
+    }
+  }
+
+  .my-course-content .video-details {
+    padding: 0 20px !important;
+  }
+
+  .gifts-background .gift-history-cards .card-content {
+    flex-direction: column;
+  }
+}
+
+//#endregion
+
+
+@media (min-width: 1200px) {
+  .col-xl-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}

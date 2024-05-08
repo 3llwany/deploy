@@ -1,0 +1,132 @@
+@font-face {
+  font-family: roboto-black;
+  src: url(../fonts/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: Roboto-BlackItalic;
+  src: url(../fonts/roboto/Roboto-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(../fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto-BoldItalic;
+  src: url(../fonts/roboto/Roboto-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Italic;
+  src: url(../fonts/roboto/Roboto-Italic.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url(../fonts/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: Roboto-LightItalic;
+  src: url(../fonts/roboto/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url(../fonts/roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto-MediumItalic;
+  src: url(../fonts/roboto/Roboto-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(../fonts/roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family: Roboto-ThinItalic;
+  src: url(../fonts/roboto/Roboto-ThinItalic.ttf);
+}
+
+
+.roboto-thin {
+  font-family: Roboto-Thin, sans-serif;
+  /*font-weight: 100;*/
+  /*font-style: normal;*/
+}
+
+.roboto-light {
+  font-family: Roboto-Light, sans-serif;
+  /*font-weight: 300;*/
+  /*font-style: normal;*/
+}
+
+.roboto-regular {
+  font-family: Roboto-Regular, sans-serif;
+  /*font-weight: 400;*/
+  /*font-style: normal;*/
+}
+
+.roboto-medium {
+  font-family: Roboto-Medium, sans-serif;
+  /*font-weight: 500;*/
+  /*font-style: normal;*/
+}
+
+.roboto-bold {
+  font-family: Roboto-Bold, sans-serif;
+  /*font-weight: 700;*/
+  /*font-style: normal;*/
+}
+
+.roboto-black {
+  font-family: roboto-black, sans-serif;
+  /*font-weight: 900;*/
+  /*font-style: normal;*/
+}
+
+.roboto-thin-italic {
+  font-family: Roboto-ThinItalic, sans-serif;
+  /*font-weight: 100;*/
+  /*font-style: italic;*/
+}
+
+.roboto-light-italic {
+  font-family: Roboto-LightItalic, sans-serif;
+  /*font-weight: 300;*/
+  /*font-style: italic;*/
+}
+
+.roboto-regular-italic {
+  font-family: Roboto-Italic, sans-serif;
+  /*font-weight: 400;*/
+  /*font-style: italic;*/
+}
+
+.roboto-medium-italic {
+  font-family: Roboto-MediumItalic, sans-serif;
+  /*font-weight: 500;*/
+  /*font-style: italic;*/
+}
+
+.roboto-bold-italic {
+  font-family: Roboto-BoldItalic, sans-serif;
+  /*font-weight: 700;*/
+  /*font-style: italic;*/
+}
+
+.roboto-black-italic {
+  font-family: Roboto-BlackItalic, sans-serif;
+  /*font-weight: 900;*/
+  /*font-style: italic;*/
+}

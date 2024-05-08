@@ -1,3 +1,5 @@
+@import "assets/sass/style-constants";
+
 @for $i from 1 through 40 {
   /* ====================== margin ====================== */
   .margin-#{$i} {
@@ -45,4 +47,43 @@
   .font-size-#{$i} {
     font-size: #{$i}px !important;
   }
+}
+
+.orange-btn {
+  background-color: $main-color;
+  color: #fff;
+  border: none;
+}
+
+.orange-outline-btn {
+  background-color: #fff;
+  border: solid 2px $main-color;
+  color: $main-color;
+}
+
+.orange-btn:disabled,
+.bark-blue-btn:disabled {
+  opacity: 0.6;
+}
+
+.bark-blue-btn {
+  color: #fff;
+  background-color: $dark-blue-color;
+  border: none;
+}
+
+.bark-blue-outline-btn {
+  background-color: #fff;
+  border: solid 2px $dark-blue-color;
+  color: $dark-blue-color;
+}
+
+.icon-btn {
+  border-radius: 22.5px;
+  background-color: #fff;
+  border: 2px solid $dark-blue-color;
+}
+
+.bg-darkBlue {
+  background-color: $dark-blue-color;
 }

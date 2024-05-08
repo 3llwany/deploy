@@ -1,109 +1,187 @@
-body
-{
-    direction: rtl;
+body {
+  direction: rtl;
+  background-color: #fff;
 }
 
-.app-sidebar .navigation li.has-sub > a:after
-{
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+.app-sidebar .navigation li.has-sub > a:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-.app-sidebar .navigation li.has-sub.open > a:after
-{
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
+.app-sidebar .navigation li.has-sub.open > a:after {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.context-menu-item > .context-menu-list
-{
-    right: 100%;
+.context-menu-item > .context-menu-list {
+  right: 100%;
 }
 
-div.hopscotch-bubble .hopscotch-bubble-arrow-container.left
-{
-    left: -34px;
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.left {
+  left: -34px;
 }
 
-.tagging .tag
-{
-    padding: 7px 0 7px 24px;
+.tagging .tag {
+  padding: 7px 0 7px 24px;
 }
 
-.tagging .tag span
-{
-    border-radius: 0 2px 2px 0;
+.tagging .tag span {
+  border-radius: 0 2px 2px 0;
 }
 
-.tagging .tag .tag-i
-{
-    right: auto;
-    left: 8px;
+.tagging .tag .tag-i {
+  right: auto;
+  left: 8px;
 }
 
-.main-content .wizard > .steps > ul > li:before
-{
-    right: 0; 
-    left: auto;
+.main-content .wizard > .steps > ul > li:before {
+  right: 0;
+  left: auto;
 }
 
-.main-content .wizard > .steps > ul > li:after
-{
-    right: auto !important;
-    left: 0;
+.main-content .wizard > .steps > ul > li:after {
+  right: auto !important;
+  left: 0;
 }
 
-.cropper-container
-{
-    direction: ltr !important;
+.cropper-container {
+  direction: ltr !important;
 }
 
-.swiper-button-next:after
-{
-    font-size: 25px; 
+.swiper-button-next:after {
+  font-size: 25px;
 
-    content: '\e844' !important;
+  content: "\e844" !important;
 }
 
-.swiper-button-prev:after
-{
-    font-size: 25px; 
+.swiper-button-prev:after {
+  font-size: 25px;
 
-    content: '\e843' !important;
+  content: "\e843" !important;
 }
 
-.dataTables_filter
-{
-    text-align: left !important;
+.dataTables_filter {
+  text-align: left !important;
 }
 
-body .sidebar-content.ps--active-y
-{
-    right: 0 !important;
+body .sidebar-content.ps--active-y {
+  right: 0 !important;
 }
 
-body .sidebar-content .ps__rail-y
-{
-    right: 96% !important; 
-    left: 0 !important;
+body .sidebar-content .ps__rail-y {
+  right: 96% !important;
+  left: 0 !important;
 }
 
 .submenu-icon,
-.carousel-control-prev span[class*='icon'],
-.carousel-control-next span[class*='icon'],
+.carousel-control-prev span[class*="icon"],
+.carousel-control-next span[class*="icon"],
 .swiper-button-next:after,
 .swiper-button-prev:after,
-.dropdown-submenu .dropdown-item:after
-{
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+.dropdown-submenu .dropdown-item:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-.progress-bar-animated
-{
-    -webkit-animation: progress-bar-stripes 40s linear infinite;
-            animation: progress-bar-stripes 40s linear infinite;
+.progress-bar-animated {
+  -webkit-animation: progress-bar-stripes 40s linear infinite;
+  animation: progress-bar-stripes 40s linear infinite;
+}
+
+#login .description {
+  padding: 20px 70px 20px 20px !important;
+}
+
+.learning-request-dialog .content {
+  padding: 0 15px 0 20px;
+}
+
+.profile-background .completed-courses .course-card {
+  padding: 10px 10px 10px 35px !important;
+}
+
+.dialog-radius .mat-dialog-container {
+  padding: 24px 20px 25px 24px;
+  overflow: hidden;
+}
+
+.requests-background .base-home-container {
+  margin-left: 20px !important;
+  margin-right: 60px !important;
+}
+
+.requests-background .card-container {
+  padding: 0 35px 0 10px !important;
+}
+
+.requests-tabs th:first-child {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0 !important;
+}
+
+.requests-tabs th:last-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0 !important;
+}
+
+.base-home-container .sub-1 {
+  padding: 0 55px 0 25px !important;
+}
+
+.content-container.diploma-course-content {
+  margin: 20px 40px 35px 25px !important;
+}
+
+.diploma-course-content .content-details .details {
+  right: -40px;
+  left: auto;
+  border-radius: 10px 0 0 10px !important;
+}
+
+.diploma-course-content .mat-expansion-panel-header .collapse-icon {
+  transform: rotate(180deg) !important;
+}
+
+.diploma-course-content
+  .mat-expansion-panel-header.mat-expanded
+  .collapse-icon {
+  transform: rotate(90deg) !important;
+}
+
+.my-course-content .video-details {
+  padding: 0 20px 0 0;
+}
+
+.diploma-course-content .mat-expansion-panel-header-title .data-title {
+  margin: 0 0 0 5px !important;
+}
+
+.my-course-content .mat-expansion-panel-header-title .unit-exam-question {
+  margin: 0 0 0 10px !important;
+}
+
+.vertical-layout .main-panel .main-content {
+  margin-left: 0 !important;
+}
+
+.admin-nav {
+  margin-left: 28px !important;
+  margin-right: 280px !important;
+}
+
+.admin-index-card.mat-card table td.mat-column-actions a:not(:last-child) i {
+  margin-right: 0 !important;
+  margin-left: 20px !important;
+}
+
+.admin-index-card.mat-card table td.mat-column-actions a:last-child i {
+  margin: 0 !important;
+}
+
+.course-completed .more-courses {
+  border-right: 1px solid #dfdfdf;
+  border-left: none !important;
 }
