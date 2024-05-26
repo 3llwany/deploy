@@ -11,8 +11,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FinancialDetailedReportComponent": function() { return /* binding */ FinancialDetailedReportComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 90587);
@@ -31,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var FinancialDetailedReportComponent = /*#__PURE__*/function () {
   function FinancialDetailedReportComponent(reportsService, fb, msg, router, route, datePipe, fileService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FinancialDetailedReportComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FinancialDetailedReportComponent);
 
     this.reportsService = reportsService;
     this.fb = fb;
@@ -42,7 +42,7 @@ var FinancialDetailedReportComponent = /*#__PURE__*/function () {
     this.fileService = fileService;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(FinancialDetailedReportComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(FinancialDetailedReportComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       var _this = this;
@@ -96,8 +96,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FinancialReportComponent": function() { return /* binding */ FinancialReportComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 90587);
@@ -116,7 +116,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var FinancialReportComponent = /*#__PURE__*/function () {
   function FinancialReportComponent(reportsService, fb, msg, router, route, datePipe, fileService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FinancialReportComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FinancialReportComponent);
 
     this.reportsService = reportsService;
     this.fb = fb;
@@ -127,7 +127,7 @@ var FinancialReportComponent = /*#__PURE__*/function () {
     this.fileService = fileService;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(FinancialReportComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(FinancialReportComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       var _this = this;
@@ -181,8 +181,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FinancialSummaryReportComponent": function() { return /* binding */ FinancialSummaryReportComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 90587);
@@ -201,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var FinancialSummaryReportComponent = /*#__PURE__*/function () {
   function FinancialSummaryReportComponent(reportsService, fb, msg, router, route, datePipe, fileService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FinancialSummaryReportComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FinancialSummaryReportComponent);
 
     this.reportsService = reportsService;
     this.fb = fb;
@@ -212,7 +212,7 @@ var FinancialSummaryReportComponent = /*#__PURE__*/function () {
     this.fileService = fileService;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(FinancialSummaryReportComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(FinancialSummaryReportComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       var _this = this;
@@ -266,8 +266,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LecturesExamsViewsCountReportComponent": function() { return /* binding */ LecturesExamsViewsCountReportComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ 90587);
@@ -689,7 +689,7 @@ var _c3 = function _c3(a1, a2) {
 
 var LecturesExamsViewsCountReportComponent = /*#__PURE__*/function () {
   function LecturesExamsViewsCountReportComponent(reportsService, fb, msg, spinner, authserv, fileService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, LecturesExamsViewsCountReportComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, LecturesExamsViewsCountReportComponent);
 
     this.reportsService = reportsService;
     this.fb = fb;
@@ -713,7 +713,7 @@ var LecturesExamsViewsCountReportComponent = /*#__PURE__*/function () {
     this.reportLiveLectureDetails = [];
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(LecturesExamsViewsCountReportComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(LecturesExamsViewsCountReportComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       this.EduCompId = this.authserv.getEduCompId(); //console.log("NOW CALL SERVER YA BEH: ", this.reportObj);
@@ -1362,8 +1362,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LecturesSalesReportComponent": function() { return /* binding */ LecturesSalesReportComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 90587);
@@ -1382,7 +1382,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var LecturesSalesReportComponent = /*#__PURE__*/function () {
   function LecturesSalesReportComponent(reportsService, fb, msg, router, route, datePipe, fileService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, LecturesSalesReportComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, LecturesSalesReportComponent);
 
     this.reportsService = reportsService;
     this.fb = fb;
@@ -1393,7 +1393,7 @@ var LecturesSalesReportComponent = /*#__PURE__*/function () {
     this.fileService = fileService;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(LecturesSalesReportComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(LecturesSalesReportComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       var _this = this;
@@ -1447,8 +1447,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ManualPaymentsReportComponent": function() { return /* binding */ ManualPaymentsReportComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 90587);
@@ -1467,7 +1467,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ManualPaymentsReportComponent = /*#__PURE__*/function () {
   function ManualPaymentsReportComponent(reportsService, fb, msg, router, route, datePipe, fileService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ManualPaymentsReportComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ManualPaymentsReportComponent);
 
     this.reportsService = reportsService;
     this.fb = fb;
@@ -1478,7 +1478,7 @@ var ManualPaymentsReportComponent = /*#__PURE__*/function () {
     this.fileService = fileService;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ManualPaymentsReportComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ManualPaymentsReportComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       var _this = this;
@@ -1530,8 +1530,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MaterialCodesReportComponent": function() { return /* binding */ MaterialCodesReportComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 90587);
@@ -1548,7 +1548,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var MaterialCodesReportComponent = /*#__PURE__*/function () {
   function MaterialCodesReportComponent(reportsService, fb, msg, router, route, fileService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, MaterialCodesReportComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, MaterialCodesReportComponent);
 
     this.reportsService = reportsService;
     this.fb = fb;
@@ -1558,7 +1558,7 @@ var MaterialCodesReportComponent = /*#__PURE__*/function () {
     this.fileService = fileService;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(MaterialCodesReportComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(MaterialCodesReportComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       var _this = this;
@@ -1609,8 +1609,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ReportDetailsComponent": function() { return /* binding */ ReportDetailsComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var app_shared_validators_customeValid_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/validators/customeValid.validator */ 84330);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
@@ -2062,7 +2062,7 @@ function ReportDetailsComponent_div_16_Template(rf, ctx) {
 
 var ReportDetailsComponent = /*#__PURE__*/function () {
   function ReportDetailsComponent(reportsService, teacherService, router, route, fb, authserv, msg, generalService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ReportDetailsComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ReportDetailsComponent);
 
     this.reportsService = reportsService;
     this.teacherService = teacherService;
@@ -2089,7 +2089,7 @@ var ReportDetailsComponent = /*#__PURE__*/function () {
     this.materialCodesReportMode = false;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ReportDetailsComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ReportDetailsComponent, [{
     key: "fromDateCtrl",
     get: function get() {
       return this.myForm.get("fromDate");
@@ -2405,8 +2405,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ReportsIndexComponent": function() { return /* binding */ ReportsIndexComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 52816);
@@ -2456,7 +2456,7 @@ function ReportsIndexComponent_div_8_Template(rf, ctx) {
 
 var ReportsIndexComponent = /*#__PURE__*/function () {
   function ReportsIndexComponent(reportsService, router, route) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ReportsIndexComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ReportsIndexComponent);
 
     this.reportsService = reportsService;
     this.router = router;
@@ -2464,7 +2464,7 @@ var ReportsIndexComponent = /*#__PURE__*/function () {
     this.reports = [];
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ReportsIndexComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ReportsIndexComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       var _this = this;
@@ -2539,8 +2539,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ReportsRoutingModule": function() { return /* binding */ ReportsRoutingModule; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 52816);
 /* harmony import */ var _report_details_report_details_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./report-details/report-details.component */ 4565);
 /* harmony import */ var _report_index_reports_index_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./report-index/reports-index.component */ 27976);
@@ -2563,8 +2563,8 @@ var routes = [{
   path: "report-details/:reportId",
   component: _report_details_report_details_component__WEBPACK_IMPORTED_MODULE_2__.ReportDetailsComponent
 }];
-var ReportsRoutingModule = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function ReportsRoutingModule() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ReportsRoutingModule);
+var ReportsRoutingModule = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function ReportsRoutingModule() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ReportsRoutingModule);
 });
 
 ReportsRoutingModule.ɵfac = function ReportsRoutingModule_Factory(t) {
@@ -2597,8 +2597,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ReportsModule": function() { return /* binding */ ReportsModule; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/forms */ 90587);
 /* harmony import */ var _shared_material_material_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../shared/material/material.module */ 793);
 /* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ngx-pagination */ 27043);
@@ -2641,8 +2641,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ReportsModule = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function ReportsModule() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ReportsModule);
+var ReportsModule = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function ReportsModule() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ReportsModule);
 });
 
 ReportsModule.ɵfac = function ReportsModule_Factory(t) {
@@ -2682,8 +2682,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ReservationReportComponent": function() { return /* binding */ ReservationReportComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 90587);
@@ -2702,7 +2702,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ReservationReportComponent = /*#__PURE__*/function () {
   function ReservationReportComponent(reportsService, fb, msg, router, spinner, route, fileService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ReservationReportComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ReservationReportComponent);
 
     this.reportsService = reportsService;
     this.fb = fb;
@@ -2713,7 +2713,7 @@ var ReservationReportComponent = /*#__PURE__*/function () {
     this.fileService = fileService;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ReservationReportComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ReservationReportComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       var _this = this;
@@ -2767,8 +2767,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "StudentsFollowUpReportComponent": function() { return /* binding */ StudentsFollowUpReportComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var app_admin_services_reports_reports_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/admin/services/reports/reports.service */ 53261);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 90587);
@@ -2915,7 +2915,7 @@ var _c1 = function _c1(a1, a2) {
 
 var StudentsFollowUpReportComponent = /*#__PURE__*/function () {
   function StudentsFollowUpReportComponent(reportsService, fb, authserv, msg) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, StudentsFollowUpReportComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, StudentsFollowUpReportComponent);
 
     this.reportsService = reportsService;
     this.fb = fb;
@@ -2929,7 +2929,7 @@ var StudentsFollowUpReportComponent = /*#__PURE__*/function () {
     this.reportMaterialStudentDetails = [];
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(StudentsFollowUpReportComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(StudentsFollowUpReportComponent, [{
     key: "ngAfterViewInit",
     value: function ngAfterViewInit() {
       var _this = this;
@@ -3168,10 +3168,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TeacherService": function() { return /* binding */ TeacherService; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
 /* harmony import */ var app_shared_services_app_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/services/app-client.service */ 18521);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ 28784);
@@ -3183,21 +3183,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var TeacherService = /*#__PURE__*/function (_AppClientService) {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__["default"])(TeacherService, _AppClientService);
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__["default"])(TeacherService, _AppClientService);
 
-  var _super = (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(TeacherService);
+  var _super = (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(TeacherService);
 
   function TeacherService(http) {
     var _this;
 
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, TeacherService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, TeacherService);
 
     _this = _super.call(this, http);
     _this.http = http;
     return _this;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(TeacherService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(TeacherService, [{
     key: "getTeacherByID",
     value: function getTeacherByID(id) {
       return this.get("Admin/getTeacherByTeacherUserID/" + id);
@@ -3229,10 +3229,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ReportsService": function() { return /* binding */ ReportsService; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
 /* harmony import */ var app_shared_services_app_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/services/app-client.service */ 18521);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ 28784);
@@ -3244,21 +3244,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ReportsService = /*#__PURE__*/function (_AppClientService) {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ReportsService, _AppClientService);
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ReportsService, _AppClientService);
 
-  var _super = (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(ReportsService);
+  var _super = (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(ReportsService);
 
   function ReportsService(http) {
     var _this;
 
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ReportsService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ReportsService);
 
     _this = _super.call(this, http);
     _this.http = http;
     return _this;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ReportsService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ReportsService, [{
     key: "getAllReportsIndex",
     value: function getAllReportsIndex() {
       return this.get("Admin/get-all-reports-index");

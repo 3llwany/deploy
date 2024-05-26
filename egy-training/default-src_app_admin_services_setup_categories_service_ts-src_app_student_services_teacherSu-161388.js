@@ -11,10 +11,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "CategoriesService": function() { return /* binding */ CategoriesService; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
 /* harmony import */ var app_shared_services_app_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/services/app-client.service */ 18521);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ 28784);
@@ -26,44 +26,68 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var CategoriesService = /*#__PURE__*/function (_AppClientService) {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__["default"])(CategoriesService, _AppClientService);
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__["default"])(CategoriesService, _AppClientService);
 
-  var _super = (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(CategoriesService);
+  var _super = (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(CategoriesService);
 
   function CategoriesService(http) {
     var _this;
 
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CategoriesService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CategoriesService);
 
     _this = _super.call(this, http);
     _this.http = http;
     return _this;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(CategoriesService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(CategoriesService, [{
     key: "getCategories",
-    value: function getCategories(page, EduCompId) {
-      return this.get("courseCategory/getAllCategories/".concat(EduCompId, "/").concat(page));
+    value: function getCategories() {
+      return this.get("SubCategoryCourse/getAllMainCategories");
     }
   }, {
-    key: "getCategoriesDropdown",
-    value: function getCategoriesDropdown(EduCompId) {
-      return this.get("courseCategory/getAllCategories/".concat(EduCompId));
-    }
-  }, {
-    key: "deleteCategories",
-    value: function deleteCategories(id) {
-      return this.delete("courseCategory/DeleteCategories/".concat(id));
-    }
-  }, {
-    key: "editCategories",
-    value: function editCategories(model, id) {
-      return this.put("courseCategory/PutCategories/".concat(id), model);
-    }
+    key: "getSubCategoriesByMainId",
+    value: function getSubCategoriesByMainId(id) {
+      return this.get("SubCategoryCourse/getAllSubCategoriesByMainId/".concat(id));
+    } // getCategoriesDropdown(EduCompId: number) {
+    //   return this.get<CategorieResponse>(
+    //     `SubCategoryCourse/getAllMainCategories/${EduCompId}`
+    //   );
+    // }
+    // deleteCategories(id: number) {
+    //   return this.delete(`courseCategory/DeleteCategories/${id}`);
+    // }
+    // editCategories<T>(model: T, id: number) {
+    //   return this.put<T>(`courseCategory/PutCategories/${id}`, model);
+    // }
+
   }, {
     key: "addCategories",
     value: function addCategories(model) {
-      return this.post("courseCategory/PostCategories/", model);
+      return this.post("SubCategoryCourse/AddCategory", model);
+    }
+  }, {
+    key: "getAllSubCategoriesByMainId",
+    value: function getAllSubCategoriesByMainId(mainCategoryId) {
+      return this.get("SubCategoryCourse/getAllSubCategoriesByMainId/".concat(mainCategoryId));
+    } // getAllSubCategoriesByMainIds(mainCategoryIds: number[]) {
+    //   return this.post<ISubCategoriesWithMainCategoryResponse>(
+    //     `SubCategoryCourse/getAllSubCategoriesByMainIds`,
+    //     {
+    //       cat_ids: mainCategoryIds,
+    //     }
+    //   );
+    // }
+
+  }, {
+    key: "sendDataToHR",
+    value: function sendDataToHR(EduComp) {
+      return this.get("HRcourseCategory/CopyCategoriesFromEgyToHR/".concat(EduComp));
+    }
+  }, {
+    key: "getDataFromHR",
+    value: function getDataFromHR(EduComp) {
+      return this.get("HRcourseCategory/CopyCategoriesFromHRtoEgy/".concat(EduComp));
     }
   }]);
 
@@ -92,10 +116,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TeacherSubjectsService": function() { return /* binding */ TeacherSubjectsService; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
 /* harmony import */ var app_shared_services_app_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/services/app-client.service */ 18521);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ 28784);
@@ -107,14 +131,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var TeacherSubjectsService = /*#__PURE__*/function (_AppClientService) {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__["default"])(TeacherSubjectsService, _AppClientService);
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__["default"])(TeacherSubjectsService, _AppClientService);
 
-  var _super = (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(TeacherSubjectsService);
+  var _super = (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(TeacherSubjectsService);
 
   function TeacherSubjectsService(http) {
     var _this;
 
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, TeacherSubjectsService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, TeacherSubjectsService);
 
     _this = _super.call(this, http);
     _this.http = http;
@@ -122,7 +146,7 @@ var TeacherSubjectsService = /*#__PURE__*/function (_AppClientService) {
   } //Return Home Teachers
 
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(TeacherSubjectsService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(TeacherSubjectsService, [{
     key: "ReturnHomeTeachers",
     value: function ReturnHomeTeachers() {
       return this.get("Teachers/HomeTeachers");
@@ -302,10 +326,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SlideModel": function() { return /* binding */ SlideModel; },
 /* harmony export */   "SlidesOutputData": function() { return /* binding */ SlidesOutputData; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ 24582);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ 2496);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ 36362);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ 92218);
@@ -519,8 +543,8 @@ var _c6 = function _c6(a0, a1, a2, a3, a4) {
   };
 };
 
-var OwlCarouselOConfig = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function OwlCarouselOConfig() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlCarouselOConfig);
+var OwlCarouselOConfig = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function OwlCarouselOConfig() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlCarouselOConfig);
 
   this.items = 3;
   this.skip_validateItems = false;
@@ -578,8 +602,8 @@ var OwlCarouselOConfig = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_mod
  */
 
 
-var OwlOptionsMockedTypes = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function OwlOptionsMockedTypes() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlOptionsMockedTypes);
+var OwlOptionsMockedTypes = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function OwlOptionsMockedTypes() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlOptionsMockedTypes);
 
   this.items = 'number';
   this.skip_validateItems = 'boolean';
@@ -633,12 +657,12 @@ var OwlOptionsMockedTypes = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_
 
 var OwlLogger = /*#__PURE__*/function () {
   function OwlLogger(errorHandler) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlLogger);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlLogger);
 
     this.errorHandler = errorHandler;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(OwlLogger, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(OwlLogger, [{
     key: "log",
     value: function log(value) {
       if ((0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.isDevMode)()) {
@@ -695,8 +719,8 @@ OwlLogger.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵ
  */
 
 
-var States = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function States() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, States);
+var States = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function States() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, States);
 });
 /**
  * Enumeration for types.
@@ -730,23 +754,23 @@ var Width;
  * Model for coords of .owl-stage
  */
 
-var Coords = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function Coords() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Coords);
+var Coords = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function Coords() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Coords);
 });
 /**
  * Model for all current data of carousel
  */
 
 
-var CarouselCurrentData = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function CarouselCurrentData() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselCurrentData);
+var CarouselCurrentData = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function CarouselCurrentData() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselCurrentData);
 });
 
 var CarouselService = /*#__PURE__*/function () {
   function CarouselService(logger) {
     var _this = this;
 
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselService);
 
     this.logger = logger;
     /**
@@ -1154,7 +1178,7 @@ var CarouselService = /*#__PURE__*/function () {
   } // Is needed for tests
 
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(CarouselService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(CarouselService, [{
     key: "invalidated",
     get: function get() {
       return this._invalidated;
@@ -2677,7 +2701,7 @@ CarouselService.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_4
 
 var NavigationService = /*#__PURE__*/function () {
   function NavigationService(carouselService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, NavigationService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, NavigationService);
 
     this.carouselService = carouselService;
     /**
@@ -2716,7 +2740,7 @@ var NavigationService = /*#__PURE__*/function () {
     this.spyDataStreams();
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(NavigationService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(NavigationService, [{
     key: "ngOnDestroy",
     value: function ngOnDestroy() {
       this.navSubscription.unsubscribe();
@@ -3077,10 +3101,10 @@ var WINDOW = new _angular_core__WEBPACK_IMPORTED_MODULE_4__.InjectionToken('Wind
 
 var WindowRef = /*#__PURE__*/function () {
   function WindowRef() {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, WindowRef);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, WindowRef);
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(WindowRef, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(WindowRef, [{
     key: "nativeWindow",
     get: function get() {
       throw new Error('Not implemented.');
@@ -3095,12 +3119,12 @@ var WindowRef = /*#__PURE__*/function () {
 
 
 var BrowserWindowRef = /*#__PURE__*/function (_WindowRef) {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_0__["default"])(BrowserWindowRef, _WindowRef);
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_0__["default"])(BrowserWindowRef, _WindowRef);
 
-  var _super = (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(BrowserWindowRef);
+  var _super = (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(BrowserWindowRef);
 
   function BrowserWindowRef() {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, BrowserWindowRef);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, BrowserWindowRef);
 
     return _super.call(this);
   }
@@ -3109,7 +3133,7 @@ var BrowserWindowRef = /*#__PURE__*/function (_WindowRef) {
    */
 
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(BrowserWindowRef, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(BrowserWindowRef, [{
     key: "nativeWindow",
     get: function get() {
       return window;
@@ -3188,10 +3212,10 @@ var DOCUMENT = new _angular_core__WEBPACK_IMPORTED_MODULE_4__.InjectionToken('Do
 
 var DocumentRef = /*#__PURE__*/function () {
   function DocumentRef() {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, DocumentRef);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, DocumentRef);
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(DocumentRef, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(DocumentRef, [{
     key: "nativeDocument",
     get: function get() {
       throw new Error('Not implemented.');
@@ -3206,12 +3230,12 @@ var DocumentRef = /*#__PURE__*/function () {
 
 
 var BrowserDocumentRef = /*#__PURE__*/function (_DocumentRef) {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_0__["default"])(BrowserDocumentRef, _DocumentRef);
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_0__["default"])(BrowserDocumentRef, _DocumentRef);
 
-  var _super2 = (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(BrowserDocumentRef);
+  var _super2 = (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(BrowserDocumentRef);
 
   function BrowserDocumentRef() {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, BrowserDocumentRef);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, BrowserDocumentRef);
 
     return _super2.call(this);
   }
@@ -3220,7 +3244,7 @@ var BrowserDocumentRef = /*#__PURE__*/function (_DocumentRef) {
    */
 
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(BrowserDocumentRef, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(BrowserDocumentRef, [{
     key: "nativeDocument",
     get: function get() {
       return document;
@@ -3291,7 +3315,7 @@ var DOCUMENT_PROVIDERS = [browserDocumentProvider, documentProvider];
 
 var AutoplayService = /*#__PURE__*/function () {
   function AutoplayService(carouselService, winRef, docRef, ngZone) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, AutoplayService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, AutoplayService);
 
     this.carouselService = carouselService;
     this.ngZone = ngZone;
@@ -3316,7 +3340,7 @@ var AutoplayService = /*#__PURE__*/function () {
     this.spyDataStreams();
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(AutoplayService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(AutoplayService, [{
     key: "isAutoplayStopped",
     get: function get() {
       return this._isAutoplayStopped;
@@ -3562,13 +3586,13 @@ AutoplayService.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_4
 
 var LazyLoadService = /*#__PURE__*/function () {
   function LazyLoadService(carouselService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, LazyLoadService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, LazyLoadService);
 
     this.carouselService = carouselService;
     this.spyDataStreams();
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(LazyLoadService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(LazyLoadService, [{
     key: "ngOnDestroy",
     value: function ngOnDestroy() {
       this.lazyLoadSubscription.unsubscribe();
@@ -3675,7 +3699,7 @@ LazyLoadService.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_4
 
 var AnimateService = /*#__PURE__*/function () {
   function AnimateService(carouselService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, AnimateService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, AnimateService);
 
     this.carouselService = carouselService;
     /**
@@ -3696,7 +3720,7 @@ var AnimateService = /*#__PURE__*/function () {
     this.spyDataStreams();
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(AnimateService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(AnimateService, [{
     key: "ngOnDestroy",
     value: function ngOnDestroy() {
       this.animateSubscription.unsubscribe();
@@ -3827,13 +3851,13 @@ AnimateService.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_4_
 
 var AutoHeightService = /*#__PURE__*/function () {
   function AutoHeightService(carouselService) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, AutoHeightService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, AutoHeightService);
 
     this.carouselService = carouselService;
     this.spyDataStreams();
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(AutoHeightService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(AutoHeightService, [{
     key: "ngOnDestroy",
     value: function ngOnDestroy() {
       this.autoHeightSubscription.unsubscribe();
@@ -3915,7 +3939,7 @@ AutoHeightService.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE
 
 var HashService = /*#__PURE__*/function () {
   function HashService(carouselService, route, router) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, HashService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, HashService);
 
     this.carouselService = carouselService;
     this.route = route;
@@ -3939,7 +3963,7 @@ var HashService = /*#__PURE__*/function () {
     }
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(HashService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(HashService, [{
     key: "ngOnDestroy",
     value: function ngOnDestroy() {
       this.hashSubscription.unsubscribe();
@@ -4047,7 +4071,7 @@ var nextId = 0;
 
 var CarouselSlideDirective = /*#__PURE__*/function () {
   function CarouselSlideDirective(tplRef) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselSlideDirective);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselSlideDirective);
 
     this.tplRef = tplRef;
     /**
@@ -4079,7 +4103,7 @@ var CarouselSlideDirective = /*#__PURE__*/function () {
     this.dataHash = '';
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(CarouselSlideDirective, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(CarouselSlideDirective, [{
     key: "dataMerge",
     get: function get() {
       return this._dataMerge;
@@ -4150,7 +4174,7 @@ CarouselSlideDirective.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MO
 
 var ResizeService = /*#__PURE__*/function () {
   function ResizeService(eventManager) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, ResizeService);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, ResizeService);
 
     this.eventManager = eventManager;
     this.resizeSubject = new rxjs__WEBPACK_IMPORTED_MODULE_5__.Subject();
@@ -4163,7 +4187,7 @@ var ResizeService = /*#__PURE__*/function () {
    */
 
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ResizeService, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ResizeService, [{
     key: "onResize$",
     get: function get() {
       return this.resizeSubject.asObservable();
@@ -4216,7 +4240,7 @@ var StageComponent = /*#__PURE__*/function () {
   function StageComponent(zone, el, renderer, carouselService, animateService) {
     var _this25 = this;
 
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, StageComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, StageComponent);
 
     this.zone = zone;
     this.el = el;
@@ -4290,7 +4314,7 @@ var StageComponent = /*#__PURE__*/function () {
     };
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(StageComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(StageComponent, [{
     key: "onMouseDown",
     value: function onMouseDown(event) {
       if (this.owlDraggable.isMouseDragable) {
@@ -4730,7 +4754,7 @@ StageComponent.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_4__
 
 var CarouselComponent = /*#__PURE__*/function () {
   function CarouselComponent(el, resizeService, carouselService, navigationService, autoplayService, lazyLoadService, animateService, autoHeightService, hashService, logger, changeDetectorRef, docRef) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselComponent);
 
     this.el = el;
     this.resizeService = resizeService;
@@ -4761,7 +4785,7 @@ var CarouselComponent = /*#__PURE__*/function () {
     this.docRef = docRef;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(CarouselComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(CarouselComponent, [{
     key: "onVisibilityChange",
     value: function onVisibilityChange(ev) {
       if (!this.carouselService.settings.autoplay) return;
@@ -5231,7 +5255,7 @@ CarouselComponent.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_
 
 var OwlRouterLinkDirective = /*#__PURE__*/function () {
   function OwlRouterLinkDirective(router, route, tabIndex, renderer, el) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlRouterLinkDirective);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlRouterLinkDirective);
 
     this.router = router;
     this.route = route;
@@ -5243,7 +5267,7 @@ var OwlRouterLinkDirective = /*#__PURE__*/function () {
     }
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(OwlRouterLinkDirective, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(OwlRouterLinkDirective, [{
     key: "owlRouterLink",
     set: function set(commands) {
       if (commands != null) {
@@ -5396,7 +5420,7 @@ var OwlRouterLinkWithHrefDirective = /*#__PURE__*/function () {
   function OwlRouterLinkWithHrefDirective(router, route, locationStrategy) {
     var _this31 = this;
 
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlRouterLinkWithHrefDirective);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, OwlRouterLinkWithHrefDirective);
 
     this.router = router;
     this.route = route;
@@ -5410,7 +5434,7 @@ var OwlRouterLinkWithHrefDirective = /*#__PURE__*/function () {
     });
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(OwlRouterLinkWithHrefDirective, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(OwlRouterLinkWithHrefDirective, [{
     key: "owlRouterLink",
     set: function set(commands) {
       if (commands != null) {
@@ -5582,15 +5606,15 @@ function attrBoolValue(s) {
  */
 
 
-var SlidesOutputData = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function SlidesOutputData() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, SlidesOutputData);
+var SlidesOutputData = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function SlidesOutputData() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, SlidesOutputData);
 });
 
 ;
 var routes = [];
 
-var CarouselModule = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function CarouselModule() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselModule);
+var CarouselModule = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function CarouselModule() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, CarouselModule);
 });
 
 CarouselModule.ɵfac = function CarouselModule_Factory(t) {
@@ -5621,8 +5645,8 @@ CarouselModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_4__
   }], null, null);
 })();
 
-var SlideModel = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function SlideModel() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, SlideModel);
+var SlideModel = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_2__["default"])(function SlideModel() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, SlideModel);
 });
 /**
  * Generated bundle index. Do not edit.

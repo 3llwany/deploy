@@ -11,8 +11,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AccessDeniedComponent": function() { return /* binding */ AccessDeniedComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 52816);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
@@ -28,10 +28,10 @@ var _c0 = function _c0() {
 
 var AccessDeniedComponent = /*#__PURE__*/function () {
   function AccessDeniedComponent() {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, AccessDeniedComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, AccessDeniedComponent);
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(AccessDeniedComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(AccessDeniedComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {}
   }]);
@@ -102,8 +102,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "EducationalDetailsComponent": function() { return /* binding */ EducationalDetailsComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _shared_validators_customeValid_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../shared/validators/customeValid.validator */ 84330);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ 90587);
 /* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/core */ 88133);
@@ -347,7 +347,7 @@ function EducationalDetailsComponent_mat_hint_49_Template(rf, ctx) {
 
 var EducationalDetailsComponent = /*#__PURE__*/function () {
   function EducationalDetailsComponent(authService, generalServ, studentServ, fb, router, toaster, spinner) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, EducationalDetailsComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, EducationalDetailsComponent);
 
     this.authService = authService;
     this.generalServ = generalServ;
@@ -364,7 +364,7 @@ var EducationalDetailsComponent = /*#__PURE__*/function () {
     this.matcher = new _angular_material_core__WEBPACK_IMPORTED_MODULE_7__.ErrorStateMatcher();
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(EducationalDetailsComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(EducationalDetailsComponent, [{
     key: "canDeactivate",
     value: function canDeactivate() {
       if (this.myForm.valid) return true;else return false;
@@ -610,8 +610,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ErrorComponent": function() { return /* binding */ ErrorComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var app_shared_data_app_assets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/data/app-assets */ 8843);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var ngx_lottie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-lottie */ 78530);
@@ -631,7 +631,7 @@ var _c0 = function _c0() {
 
 var ErrorComponent = /*#__PURE__*/function () {
   function ErrorComponent() {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ErrorComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ErrorComponent);
 
     this.jsonAssets = app_shared_data_app_assets__WEBPACK_IMPORTED_MODULE_2__.JsonAssets;
     this.options = {
@@ -639,7 +639,7 @@ var ErrorComponent = /*#__PURE__*/function () {
     };
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ErrorComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ErrorComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {}
   }]);
@@ -709,8 +709,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ForgotPasswordComponent": function() { return /* binding */ ForgotPasswordComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 90587);
 /* harmony import */ var _shared_validators_customeValid_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../shared/validators/customeValid.validator */ 84330);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
@@ -1022,7 +1022,7 @@ function ForgotPasswordComponent_div_11_Template(rf, ctx) {
 
 var ForgotPasswordComponent = /*#__PURE__*/function () {
   function ForgotPasswordComponent(authServ, router, fb, toastr, spinner) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ForgotPasswordComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ForgotPasswordComponent);
 
     this.authServ = authServ;
     this.router = router;
@@ -1035,7 +1035,7 @@ var ForgotPasswordComponent = /*#__PURE__*/function () {
     this.ifHaveCode = false;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ForgotPasswordComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ForgotPasswordComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       this.resetForm = this.fb.group({
@@ -1170,8 +1170,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LoginPageComponent": function() { return /* binding */ LoginPageComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/forms */ 90587);
 /* harmony import */ var app_shared_services_local_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/services/local-storage */ 6897);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 3184);
@@ -1228,7 +1228,7 @@ function LoginPageComponent_ngb_alert_22_Template(rf, ctx) {
 
 var LoginPageComponent = /*#__PURE__*/function () {
   function LoginPageComponent(router, fb, authService, spinner, route, appAssets) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, LoginPageComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, LoginPageComponent);
 
     this.router = router;
     this.fb = fb;
@@ -1241,7 +1241,7 @@ var LoginPageComponent = /*#__PURE__*/function () {
     this.errMsg = "";
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(LoginPageComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(LoginPageComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       this.returnUrl = this.route.snapshot.queryParams["returnUrl"];
@@ -1423,7 +1423,7 @@ LoginPageComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_8
   },
   directives: [_shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_5__.NavbarComponent, _angular_common__WEBPACK_IMPORTED_MODULE_12__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.FormGroupDirective, _shared_components_dynamic_form_field_input_input_component__WEBPACK_IMPORTED_MODULE_6__.InputComponent, _angular_router__WEBPACK_IMPORTED_MODULE_10__.RouterLinkWithHref, _shared_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__.FooterComponent, ngx_spinner__WEBPACK_IMPORTED_MODULE_11__.NgxSpinnerComponent, _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_13__.NgbAlert],
   pipes: [_ngx_translate_core__WEBPACK_IMPORTED_MODULE_14__.TranslatePipe],
-  styles: [".login-background {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n}\n  #login {\n  flex-grow: 1;\n  display: flex;\n  align-items: center;\n}\n  #login .card {\n  max-width: 400px;\n  border: solid 1px #d7d7d7;\n  border-radius: 20px;\n  background-color: #fff;\n  padding: 25px 40px;\n  margin: 45px 0 40px 0;\n  box-shadow: none;\n}\n  #login .card-title {\n  font-size: 26px;\n  color: #193141;\n  margin-bottom: 25px;\n}\n  #login .card-title::after {\n  content: \"\";\n  border: 3px solid #437a9f;\n  width: 130px;\n  display: block;\n  border-radius: 2px;\n  margin-top: 8px;\n}\n  #login .mat-form-field {\n  margin-bottom: 0 !important;\n}\n  #login label {\n  margin-bottom: 10px;\n}\n  #login .radius-btn {\n  font-size: 16px !important;\n  padding: 10px 30px;\n}\n  #login .radius-btn .text-btn {\n  line-height: normal;\n}\n  #login .forgetpass {\n  font-size: 15px;\n  color: #fb6239;\n  font-weight: bold;\n}\n  #login .description {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 20px;\n  padding: 20px 20px 20px 70px;\n}\n  #login .description p {\n  margin: 0;\n}\n  #login .description .main {\n  font-size: 22px;\n  font-weight: bold;\n  line-height: 1.3;\n  letter-spacing: 0.72px;\n  color: #193141;\n}\n  #login .description .sub-1 {\n  font-size: 36px;\n  font-weight: bold;\n  line-height: 1.35;\n  letter-spacing: 1px;\n  color: #437a9f;\n}\n  #login .description .sub-2 {\n  font-family: Roboto-Regular;\n  font-size: 15px;\n  line-height: 1.71;\n  letter-spacing: 0.41px;\n  color: #8a8a8a;\n}\n  #login .input-label {\n  color: #101317;\n}\n  .login-background .egy-navbar {\n  background-color: #fff !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvZ2luLXBhZ2UuY29tcG9uZW50LnNjc3MiLCIuLlxcLi5cXC4uXFxhc3NldHNcXHNhc3NcXHN0eWxlLWNvbnN0YW50cy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdFO0VBQ0UsaUJBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7QUFGSjtBQUtFO0VBQ0UsWUFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtBQUhKO0FBS0k7RUFDRSxnQkFBQTtFQUNBLHlCQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EscUJBQUE7RUFDQSxnQkFBQTtBQUhOO0FBTUk7RUFDRSxlQUFBO0VBQ0EsY0N2Qlk7RUR3QlosbUJBQUE7QUFKTjtBQU1NO0VBQ0UsV0FBQTtFQUNBLHlCQUFBO0VBQ0EsWUFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7QUFKUjtBQVFJO0VBQ0UsMkJBQUE7QUFOTjtBQVNJO0VBQ0UsbUJBQUE7QUFQTjtBQVVJO0VBQ0UsMEJBQUE7RUFDQSxrQkFBQTtBQVJOO0FBVU07RUFDRSxtQkFBQTtBQVJSO0FBWUk7RUFDRSxlQUFBO0VBQ0EsY0FBQTtFQUNBLGlCQUFBO0FBVk47QUFhSTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtFQUNBLHVCQUFBO0VBQ0EsU0FBQTtFQUNBLDRCQUFBO0FBWE47QUFhTTtFQUNFLFNBQUE7QUFYUjtBQWNNO0VBQ0UsZUFBQTtFQUNBLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxzQkFBQTtFQUNBLGNDM0VVO0FEK0RsQjtBQWVNO0VBQ0UsZUFBQTtFQUNBLGlCQUFBO0VBQ0EsaUJBQUE7RUFDQSxtQkFBQTtFQUNBLGNDbEZLO0FEcUViO0FBZ0JNO0VBQ0UsMkJBQUE7RUFDQSxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxzQkFBQTtFQUNBLGNBQUE7QUFkUjtBQWtCSTtFQUNFLGNBQUE7QUFoQk47QUFxQkE7RUFDRSxpQ0FBQTtBQWxCRiIsImZpbGUiOiJsb2dpbi1wYWdlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCBcImFzc2V0cy9zYXNzL3N0eWxlLWNvbnN0YW50c1wiO1xyXG5cclxuOjpuZy1kZWVwIHtcclxuICAubG9naW4tYmFja2dyb3VuZCB7XHJcbiAgICBtaW4taGVpZ2h0OiAxMDB2aDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIH1cclxuXHJcbiAgI2xvZ2luIHtcclxuICAgIGZsZXgtZ3JvdzogMTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG5cclxuICAgIC5jYXJkIHtcclxuICAgICAgbWF4LXdpZHRoOiA0MDBweDtcclxuICAgICAgYm9yZGVyOiBzb2xpZCAxcHggI2Q3ZDdkNztcclxuICAgICAgYm9yZGVyLXJhZGl1czogMjBweDtcclxuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcclxuICAgICAgcGFkZGluZzogMjVweCA0MHB4O1xyXG4gICAgICBtYXJnaW46IDQ1cHggMCA0MHB4IDA7XHJcbiAgICAgIGJveC1zaGFkb3c6IG5vbmU7XHJcbiAgICB9XHJcblxyXG4gICAgLmNhcmQtdGl0bGUge1xyXG4gICAgICBmb250LXNpemU6IDI2cHg7XHJcbiAgICAgIGNvbG9yOiAkZGFyay1ibHVlLWNvbG9yO1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAyNXB4O1xyXG5cclxuICAgICAgJjo6YWZ0ZXIge1xyXG4gICAgICAgIGNvbnRlbnQ6IFwiXCI7XHJcbiAgICAgICAgYm9yZGVyOiAzcHggc29saWQgJGJsdWUtY29sb3I7XHJcbiAgICAgICAgd2lkdGg6IDEzMHB4O1xyXG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDJweDtcclxuICAgICAgICBtYXJnaW4tdG9wOiA4cHg7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICAubWF0LWZvcm0tZmllbGQge1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAwICFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcblxyXG4gICAgbGFiZWwge1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgfVxyXG5cclxuICAgIC5yYWRpdXMtYnRuIHtcclxuICAgICAgZm9udC1zaXplOiAxNnB4ICFpbXBvcnRhbnQ7XHJcbiAgICAgIHBhZGRpbmc6IDEwcHggMzBweDtcclxuXHJcbiAgICAgIC50ZXh0LWJ0biB7XHJcbiAgICAgICAgbGluZS1oZWlnaHQ6IG5vcm1hbDtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5mb3JnZXRwYXNzIHtcclxuICAgICAgZm9udC1zaXplOiAxNXB4O1xyXG4gICAgICBjb2xvcjogI2ZiNjIzOTtcclxuICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICB9XHJcblxyXG4gICAgLmRlc2NyaXB0aW9uIHtcclxuICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICAgIGdhcDogMjBweDtcclxuICAgICAgcGFkZGluZzogMjBweCAyMHB4IDIwcHggNzBweDtcclxuXHJcbiAgICAgIHAge1xyXG4gICAgICAgIG1hcmdpbjogMDtcclxuICAgICAgfVxyXG5cclxuICAgICAgLm1haW4ge1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMjJweDtcclxuICAgICAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgICAgICBsaW5lLWhlaWdodDogMS4zO1xyXG4gICAgICAgIGxldHRlci1zcGFjaW5nOiAwLjcycHg7XHJcbiAgICAgICAgY29sb3I6ICRkYXJrLWJsdWUtY29sb3I7XHJcbiAgICAgIH1cclxuXHJcbiAgICAgIC5zdWItMSB7XHJcbiAgICAgICAgZm9udC1zaXplOiAzNnB4O1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgICAgIGxpbmUtaGVpZ2h0OiAxLjM1O1xyXG4gICAgICAgIGxldHRlci1zcGFjaW5nOiAxcHg7XHJcbiAgICAgICAgY29sb3I6ICRibHVlLWNvbG9yO1xyXG4gICAgICB9XHJcblxyXG4gICAgICAuc3ViLTIge1xyXG4gICAgICAgIGZvbnQtZmFtaWx5OiBSb2JvdG8tUmVndWxhcjtcclxuICAgICAgICBmb250LXNpemU6IDE1cHg7XHJcbiAgICAgICAgbGluZS1oZWlnaHQ6IDEuNzE7XHJcbiAgICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuNDFweDtcclxuICAgICAgICBjb2xvcjogIzhhOGE4YTtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5pbnB1dC1sYWJlbCB7XHJcbiAgICAgIGNvbG9yOiAjMTAxMzE3O1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuOjpuZy1kZWVwIC5sb2dpbi1iYWNrZ3JvdW5kIC5lZ3ktbmF2YmFyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XHJcbn1cclxuIiwiJG1haW4tY29sb3I6ICNlODY4MjA7XHJcbiRtYWluLWxpZ2h0LWNvbG9yOiAjZmI2MjM5O1xyXG4kZXJyb3ItY29sb3I6ICNmNTUyNTI7XHJcbiRkYXJrLWJsdWUtY29sb3I6ICMxOTMxNDE7XHJcbiRibHVlLWNvbG9yOiAjNDM3YTlmO1xyXG4kZm9udEF3ZXNvbWU6IFwiRm9udCBBd2Vzb21lIDUgRnJlZVwiO1xyXG4kbWluLWNvbnRhaW5lci1oZWlnaHQ6IGNhbGMoMTAwdmggLSA3NXB4KTtcclxuJGlucHV0LXJhZGl1czogMTVweDtcclxuJHJlZC1jb2xvcjogI2QxMDMxYjtcclxuIl19 */"]
+  styles: [".login-background {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n}\n  #login {\n  flex-grow: 1;\n  display: flex;\n  align-items: center;\n}\n  #login .card {\n  max-width: 400px;\n  border: solid 1px #d7d7d7;\n  border-radius: 20px;\n  background-color: #fff;\n  padding: 25px 40px;\n  margin: 45px 0 40px 0;\n  box-shadow: none;\n}\n  #login .card-title {\n  font-size: 26px;\n  color: #193141;\n  margin-bottom: 25px;\n}\n  #login .card-title::after {\n  content: \"\";\n  border: 3px solid #437a9f;\n  width: 130px;\n  display: block;\n  border-radius: 2px;\n  margin-top: 8px;\n}\n  #login .mat-form-field {\n  margin-bottom: 0 !important;\n}\n  #login label {\n  margin-bottom: 10px;\n}\n  #login .radius-btn {\n  font-size: 16px !important;\n  padding: 10px 30px;\n}\n  #login .radius-btn .text-btn {\n  line-height: normal;\n}\n  #login .forgetpass {\n  font-size: 15px;\n  color: #fb6239;\n  font-weight: bold;\n}\n  #login .description {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 20px;\n  padding: 20px 20px 20px 70px;\n}\n  #login .description p {\n  margin: 0;\n}\n  #login .description .main {\n  font-size: 22px;\n  font-weight: bold;\n  line-height: 1.3;\n  letter-spacing: 0.72px;\n  color: #193141;\n}\n  #login .description .sub-1 {\n  font-size: 36px;\n  font-weight: bold;\n  line-height: 1.35;\n  letter-spacing: 1px;\n  color: #437a9f;\n}\n  #login .description .sub-2 {\n  font-family: Roboto-Regular;\n  font-size: 15px;\n  line-height: 1.71;\n  letter-spacing: 0.41px;\n  color: #8a8a8a;\n}\n  #login .input-label {\n  color: #101317;\n}\n  .login-background .egy-navbar {\n  background-color: #fff !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvZ2luLXBhZ2UuY29tcG9uZW50LnNjc3MiLCIuLlxcLi5cXC4uXFxhc3NldHNcXHNhc3NcXHN0eWxlLWNvbnN0YW50cy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdFO0VBQ0UsaUJBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7QUFGSjtBQUtFO0VBQ0UsWUFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtBQUhKO0FBS0k7RUFDRSxnQkFBQTtFQUNBLHlCQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EscUJBQUE7RUFDQSxnQkFBQTtBQUhOO0FBTUk7RUFDRSxlQUFBO0VBQ0EsY0N2Qlk7RUR3QlosbUJBQUE7QUFKTjtBQU1NO0VBQ0UsV0FBQTtFQUNBLHlCQUFBO0VBQ0EsWUFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7QUFKUjtBQVFJO0VBQ0UsMkJBQUE7QUFOTjtBQVNJO0VBQ0UsbUJBQUE7QUFQTjtBQVVJO0VBQ0UsMEJBQUE7RUFDQSxrQkFBQTtBQVJOO0FBVU07RUFDRSxtQkFBQTtBQVJSO0FBWUk7RUFDRSxlQUFBO0VBQ0EsY0FBQTtFQUNBLGlCQUFBO0FBVk47QUFhSTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtFQUNBLHVCQUFBO0VBQ0EsU0FBQTtFQUNBLDRCQUFBO0FBWE47QUFhTTtFQUNFLFNBQUE7QUFYUjtBQWNNO0VBQ0UsZUFBQTtFQUNBLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxzQkFBQTtFQUNBLGNDM0VVO0FEK0RsQjtBQWVNO0VBQ0UsZUFBQTtFQUNBLGlCQUFBO0VBQ0EsaUJBQUE7RUFDQSxtQkFBQTtFQUNBLGNDbEZLO0FEcUViO0FBZ0JNO0VBQ0UsMkJBQUE7RUFDQSxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxzQkFBQTtFQUNBLGNBQUE7QUFkUjtBQWtCSTtFQUNFLGNBQUE7QUFoQk47QUFxQkE7RUFDRSxpQ0FBQTtBQWxCRiIsImZpbGUiOiJsb2dpbi1wYWdlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCBcImFzc2V0cy9zYXNzL3N0eWxlLWNvbnN0YW50c1wiO1xyXG5cclxuOjpuZy1kZWVwIHtcclxuICAubG9naW4tYmFja2dyb3VuZCB7XHJcbiAgICBtaW4taGVpZ2h0OiAxMDB2aDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIH1cclxuXHJcbiAgI2xvZ2luIHtcclxuICAgIGZsZXgtZ3JvdzogMTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG5cclxuICAgIC5jYXJkIHtcclxuICAgICAgbWF4LXdpZHRoOiA0MDBweDtcclxuICAgICAgYm9yZGVyOiBzb2xpZCAxcHggI2Q3ZDdkNztcclxuICAgICAgYm9yZGVyLXJhZGl1czogMjBweDtcclxuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcclxuICAgICAgcGFkZGluZzogMjVweCA0MHB4O1xyXG4gICAgICBtYXJnaW46IDQ1cHggMCA0MHB4IDA7XHJcbiAgICAgIGJveC1zaGFkb3c6IG5vbmU7XHJcbiAgICB9XHJcblxyXG4gICAgLmNhcmQtdGl0bGUge1xyXG4gICAgICBmb250LXNpemU6IDI2cHg7XHJcbiAgICAgIGNvbG9yOiAkZGFyay1ibHVlLWNvbG9yO1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAyNXB4O1xyXG5cclxuICAgICAgJjo6YWZ0ZXIge1xyXG4gICAgICAgIGNvbnRlbnQ6IFwiXCI7XHJcbiAgICAgICAgYm9yZGVyOiAzcHggc29saWQgJGJsdWUtY29sb3I7XHJcbiAgICAgICAgd2lkdGg6IDEzMHB4O1xyXG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDJweDtcclxuICAgICAgICBtYXJnaW4tdG9wOiA4cHg7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICAubWF0LWZvcm0tZmllbGQge1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAwICFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcblxyXG4gICAgbGFiZWwge1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgfVxyXG5cclxuICAgIC5yYWRpdXMtYnRuIHtcclxuICAgICAgZm9udC1zaXplOiAxNnB4ICFpbXBvcnRhbnQ7XHJcbiAgICAgIHBhZGRpbmc6IDEwcHggMzBweDtcclxuXHJcbiAgICAgIC50ZXh0LWJ0biB7XHJcbiAgICAgICAgbGluZS1oZWlnaHQ6IG5vcm1hbDtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5mb3JnZXRwYXNzIHtcclxuICAgICAgZm9udC1zaXplOiAxNXB4O1xyXG4gICAgICBjb2xvcjogI2ZiNjIzOTtcclxuICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICB9XHJcblxyXG4gICAgLmRlc2NyaXB0aW9uIHtcclxuICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICAgIGdhcDogMjBweDtcclxuICAgICAgcGFkZGluZzogMjBweCAyMHB4IDIwcHggNzBweDtcclxuXHJcbiAgICAgIHAge1xyXG4gICAgICAgIG1hcmdpbjogMDtcclxuICAgICAgfVxyXG5cclxuICAgICAgLm1haW4ge1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMjJweDtcclxuICAgICAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgICAgICBsaW5lLWhlaWdodDogMS4zO1xyXG4gICAgICAgIGxldHRlci1zcGFjaW5nOiAwLjcycHg7XHJcbiAgICAgICAgY29sb3I6ICRkYXJrLWJsdWUtY29sb3I7XHJcbiAgICAgIH1cclxuXHJcbiAgICAgIC5zdWItMSB7XHJcbiAgICAgICAgZm9udC1zaXplOiAzNnB4O1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgICAgIGxpbmUtaGVpZ2h0OiAxLjM1O1xyXG4gICAgICAgIGxldHRlci1zcGFjaW5nOiAxcHg7XHJcbiAgICAgICAgY29sb3I6ICRibHVlLWNvbG9yO1xyXG4gICAgICB9XHJcblxyXG4gICAgICAuc3ViLTIge1xyXG4gICAgICAgIGZvbnQtZmFtaWx5OiBSb2JvdG8tUmVndWxhcjtcclxuICAgICAgICBmb250LXNpemU6IDE1cHg7XHJcbiAgICAgICAgbGluZS1oZWlnaHQ6IDEuNzE7XHJcbiAgICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuNDFweDtcclxuICAgICAgICBjb2xvcjogIzhhOGE4YTtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5pbnB1dC1sYWJlbCB7XHJcbiAgICAgIGNvbG9yOiAjMTAxMzE3O1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuOjpuZy1kZWVwIC5sb2dpbi1iYWNrZ3JvdW5kIC5lZ3ktbmF2YmFyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XHJcbn1cclxuIiwiJG1haW4tY29sb3I6ICNlODY4MjA7XHJcbiRtYWluLWxpZ2h0LWNvbG9yOiAjZmI2MjM5O1xyXG4kZXJyb3ItY29sb3I6ICNmNTUyNTI7XHJcbiRkYXJrLWJsdWUtY29sb3I6ICMxOTMxNDE7XHJcbiRibHVlLWNvbG9yOiAjNDM3YTlmO1xyXG4kZm9udEF3ZXNvbWU6IFwiRm9udCBBd2Vzb21lIDUgRnJlZVwiO1xyXG4kbWluLWNvbnRhaW5lci1oZWlnaHQ6IGNhbGMoMTAwdmggLSA3NXB4KTtcclxuJGlucHV0LXJhZGl1czogMTVweDtcclxuJHJlZC1jb2xvcjogI2QxMDMxYjtcclxuJGdyZWVuLWNvbG9yOiAjMjU4ZjZlO1xyXG4iXX0= */"]
 });
 
 /***/ }),
@@ -1438,8 +1438,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "NotFoundComponent": function() { return /* binding */ NotFoundComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
 /* harmony import */ var app_shared_data_app_assets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/data/app-assets */ 8843);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var ngx_lottie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-lottie */ 78530);
@@ -1457,8 +1457,8 @@ var _c0 = function _c0() {
   return ["/"];
 };
 
-var NotFoundComponent = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function NotFoundComponent() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, NotFoundComponent);
+var NotFoundComponent = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function NotFoundComponent() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, NotFoundComponent);
 
   this.jsonAssets = app_shared_data_app_assets__WEBPACK_IMPORTED_MODULE_2__.JsonAssets;
   this.options = {
@@ -1533,8 +1533,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RegisterComponent": function() { return /* binding */ RegisterComponent; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ 90587);
 /* harmony import */ var app_shared_validators_customeValid_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/validators/customeValid.validator */ 84330);
 /* harmony import */ var app_shared_services_local_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/shared/services/local-storage */ 6897);
@@ -1797,7 +1797,7 @@ function RegisterComponent_mat_hint_47_Template(rf, ctx) {
 
 var RegisterComponent = /*#__PURE__*/function () {
   function RegisterComponent(router, fb, toastr, authService, spinner) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, RegisterComponent);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, RegisterComponent);
 
     this.router = router;
     this.fb = fb;
@@ -1809,7 +1809,7 @@ var RegisterComponent = /*#__PURE__*/function () {
     this.errMsg = "";
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(RegisterComponent, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(RegisterComponent, [{
     key: "ngOnInit",
     value: function ngOnInit() {
       this.myForm = this.fb.group({
@@ -2022,8 +2022,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RegistrationRoutingModule": function() { return /* binding */ RegistrationRoutingModule; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
 /* harmony import */ var _educational_details_educational_details_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./educational-details/educational-details.component */ 16912);
 /* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./register/register.component */ 67225);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/router */ 52816);
@@ -2081,8 +2081,8 @@ var routes = [{
     canDeactivate: [app_shared_services_auth_Guards_auth_pending_changes_guard__WEBPACK_IMPORTED_MODULE_9__.PendingChangesGuard]
   }]
 }];
-var RegistrationRoutingModule = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function RegistrationRoutingModule() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, RegistrationRoutingModule);
+var RegistrationRoutingModule = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function RegistrationRoutingModule() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, RegistrationRoutingModule);
 });
 
 RegistrationRoutingModule.ɵfac = function RegistrationRoutingModule_Factory(t) {
@@ -2115,8 +2115,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RegistrationModule": function() { return /* binding */ RegistrationModule; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ngx-translate/core */ 89461);
 /* harmony import */ var _shared_material_material_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../shared/material/material.module */ 793);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common */ 36362);
@@ -2153,8 +2153,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var RegistrationModule = /*#__PURE__*/(0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function RegistrationModule() {
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, RegistrationModule);
+var RegistrationModule = /*#__PURE__*/(0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function RegistrationModule() {
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_1__["default"])(this, RegistrationModule);
 });
 
 RegistrationModule.ɵfac = function RegistrationModule_Factory(t) {
@@ -2187,8 +2187,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "NotUserGuard": function() { return /* binding */ NotUserGuard; }
 /* harmony export */ });
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
-/* harmony import */ var F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ 78069);
+/* harmony import */ var F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ 48047);
 /* harmony import */ var app_shared_services_local_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/services/local-storage */ 6897);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 52816);
@@ -2201,13 +2201,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var NotUserGuard = /*#__PURE__*/function () {
   function NotUserGuard(route, authservice) {
-    (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, NotUserGuard);
+    (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, NotUserGuard);
 
     this.route = route;
     this.authservice = authservice;
   }
 
-  (0,F_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(NotUserGuard, [{
+  (0,F_Mashura_Front_End_new_egypt_training_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_1__["default"])(NotUserGuard, [{
     key: "canActivate",
     value: function canActivate(route, state) {
       if (!app_shared_services_local_storage__WEBPACK_IMPORTED_MODULE_2__.Storage.isUserLoggedIn()) {

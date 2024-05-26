@@ -185,3 +185,86 @@ body .sidebar-content .ps__rail-y {
   border-right: 1px solid #dfdfdf;
   border-left: none !important;
 }
+
+.learning-request-index-img {
+  margin: 0 0 0 12px;
+}
+
+.diploma-card-admin .course-card-actions button:nth-child(2) {
+  border-right: 1px solid #e8e8e8 !important;
+  border-left: none !important;
+}
+
+.mat-slide-toggle .mat-slide-toggle-thumb-container {
+  left: -6px !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container {
+  left: -3px !important;
+}
+
+.mat-form-field-outline-start {
+  border-radius: 0 15px 5px 0 !important;
+}
+
+.mat-form-field-outline-end {
+  border-radius: 15px 0 0 15px !important;
+}
+
+.basic-jobs {
+  padding: 0 0 0 40px !important;
+  border-left: 1px solid #dbdbdb;
+  border-right: none !important;
+}
+.recommended-jobs {
+  padding: 0 40px 0 0 !important;
+}
+@media (max-width: 768px) {
+  .basic-jobs {
+    padding: 0 !important;
+  }
+  .recommended-jobs {
+    padding: 0 !important;
+  }
+}
+
+.td-checkbox {
+  margin-left: 0;
+  margin-right: 34px;
+}
+
+.admin-index-card.add-question .number-btns {
+  right: auto !important;
+  left: 10px;
+}
+
+.admin-index-card.add-question .input-with-radio .fa-check {
+  right: -5px !important;
+}
+
+.admin-index-card.questions tr.ques-view td:first-child {
+  border-radius: 0 5px 5px 0 !important;
+}
+
+.admin-index-card.questions tr.ques-view td:last-child {
+  border-radius: 5px 0 0 5px !important;
+}
+
+.admin-index-card.questions tr.ques-view .ques-answers span:first-child {
+  border-radius: 1px 5px 5px 1px !important;
+}
+
+.admin-index-card.questions tr.ques-view .ques-answers span:last-child {
+  border-radius: 5px 1px 1px 5px !important;
+}
+
+.admin-index-card.questions tr.ques-view .ques-answers span.onlyOne {
+  border-radius: 5px !important;
+}
+
+@media (max-width: 455px) {
+  .admin-index-card.add-question .editor-footer {
+    right: 30px !important;
+    left: auto !important;
+  }
+}

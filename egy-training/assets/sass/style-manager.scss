@@ -53,6 +53,8 @@
   background-color: $main-color;
   color: #fff;
   border: none;
+  font-family: Roboto-Regular, sans-serif;
+  //font-weight: 600;
 }
 
 .orange-outline-btn {
@@ -62,17 +64,17 @@
 }
 
 .orange-btn:disabled,
-.bark-blue-btn:disabled {
+.dark-blue-btn:disabled {
   opacity: 0.6;
 }
 
-.bark-blue-btn {
+.dark-blue-btn {
   color: #fff;
   background-color: $dark-blue-color;
   border: none;
 }
 
-.bark-blue-outline-btn {
+.dark-blue-outline-btn {
   background-color: #fff;
   border: solid 2px $dark-blue-color;
   color: $dark-blue-color;
@@ -86,4 +88,23 @@
 
 .bg-darkBlue {
   background-color: $dark-blue-color;
+}
+
+.orange-btn {
+  background-color: $main-color;
+  color: #fff;
+  border: none;
+  font-size: 14.5px;
+}
+
+.approve-btn {
+  background-color: $green-color;
+  color: #fff;
+  border: none;
+}
+
+.reject-btn {
+  background-color: $red-color;
+  color: #fff;
+  border: none;
 }

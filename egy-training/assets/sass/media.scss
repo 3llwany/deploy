@@ -11,9 +11,9 @@
 
 // Medium devices (tablets, 768px and up)
 @media (max-width: 991px) {
-  .home-categories .categories-cards {
-    gap: 30px 12.5% !important;
-  }
+  // .home-categories .categories-cards {
+  //   gap: 30px 12.5% !important;
+  // }
 
   .home-header .first-row-info {
     padding: 0 60px !important;
@@ -31,9 +31,9 @@
     }
   }
 
-  .courses .course-cards {
-    gap: 30px 12.5% !important;
-  }
+  // .courses .course-cards {
+  //   gap: 30px 12.5% !important;
+  // }
 
   .gifts-background {
     .history-img {
@@ -50,14 +50,20 @@
       padding: 0 !important;
     }
   }
+
+  .add-course-card.mat-card {
+    .mat-card-actions {
+      margin-top: 0 !important;
+    }
+  }
 }
 
 // Small devices (landscape phones,tablets) 576px to 991px)
 //#region ############ START: phones,tablets ############
 @media (max-width: 768px) {
-  .home-categories .categories-cards {
-    gap: 30px 16.6% !important;
-  }
+  // .home-categories .categories-cards {
+  //   gap: 30px 16.6% !important;
+  // }
 
   .base-home-container {
     margin-right: 15px !important;
@@ -78,9 +84,9 @@
     }
   }
 
-  .courses .course-cards {
-    gap: 30px 16.6% !important;
-  }
+  // .courses .course-cards {
+  //   gap: 30px 16.6% !important;
+  // }
 
   .notification-background {
     .notification-icon {
@@ -106,6 +112,15 @@
 
   .gifts-background .gift-history-cards .card-content {
     flex-direction: column;
+  }
+
+  .basic-jobs {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .recommended-jobs {
+    padding: 0 !important;
   }
 }
 

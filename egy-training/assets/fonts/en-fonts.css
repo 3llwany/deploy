@@ -24,7 +24,8 @@
   .card .card-title,
   .content-header, .page-title,
   .navlogo,
-  .mat-card.course-card .description .title p {
+  .mat-card.course-card .description .title p,
+  .dashed-btn p {
     font-family: "Roboto-Bold", serif !important;
   }
 
