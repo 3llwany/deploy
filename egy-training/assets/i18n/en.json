@@ -589,7 +589,9 @@
     "saveExam": "Save Exam",
     "points": "points",
     "saveExam?": "Save exam ?",
-    "youCanReturnAnyTimeAndEditOrAddQuestions": "You can return any time and edit or add questions"
+    "youCanReturnAnyTimeAndEditOrAddQuestions": "You can return any time and edit or add questions",
+    "selectedQuestion": "selected question",
+    "canNotdeleteThisQuestion": "This question can't be deleted"
   },
   "categories": {
     "categories": "Categories",
@@ -671,8 +673,8 @@
     "redeemThisGift": "Redeem this gift ?",
     "congratulations": "Congratulations !",
     "backToGiftGallery": "Back to gift gallery",
-    "youWillGet": "You will get",
-    "youGot": "You got",
+    "youWillGet": "You will get ",
+    "youGot": "You got ",
     "for": "for",
     "redemptionHistory": "Redemption history",
     "AddNewGiftCategory": "Add New Gift Category",
@@ -908,6 +910,7 @@
   "userInformation": "User information",
   "completedCourses": "Completed courses",
   "downloadCertificate": "Download certificate",
+  "uploadCertificate": "Upload certificate",
   "userProfile": "User profile",
   "phone": "Phone",
   "phoneNumber": "Phone number",
@@ -965,10 +968,16 @@
   "addNewQuestion": "Add new question",
   "uploadFile": "Upload file",
   "AddGeneralInfCourse": "Add general information about the course",
-  "getFromHr": "copy from HR",
-  "sendToHr": "copy to HR",
+  "getFromHr": "Copy from HR",
+  "sendToHr": "Copy to HR",
   "copyHrSuccess": "Date restored from hr successfully",
   "sendHrSuccess": "Date Send to hr successfully",
   "examIntegration": "Exam integration",
-  "Implementations": "Implementations"
+  "Implementations": "Implementations",
+  "mustSelectCoverPhoto": "Must Select Cover Photo",
+  "noDataFind": "No data to display",
+  "uploaded": "Uploaded",
+  "uploadedBefore": "Certificate for this request was uploaded before",
+  "noCertification": "There is no certification",
+  "actions": "Actions"
 }

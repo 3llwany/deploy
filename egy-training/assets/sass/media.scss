@@ -122,14 +122,50 @@
   .recommended-jobs {
     padding: 0 !important;
   }
+
+  .add-diploma {
+    .mat-card-actions {
+      margin-top: 20px !important;
+      margin-bottom: 65px !important;
+    }
+  }
+
+  .add-course-card {
+    .mat-card-actions {
+      margin-bottom: 28px !important;
+    }
+  }
+
+  .add-structure {
+    .mat-card-actions {
+      margin-bottom: 20px !important;
+    }
+  }
+
+  .add-lecture {
+    .mat-card-actions {
+      margin-bottom: 10px !important;
+    }
+  }
+
+  .add-questions {
+    overflow: auto;
+  }
 }
 
 //#endregion
-
 
 @media (min-width: 1200px) {
   .col-xl-5 {
     flex: 0 0 20%;
     max-width: 20%;
+  }
+}
+
+// all screens less than 1200px
+@media (max-width: 1200px) {
+  .admin-nav.egy-navbar {
+    margin-right: 28px !important;
+    margin-left: 28px !important;
   }
 }

@@ -573,7 +573,9 @@
     "saveExam": "حفظ الامتحان",
     "points": "نقاط",
     "saveExam?": "حفظ الامتحان ؟",
-    "youCanReturnAnyTimeAndEditOrAddQuestions": "يمكنك العودة في أي وقت و تعديل او اضافة الأسئلة"
+    "youCanReturnAnyTimeAndEditOrAddQuestions": "يمكنك العودة في أي وقت و تعديل او اضافة الأسئلة",
+    "selectedQuestion": "السؤال الحالي",
+    "canNotdeleteThisQuestion": "لا يمكن حذف هذا السؤال"
   },
   "categories": {
     "categories": "التصنيفات",
@@ -658,8 +660,8 @@
     "redeemThisGift": "شراء هذه الهدية؟",
     "congratulations": "تهانينا !",
     "backToGiftGallery": "الرجوع إلى معرض الهدايا",
-    "youWillGet": "سوف تحصل على",
-    "youGot": "لقد حصلت علي",
+    "youWillGet": "سوف تحصل على ",
+    "youGot": "لقد حصلت علي ",
     "for": "مقابل",
     "redemptionHistory": "تاريخ الشراء",
     "AddNewGiftCategory": "إضافة نوع هدية جديدة",
@@ -900,6 +902,7 @@
   "userInformation": "معلومات المستخدم",
   "completedCourses": "الكورسات المكتملة",
   "downloadCertificate": "تحميل الشهادة",
+  "uploadCertificate": "رفع الشهادة",
   "userProfile": "الملف الشخصي للمستخدم",
   "phone": "الموبايل",
   "dob": "تاريخ الميلاد",
@@ -956,10 +959,16 @@
   "addNewQuestion": "إضافة سؤال جديد",
   "uploadFile": "رفع ملف",
   "AddGeneralInfCourse": "إضافة البيانات الاساسية للكورس",
-  "getFromHr": "نسخ من hr",
-  "sendToHr": "نسخ الي hr",
+  "getFromHr": "نسخ من HR",
+  "sendToHr": "نسخ الي HR",
   "copyHrSuccess": "تم اخذ نسخة من hr بنجاح",
   "sendHrSuccess": "تم إرسال نسخة الي hr بنجاح",
   "examIntegration": "examIntegration",
-  "Implementations": "Implementations"
+  "Implementations": "Implementations",
+  "mustSelectCoverPhoto": "يجب اختيار صورة البروفايل",
+  "noDataFind": "لا يوجد بيانات لعرضها",
+  "uploaded": "تم الرفع",
+  "uploadedBefore": "تم تحميل شهادة لهذا الطلب من قبل",
+  "noCertification": "لا يوجد شهادة",
+  "actions": "الاجراءات"
 }

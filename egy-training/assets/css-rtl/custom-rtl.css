@@ -167,9 +167,15 @@ body .sidebar-content .ps__rail-y {
   margin-left: 0 !important;
 }
 
-.admin-nav {
+.admin-nav.egy-navbar {
   margin-left: 28px !important;
   margin-right: 280px !important;
+}
+@media (max-width: 1200px) {
+  .admin-nav.egy-navbar {
+    margin-right: 28px !important;
+    margin-left: 28px !important;
+  }
 }
 
 .admin-index-card.mat-card table td.mat-column-actions a:not(:last-child) i {
@@ -262,9 +268,27 @@ body .sidebar-content .ps__rail-y {
   border-radius: 5px !important;
 }
 
-@media (max-width: 455px) {
-  .admin-index-card.add-question .editor-footer {
-    right: 30px !important;
-    left: auto !important;
-  }
+/* @media (max-width: 455px) { */
+.admin-index-card.add-question .editor-footer {
+  right: auto !important;
+  left: 10px !important;
+}
+/* } */
+
+.delete-dialog::after {
+  left: auto;
+  right: 0;
+}
+
+.admin-index-card.questions .card-container,
+.admin-index-card.add-question .card-container {
+  padding-right: 20px;
+  margin-right: -20px;
+  padding-left: 36px;
+  margin-left: -36px;
+}
+
+.admin-index-card.add-question .editor-container .editor-delete {
+  right: auto !important;
+  left: 10px !important;
 }
