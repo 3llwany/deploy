@@ -236,7 +236,7 @@
     "ClickBuyToBuyExam": "Click Buy To Buy Exam",
     "ConfirmBuyExam": "Confirm Buy Exam",
     "َQuestionNumber": "Question Number",
-    "questionsCount": "َquestions Count",
+    "questionsCount": "Question Count",
     "QuestionHeader": "Question Header",
     "َQuestionContent": "Question Content",
     "QuestionAnswer": "Question Answer",
@@ -979,5 +979,16 @@
   "uploaded": "Uploaded",
   "uploadedBefore": "Certificate for this request was uploaded before",
   "noCertification": "There is no certification",
-  "actions": "Actions"
+  "actions": "Actions",
+  "survey": "Survey",
+  "surveys": "Surveys",
+  "addSurvey": "add survey",
+  "editSurvey": "Edit survey",
+  "newSurvey": " new survey",
+  "surveyPublished": "Survey Published",
+  "surveyUnpublished": "Survey Unpublished",
+  "unpublishSurvey": "Unpublish Survey",
+  "publishSurvey": "Publish Survey",
+  "surveySubmitted": "Survey Submitted",
+  "surveyIntegration": "Survey Integration"
 }

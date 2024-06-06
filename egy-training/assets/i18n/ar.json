@@ -970,5 +970,16 @@
   "uploaded": "تم الرفع",
   "uploadedBefore": "تم تحميل شهادة لهذا الطلب من قبل",
   "noCertification": "لا يوجد شهادة",
-  "actions": "الاجراءات"
+  "actions": "الاجراءات",
+  "survey": "استطلاع الرأي",
+  "surveys": "استطلاعات الرأي",
+  "addSurvey": "إضافة استطلاع رأي",
+  "editSurvey": "تعديل استطلاع الرأي",
+  "newSurvey": "استطلاع رأي جديد",
+  "surveyPublished": "تم نشر استطلاع الرأي",
+  "surveyUnpublished": "تم إلغاء نشر استطلاع الرأي",
+  "unpublishSurvey": "الغاء النشر استطلاء الرأي",
+  "publishSurvey": "نشر استطلاء الرأي",
+  "surveySubmitted": "تم تقديم الاستطلاع",
+  "surveyIntegration": "Survey Integration"
 }
