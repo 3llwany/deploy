@@ -147,7 +147,8 @@
     "cancel": "إلغاء",
     "emptysubcategories": "من فضلك اضف قسم فرعى ",
     "emptycategories": "لا توجد اقسام ",
-    "saveDiploma": "حفظ الدبلومة"
+    "saveDiploma": "حفظ الدبلومة",
+    "discard": "تجاهل"
   },
   "Material": {
     "FilesBooksEmpty": "الكتب & الملفات فارغة",
@@ -168,6 +169,7 @@
     "LeaderBoard": "المتفوقين",
     "GeneralEvaluation": "التقيم العام",
     "Videos": "الفيديوهات",
+    "videoName": "اسم الفيديو",
     "Exams": "الإمتحانات",
     "SolvedExams": "إمتحانات تم حلها",
     "Points": "النقاط",
@@ -428,7 +430,7 @@
     "SubjectStructure": "هيكل الكورس",
     "CreateCenterBranch": "إضافة فرع",
     "UpdateCenterBranch": "تعديل فرع",
-    "ConfirmViewPercentage": "تأكيد مشاهدة بعد % (اختياري)",
+    "ConfirmViewPercentage": "تأكيد مشاهدة بعد %",
     "MustHasColCodes": "الملف يجب ان يحتوي على عمود اسمه",
     "SendMessageTo": "إرسال الرسالة إلى: ",
     "MustChoosevalue": "يجب اختيار قيمة",
@@ -981,5 +983,13 @@
   "unpublishSurvey": "الغاء النشر استطلاء الرأي",
   "publishSurvey": "نشر استطلاء الرأي",
   "surveySubmitted": "تم تقديم الاستطلاع",
-  "surveyIntegration": "Survey Integration"
+  "surveyIntegration": "Survey Integration",
+  "advancedOptions": "خيارات متقدمة",
+  "discardChanges": "تجاهل التغييرات",
+  "backToCourseWithoutSavingChanges": "العودة إلى الكورس بدون حفظ التغييرات ؟",
+  "backToCourse": "العودة إلى الكورس",
+  "stay": "البفاء",
+  "exit": "خروج",
+  "unsavedChanges": "عدم حفظ التغييرات",
+  "unsavedChangesMsg": "لم تنتهِ من الإنشاء. هل تريد المغادرة دون الانتهاء؟"
 }

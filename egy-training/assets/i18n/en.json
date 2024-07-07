@@ -149,7 +149,8 @@
     "UploadFromCo": "Upload From Computer",
     "emptysubcategories": "add at least one sub category",
     "emptycategories": "No Categories",
-    "saveDiploma": "Save Diploma"
+    "saveDiploma": "Save Diploma",
+    "discard": "Discard"
   },
   "Material": {
     "FilesBooksEmpty": "Files & Books is empty",
@@ -170,6 +171,7 @@
     "LeaderBoard": "Leader Board",
     "GeneralEvaluation": "General Evaluation",
     "Videos": "Videos",
+    "videoName": "Video name",
     "Exams": "Exams",
     "SolvedExams": "Solved Exams",
     "Points": "Points",
@@ -428,7 +430,7 @@
     "StudentQuestionSettings": "Student Question Settings",
     "StudentTemplatesSettings": "Student Templates Settings",
     "CreateFunction": "Create Function",
-    "ConfirmViewPercentage": "Confirm watching after % (Optional)",
+    "ConfirmViewPercentage": "Confirm watching after %",
     "CreateCenterBranch": "Create Central Branch",
     "UpdateCenterBranch": "Update Central Branch",
     "UserBranchesAndRoles": "User Branches And Roles",
@@ -753,6 +755,7 @@
     "AddExam": "Add Exam",
     "AddSurvey": "Add Survey",
     "AddLecture": "Add Lecture",
+    "saveLecture": "Save Lecture",
     "UpdateLecture": "Update Lecture",
     "Attachment": "Attachment",
     "AddAttachment": "Add Attachment",
@@ -990,5 +993,13 @@
   "unpublishSurvey": "Unpublish Survey",
   "publishSurvey": "Publish Survey",
   "surveySubmitted": "Survey Submitted",
-  "surveyIntegration": "Survey Integration"
+  "surveyIntegration": "Survey Integration",
+  "advancedOptions": "Advanced options",
+  "discardChanges": "Discard changes",
+  "backToCourseWithoutSavingChanges": "Back to course without saving changes ?",
+  "backToCourse": "Back to course",
+  "stay": "Stay",
+  "exit": "Exit",
+  "unsavedChanges": "Unsaved changes",
+  "unsavedChangesMsg": "You haven't finished creating. Do you want to leave without finishing?"
 }
