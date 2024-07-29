@@ -1,0 +1,80 @@
+@font-face {
+  font-family: GraphikArabicBlack;
+  src: url(../fonts/graphikArabic/GraphikArabic-Black.ttf);
+}
+
+@font-face {
+  font-family: GraphikArabicBold;
+  src: url(../fonts/graphikArabic/GraphikArabic-Bold.ttf);
+}
+
+@font-face {
+  font-family: GraphikArabicExtralight;
+  src: url(../fonts/graphikArabic/GraphikArabic-Extralight.ttf);
+}
+
+@font-face {
+  font-family: GraphikArabicLight;
+  src: url(../fonts/graphikArabic/GraphikArabic-Light.ttf);
+}
+
+@font-face {
+  font-family: GraphikArabicMedium;
+  src: url(../fonts/graphikArabic/GraphikArabic-Medium.ttf);
+}
+
+@font-face {
+  font-family: GraphikArabicRegular;
+  src: url(../fonts/graphikArabic/GraphikArabic-Regular.ttf);
+}
+
+@font-face {
+  font-family: GraphikArabicSemibold;
+  src: url(../fonts/graphikArabic/GraphikArabic-Semibold.ttf);
+}
+
+@font-face {
+  font-family: GraphikArabicSuper;
+  src: url(../fonts/graphikArabic/GraphikArabic-Super.ttf);
+}
+
+@font-face {
+  font-family: GraphikArabicThin;
+  src: url(../fonts/graphikArabic/GraphikArabic-Thin.ttf);
+}
+
+.graphikArabic-Black {
+  font-family: GraphikArabicBlack, serif !important;
+}
+
+.graphikArabic-Bold {
+  font-family: GraphikArabicBold, serif !important;
+}
+
+.graphikArabic-Light {
+  font-family: GraphikArabicLight, serif !important;
+}
+
+.graphikArabic-Extralight {
+  font-family: GraphikArabicExtralight, serif !important;
+}
+
+.graphikArabic-Medium {
+  font-family: GraphikArabicMedium, serif !important;
+}
+
+.graphikArabic-Regular {
+  font-family: GraphikArabicRegular, serif !important;
+}
+
+.graphikArabic-Semibold {
+  font-family: GraphikArabicSemibold, serif !important;
+}
+
+.graphikArabic-Super {
+  font-family: GraphikArabicSuper, serif !important;
+}
+
+.graphikArabic-Thin {
+  font-family: GraphikArabicThin, serif !important;
+}

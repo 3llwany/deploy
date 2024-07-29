@@ -1,0 +1,163 @@
+// Small devices (landscape phones,tablets) 576px to 991px)
+
+//#region ############ START: phones,tablets ############
+@media (min-width: 320px) and (max-width: 991px) {
+  .about-information {
+    padding: 0 50px !important;
+  }
+
+  .responsive-website {
+    padding: 0 55px !important;
+  }
+
+  .horizontal-layout .student-navbar {
+    height: 75px !important;
+  }
+
+  .home-numbers {
+    flex-direction: column !important;
+    gap: 15px;
+
+    .item-container:not(:last-child):after {
+      display: none;
+    }
+  }
+
+  .bannermain {
+    padding: 30px !important;
+
+    .banner-img {
+      padding-top: 20px;
+      margin-top: 0 !important;
+    }
+
+    .my-teachers {
+      margin-top: 20px !important;
+    }
+  }
+
+  .stages,
+  .our-services,
+  .mozakrety-app {
+    padding: 0 30px !important;
+  }
+
+  .about-information {
+    padding: 0 30px !important;
+
+    .about-img-container {
+      align-items: center !important;
+
+      .box {
+        margin-top: 70px;
+      }
+    }
+  }
+
+  .responsive-website {
+    padding: 0 30px !important;
+
+    .about-img-container {
+      align-items: center !important;
+
+      .box {
+        margin-bottom: 50px;
+        min-height: 300px;
+      }
+    }
+  }
+
+  .mozakrety-app .imgs {
+    align-items: center !important;
+
+    div {
+      margin: 80px -25px 0 -25px !important;
+    }
+  }
+
+
+  .nav-item.lang {
+    margin: 15px 0 0 0 !important;
+  }
+
+  .navlogo {
+    font-size: 20px !important;
+  }
+
+  .logo-img {
+    width: 25px;
+  }
+
+  .navbar .navbar-brand {
+    margin: 0 10px;
+  }
+
+  .student-notification {
+    .dropdown-item {
+      padding: 12px;
+    }
+  }
+
+  .side {
+    margin: auto;
+    width: auto !important;
+  }
+
+  .vertical-overlay-menu.menu-open .main-menu {
+    z-index: 999 !important;
+  }
+
+  .nav-user-data {
+    img.avatar {
+      width: 30px;
+      height: 30px;
+      margin-top: 10px;
+    }
+  }
+
+  .mtmins-63 {
+    margin-top: 0 !important;
+  }
+
+  .checkout-card{
+    padding: 16px !important;
+  }
+
+  //end
+}
+
+//#endregion
+
+
+// Large devices (desktops, 992px and up)
+//#region ############ START: desktops 992px to 1999px ############
+@media (min-width: 992px) and (max-width: 1999px) {
+
+}
+
+//#endregion
+
+
+// all screens more than 1200px
+@media (min-width: 1200px) {
+  .col-xl-5 {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+  }
+
+  .bannermain {
+    .text {
+      padding-right: 50px !important;
+    }
+
+    .banner-img {
+      margin-left: 50px !important;
+    }
+  }
+
+
+  .side {
+    width: 300px !important;
+  }
+}
+
