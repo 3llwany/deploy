@@ -1,10 +1,37 @@
+@media (max-width: 320px) {
+  .w-md-20 {
+    width: 100% !important;
+  }
+}
+
 // Small devices (landscape phones,tablets) 576px to 991px)
 
-//#region ############ START: phones,tablets ############
+//#region ############ START: small only ############
+@media (min-width: 320px) and (max-width: 768px) {
+  .add-candidate-container {
+    .borderright {
+      border-right: none !important;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .borderleft {
+      border-left: none !important;
+      border-bottom: 1px solid #eaeaea;
+    }
+  } 
+  
+  .w-lg-20 {
+    width: 100% !important;
+  }
+}
+//#endregion
+
+//#region ############ START: phones,tablets small & medium ############
 @media (min-width: 320px) and (max-width: 991px) {
   td.mat-cell,
   th.mat-header-cell,
-  .table-container td.mat-cell, .table-container th.mat-header-cell {
+  .table-container td.mat-cell,
+  .table-container th.mat-header-cell {
     padding: 10px !important;
     font-size: 10px !important;
   }
@@ -20,7 +47,8 @@
   .p-paginator .p-paginator-first,
   .p-paginator .p-paginator-prev,
   .p-paginator .p-paginator-next,
-  .p-paginator .p-paginator-last, .p-paginator .p-paginator-pages .p-paginator-page {
+  .p-paginator .p-paginator-last,
+  .p-paginator .p-paginator-pages .p-paginator-page {
     min-width: 2rem !important;
     height: 2rem !important;
     margin-bottom: 6px;
@@ -122,7 +150,8 @@
     padding: 5px !important;
   }
 
-  .card-view {
+  .card-view,
+  .add-candidate-container {
     .cardSectionTitle {
       border-bottom: 1px solid #ddd !important;
       padding: 5px 2px 3px !important;
@@ -212,18 +241,20 @@
   }
 
   .w-md-20 {
-    width: 25% !important;
+    width: 50% !important;
   }
 
   .card.card-vacations-custom {
     margin-bottom: 20px !important;
   }
 
-  .add-employee-container {
+  .fixed-header-tabs {
     .view-tabs-group {
       padding: 0 !important;
     }
+  }
 
+  .add-employee-container {
     .emp-header-card {
       padding: 0 10px !important;
 
@@ -237,14 +268,15 @@
     margin: 10px 10px 20px;
   }
 
-  .global-fun-btn, button, .btn {
+  .global-fun-btn,
+  button,
+  .btn {
     font-size: 10px;
 
     i {
-      font-size: 10px !important
+      font-size: 10px !important;
     }
   }
-
 
   .index-card .mat-card-title {
     display: inline-block;
@@ -260,13 +292,21 @@
     font-size: 10px;
   }
 
-  .title-no-margin #back_btn, .title-no-margin #add_new_btn {
+  .title-no-margin #back_btn,
+  .title-no-margin #add_new_btn,
+  .title-no-margin app-button button {
+    margin-top: 5px !important;
+  }
+
+  .title-no-margin .edit-all {
     margin-top: 5px !important;
   }
 
   .mat-card-title.fixed-title {
     padding: 5px 10px;
     border-radius: 0 0 5px 5px;
+    display: block;
+    // margin: 0 -15px !important;
   }
 
   .percentage {
@@ -280,22 +320,81 @@
   .toast-delete {
     width: 20rem !important;
   }
+
+  #close_dialog_btn,
+  #reset_form_btn,
+  #submit_btn,
+  #discard_btn {
+    line-height: 35px !important;
+  }
+
+  #back_btn,
+  #add_new_btn,
+  app-button button,
+  .edit-all {
+    line-height: 30px !important;
+  }
+
+  .big-global-btn {
+    padding: 5px 11px !important;
+  }
+
+  .steps-footer,
+  .fixed-actions {
+    justify-content: center !important;
+  }
+
+  .setup-dialog .sub-actions {
+    width: 100%;
+  }
+
+  .setup-dialog .mat-dialog-container {
+    padding: 25px;
+  }
+
+  .calendar-emp-container {
+    .calendar-container .fc-header-toolbar.fc-toolbar {
+      width: 50% !important;
+    }
+
+    .employees-container .dropdown {
+      margin-bottom: 2px;
+    }
+  }
+
+  .job-description-rep th {
+    text-wrap: wrap !important;
+  }
   //end
 }
 
 //#endregion
 
 // Medium devices (tablets, 768px and up)
-//@media (min-width: 768px) and (max-width: 991px) {
-//
-//
-//}
+@media (min-width: 768px) and (max-width: 991px) {
+  .calendar-emp-container {
+    .calendar-container .fc-header-toolbar.fc-toolbar {
+      width: 33.3333333333% !important;
+    }
+
+    .employees-container .dropdown {
+      margin-bottom: 2px;
+    }
+  }
+
+  .w-md-20 {
+    width: 25% !important;
+  }
+
+  .w-lg-20 {
+    width: 50% !important;
+  }
+}
 
 // Large devices (desktops, 992px and up)
 //#region ############ START: desktops 992px to 1999px ############
 @media (min-width: 992px) and (max-width: 1999px) {
   .card.card-vacations-custom {
-
     strong {
       font-size: 20px;
     }
@@ -308,10 +407,20 @@
       font-size: 14px;
     }
   }
+
+  .view-data-row-container {
+    margin: 0 -13px;
+  }
 }
 
 //#endregion
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .w-lg-20 {
+    width: 33.33% !important;
+  }
 }

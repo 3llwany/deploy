@@ -47,3 +47,40 @@
   font-family: interBlack;
   src: url(../fonts/Inter/static/Inter-Black.ttf);
 }
+
+
+.interExtraLight {
+  font-family: "interExtraLight", serif !important;
+}
+
+.interLight {
+  font-family: "interLight", serif !important;
+}
+
+.interRegular {
+  font-family: "interRegular", serif !important;
+}
+
+.interMedium {
+  font-family: "interMedium", serif !important;
+}
+
+.interSemiBold {
+  font-family: "interSemiBold", serif !important;
+}
+
+.interBold {
+  font-family: "interBold", serif !important;
+}
+
+.interExtraBold {
+  font-family: "interExtraBold", serif !important;
+}
+
+.interThin {
+  font-family: "interThin", serif !important;
+}
+
+.interBlack {
+  font-family: "interBlack", serif !important;
+}

@@ -2,8 +2,6 @@ p,
 div,
 section,
 a,
-li,
-ul,
 button,
 .btn,
 .mat-raised-button {
@@ -22,7 +20,14 @@ label,
 .mat-card-title,
 .card .card-title,
 .content-header, .page-title,
-.table-container td.mat-cell, .table-container td.mat-cell > span, th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+li,
+ul,
+.table-container td.mat-cell,
+.table-container td.mat-cell > span,
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell,
+.mat-chip, .mat-expansion-panel-header-title {
   /*font-family: "Axi-bold" !important;*/
   font-family: "interMedium", serif !important;
 }
