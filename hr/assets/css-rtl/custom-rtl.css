@@ -532,3 +532,20 @@ p-multiselect.p-multiselect-clearable .p-multiselect-clear-icon {
   border-top-left-radius: 0.35rem;
   border-bottom-left-radius: 0.35rem;
 }
+
+.custom-editor-container
+  .p-editor-container
+  .p-editor-toolbar.ql-toolbar.ql-snow
+  .ql-formats:not(:last-child) {
+  border-right: none !important;
+  border-left: 1px solid #e2e8f0;
+}
+
+.word-count-div {
+  left: auto !important;
+  right: 1px;
+  border-right: none !important;
+  border-left: 1px solid #e2e8f0;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 24px;
+}

@@ -1,4 +1,20 @@
+@media (max-width: 480px) {
+  .admin-form-card {
+    flex-direction: column;
+  }
+}
+
 // Small devices (landscape phones,tablets) 576px to 991px)
+@media (max-width: 768px) {
+  .admin-form-card {
+    form {
+      overflow: hidden;
+      & > div.row {
+        gap: 20px;
+      }
+    }
+  }
+}
 
 //#region ############ START: phones,tablets ############
 @media (min-width: 320px) and (max-width: 991px) {
@@ -75,7 +91,6 @@
     }
   }
 
-
   .nav-item.lang {
     margin: 15px 0 0 0 !important;
   }
@@ -119,7 +134,7 @@
     margin-top: 0 !important;
   }
 
-  .checkout-card{
+  .checkout-card {
     padding: 16px !important;
   }
 
@@ -128,15 +143,12 @@
 
 //#endregion
 
-
 // Large devices (desktops, 992px and up)
 //#region ############ START: desktops 992px to 1999px ############
 @media (min-width: 992px) and (max-width: 1999px) {
-
 }
 
 //#endregion
-
 
 // all screens more than 1200px
 @media (min-width: 1200px) {
@@ -155,9 +167,7 @@
     }
   }
 
-
   .side {
     width: 300px !important;
   }
 }
-

@@ -1001,5 +1001,6 @@
   "stay": "Stay",
   "exit": "Exit",
   "unsavedChanges": "Unsaved changes",
-  "unsavedChangesMsg": "You haven't finished creating. Do you want to leave without finishing?"
+  "unsavedChangesMsg": "You haven't finished creating. Do you want to leave without finishing?",
+  "EmailOrUsername": "Email or username"
 }

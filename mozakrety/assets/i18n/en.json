@@ -85,6 +85,7 @@
     "en_name": "English Name",
     "Description": "Description",
     "Choose": "Choose",
+    "Select": "Select",
     "Confirm": "Confirm",
     "ConfirmDelete": "Confirm Delete",
     "ConfirmCloseMsg": "Confirm Close Message",
@@ -776,5 +777,7 @@
   "done": "Done",
   "theExamIsCurrentlyNotAvailable": "The exam is currently not available",
   "theLectureIsCurrentlyNotAvailable": "The lecture is currently not available",
-  "remainingAttempts": "Remaining attempts"
+  "remainingAttempts": "Remaining attempts",
+  "thereIsNoData": "There is no data",
+  "actions": "Actions"
 }
