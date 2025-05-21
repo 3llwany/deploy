@@ -1,25 +1,26 @@
-p,
-div,
-span,
-section,
-a,
-li,
-ul {
-  font-family: "Axi-Regular" !important;
-}
+.admin-font {
+  p,
+  div,
+  span,
+  section,
+  a,
+  li,
+  ul {
+    font-family: "Axi-Regular" !important;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.mat-card-title {
-  font-family: "Axi-bold" !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .mat-card-title {
+    font-family: "Axi-bold" !important;
+  }
 }
 
 /*  Axi Font   */
-
 .font-axi-regular {
   font-family: "Axi-Regular" !important;
 }
@@ -60,4 +61,42 @@ h6,
 
 .font-bold-italic {
   font-family: "Axi-BoldItalic" !important;
+}
+
+/* ########## Font used in user UI ########## */
+
+.default-font {
+  & p,
+  & div,
+  & section,
+  & a,
+  & li,
+  & ul,
+  & button,
+  .btn,
+  .mat-raised-button,
+  & mat-label,
+  & label {
+    font-family: "agrandirRegular", serif;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  .mat-card-title,
+  .card .card-title,
+  .content-header,
+  .page-title,
+  .table-container td.mat-cell,
+  .table-container td.mat-cell > span,
+  & th.mat-header-cell,
+  & td.mat-cell,
+  & td.mat-footer-cell,
+  .navlogo,
+  .mat-card.course-card .description .title p {
+    font-family: "agrandirBold", serif;
+  }
 }
