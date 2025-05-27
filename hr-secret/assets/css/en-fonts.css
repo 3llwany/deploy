@@ -1,10 +1,10 @@
 p,
 div,
 section,
-a,
-button,
-.btn,
-.mat-raised-button {
+.table-container td.mat-cell,
+.table-container td.mat-cell > span,
+td.mat-cell,
+a {
   /* font-family: "Axi-Regular" !important;*/
   font-family: "interRegular", serif !important;
 }
@@ -22,12 +22,12 @@ label,
 .content-header, .page-title,
 li,
 ul,
-.table-container td.mat-cell,
-.table-container td.mat-cell > span,
 th.mat-header-cell,
-td.mat-cell,
 td.mat-footer-cell,
-.mat-chip, .mat-expansion-panel-header-title {
+.mat-chip, .mat-expansion-panel-header-title,
+button,
+.btn,
+.mat-raised-button {
   /*font-family: "Axi-bold" !important;*/
   font-family: "interMedium", serif !important;
 }

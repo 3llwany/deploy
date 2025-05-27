@@ -218,6 +218,14 @@ vertical-align-middle {
   width: 15% !important;
 }
 
+.w-md-40 {
+  width: 40% !important;
+}
+
+.w-md-60 {
+  width: 60% !important;
+}
+
 .w-30 {
   width: 30% !important;
 }
@@ -291,6 +299,18 @@ vertical-align-middle {
   color: $black-color !important;
 }
 
+.danger-color {
+  color: $danger-color !important;
+}
+
+.danger-color2 {
+  color: $danger-color2 !important;
+}
+
+.dark-gray {
+  color: $dark-gray !important;
+}
+
 .bg-light-success,
 .btn.bg-light-success:hover {
   background-color: rgba(37, 143, 110, 0.2) !important;
@@ -329,7 +349,7 @@ vertical-align-middle {
 
 .btn-babyBlue, .btn-Blue, .btn-gray {
   color: #fff !important;
-  padding: 6px 29px !important;
+  padding: 6px 29px;
   border-radius: 5px !important;
   // margin-right: 30px !important;
 }
@@ -365,10 +385,34 @@ vertical-align-middle {
   color: $babyBlue-color !important;
 }
 
+.sub-title-color {
+  color: $sub-title-color !important;
+}
+
+.success-color {
+  color: $success-color !important;
+}
+
 .text-wrap-nowrap {
   text-wrap: nowrap !important;
 }
 
 .border-dashed {
   border: 1px dashed #8080808c;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.btn, button {
+  font-size: 16px !important;
+}
+
+.svg-main-color {
+  filter: invert(27%) sepia(16%) saturate(1136%) hue-rotate(179deg) brightness(94%) contrast(87%) !important;
+}
+
+.svg-babyBlue-color {
+  filter: invert(46%) sepia(58%) saturate(3797%) hue-rotate(174deg) brightness(92%) contrast(99%) !important;
 }
