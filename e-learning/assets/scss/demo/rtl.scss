@@ -1,0 +1,121 @@
+
+body.ar {
+    * {
+        direction: rtl;
+    }
+
+    // region navbar
+    .layout-topbar .layout-topbar-actions {
+        margin-right: auto;
+        margin-left: unset;
+    }
+
+    // navbar configurator menu
+    app-configurator {
+        left: 0px;
+        right: 3px;
+    }
+
+    //endregion
+
+    // region sidebar
+    .layout-sidebar {
+        right: 2rem;
+        left: unset;
+    }
+
+    .layout-menu ul a .layout-menuitem-icon {
+        margin-left: 0.5rem;
+        margin-right: unset;
+    }
+
+    .layout-menu ul a .layout-submenu-toggler {
+        margin-right: auto;
+        margin-left: unset;
+    }
+
+    .layout-main-container {
+        transition: margin-right var(--layout-section-transition-duration);
+        margin-left: unset;
+    }
+
+    .layout-static.layout-mobile-active {
+        .layout-sidebar {
+            border-radius: var(--p-content-border-radius) 0 0 var(--p-content-border-radius) !important;
+        }
+    }
+
+    // endregion
+
+    // region responsive
+    @media (min-width: 992px) {
+        .layout-wrapper {
+            &.layout-overlay {
+                .layout-main-container {
+                    margin-right: 0;
+                    padding-left: 2rem;
+                }
+
+                .layout-sidebar {
+                    right: 0rem;
+                    transform: translateX(100%);
+                }
+
+                &.layout-overlay-active {
+                    .layout-sidebar {
+                        transform: translateX(0);
+                    }
+                }
+            }
+
+            &.layout-static {
+                .layout-main-container {
+                    margin-right: 22rem;
+                    margin-left: unset;
+                }
+
+                &.layout-static-inactive {
+                    .layout-sidebar {
+                        transform: translateX(100%);
+                        right: 0;
+                    }
+
+                    .layout-main-container {
+                        margin-right: 0;
+                        padding-right: 2rem;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    @media (max-width: 991px) {
+        .layout-wrapper {
+            .layout-main-container {
+                margin-right: 0;
+                padding-left: 2rem;
+            }
+
+            .layout-sidebar {
+                right: 0rem;
+                transform: translateX(100%);
+            }
+
+            &.layout-mobile-active {
+                .layout-sidebar {
+                    transform: translateX(0);
+                }
+            }
+        }
+        .layout-topbar .layout-topbar-menu {
+            left: 2rem;
+            right: unset;
+        }
+    }
+
+    // endregion
+}
+
+// end body.ar
