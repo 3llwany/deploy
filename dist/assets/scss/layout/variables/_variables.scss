@@ -1,0 +1,16 @@
+$border-radius: var(--p-content-border-radius);
+
+:root {
+
+    // buttons
+    --btn-height: 37px;
+
+    // Dialogs
+    --dialog-title-size: 1.5rem;
+    --dialog-title-wight: bold;
+    --dialog-header-padding: 2rem 1.75rem 1rem 1.75rem;
+    --dialog-header-padding-sm: 1rem 1rem .75rem 1rem;
+    --dialog-content-padding: 1rem 1.75rem 1.25rem 1.75rem;
+    --dialog-content-padding-sm: .75rem 1rem 1rem 1rem;
+}
+
